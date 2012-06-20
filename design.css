@@ -1,0 +1,170 @@
+div#container{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 1000px;
+}
+
+div#header{
+	position: relative;
+	float: top;
+	margin: 5px;
+	text-align: center;
+	border: 2px solid white;
+	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-size: 100% 100%;
+	border-radius: 65px;
+}
+
+div#menu{
+	position: relative;
+	border-style: none;
+	clear: both;
+	text-align: left;
+	top: -10px;
+}
+
+#menu a{
+	color: white;
+}
+
+ul#menu{
+	position: relative;
+	left: 45px;
+}
+
+#menu li{
+	display: inline;
+	list-style-type: none;
+	padding-right: 110px;
+}
+
+iframe#menu{
+	position: relative;
+	width: 90%;
+	clear: both;
+	height: 30px;
+  	border-radius: 17px; 
+}
+
+div#sidebar{
+	position: relative;
+	width: 300px;
+	height: 584px;
+	border-radius: 25px;
+	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-size: 100% 100%;
+}
+
+#sidebar p{
+	margin: 5px;
+}
+
+#sidebar a{
+	color: black;
+}
+
+iframe#sidebar{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	border-radius: 25px;
+	border: 2px solid white;
+	margin: 5px;
+	height: 603px;
+}
+
+#goodies li{
+	position: relative;
+	left: -20px;
+	list-style-type: none;
+}
+
+table#utilities{
+	position: relative;
+	float: center;
+	width: 94%;
+	left: 3%;
+}
+
+#utilities th{
+	height: 50px;
+}
+
+#utilities td{
+	height: 25px;
+}
+
+div#main{
+	position: relative;
+	float: left;
+	width: 660px;
+	min-height: 593px;
+	padding: 5px;
+	margin: 5px;
+	border: 2px solid white;
+	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-size: 100% 100%;
+	border-radius: 25px;
+}
+
+h1#header{
+	position: relative;
+	font-size: 50px;
+}
+
+div#footer{
+	position: relative;
+	text-align: center;
+	clear: both;
+	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-size: 100% 100%;
+	border: 2px solid white;
+	border-radius: 34px;
+	height: 100%;
+	width: 100%;
+}
+
+iframe#footer{
+	position: relative;
+	border: 2px solid white;
+	text-align: center;
+	clear: both;
+	border-radius: 34px;
+	width: 100%;
+	height: 68px;
+}
+
+div.spacer{
+	position: relative;
+	height: 50px;
+}
+
+body#home{ 
+	background-color: white;
+	text-align: center;
+	margin: 0px;
+	background-image: url(Images/GradientGreyToWhiteL2R.png);
+	background-size: 100%;
+} 	
+
+body{ 
+	background-color: white;
+	text-align: center;
+	margin: 0px;
+} 	
+
+body#menu{ 
+	background-color: black;
+	text-align: center;
+	margin: 0px;
+} 	
+
+img.social{
+	border-radius: 15px;
+}
+
+div#tunnel{
+	position: relative;
+	top: 200px;
+}
