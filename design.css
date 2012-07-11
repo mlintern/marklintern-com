@@ -80,6 +80,12 @@ iframe#sidebar{
 	list-style-type: none;
 }
 
+#links li{
+	position: relative;
+	left: -20px;
+	list-style-type: none;
+}
+
 table#utilities{
 	position: relative;
 	float: center;
