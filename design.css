@@ -47,6 +47,11 @@ iframe#menu{
   	border-radius: 17px; 
 }
 
+.player-count li{
+	display: inline;
+	list-style-type: none;
+}
+
 div#sidebar{
 	position: relative;
 	width: 300px;
