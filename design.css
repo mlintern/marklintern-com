@@ -52,6 +52,10 @@ iframe#menu{
 	list-style-type: none;
 }
 
+.player-count ul{
+	margin-top: 0px;
+}
+
 div#sidebar{
 	position: relative;
 	width: 300px;
@@ -178,4 +182,21 @@ img.social{
 div#tunnel{
 	position: relative;
 	top: 200px;
+}
+
+form#p4 {
+	width: 590px;
+	margin: 0px auto;
+}
+form#p5 {
+	width: 725px;
+	margin: 0px auto;
+}
+form#p6 {
+	width: 860px;
+	margin: 0px auto;
+}
+form#p7 {
+	width: 995px;
+	margin: 0px auto;
 }
