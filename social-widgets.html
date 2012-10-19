@@ -23,10 +23,34 @@
 			<iframe name="menu" id="menu" src="menu.html" scrolling="no"></iframe>
 			
 			<div id="main" style="width:100%">
+			
+<!-- Social Widget Code Starts here-->			
 <div id="home-social">
+
+<!-- Each Widget is wrapped in a div with a unique id and a shared class.  
+Then inside that is another div with a class common shared accross all of the
+widgets.  Each Widget is gather it's data differently, but they all have the
+same easyPaginator widget used to navigate through the live data.  It will look
+something like this:
+	function(){
+		$('#home-instagram-photos').easyPaginate({
+			step:1, 
+			auto:false, 
+			loop:false,
+			clickstop:false,
+			nextprev: false
+	});
+	
+There are also some require javascript files for this to run properly.  You will
+need jquery, the jquery easy paginate widget, twitter-text functions, and the tiny
+scroll bar widget.  The social widget css will help with intial formatting as well.
+-->
+
+<!-- Twitter Widget Code Starts here-->
 <div id="home-twitter" class="grid_3">
 <div class="home-social-box">
-<h4><a href="https://twitter.com/TCMIndy">Twitter</a></h4>
+<!-- Update URL here-->
+<h4><a href="https://twitter.com/mlintern">Twitter</a></h4>
 
 <div class="twtr-widget" id="home-twitter-feed"></div>            
 <script type="text/javascript">
@@ -55,6 +79,7 @@ twitter_widget = new TWTR.Widget({
 		live: false,
 		behavior: 'all'
 	}
+	/* Update user here */
 }).render().setUser('mlintern').start();
 
 watch_twitter = setInterval(function(){checkTwitter()}, 500);
@@ -81,6 +106,9 @@ function checkTwitter() {
 
 </div>
 </div>
+<!-- Twitter Widget Code Ends here-->
+
+<!-- Facebook Widget Code Starts here-->
 <div id="home-facebook" class="grid_3">
 <div class="home-social-box">
 <h4><a href="http://www.facebook.com/childrensmuseum">Facebook</a></h4>
@@ -89,6 +117,7 @@ function checkTwitter() {
 <script type="text/javascript">
 $(function(){
 	var access_token = '430093523696232|X3UMnyZkSoxCulMrYxzEK8S5YkA';
+	/* Update user here */
 	//var fb_id = '46900391';//Mark Lintern
 	var fb_id = '100003860414884';//P Art Ygo Rilla
 	var fb_url = 'https://graph.facebook.com/' + fb_id + '/feed?access_token=' + access_token + '&limit=100&callback=?';
@@ -218,6 +247,9 @@ $(function(){
 
 </div>
 </div>
+<!-- Facebook Widget Code Ends here-->
+
+<!-- Flickr Widget Code Starts here-->
 <div id="home-flickr" class="grid_3">
 <div class="home-social-box">
 <h4><a href="https://www.flickr.com">Flickr</a></h4>
@@ -247,7 +279,7 @@ function flickrElement(photo) {
 } 
 
 $(document).ready(function() {
-
+		/* Update user here within the url */
 	var feed = new google.feeds.Feed("http://api.flickr.com/services/feeds/photos_public.gne?id=41434597@N07&lang=en-us&format=atom");
 	feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
 	feed.load(function(result) {
@@ -275,6 +307,9 @@ $(document).ready(function() {
 
 </div>
 </div>
+<!-- Flikr Widget Code Ends here-->
+
+<!-- Google+ Widget Code Starts here-->
 <div id="home-googleplus" class="grid_3">
 <div class="home-social-box">
 <h4><a href="https://plus.google.com/u/0/107285266176330979914/posts">Google+</a></h4>
@@ -285,7 +320,7 @@ $(function(){
 
 	var img_width = 178;
 	var img_height = 100;
-
+					/* Update user here */
 	var user_id = '107285266176330979914'; //Mark Lintern
 	var api_key = 'AIzaSyBRrcVVd8NAU7oMLw_dler0Za9W6GLkWTE'; //Mark Lintern
 
@@ -405,6 +440,9 @@ $(function(){
 
 </div>
 </div>
+<!-- Google+ Widget Code Ends here-->
+
+<!-- Instagram Widget Code Starts here-->
 <div id="home-instagram" class="grid_3">
 <div class="home-social-box">
 <h4><a href="#">Instagram</a></h4>
@@ -532,6 +570,7 @@ $(function(){
 $(function() {
 	$("#home-instagram-photos").instagram({
 		show: 10,
+		/* Update user here */
 		userId: '205224010',
 		accessToken: '8325917.7a90852.ada4cf0dab3641de8592d5beb5114d25',
 		clientId: '7a90852f00f342afb1331927fae0cd94',
@@ -550,7 +589,10 @@ $(function() {
 
 </div>
 </div>
+<!-- Instagram Widget Code Ends here-->
+
 </div>
+<!-- Social Widget Code Ends here-->
 			</div>	
 			
 			<iframe name="footer" id="footer" src="footer.html" scrolling="no"></iframe>
