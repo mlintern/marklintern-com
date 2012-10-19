@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Social Widgets</title>
+		<link type="text/css" rel="stylesheet" href="design.css"/>
+		<link type="text/css" rel="stylesheet" href="social-widgets.css"/>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="easyPaginate.jquery.js"></script>
+		<script src="twitter-text.js"></script>
+		<script src="tiny-scrollbar.js"></script>
+		
+
+	</head>
+	<body id="home">
+		<!--The container is the site.  There are 4 main div containers within the main container.-->
+		<div id="container" style="min-width: 1000px; width:100%;">
+			
+			<div id="header"> 
+				<h1 id="header">Social Widgets</h1>
+			</div>
+
+			<iframe name="menu" id="menu" src="menu.html" scrolling="no"></iframe>
+			
+			<div id="main" style="width:100%">
+<div id="home-social">
+<div id="home-twitter" class="grid_3">
+<div class="home-social-box">
+<h4><a href="https://twitter.com/TCMIndy">Twitter</a></h4>
+
+<div class="twtr-widget" id="home-twitter-feed"></div>            
+<script type="text/javascript">
+twitter_widget = new TWTR.Widget({
+	id: 'home-twitter-feed',
+	version: 2,
+	type: 'profile',
+	rpp: 30,
+	interval: 30000,
+	width: 230,
+	height: 310,
+	theme: {
+		shell: {
+			background: '#ffffff',
+			color: '#000000'
+		},
+		tweets: {
+			background: '#ffffff',
+			color: '#333333',
+			links: '#004097'
+		}
+	},
+	features: {
+		scrollbar: false,
+		loop: false,
+		live: false,
+		behavior: 'all'
+	}
+}).render().setUser('mlintern').start();
+
+watch_twitter = setInterval(function(){checkTwitter()}, 500);
+function checkTwitter() {
+	if($("#home-twitter-feed .twtr-tweet").length) {
+		clearInterval(watch_twitter);
+
+		$("#home-twitter-feed.twtr-widget").css("position", "static");
+
+		$("#home-twitter-feed .twtr-reference-tweet").remove();
+		$("#home-twitter-feed .twtr-tweets").easyPaginate({
+			step:3, 
+			auto:false, 
+			loop:false,
+			clickstop:false,
+			nextprev: false,
+			controls: 'twitter-controls'
+		});
+	}
+}
+
+</script>
+
+
+</div>
+</div>
+<div id="home-facebook" class="grid_3">
+<div class="home-social-box">
+<h4><a href="http://www.facebook.com/childrensmuseum">Facebook</a></h4>
+
+<ul id="facebook-stream"></ul>
+<script type="text/javascript">
+$(function(){
+	var access_token = '430093523696232|X3UMnyZkSoxCulMrYxzEK8S5YkA';
+	//var fb_id = '46900391';//Mark Lintern
+	var fb_id = '100003860414884';//P Art Ygo Rilla
+	var fb_url = 'https://graph.facebook.com/' + fb_id + '/feed?access_token=' + access_token + '&limit=100&callback=?';
+	var fb_limit = 10;
+
+	function fb_message(data) {
+		var message_id = data.id.replace(fb_id + '_', '');
+		var html = "";
+		if (!exists(data.message)) {
+			data.message = data.story;
+		}
+		if (exists(data.message)) {
+			html += "<li class='facebook-message'>";
+			if (data.picture) {
+				//facebook returns images in a 90x90 format, let's strip down to the original image and then resize in our resizer
+				params = data.picture.split("&")
+				photo = params[params.length-1];
+				photo = photo.replace("url=",""); //should already be urlencoded
+      			html += "<div class='social-image' style='background-image: url(" + photo + ");height: 120px; background-repeat: no-repeat;background-position: center;'></div>";
+      			//html += "<div class='social-image' style='background-image: url(//imagefilter.content.compendiumblog.com/image?url=" + photo + "&width=178&cropW=178&cropH=120&secure=0);height: 120px;'></div>";
+
+
+			}
+			html += "<div class='facebook-title'>";
+			html += autoLink(data.message);
+			html += "</div>";
+			html += "<div class='facebook-meta'>";
+			html += "<a class='facebook-date' href='http://www.facebook.com/" + fb_id + "/posts/" + message_id + "'>";
+			html += fb_date(data.created_time);
+			html += "</a> ";
+			if (exists(data.likes)) {
+				html += "<span class='facebook-likes'>";
+				html += data.likes.count + " Likes";
+				html += "</span>";
+			}
+			html += "</div>";
+			html += "</li>";
+		}
+		return html;
+	}
+
+	function fb_date(dateStr){
+		var year, month, day, hour, minute, dateUTC, date, ampm, d, time;
+		var iso = (dateStr.indexOf(' ')==-1&&dateStr.substr(4,1)=='-'&&dateStr.substr(7,1)=='-'&&dateStr.substr(10,1)=='T') ? true : false;
+
+		if(iso){
+			year = dateStr.substr(0,4);
+			month = parseInt((dateStr.substr(5,1)=='0') ? dateStr.substr(6,1) : dateStr.substr(5,2))-1;
+			day = dateStr.substr(8,2);
+			hour = dateStr.substr(11,2);
+			minute = dateStr.substr(14,2);
+			dateUTC = Date.UTC(year, month, day, hour, minute);
+			date = new Date(dateUTC);
+		}else{
+			d = dateStr.split(' ');
+			if(d.length!=6||d[4]!='at')
+				return dateStr;
+				time = d[5].split(':');
+				ampm = time[1].substr(2);
+				minute = time[1].substr(0,2);
+				hour = parseInt(time[0]);
+				if(ampm=='pm')hour+=12;
+				date = new Date(d[1]+' '+d[2]+' '+d[3] +' '+ hour+':'+minute);
+				date.setTime(date.getTime()-(1000*60*60*7));
+		}
+		//	day = (date.getDate()<10)?'0'+date.getDate():date.getDate();
+		month = date.getMonth()+1;
+		//month = (month<10)?'0'+month:month;
+		hour = date.getHours();
+		minute = (date.getMinutes()<10)?'0'+date.getMinutes():date.getMinutes();
+		ampm = (hour<12) ? 'am' : 'pm';
+		if(hour==0)hour==12;
+		else if(hour>12)hour=hour-12;
+		//	if(hour<10)hour='0'+hour;
+		return month+'-'+day+'-'+date.getFullYear()+' at '+hour+':'+minute+' '+ampm;
+	}
+
+	function exists(data){
+		if(!data || data==null || data=='undefined' || typeof(data)=='undefined') return false;
+		else return true;
+	}
+
+	function autoLink(str){
+		return str.replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<a href="$1" target="_blank">$1</a>');
+	}
+
+
+	$.getJSON(fb_url, function(data) {
+		data = data['data'];
+		var html = "";
+		var data_length = data.length;
+		var valid_messages = 0;
+
+		for(var i=0;i<data_length;i++) {
+			if (data[i].from.id == fb_id && valid_messages < fb_limit) {
+				valid_messages++;
+				html += fb_message(data[i]);  
+			}
+		}
+		$("#facebook-stream").append(html);
+
+		padding_height = 90;
+		max_height = 0;
+		box_height = parseInt($("#home-social .home-social-box").first().css("min-height"));
+		$("#home-social li").each(function(){
+			height = $(this).height();
+			if (height > max_height) {
+				max_height = height;
+			}
+		});
+		if (max_height > (box_height - padding_height)) {
+			$(".home-social-box").css("min-height", max_height + padding_height);
+		}
+
+		$("#facebook-stream").easyPaginate({
+			step:1, 
+			auto:false, 
+			loop:false,
+			clickstop:false,
+			nextprev: false,
+			controls: 'facebook-controls'
+		});
+
+	});
+});
+</script>
+
+</div>
+</div>
+<div id="home-flickr" class="grid_3">
+<div class="home-social-box">
+<h4><a href="https://www.flickr.com">Flickr</a></h4>
+
+<ul id="flickr-posts"></ul>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("feeds", "1");
+
+function flickrElement(photo) {
+	xml = $(photo.xmlNode);
+	image_url = xml.find('link[type="image/jpeg"]').attr('href');
+	var li = $('<li>')
+	.addClass('flickr-placeholder')
+	.append(
+	$('<a>')
+	.attr('target', '_blank')
+	.attr('href', photo.link)
+	.addClass('social-image')
+	.css('background-image', 'url(' + image_url + ')')
+	//.css('background-image', 'url(//imagefilter.content.compendiumblog.com/image?url=' + encodeURIComponent(image_url) + '&height=178&cropW=178&cropH=178&secure=0)')
+	);
+	if (photo.title) {
+		li.append($('<p>').text(photo.title));
+	}
+	return li;
+} 
+
+$(document).ready(function() {
+
+	var feed = new google.feeds.Feed("http://api.flickr.com/services/feeds/photos_public.gne?id=41434597@N07&lang=en-us&format=atom");
+	feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+	feed.load(function(result) {
+		if (!result.error) {
+			//var container = document.getElementById("feed");
+			for (var i = 0; i < result.feed.entries.length; i++) {
+				var entry = result.feed.entries[i];
+				$("#flickr-posts").append(flickrElement(entry));
+
+			}
+		}
+	$('ul#flickr-posts').easyPaginate({
+		step:1, 
+		auto:false, 
+		loop:false,
+		clickstop:false,
+		nextprev: false,
+		controls: 'flickr-controls'
+	});
+	});
+});
+
+</script>
+
+
+</div>
+</div>
+<div id="home-googleplus" class="grid_3">
+<div class="home-social-box">
+<h4><a href="https://plus.google.com/u/0/107285266176330979914/posts">Google+</a></h4>
+
+
+<script type="text/javascript">
+$(function(){
+
+	var img_width = 178;
+	var img_height = 100;
+
+	var user_id = '107285266176330979914'; //Mark Lintern
+	var api_key = 'AIzaSyBRrcVVd8NAU7oMLw_dler0Za9W6GLkWTE'; //Mark Lintern
+
+	$.ajax({
+		type: "GET",
+		dataType: "jsonp",
+		cache: false,
+		url: 'https://www.googleapis.com/plus/v1/people/' + user_id + '/activities/public',
+		data: { 
+			//fields: 'items(id,kind,object(attachments(displayName,fullImage,id,image,objectType,url),id,objectType,plusoners,replies,resharers,url),published,title,url,verb)',
+			key: api_key,
+			maxResults: 10
+
+		},
+
+		success: parseGooglePlus
+	});
+
+
+
+	function parseGooglePlus(results) {
+		container = $("#home-googleplus-posts");
+		for (item_key in results.items) {
+			$("#home-googleplus-posts").append(parseGooglePlusItem(results.items[item_key]));
+		}
+
+		padding_height = 90;
+		max_height = 0;
+		box_height = parseInt($("#home-social .home-social-box").first().css("min-height"));
+		$("#home-social li").each(function(){
+			height = $(this).height();
+			if (height > max_height) {
+				max_height = height;
+			}
+		});
+		if (max_height > (box_height - padding_height)) {
+			$(".home-social-box").css("min-height", max_height + padding_height);
+		}
+
+		container.easyPaginate({
+			step:1, 
+			auto:false, 
+			loop:false,
+			clickstop:false,
+			nextprev: false,
+			controls: 'googleplus-controls'
+		});
+
+	}
+
+	function parseGooglePlusItem(item) {
+		var title, text, photo, url, permalink, video;
+
+		if (item.object) {
+			if (item.object.attachments) {
+				for (attachment_key in item.object.attachments) {
+					attachment = item.object.attachments[attachment_key];
+
+					if (attachment.objectType == 'article') {
+						title = attachment.displayName;
+						url = attachment.url;
+					}
+					if (attachment.objectType == 'photo') {
+						photo = attachment.image.url;
+					}
+					if (attachment.objectType == 'video') {
+						video = attachment.url;
+					}
+				}
+			}
+			if(item.object.objectType == 'note') {
+				text = item.object.content;
+			}
+		}
+
+		permalink = item.url;
+		if (!title) {
+			title = item.title;
+		}
+
+		if (!url) {
+			url = permalink;
+		}
+
+		if (video) {
+			video = embedYouTube(attachment.url, img_width, img_height);
+		}
+
+		li = $("<li>");
+		if (video) {
+			li.append(video);
+		} else if (photo) {
+			$('<a>')
+			.attr('target', '_blank')
+			.attr('href', url)
+			.addClass('social-image')
+			.css('background-image', 'url(' + photo + ')')
+			//.css('background-image', 'url(//imagefilter.content.compendiumblog.com/image?url=' + encodeURIComponent(photo) + '&width=178&cropW=178&cropH=100&secure=0)')
+			.css('height', 100)
+		}
+		li.append($("<a>").addClass("googleplus-title").attr("href", url).text(title));
+		if (text) {
+			li.append($("<p>").html(text));
+		}
+		return li;
+	}
+
+	function embedYouTube(url, width, height) {
+		var regex = /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?/;
+		embed = url.replace(regex, '<div class="social-image" style="height: 100px;"><iframe class="youtube-player" type="text/html" width="' + width + '" height="' + height + '" src="http://www.youtube.com/embed/$2" frameborder="0"></iframe></div>');
+		return embed;
+	}
+
+
+});
+</script>
+
+</div>
+</div>
+<div id="home-instagram" class="grid_3">
+<div class="home-social-box">
+<h4><a href="#">Instagram</a></h4>
+
+<script type="text/javascript">
+(function($){
+	$.fn.instagram = function(options) {
+		var that = this,
+		apiEndpoint = "https://api.instagram.com/v1",
+		settings = {
+			hash: null
+			, userId: null
+			, locationId: null
+			, search: null
+			, accessToken: null
+			, clientId: null
+			, show: null
+			, onLoad: null
+			, onComplete: null
+			, maxId: null
+			, minId: null
+			, next_url: null
+		};
+
+		options && $.extend(settings, options);
+
+		function createPhotoElement(photo) {
+			var li = $('<li>')
+			.addClass('instagram-placeholder')
+			.attr('id', photo.id)
+			.append(
+			$('<a>')
+			.attr('target', '_blank')
+			.attr('href', photo.link)
+			.addClass('social-image')
+			.css('background-image', 'url(' + photo.images.low_resolution.url + ')')
+			//.css('background-image', 'url(//imagefilter.content.compendiumblog.com/image?url=' + encodeURIComponent(photo.images.low_resolution.url) + '&width=178&height=178&secure=0)')
+			);
+			if (photo.caption) {
+				li.append($('<p>').text(photo.caption.text));
+			}
+			return li;
+		}
+
+		function createEmptyElement() {
+			return $('<div>')
+			.addClass('instagram-placeholder')
+			.attr('id', 'empty')
+			.append($('<p>').html('No photos for this query'));
+		}
+
+		function composeRequestURL() {
+
+			var url = apiEndpoint,
+			params = {};
+
+			if (settings.next_url != null) {
+				return settings.next_url;
+			}
+
+			if(settings.hash != null) {
+				url += "/tags/" + settings.hash + "/media/recent";
+			}
+			else if(settings.search != null) {
+				url += "/media/search";
+				params.lat = settings.search.lat;
+				params.lng = settings.search.lng;
+				settings.search.max_timestamp != null && (params.max_timestamp = settings.search.max_timestamp);
+				settings.search.min_timestamp != null && (params.min_timestamp = settings.search.min_timestamp);
+				settings.search.distance != null && (params.distance = settings.search.distance);
+			}
+			else if(settings.userId != null) {
+				url += "/users/" + settings.userId + "/media/recent";
+			}
+			else if(settings.locationId != null) {
+				url += "/locations/" + settings.locationId + "/media/recent";
+			}
+			else {
+				url += "/media/popular";
+			}
+
+			settings.accessToken != null && (params.access_token = settings.accessToken);
+			settings.clientId != null && (params.client_id = settings.clientId);
+			settings.minId != null && (params.min_id = settings.minId);
+			settings.maxId != null && (params.max_id = settings.maxId);
+			settings.show != null && (params.count = settings.show);
+
+			url += "?" + $.param(params)
+
+			return url;
+		}
+
+		settings.onLoad != null && typeof settings.onLoad == 'function' && settings.onLoad();
+
+		$.ajax({
+			type: "GET",
+			dataType: "jsonp",
+			cache: false,
+			url: composeRequestURL(),
+			success: function(res) {
+				var length = typeof res.data != 'undefined' ? res.data.length : 0;
+				var limit = settings.show != null && settings.show < length ? settings.show : length;
+
+				if(limit > 0) {
+					for(var i = 0; i < limit; i++) {
+						that.append(createPhotoElement(res.data[i]));
+					}
+				}
+				else {
+					that.append(createEmptyElement());
+				}
+
+				settings.onComplete != null && typeof settings.onComplete == 'function' && settings.onComplete(res.data, res);
+			}
+		});
+
+		return this;
+	};
+})(jQuery);
+
+</script>
+
+<ul id="home-instagram-photos"></ul>
+<script type="text/javascript">
+$(function() {
+	$("#home-instagram-photos").instagram({
+		show: 10,
+		userId: '8325917',
+		accessToken: '8325917.7a90852.ada4cf0dab3641de8592d5beb5114d25',
+		clientId: '7a90852f00f342afb1331927fae0cd94',
+		onComplete: function(){
+			$('#home-instagram-photos').easyPaginate({
+				step:1, 
+				auto:false, 
+				loop:false,
+				clickstop:false,
+				nextprev: false
+			});
+		}
+	});
+});
+</script>
+
+</div>
+</div>
+</div>
+			</div>	
+			
+			<iframe name="footer" id="footer" src="footer.html" scrolling="no"></iframe>
+		</div>
+	</body>
+</html>
