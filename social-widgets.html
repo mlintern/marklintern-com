@@ -269,6 +269,7 @@ function flickrElement(photo) {
 	.attr('target', '_blank')
 	.attr('href', photo.link)
 	.addClass('social-image')
+	.addClass('flikr-image')
 	.css('background-image', 'url(' + image_url + ')')
 	//.css('background-image', 'url(//imagefilter.content.compendiumblog.com/image?url=' + encodeURIComponent(image_url) + '&height=178&cropW=178&cropH=178&secure=0)')
 	);
@@ -322,7 +323,7 @@ $(function(){
 	var img_height = 100;
 					/* Update user here */
 	var user_id = '107285266176330979914'; //Mark Lintern
-	var api_key = 'AIzaSyBRrcVVd8NAU7oMLw_dler0Za9W6GLkWTE'; //Mark Lintern
+	var api_key = 'AIzaSyDb8ZJfspwhvawCUl17wNxiC7N-7BQqx7g'; //Mark Lintern
 
 	$.ajax({
 		type: "GET",

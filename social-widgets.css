@@ -194,6 +194,9 @@ padding: 10px 8px;
 font-family: 'Didact Gothic', sans-serif !important;
 font-size: 13px !important;
 }
+.flickr-image{
+background-size:180px 180px;
+}
 .instagram-image{
 background-size:180px 180px;
 }

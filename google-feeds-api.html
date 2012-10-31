@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+<body>
+
+  <ul id="googleFeedList">
+  </ul>
+
+<script type="text/javascript">
+  google.load("feeds", "1", { callback: function() {
+    var feed = new google.feeds.Feed("http://mark.compendiumblog.com/blog/test---marks-network/rss");
+    feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
+    feed.setNumEntries(5);
+    feed.load(function(result) {
+      if (!result.error) {
+        for (var i = 0, l=result.feed.entries.length; i < l; i++) {
+          var entry = result.feed.entries[i];
+          console.log(entry);
+          var entrydate = new Date(entry.publishedDate);
+          var li = $('<li>')
+            .append(
+              $('<a>')
+                .attr('target','_blank')
+                .attr('href', entry.link)
+                .text(entry.title),
+              $('<div>').text(entry.publishedDate + ' - ' + entry.author)
+			   .attr('class','Date-Author'),
+			  $('<div>')
+			   .attr('class','Content')
+			   .html(entry.content)
+            );
+          $('#googleFeedList').append(li);
+        }
+      }
+    });
+  }});
+</script>
+</body>
+</html>
