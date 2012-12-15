@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 $(document).ready(function (){ 
 	$('#cb_web_to_post').on('submit',function(){ 
-		$.post(https://cl.exct.net/subscribe.aspx,{ 
+		$.post('https://cl.exct.net/subscribe.aspx',{ 
 		SubAction:sub_add_update, 
 		MID:'xxx18', 
 		lid:'xxx26', 

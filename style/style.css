@@ -1,6 +1,15 @@
 .clear{
 clear:both;   
 }
+.fog60{
+	background-image: url('../images/fog_60.png');	
+}
+.show{
+display: block;
+}
+.hide{
+display: none;
+}
 a {
 text-decoration: none;   
 }
@@ -64,45 +73,10 @@ margin: 20px;
 background-color: #ffffff;
 }
 /*CONTENT*/
-.imgs{
-border-radius: 8px;
-background-color: #ffffff;
-border: 1px solid black;
-margin: 10px 0;
-padding: 10px 29px;
-}
-.post-social-bookmarking{
-margin: 10px;
-float: right;
-}
-.social-row-two{
-margin-top: 10px;   
-}
-.left-image{
-width: 190px;  
-float: left;
-}
-.post-list{
-margin-top: 10px;   
-}
-.post-header-meta{
-border: #000000 solid 1px; 
-margin-bottom: 5px;
-}
-.post-header-date{
-float: left; 
-margin: 8px 10px 0 0;
-}
-.post{
-background-color: #ffffff;
-margin-bottom: 10px;
-padding: 10px;
-border-radius: 8px;
-border: 1px Red solid;
-}
-.post h2 a{
-font-size: 24px;
-color: Red;
+.sub-content{
+	width: 600px;
+	margin-left: 50px;
+	padding: 15px;
 }
 /*NAVIGATION*/
 .prev{
@@ -183,7 +157,7 @@ margin: 0;
 padding: 5px 0;
 }
 #form_container .fire{
-background-image: url('//cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/0aaeeaa074b2e8a87a2b7130751fcf02/fireball_80.png');
+background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/0aaeeaa074b2e8a87a2b7130751fcf02/fireball_80.png');
 background-repeat: no-repeat;
 min-height: 80px;
 }

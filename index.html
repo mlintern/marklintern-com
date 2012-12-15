@@ -14,6 +14,7 @@
 <link type="text/css" href="style/style.css" rel="stylesheet">
 
 <script type="text/javascript" src="scripts/popupform.js"></script>
+<script type="text/javascript" src="scripts/show-hide.js"></script>
 
 </head>
 
@@ -26,10 +27,8 @@
         
         <div class="header grid_12">
 			<div class="header-text">Mark Lintern</div>
-		</div> 
-        
-              
-        
+		</div>         
+
         <div id="sidebar" class="sidebar grid_3">
 <a href="/"><img src="images/Home.png"/></a>
 <a href="http://blog.marklintern.com"><img src="images/Blog.png"/></a>
@@ -58,8 +57,6 @@
 		    <div class="clear"></div>
         </div>
         <div class="form_item fire" id="form_item_name">
-			<div id="cb_connect">
-				&nbsp;</div>
 			<label class="drop" for="DataField_Name">Name: </label> <input class="drop" id="DataField_Name" name="DataField[Name]" type="text" value="" /></div>
 		<div class="clear"></div>
         <div class="form_item fire">
@@ -73,6 +70,8 @@
 			<div class="form_item fire">
 				<label class="drop" for="UserFiles_0">Image: </label> <input class="drop" id="UserFiles" name="UserFiles[0]" type="file" /></div>
 		</div>
+		<div class="form_item hide" id="add_another_image_link">
+					<label>&nbsp;</label><a href="#">[+] Add another image</a></div>
 		<div class="clear"></div>
                 <div class="form_item">
 			<button onclick="" type="submit">Share your Story</button></div>
@@ -84,7 +83,20 @@
 
 	</div>        
 	<div id="content" class="content section grid_9">					
-	<a href="tools.html"><img src="images/Netowrk_Tool.png"/></a>
+	<a id="tools" class="show"><img src="images/Netowrk_Tool.png"/></a>
+		<div id="tools-div" class="fog60 hide sub-content">
+			<ul>
+				<li><a href="downloads/resume.pdf">Resume</a></li>
+				<li><a href="downloads/ciscovpn-5.0.02.090.zip">Windows - VPN</a></li>
+				<li><a href="downloads/HandgunChangeOfAddressForm.pdf">Indiana Handgun change of Address</a></li>
+				<li><a href="downloads/vpnclient-winx64-msi-5.0.07.0290-k9.exe">Windows - VPN x64</a></li>
+				<li><a href="downloads/Tough_Mudder_Participant_Waiver.pdf">TM Participant Waiver</a></li>
+				<li><a href="downloads/vpnclient-darwin-4.9.01.0180-universal-k9.dmg">Apple - VPN</a></li>
+				<li><a href="downloads/Cannon_IR2550_PS.dmg">Apple - Cannon IR 2550 Driver</a></li>
+				<li><a href="downloads/compendium.pcf">Compendium - PCF</a></li>
+				<li><a href="downloads/xp_exe_fix.zip">Fix XP Registry EXE Error</a></li>
+			</ul>
+		</div>
 	<div class="clear"></div>   
 	</div>
 		
