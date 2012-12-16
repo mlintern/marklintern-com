@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	$('a#tools').click(function() {
 		if ($('#tools-div').hasClass('show')){
 			$('#tools-div').removeClass('show');
@@ -9,3 +9,13 @@ $(document).ready(function() {
 		}
 	});
 });
+*/
+function showhide (div) {
+		if ($(div).hasClass('show')) {
+			$(div).removeClass('show');
+			$(div).addClass('hide');
+		} else {
+			$(div).removeClass('hide');
+			$(div).addClass('show');
+		}
+	}

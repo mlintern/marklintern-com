@@ -11,10 +11,15 @@
 <link type="text/css" href="style/fonts.css" rel="stylesheet">
 <link type="text/css" href="style/text.css" rel="stylesheet">
 <link type="text/css" href="style/reset.css" rel="stylesheet">
+<link type="text/css" href="style/social-widgets.css" rel="stylesheet">
 <link type="text/css" href="style/style.css" rel="stylesheet">
 
 <script type="text/javascript" src="scripts/popupform.js"></script>
 <script type="text/javascript" src="scripts/show-hide.js"></script>
+<script type="text/javascript" src="scripts/social-widgets.js"></script>
+<script type="text/javascript" src="scripts/easyPaginate.js"></script>
+<script type="text/javascript" src="scripts/twitter-text.js"></script>
+<script type="text/javascript" src="scripts/tiny-scrollbar.js"></script>
 
 </head>
 
@@ -34,13 +39,7 @@
 <a href="http://blog.marklintern.com"><img src="images/Blog.png"/></a>
 <a class="link-to-form" href="#popupform" title="Tell Me About It" ><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
 <a href="http://us.playstation.com/playstation/psn/visit/profiles/Cheeez2008"><img border="0" height="155" src="http://fp.profiles.us.playstation.com/playstation/psn/pid/Cheeez2008.png" width="230" style="margin-bottom: 20px;" class="shadow"/></a>
-
-<div class="widget html shadow">
-    <h3>Follow Me</h3>
-	<a class="twitter-follow-button" data-show-count="false" href="http://twitter.com/mlintern">Follow @mlintern</a> <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-	<a class="twitter-follow-button" data-show-count="false" href="http://twitter.com/compendiumit">Follow @CompendiumIT</a> <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-
-</div>
+<a class="twitter-follow-button" data-show-count="false" href="http://twitter.com/mlintern"><img src="images/Twitter.png"/></a>
 
 <div id="popupform">
 <div class="widget html">
@@ -83,27 +82,59 @@
 
 	</div>        
 	<div id="content" class="content section grid_9">					
-	<a id="tools" class="show"><img src="images/Netowrk_Tool.png"/></a>
+	<a id="tools" onclick="showhide('#tools-div')"><img src="images/Netowrk_Tool.png"/></a>
 		<div id="tools-div" class="fog60 hide sub-content">
 			<ul>
-				<li><a href="downloads/resume.pdf">Resume</a></li>
-				<li><a href="downloads/ciscovpn-5.0.02.090.zip">Windows - VPN</a></li>
-				<li><a href="downloads/HandgunChangeOfAddressForm.pdf">Indiana Handgun change of Address</a></li>
-				<li><a href="downloads/vpnclient-winx64-msi-5.0.07.0290-k9.exe">Windows - VPN x64</a></li>
-				<li><a href="downloads/Tough_Mudder_Participant_Waiver.pdf">TM Participant Waiver</a></li>
-				<li><a href="downloads/vpnclient-darwin-4.9.01.0180-universal-k9.dmg">Apple - VPN</a></li>
+				<li><a href="downloads/ciscovpn-5.0.02.090.zip">Cisco - Win - VPN</a></li>
+				<li><a href="downloads/vpnclient-winx64-msi-5.0.07.0290-k9.exe">Cisco - Win - VPN x64</a></li>
+				<li><a href="downloads/vpnclient-darwin-4.9.01.0180-universal-k9.dmg">Cisco - Apple - VPN</a></li>
 				<li><a href="downloads/Cannon_IR2550_PS.dmg">Apple - Cannon IR 2550 Driver</a></li>
-				<li><a href="downloads/compendium.pcf">Compendium - PCF</a></li>
 				<li><a href="downloads/xp_exe_fix.zip">Fix XP Registry EXE Error</a></li>
 			</ul>
+	</div>
+	<a id="pencil" onclick="showhide('#pencil-div');"><img src="images/Pencil.png"/></a>
+		<div id="pencil-div" class="fog60 hide sub-content">
+			<ul>
+				<li><a href="downloads/resume.pdf">Resume</a></li>
+				<li><a href="downloads/HandgunChangeOfAddressForm.pdf">Indiana Handgun change of Address</a></li>
+				<li><a href="downloads/Tough_Mudder_Participant_Waiver.pdf">Touch Mudder Participant Waiver</a></li>
+				<li><a href="downloads/compendium.pcf">Compendium - VPN</a></li>
+			</ul>
 		</div>
-	<div class="clear"></div>   
-	</div>
-		
-	<div class="footer grid_12"></div>
-		
-				  
-	</div>
+	<a id="social" onclick="showhide('#social-div');"><img src="images/Social.png"/></a>
+		<div id="social-div" class="fog60 hide sub-content">
+			<!-- Social Widget Code Starts here-->			
+			<div id="home-social">
+
+				<!-- Twitter Widget Code Starts here-->
+				<div id="home-twitter" class="grid_3" style="margin-left: 30px;">
+				<div class="home-social-box">
+				<!-- Update URL here-->
+				<h4><a href="https://twitter.com/mlintern">Twitter</a></h4>
+				<div class="twtr-widget" id="home-twitter-feed"></div>
+
+				</div>
+				</div>
+				<!-- Twitter Widget Code Ends here-->
+				<!-- Instagram Widget Code Starts here-->
+				<div id="home-instagram" class="grid_3" style="margin-left: 50px;">
+				<div class="home-social-box">
+				<h4><a href="#">Instagram</a></h4>
+				<ul id="home-instagram-photos"></ul>
+				</div>
+				</div>
+				<!-- Instagram Widget Code Ends here-->
+
+			</div>
+			<div class="clear"></div>   
+		</div>
+<div class="clear"></div>   
+</div>
+
+<div class="footer grid_12"></div>
+
+
+</div>
 </div>
 </div>
 </div>
