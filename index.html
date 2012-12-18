@@ -1,39 +1,143 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<title>Mark's Home Page</title>
-		<link type="text/css" rel="stylesheet" href="design.css"/>
-	</head>
-	<body id="home">
-		<!--The container is the site.  There are 4 main div containers within the main container.-->
-		<div id="container">
-			
-			<div id="header"> 
-				<h1 id="header">Mark</h1>
-			</div>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="host_name" content="http://www.marklintern.com">
+<link rel="icon" type="image/png" href="images/fireball_20x20.png">
 
-			<iframe name="menu" id="menu" src="menu.html" scrolling="no"></iframe>
-			
-			<iframe name="sidebar" id="sidebar" src="sidebar.html" scrolling="no"></iframe>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-			<div id="main">
-				<h2>Shrinking Photo</h2></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="90%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="75%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="62%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="50%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="39%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="29%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="20%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="12%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="8%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="4%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="2%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="1.5%" border="0" text-align="center"></br>
-				<img src="Images/MarkTuxB&W.jpg" alt="Mark" width="1%" border="0" text-align="center">
-			</div>	
-			
-			<iframe name="footer" id="footer" src="footer.html" scrolling="no"></iframe>
+<link type="text/css" href="style/960.css" rel="stylesheet">
+<link type="text/css" href="style/fonts.css" rel="stylesheet">
+<link type="text/css" href="style/text.css" rel="stylesheet">
+<link type="text/css" href="style/reset.css" rel="stylesheet">
+<link type="text/css" href="style/social-widgets.css" rel="stylesheet">
+<link type="text/css" href="style/style.css" rel="stylesheet">
+
+<script type="text/javascript" src="scripts/popupform.js"></script>
+<script type="text/javascript" src="scripts/show-hide.js"></script>
+<script type="text/javascript" src="scripts/social-widgets.js"></script>
+<script type="text/javascript" src="scripts/easyPaginate.js"></script>
+<script type="text/javascript" src="scripts/twitter-text.js"></script>
+<script type="text/javascript" src="scripts/tiny-scrollbar.js"></script>
+
+</head>
+
+<body>
+<div class="background-cardboard">
+<div class="background-top">
+<div class="background-middle">
+<div class="background-bottom">
+    <div class="container_12">
+        
+        <div class="header grid_12">
+			<div class="header-text">Mark Lintern</div>
+		</div>         
+
+        <div id="sidebar" class="sidebar grid_3">
+<a href="/"><img src="images/Home.png"/></a>
+<a href="http://blog.marklintern.com"><img src="images/Blog.png"/></a>
+<a href="http://www.twitter.com/mlintern"><img src="images/Twitter.png"/></a>
+<a class="link-to-form" href="#popupform" title="Tell Me About It" ><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
+<a href="http://us.playstation.com/playstation/psn/visit/profiles/Cheeez2008"><img border="0" height="155" src="http://fp.profiles.us.playstation.com/playstation/psn/pid/Cheeez2008.png" width="230" style="margin-bottom: 20px;" class="shadow"/></a>
+
+
+	</div>        
+	<div id="content" class="content section grid_9">					
+	<a id="tools" onclick="showhide('#tools-div')"><img src="images/Netowrk_Tool.png"/></a>
+		<div id="tools-div" class="fog60 hide sub-content">
+			<ul>
+				<li><a href="downloads/ciscovpn-5.0.02.090.zip">Cisco - Win - VPN</a></li>
+				<li><a href="downloads/vpnclient-winx64-msi-5.0.07.0290-k9.exe">Cisco - Win - VPN x64</a></li>
+				<li><a href="downloads/vpnclient-darwin-4.9.01.0180-universal-k9.dmg">Cisco - Apple - VPN</a></li>
+				<li><a href="downloads/Cannon_IR2550_PS.dmg">Apple - Cannon IR 2550 Driver</a></li>
+				<li><a href="downloads/xp_exe_fix.zip">Fix XP Registry EXE Error</a></li>
+			</ul>
+	</div>
+	<a id="pencil" onclick="showhide('#pencil-div');"><img src="images/Pencil.png"/></a>
+		<div id="pencil-div" class="fog60 hide sub-content">
+			<ul>
+				<li><a href="downloads/resume.pdf">Resume</a></li>
+				<li><a href="downloads/HandgunChangeOfAddressForm.pdf">Indiana Handgun change of Address</a></li>
+				<li><a href="downloads/Tough_Mudder_Participant_Waiver.pdf">Touch Mudder Participant Waiver</a></li>
+				<li><a href="downloads/compendium.pcf">Compendium - VPN</a></li>
+			</ul>
 		</div>
-	</body>
+	<a id="social" onclick="showhide('#social-div');"><img src="images/Social.png"/></a>
+		<div id="social-div" class="fog60 hide sub-content">
+			<!-- Social Widget Code Starts here-->			
+			<div id="home-social">
+
+				<!-- Twitter Widget Code Starts here-->
+				<div id="home-twitter" class="grid_3" style="margin-left: 30px;">
+				<div class="home-social-box">
+				<!-- Update URL here-->
+				<h4><a href="https://twitter.com/mlintern">Twitter</a></h4>
+				<div class="twtr-widget" id="home-twitter-feed"></div>
+
+				</div>
+				</div>
+				<!-- Twitter Widget Code Ends here-->
+				<!-- Instagram Widget Code Starts here-->
+				<div id="home-instagram" class="grid_3" style="margin-left: 50px;">
+				<div class="home-social-box">
+				<h4><a href="#">Instagram</a></h4>
+				<ul id="home-instagram-photos"></ul>
+				</div>
+				</div>
+				<!-- Instagram Widget Code Ends here-->
+
+			</div>
+			<div class="clear"></div>   
+		</div>
+<div class="clear"></div>   
+</div>
+
+<div class="footer grid_12">
+<div id="popupform">
+	<div class="widget html">
+	<div id="form_container">
+		<form action="https://www.compendiumblog.com/app/posts/webtopost" enctype="multipart/form-data" id="cb_web_to_post" method="post">
+			<input name="BlogKey" type="hidden" value="6U0be14zgTQNMhgA4R445NTmfDGQhLCvw0N0KmMUn2IhxeHKupj3rHBoviZWo80UwxNyEi8zI/0oSQVZVITc4Q==" /> <input name="RetUrl" type="hidden" value="http://blog.marklintern.com" />
+			<div class="form_item fire">
+				<label class="drop" for="Title">Title: </label> <input class="drop"  id="Title" name="Title" type="text" value="" /> 
+				<div class="clear"></div>
+			</div>		
+			<div class="form_item fire">
+				<label class="drop" for="Body">Your Story: </label><textarea cols="30" id="Body" name="Body" rows="12"></textarea>
+				<div class="clear"></div>
+			</div>
+			<div class="form_item fire" id="form_item_name">
+				<label class="drop" for="DataField_Name">Name: </label> <input class="drop" id="DataField_Name" name="DataField[Name]" type="text" value="" /></div>
+			<div class="clear"></div>
+			<div class="form_item fire">
+				<label class="drop" for="HiddenField_EmailAddress">E-mail: </label> <input class="drop" id="HiddenField_EmailAddress" name="HiddenField[EmailAddress]" type="text" value="" />
+				<div>
+				<div class="clear"></div>
+				<label>&nbsp;</label><input style="width: 20px;" checked="checked" name="Settings[Notify]" type="checkbox" value="yes" /> Notify me when my story goes live</div>
+			</div>
+			<div class="clear"></div>
+			<div id="image_fields">
+				<div class="form_item fire">
+					<label class="drop" for="UserFiles_0">Image: </label> <input class="drop" id="UserFiles" name="UserFiles[0]" type="file" /></div>
+			</div>
+			<div class="form_item hide" id="add_another_image_link">
+						<label>&nbsp;</label><a href="#">[+] Add another image</a></div>
+			<div class="clear"></div>
+					<div class="form_item">
+				<button onclick="" type="submit">Share your Story</button></div>
+			<script src="http://www.compendiumblog.com/js/w2p.js" type="text/javascript"></script></form>
+		<div id="hiddenlpsubmitdiv" style="display: none; "></div>
+	</div>
+	</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
 </html>

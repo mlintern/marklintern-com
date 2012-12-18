@@ -1,0 +1,191 @@
+.clear{
+clear:both;   
+}
+.fog60{
+	background-image: url('../images/fog_60.png');	
+}
+.show{
+display: block;
+}
+.hide{
+display: none;
+}
+a {
+text-decoration: none;   
+color: #000000;
+}
+a:hover{
+text-decoration: underline; 
+}
+.shadow {
+-moz-box-shadow: 7px 7px 8px #444;
+-webkit-box-shadow: 7px 7px 8px #444;
+box-shadow: 7px 7px 8px #444;
+}
+/*BACKGROUND IMAGES*/
+.background-cardboard{
+background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/f14fd3dc7dfb8feb1f5dc29985e3f717/cardboard_background.jpg');
+background-position: 0% 0%;
+}
+.background-top{
+background-color: transparent;
+background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/1ae777dc62836fe3017bf5d33ec8573c/fireball_pouring.png');
+background-position: 0% 0%;
+background-repeat: no-repeat;
+}
+.background-middle{
+background-color: transparent;
+background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/300fd1075cb2199cb69c5c3b7ad9ceec/fireball_rain.png');
+background-position: 0% 0%;
+background-repeat: both;
+}
+.background-bottom{
+background-color: transparent;
+background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/1ad830d3318ce04d8e2cad85e5b6e3ac/fireball_pile_one_third.png');
+background-position: 0% 100%;
+background-repeat: repeat-x;
+}
+/*HEADER*/
+.header{
+/*background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/b932b37dc6f4bf7bdf01920c6eb2ff84/success_balls.png'); 
+background-repeat: no-repeat;*/
+height: 200px;
+}
+.header-text{
+	font-family: 'Homemade Apple', cursive;
+	font-family: 'Finger Paint', cursive;
+	font-size: 130px;
+	color: #4CF748;
+	text-align: center;
+}
+/*MENU*/
+.menu{
+padding: 5px;   
+}
+.menu ul li{
+list-style: none outside none;
+display: inline;
+padding: 5px auto;
+}
+.menu ul li a{
+font-size: 20px;
+padding: 5px 30px;
+margin: 20px;
+background-color: #ffffff;
+}
+/*CONTENT*/
+.sub-content{
+	width: 600px;
+	margin-left: 50px;
+	padding: 15px;
+}
+/*NAVIGATION*/
+.prev{
+float: left;   
+}
+.next{
+float: right;
+}
+.navigation a{
+color: black;
+font-size: 18px;
+}
+/*SIDEBAR*/
+.sidebar{
+margin-top: 10px;   
+}
+.sidebar .widget{
+background-color: #ffffff;
+border-radius: 8px;
+width: 100%;
+padding: 5px;
+margin-bottom: 20px;
+}
+.sidebar h3 {
+font-size: 22px;
+border-bottom: 3px solid #000000;
+margin-bottom: 10px;
+}
+/* POP UP FORM */
+#popupform {
+display:none;
+background: Red;
+padding: 5px; 	
+border: 2px solid #000000;
+float: left;
+font-size: 1.2em;
+position: fixed;
+top: 50%; left: 50%;
+z-index: 99999;
+box-shadow: 0px 0px 20px #999; /* CSS3 */
+border-radius:3px 3px 3px 3px;
+text-align: center;
+}
+#popupform .widget.html { 
+background: #ffffff;
+margin: 0px;
+padding: 0px;
+border-radius: 0;
+}
+#mask {
+display: none;
+background: #ffffff; 
+position: fixed; left: 0; top: 0; 
+z-index: 10;
+width: 100%; height: 100%;
+opacity: 0.8;
+z-index: 999;
+}
+/*More Pop Up Form CSS*/
+#form_container {
+width: 345px;
+padding: 5px;
+background-color: #ffffff;
+text-align: left;
+font-size: 15px;
+}
+#form_container label {
+float:left;
+width: 85px;
+text-align: center;
+color: yellow;
+}
+#form_container .drop{
+margin-top: 20px;
+}
+#form_container .form_item{
+margin: 0;
+padding: 5px 0;
+}
+#form_container .fire{
+background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/0aaeeaa074b2e8a87a2b7130751fcf02/fireball_80.png');
+background-repeat: no-repeat;
+min-height: 80px;
+}
+#form_container a{
+color: #3C3D3C;
+}
+#form_container .form_item input{
+border: solid 1px #69584d;
+background: #fffcf6;
+float:left;
+width: 200px;
+}
+#form_container .form_item textarea{
+border: solid 1px #69584d;
+background: #fffcf6;
+float: left;
+}
+#form_container .form_item button {
+margin-left:100px;
+margin-top: 10px;
+height:auto;
+font-size: 13px;
+}
+#cb_connect {
+float: right;
+}
+/*FOOTER*/
+.footer{
+height: 150px;
+}

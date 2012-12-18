@@ -1,0 +1,197 @@
+A/* HOME SOCIAL */
+#home-social {
+margin-top:15px;
+}
+#home-social, #home-social p, #home-social ul {
+font-size: 13px;
+}
+.grid_3 {
+width: 240px;
+display: inline;
+float: left;
+position: relative;
+margin-left: 10px;
+margin-right: 10px;
+}
+#home-social .home-social-box {
+background-image: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/b2b61fcddfc9939d9413bd85b093723f/tcm_social_bg_2.png");
+background-color: #FFFFFF;
+background-position: center top;
+background-repeat: repeat-x;
+border-bottom: 1px solid #B6D9FF;
+border-left: 1px solid #B6D9FF;
+border-radius: 14px 14px 14px 14px;
+border-right: 1px solid #B6D9FF;
+float:left;
+margin-top: 20px;
+min-height: 100px;
+padding: 9px 19px 19px;
+position: relative;
+width:200px;
+}
+#home-social #home-twitter .home-social-box {
+margin-left:3px;
+}
+#home-social ol.pagination-controls {
+left: 35px;
+position: absolute;
+top: 53px;
+}
+#home-social, #home-social p, #home-social ul {
+font-size: 13px;
+}
+#home-social p, .facebook-title {
+word-wrap: break-word;
+}
+#home-social a {
+color: #004097;
+font-weight: normal;
+text-decoration: underline;
+}
+#home-social h4 {
+background-position: left top;
+background-repeat: no-repeat;
+display: block;
+height: 24px;
+padding-bottom: 51px;
+padding-left: 44px;
+padding-top: 2px;
+text-decoration: none;
+margin-top: 0px;
+}
+#home-social h4 a {
+color: white;
+font-family: 'Didact Gothic',sans-serif;
+font-size: 18px;
+font-weight: 100;
+text-decoration: none;
+}
+#home-social h4 a:hover {
+color: white;
+text-decoration: none;
+font-weight:600;
+}
+#home-social ul, #home-social li {
+list-style: none outside none;
+margin: 0;
+padding: 0;
+}
+#home-social #home-twitter h4 {
+padding-left: 43px;
+}
+#home-twitter h4 {
+background-image: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/0d82a84012dc315b27c95fd313f48d38/twitter.png");
+}
+#home-facebook h4 {
+background-image: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/05e4431aeec1e615602d39827f330a66/facebook.png");
+}
+#home-flickr h4 {
+background-image: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/72e6ff80b49ed30be6ded08f5cdd0f5f/flickr_icon_30.png");
+}
+#home-googleplus h4 {
+background-image: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/3edfb8b630860e417fbae7844afa7f54/googleplus.png");
+}
+#home-instagram h4 {
+background-image: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/67b5ec646eb4a9d94b28902a5aa5f612/instagram.png");
+}
+#home-twitter-feed {
+clear: both !important;
+}
+#home-twitter-feed.twtr-widget {
+font-family: inherit !important;
+}
+#home-twitter-feed.twtr-widget .twtr-doc {
+background-color: transparent !important;
+width: 180px !important;
+}
+.twtr-hd {
+display: none !important;
+}
+.twtr-ft {
+display: none;
+}
+.twtr-bd {
+padding: 0 !important;
+}
+#home-twitter-feed.twtr-widget .twtr-timeline {
+background-color: transparent !important;
+position: inherit !important;
+}
+.twtr-tweet {
+border: medium none !important;
+color: #5E6A71 !important;
+font-size: 13px !important;
+margin: 0 0 10px !important;
+padding: 0 !important;
+}
+#home-twitter-feed .twtr-tweet a {
+text-decoration: underline !important;
+}
+#home-twitter-feed .twtr-tweet em {
+display: block !important;
+margin-top: 4px !important;
+}
+#home-twitter-feed .twtr-tweet em a {
+color: #5E6A71 !important;
+}
+.twtr-tweet-wrap {
+padding: 0 !important;
+}
+.twtr-user {
+display: none;
+}
+.facebook-meta {
+font-size: 10px;
+margin-top: 4px;
+}
+#home-social .facebook-meta a {
+color: #004097;
+}
+#home-social .googleplus-title {
+display: block;
+font-weight: bold;
+margin-bottom: 4px;
+}
+.social-image {
+border: 1px solid #D6D6D6;
+border-radius: 5px 5px 5px 5px;
+display: block;
+height: 178px;
+margin-bottom: 6px;
+width: 178px;
+}
+.noSelect {
+-moz-user-select: none;
+}
+ol.pagination-controls li {
+background: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/cbfa8f16fe141f1ecd39371a0aab206c/light_dot.png") no-repeat scroll 0 0 transparent;
+cursor: pointer;
+display: inline-block;
+height: 12px;
+list-style: none outside none;
+margin: 0 1px !important;
+text-align: left;
+text-indent: -8000px;
+width: 13px;
+}
+ol.pagination-controls li:hover {
+background: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/76d51b9e9f18794a79159902a35e6aaa/hover_dot.png") no-repeat scroll 0 0 transparent;
+}
+ol.pagination-controls li.current {
+background: url("http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/accf0d87-0d14-4aa7-bbf3-193b90c8d68c/Image/ee5e37656b6fa092894e045eb3367638/blue_dot.png") no-repeat scroll 0 0 transparent;
+}
+.facebook-message {
+border-bottom: none !important;
+color: #333 !important;
+padding: 10px 8px;
+}
+#home-social p, .facebook-title {
+font-family: 'Didact Gothic', sans-serif !important;
+font-size: 13px !important;
+}
+.flickr-image{
+background-size:180px 180px;
+}
+.instagram-image{
+background-size:180px 180px;
+}
