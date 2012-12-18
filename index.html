@@ -56,6 +56,61 @@
 	</div>
 	<a id="keyboard" onclick="showhide('#keyboard-div');"><img src="images/Keyboard.png"/></a>
 		<div id="keyboard-div" class="fog60 hide sub-content">
+			<div style="width: 550px;margin-left: 25px;">
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("input[name='q9'][value='No']").click(function() {
+					$("input[name='q9'][value='Yes']").prop('checked', true);
+					$("input[name='q9'][value='No']").prop('checked', false);
+				});
+				$("input[name='q12'][value='Yes']").click(function() {
+					$("input[name='q12'][value='Yes']").prop('checked', false);
+					$("input[name='q12'][value='No']").prop('checked', true);
+				});
+				$("input[name='q14'][value='No']").click(function() {
+					$("input[name='q14'][value='Yes']").prop('checked', true);
+					$("input[name='q14'][value='No']").prop('checked', false);
+				});
+			});
+			</script>
+			<h1>Computer Problem Report Form</h1>
+			<p><i>Complete all answers before submitting, incomplete forms will be ignored</i></p>
+			<form action="#" method="POST">
+			<input type=hidden name="recipient" value="lintern.mark#gmail.com">
+			<input type="hidden" name="subject" value="Computer Problem Report Form">
+			<input type=hidden name="env_report" value="REMOTE_ADDR,HTTP_USER_AGENT">
+			<input type="hidden" name="Source" value="Computer Problem Report Form">
+			<input type="hidden" name="redirect" value="http://www.marklintern.com">
+			<input type="hidden" name="required" value="q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21">
+			<ol>
+			<li> <p>Describe your problem:<br /> <textarea rows="3" cols="60" name="q1"></textarea></p></li>
+			<li> <p>Now, describe the problem with deatils:<br /> <textarea rows="3" cols="60" name="q2"></textarea></p></li>
+			<li> <p>Speculate wildly about the cause of the problem:<br /> <textarea rows="3" cols="60" name="q3"></textarea></p></li>
+			<li> <p>Select the problem severity: <select name="q4" size="1"><option>Minor</option><option>Minor</option><option>Minor</option><option>Trivial</option></select></p></li>
+			<li> <p>Select the nature of the problem: <select name="q5" size="1"><option>Locked Up</option><option>Frozen</option><option>Hung</option><option>Shot</option></select></p></li>
+			<li> <p>Is your computer plugged in? <input name="q6" type="radio" value="Yes"> Yes </input> <input name="q6" type="radio" value="No"> No </input></p></li>
+			<li> <p>Is it turned on? <input name="q7" type="radio" value="Yes"> Yes </input> <input name="q7" type="radio" value="No"> No </input></p></li>
+			<li> <p>Have you tried to fix it yourself? <input name="q8" type="radio" value="Yes"> Yes </input> <input name="q8" type="radio" value="No"> No </input></p></li>
+			<li> <p>Have you made it worse? <input name="q9" type="radio" value="Yes"> Yes </input>  <input id="q9" name="q9" type="radio" value="No"> No </input></p></li>
+			<li> <p>What were you doing with your computer at the time the problem occurred? <br /> <textarea rows="3" cols="60" name="q10"></textarea></p></li>
+			<li> <p>If &quot;nothing&quot; explain why you were logged in. <br /> <textarea rows="3" cols="60" name="q11"></textarea></p></li>
+			<li> <p>Are you sure that you aren't imagining the problem? <input name="q12" type="radio" value="Yes"> Yes </input> <input name="q12" type="radio" value="No"> No </input></p></li>
+			<li> <p>Do you have any independent witnesses of the problem? <input name="q13" type="radio" value="Yes"> Yes </input> <input name="q13" type="radio" value="No"> No </input></p></li>
+			<li> <p>Can't you do something else, instead of bothering me? <input name="q14" type="radio" value="Yes"> Yes </input> <input name="q14" type="radio" value="No"> No </input></p></li>
+			<li> <p>Did you install any sketchy software on your computer recently? <input name="q15" type="radio" value="Yes"> Yes </input> <input name="q15" type="radio" value="No"> No </input></p></li>
+			<li> <p>Are you sure you haven't installed any sketchy software on your computer recently? <input name="q16" type="radio" value="Yes"> Yes </input> <input name="q16" type="radio" value="No"> No </input></p></li>
+			<li> <p>Did any sketchy software magically appear on your computer recently that you don't have a clue where it came from? <input name="q17" type="radio" value="Yes"> Yes </input> <input name="q17" type="radio" value="No"> No </input></p></li>
+			<li> <p>Did a co-worker force you to install some sketchy software on your computer recently? <input name="q18" type="radio" value="Yes"> Yes </input> <input name="q18" type="radio" value="No"> No </input></p></li>
+			<li> <p>Are you interested in our sketchy software installation witness protection program? <input name="q19" type="radio" value="Yes"> Yes </input> <input name="q19" type="radio" value="No"> No </input></p></li>
+			<li> <p>Are you sure you don't want to just move to another computer? <input name="q20" type="radio" value="Yes"> Yes </input> <input name="q20" type="radio" value="No"> No </input></p></li>
+			<li> <p>Is the problem life threatening? <input name="q21" type="radio" value="Yes"> Yes </input> <input name="q21" type="radio" value="No"> No </input></p></li>
+			</ol>
+			<p>
+			<input TYPE="SUBMIT" VALUE=" Send in Report">
+			<input TYPE="RESET" VALUE=" Forget it, I'll change computers ">
+			</p>
+			</form>
+			</div>
 		</div>
 	<a id="pencil" onclick="showhide('#pencil-div');"><img src="images/Pencil.png"/></a>
 		<div id="pencil-div" class="fog60 hide sub-content">
