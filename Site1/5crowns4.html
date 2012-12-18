@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Five Crowns Score Card</title>
+		<link type="text/css" rel="stylesheet" href="design.css"/>
+		<script>
+			var array1=['31','41','51','61','71','81','91','101','j1','q1','k1'];
+			var array2=['32','42','52','62','72','82','92','102','j2','q2','k2'];
+			var array3=['33','43','53','63','73','83','93','103','j3','q3','k3'];
+			var array4=['34','44','54','64','74','84','94','104','j4','q4','k4'];
+			var arrayt=['t1','t2','t3','t4','t5','t6','t7'];
+		
+		function calculate_score(){
+			add_column(array1,1);
+			add_column(array2,2);
+			add_column(array3,3);
+			add_column(array4,4);
+		};
+
+		function add_column(col_array,col_id) {
+			var x = 0;
+			var y = col_array.length-1;
+			for (i=0;i<=y;i++)
+				{
+				 x = x + (document.getElementById(col_array[i]).value -0);
+				}
+			document.getElementById(arrayt[col_id-1]).value = x;
+		};
+
+		function reset_column(col_array) {
+			var x = 0;
+			var y = col_array.length-1;
+			for (i=0;i<=y;i++)
+				{
+				document.getElementById(col_array[i]).value = 0;
+				}
+		};
+
+		function reset_score(){
+			var ans=confirm("Are You Sure you want to Reset?!");
+			if (ans==true)
+	 			{
+				reset_column(array1);
+				reset_column(array2);
+				reset_column(array3);
+				reset_column(array4);
+				reset_column(arrayt);
+			  	}
+			  else
+				{
+				}
+		};
+		
+		</script>
+	</head>
+	<body id="home">
+		<!--The container is the site.  There are 4 main div containers within the main container.-->
+		<div id="container">
+			
+			<div id="header"> 
+				<h1 id="header">Five Crowns Score Card</h1>
+			</div>
+
+			<iframe name="menu" id="menu" src="menu.html" scrolling="no"></iframe>
+			
+			<div >
+				<h2>5 Crowns</h2></br>
+				<div class="player-count">
+					<ul>
+						<li><a href="5crowns4.html">4 Players</a></li>
+						<li><a href="5crowns5.html">5 Players</a></li>
+						<li><a href="5crowns6.html">6 Players</a></li>
+						<li><a href="5crowns7.html">7 Players</a></li>
+					</ul>
+																																			                </div>
+				<form id="p4">
+				<table id="5crowns" border="1">
+				<tr>
+				<th>Hand</th>
+				<th><input type="text" name="name1" placeholder="Player 1"</th>
+				<th><input type="text" name="name2" placeholder="Player 2"</th>
+				<th><input type="text" name="name3" placeholder="Player 3"</th>
+				<th><input type="text" name="name4" placeholder="Player 4"</th>
+				</tr>
+				<tr>
+				<td>3</td>
+				<td><input id="31" type="input" name="num" value="0"</td>
+				<td><input id="32" type="input" name="num" value="0"</td>
+				<td><input id="33" type="input" name="num" value="0"</td>
+				<td><input id="34" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>4</td>
+				<td><input id="41" type="input" name="num" value="0"</td>
+				<td><input id="42" type="input" name="num" value="0"</td>
+				<td><input id="43" type="input" name="num" value="0"</td>
+				<td><input id="44" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>5</td>
+				<td><input id="51" type="input" name="num" value="0"</td>
+				<td><input id="52" type="input" name="num" value="0"</td>
+				<td><input id="53" type="input" name="num" value="0"</td>
+				<td><input id="54" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>6</td>
+				<td><input id="61" type="input" name="num" value="0"</td>
+				<td><input id="62" type="input" name="num" value="0"</td>
+				<td><input id="63" type="input" name="num" value="0"</td>
+				<td><input id="64" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>7</td>
+				<td><input id="71" type="input" name="num" value="0"</td>
+				<td><input id="72" type="input" name="num" value="0"</td>
+				<td><input id="73" type="input" name="num" value="0"</td>
+				<td><input id="74" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>8</td>
+				<td><input id="81" type="input" name="num" value="0"</td>
+				<td><input id="82" type="input" name="num" value="0"</td>
+				<td><input id="83" type="input" name="num" value="0"</td>
+				<td><input id="84" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>9</td>
+				<td><input id="91" type="input" name="num" value="0"</td>
+				<td><input id="92" type="input" name="num" value="0"</td>
+				<td><input id="93" type="input" name="num" value="0"</td>
+				<td><input id="94" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>10</td>
+				<td><input id="101" type="input" name="num" value="0"</td>
+				<td><input id="102" type="input" name="num" value="0"</td>
+				<td><input id="103" type="input" name="num" value="0"</td>
+				<td><input id="104" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>j</td>
+				<td><input id="j1" type="input" name="num" value="0"</td>
+				<td><input id="j2" type="input" name="num" value="0"</td>
+				<td><input id="j3" type="input" name="num" value="0"</td>
+				<td><input id="j4" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>q</td>
+				<td><input id="q1" type="input" name="num" value="0"</td>
+				<td><input id="q2" type="input" name="num" value="0"</td>
+				<td><input id="q3" type="input" name="num" value="0"</td>
+				<td><input id="q4" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>k</td>
+				<td><input id="k1" type="input" name="num" value="0"</td>
+				<td><input id="k2" type="input" name="num" value="0"</td>
+				<td><input id="k3" type="input" name="num" value="0"</td>
+				<td><input id="k4" type="input" name="num" value="0"</td>
+				</tr>
+				<tr>
+				<td>Total</td>
+				<td><input id="t1" type="text" name="num" value="0" readonly</td>
+				<td><input id="t2" type="text" name="num" value="0" readonly</td>
+				<td><input id="t3" type="text" name="num" value="0" readonly</td>
+				<td><input id="t4" type="text" name="num" value="0" readonly</td>
+				</tr>
+				</table>
+				</form>
+				<br sytle="clear:both;"/>
+				<button id="calculate" value="Calculate" onclick="calculate_score();" style="float:left;">Calculate</button>
+				<button id="reset" value="Reset Scores" onclick="reset_score();" style="float:right;">Reset</button>
+				</br></br>
+			</div>	
+			
+			<iframe name="footer" id="footer" src="footer.html" scrolling="no"></iframe>
+		</div>
+	</body>
+</html>
