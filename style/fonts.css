@@ -2,11 +2,11 @@
 	font-family: 'Homemade Apple';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Homemade Apple'), local('HomemadeApple'), url(http://themes.googleusercontent.com/static/fonts/homemadeapple/v3/yg3UMEsefgZ8IHz_ryz86MFNxRyFoYQQR-5vMyIGaCo.woff) format('woff');
-}
+	src: local('Homemade Apple'), local('HomemadeApple'), url(homemade-apple.woff) format('woff');
+}	
 @font-face {
 	font-family: 'Finger Paint';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Finger Paint'), local('FingerPaint-Regular'), url(http://themes.googleusercontent.com/static/fonts/fingerpaint/v1/m_ZRbiY-aPb13R3DWPBGX6RDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+	src: local('Finger Paint'), local('FingerPaint-Regular'), url(finger-paint.woff) format('woff');
 }
