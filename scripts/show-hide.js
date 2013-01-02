@@ -23,10 +23,10 @@ function showhide (div) {
 $(document).ready(function() {
 	$('a#twitter-link').hover(
 	function() {
-		$('.sidebar .twtr-widget').show();
+		$('#twitter-box').show();
 	},
 	function() {
-		$('.sidebar .twtr-widget').hide();
+		$('#twitter-box').hide();
 	}
 	);
 });

@@ -106,12 +106,12 @@ font-size: 22px;
 border-bottom: 3px solid #000000;
 margin-bottom: 10px;
 }
-.sidebar .twtr-widget{
+/*TWITTER BOX*/
+#twitter-box{
 display: none;
 position: absolute;
-left: 230px;
-top: 380px;
-width: 300px;
+top: 600px;
+left: 30%
 }
 /* POP UP FORM */
 #popupform {
