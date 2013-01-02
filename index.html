@@ -36,8 +36,42 @@
 
         <div id="sidebar" class="sidebar grid_3">
 			<a href="/"><img src="images/Home.png"/></a>
-			<a target="_blank" href="http://blog.marklintern.com"><img src="images/Blog.png"/></a>
-			<a target="_blank" href="http://www.twitter.com/mlintern"><img src="images/Twitter.png"/></a>
+			<a target="_blank" href="http://blog.marklintern.com"><img src="images/Blog.png"/></a> 
+			<a id="twitter-link" target="_blank" href="http://www.twitter.com/mlintern"><img src="images/Twitter.png"/></a>
+				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'profile',
+				  rpp: 10,
+				  interval: 30000,
+				  width: 'auto',
+				  height: 'auto',
+				  theme: {
+					shell: {
+					  background: '#ffffff',
+					  color: '#666666'
+					},
+					tweets: {
+					  background: '#ffffff',
+					  color: '#666666',
+					  links: '#74A2B1'
+					}
+				  },
+				  features: {
+					scrollbar: false,
+					loop: false,
+					live: false,
+					behavior: 'all'
+				  }
+				}).render().setUser('mlintern').start();
+				</script>
+				<style type="text/css">
+				.twtr-profile-img {display:none !important;}
+				.twtr-widget-profile h3, .twtr-widget-profile h4 {margin: 0 !important;}
+				.twtr-ft div {display: none;}
+				.twtr-hd {display: none;}
+				</style>
 			<a class="link-to-form" href="#popupform" title="Tell Me About It" ><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
 			<a target="_blank" href="http://us.playstation.com/playstation/psn/visit/profiles/Cheeez2008"><img border="0" height="155" src="http://fp.profiles.us.playstation.com/playstation/psn/pid/Cheeez2008.png" width="230" style="margin-bottom: 20px;" class="shadow"/></a>
 		</div>        
