@@ -110,8 +110,11 @@ margin-bottom: 10px;
 #twitter-box{
 display: none;
 position: absolute;
-top: 600px;
+top: 650px;
 left: 30%
+}
+.twtr-tweets{
+padding: 10px;
 }
 /* POP UP FORM */
 #popupform {
