@@ -62,37 +62,41 @@ $(document).ready(function() {
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
-	)};
+	});
 	
 	$('#player_4').click(function() {
 		console.log('4');
 		$('.player3').show();
+		$('.player4').show();
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
-	)};
+	});
 	
 	$('#player_5').click(function() {
 		console.log('5');
 		$('.player4').show();
 		$('.player3').show();
+		$('.player5').show();
 		$('.player6').hide();
 		$('.player7').hide();
-	)};
+	});
 	
 	$('#player_6').click(function() {
 		console.log('6');
 		$('.player4').show();
 		$('.player5').show();
+		$('.player6').show();
 		$('.player3').show();
 		$('.player7').hide();
-	)};
+	});
 	
 	$('#player_7').click(function() {
 		console.log('7');
 		$('.player4').show();
 		$('.player5').show();
 		$('.player6').show();
+		$('.player7').show();
 		$('.player3').show();
-	)};
-)};
+	});
+});
