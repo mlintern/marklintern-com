@@ -121,7 +121,7 @@ padding: 10px;
 /* SCORE SHEET FORM */
 #score-sheet {
 display:none;
-background: Red;
+background: purple;
 padding: 5px; 	
 border: 2px solid #000000;
 float: left;
