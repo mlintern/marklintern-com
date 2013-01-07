@@ -54,9 +54,9 @@ function reset_score(){
 		}
 };
 
-$(document).ready(function(){
-	$('#player_3').click(function(){
-		window.alert();
+$(document).ready(function() {
+
+	$('#player_3').click(function() {
 		console.log('3');
 		$('.player4').hide();
 		$('.player5').hide();
@@ -64,28 +64,32 @@ $(document).ready(function(){
 		$('.player7').hide();
 	)};
 	
-	$('#player_4').click(function(){
+	$('#player_4').click(function() {
+		console.log('4');
 		$('.player3').show();
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
 	)};
 	
-	$('#player_5').click(function(){
+	$('#player_5').click(function() {
+		console.log('5');
 		$('.player4').show();
 		$('.player3').show();
 		$('.player6').hide();
 		$('.player7').hide();
 	)};
 	
-	$('#player_6').click(function(){
+	$('#player_6').click(function() {
+		console.log('6');
 		$('.player4').show();
 		$('.player5').show();
 		$('.player3').show();
 		$('.player7').hide();
 	)};
 	
-	$('#player_7').click(function(){
+	$('#player_7').click(function() {
+		console.log('7');
 		$('.player4').show();
 		$('.player5').show();
 		$('.player6').show();
