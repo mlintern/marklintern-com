@@ -2,16 +2,16 @@ $(document).ready(function() {
 	$('a.link-to-form').click(function() {
 
 		//Getting the variable's value from a link 
-		var loginBox = $(this).attr('href');
+		var popupBox = $(this).attr('href');
 
 		//Fade in the Popup
-		$(loginBox).fadeIn(300);
+		$(popupBox).fadeIn(300);
 
 		//Set the center alignment padding + border see css style
-		var popMargTop = ($(loginBox).height() + 24) / 2; 
-		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		var popMargTop = ($(popupBox).height() + 24) / 2; 
+		var popMargLeft = ($(popupBox).width() + 24) / 2; 
 
-		$(loginBox).css({ 
+		$(popupBox).css({ 
 			'margin-top' : -popMargTop,
 			'margin-left' : -popMargLeft
 		});
@@ -24,7 +24,7 @@ $(document).ready(function() {
 	});
 
 	// When clicking on the button close or the mask layer the popup closed
-	$('a.close, #mask').live('click', function() { 
+	$('#mask').live('click', function() { 
 		$('#mask , #popupform , #score-sheet').fadeOut(300 , function() {
 			$('#mask').remove();  
 		}); 

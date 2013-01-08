@@ -54,6 +54,25 @@ function reset_score(){
 		}
 };
 
+function fixsizing(divname) {
+
+		//Getting the variable's value from a link 
+		var popupBox = divname;
+
+		//Fade in the Popup
+		$(popupBox).fadeIn(300);
+
+		//Set the center alignment padding + border see css style
+		var popMargTop = ($(popupBox).height() + 24) / 2; 
+		var popMargLeft = ($(popupBox).width() + 24) / 2; 
+
+		$(popupBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		return false;
+	};
+
 $(document).ready(function() {
 
 	$('#player_3').click(function() {
@@ -62,6 +81,7 @@ $(document).ready(function() {
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
+		fixsizing('#score-sheet')
 	});
 	
 	$('#player_4').click(function() {
@@ -71,6 +91,7 @@ $(document).ready(function() {
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
+		fixsizing('#score-sheet')
 	});
 	
 	$('#player_5').click(function() {
@@ -80,6 +101,7 @@ $(document).ready(function() {
 		$('.player5').show();
 		$('.player6').hide();
 		$('.player7').hide();
+		fixsizing('#score-sheet')
 	});
 	
 	$('#player_6').click(function() {
@@ -89,6 +111,7 @@ $(document).ready(function() {
 		$('.player6').show();
 		$('.player3').show();
 		$('.player7').hide();
+		fixsizing('#score-sheet')
 	});
 	
 	$('#player_7').click(function() {
@@ -98,5 +121,6 @@ $(document).ready(function() {
 		$('.player6').show();
 		$('.player7').show();
 		$('.player3').show();
+		fixsizing('#score-sheet')
 	});
 });
