@@ -82,6 +82,12 @@ background-color: #ffffff;
 #tm-div {
 	text-align: center;
 }
+#tm-div img{
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	float: left;
+}
 /*SIDEBAR*/
 .sidebar{
 margin-top: 10px;   
