@@ -79,16 +79,8 @@ background-color: #ffffff;
 	margin: 0 33px;
 	padding: 15px;
 }
-/*NAVIGATION*/
-.prev{
-float: left;   
-}
-.next{
-float: right;
-}
-.navigation a{
-color: black;
-font-size: 18px;
+#tm-div {
+	text-align: center;
 }
 /*SIDEBAR*/
 .sidebar{
