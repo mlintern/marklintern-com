@@ -2,7 +2,7 @@
 clear:both;   
 }
 .fog60{
-	background-image: url('../images/fog_60.png');	
+background-image: url('../images/fog_60.png');	
 }
 .show{
 display: block;
@@ -52,11 +52,11 @@ background-repeat: no-repeat;*/
 height: 200px;
 }
 .header-text{
-	font-family: 'Homemade Apple', cursive;
-	font-family: 'Finger Paint', cursive;
-	font-size: 130px;
-	color: #4CF748;
-	text-align: center;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Finger Paint', cursive;
+font-size: 130px;
+color: #4CF748;
+text-align: center;
 }
 /*MENU*/
 .menu{
@@ -75,18 +75,20 @@ background-color: #ffffff;
 }
 /*CONTENT*/
 .sub-content{
-	width: 600px;
-	margin: 0 33px;
-	padding: 15px;
-}
-#tm-div {
-	text-align: center;
+width: 600px;
+margin: 0 33px;
+padding: 15px;
 }
 #tm-div img{
-	height: 100px;
-	width: 100px;
-	margin: 10px;
-	float: left;
+margin: 10px;
+float: left;
+}
+#pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7, #pic8, #pic9, #pic10, #pic11, #pic12, #pic13{
+display:none;
+position: fixed;
+top: 50%; left: 50%;
+z-index: 99999;
+border: 5px black solid;
 }
 /*SIDEBAR*/
 .sidebar{
