@@ -167,3 +167,54 @@ $(document).ready(function() {
 		$("#awayscore").val(0);
 	});
 });
+
+//Eucher Scoreboard
+$(document).ready(function() {
+	$(".eucherhomeminusbtn").live("click", function() {
+		console.log("EucherHomeMinus");
+		var currentscore = parseInt($("#eucherhomescore").val());
+		var currentpos = $("#eucherteam1").width();
+		if (currentpos == 0){
+		}else{
+			$("#eucherteam1").width(currentpos - 40);
+			$("#eucherhomescore").val(currentscore - 1);
+		}
+	});
+	$(".eucherhomeplusbtn").live("click", function() {
+		console.log("EucherHomePlus");
+		var currentscore = parseInt($("#eucherhomescore").val());
+		var currentpos = $("#eucherteam1").width();
+		if (currentpos == 400){
+		}else{
+			$("#eucherteam1").width(currentpos + 40);
+			$("#eucherhomescore").val(currentscore + 1);
+		}
+	});
+	$(".eucherawayminusbtn").live("click", function() {
+		console.log("EucherAwayMinus");
+		var currentscore = parseInt($("#eucherawayscore").val());
+		var currentpos = $("#eucherteam2").width();
+		if (currentpos == 0){
+		}else{
+			$("#eucherteam2").width(currentpos - 40);
+			$("#eucherawayscore").val(currentscore - 1);
+		}
+	});
+	$(".eucherawayplusbtn").live("click", function() {
+		console.log("EucherHomePlus");
+		var currentscore = parseInt($("#eucherawayscore").val());
+		var currentpos = $("#eucherteam2").width();
+		if (currentpos == 400){
+		}else{
+			$("#eucherteam2").width(currentpos + 40);
+			$("#eucherawayscore").val(currentscore + 1);
+		}
+	});
+	$("#eucherresetscore").live("click", function() {
+		console.log("EucherReset");
+		$("#eucherteam1").width(0);
+		$("#eucherhomescore").val(0);
+		$("#eucherteam2").width(0);
+		$("#eucherawayscore").val(0);
+	});
+});

@@ -12,6 +12,7 @@
 <link type="text/css" href="style/text.css" rel="stylesheet">
 <link type="text/css" href="style/reset.css" rel="stylesheet">
 <link type="text/css" href="style/social-widgets.css" rel="stylesheet">
+<link type="text/css" href="style/progressbar.css" rel="stylesheet">
 <link type="text/css" href="style/style.css" rel="stylesheet">
 
 <script type="text/javascript" src="scripts/popupform.js"></script>
@@ -21,7 +22,18 @@
 <script type="text/javascript" src="scripts/twitter-text.js"></script>
 <script type="text/javascript" src="scripts/tiny-scrollbar.js"></script>
 <script type="text/javascript" src="scripts/scoring.js"></script>
-
+<script>	
+$(function() {
+		$(".meter > span").each(function() {
+			$(this)
+				.data("origWidth", $(this).width())
+				.width(0)
+				.animate({
+					width: $(this).data("origWidth")
+				}, 1200);
+		});
+	});
+</script>
 </head>
 
 <body>
@@ -75,8 +87,9 @@
 			</a>
 			<a class="link-to-form" href="#popupform" title="Tell Me About It" ><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
 			<a class="link-to-form" href="#score-sheet" title="5 Crowns Score Sheet" ><img alt="5 Crowns Score Sheet" src="images/Crown.png"></a>
+			<a class="link-to-form" href="#scoreboard" title="Scoreboard"><img alt="ScoreBoard" src="images/Scoreboard.png"></a>
 			</br></br>
-			<a class="link-to-form" href="#scoreboard" title="Scoreboard"><img alt="ScoreBoard" src="images/Suites.png"></a>
+			<a class="link-to-form" href="#score-eucher" title="Scoreboard"><img alt="Score Eucher" src="images/Suites.png"></a>
 			</br></br></br>
 			<a target="_blank" href="http://us.playstation.com/playstation/psn/visit/profiles/Cheeez2008"><img border="0" height="155" src="http://fp.profiles.us.playstation.com/playstation/psn/pid/Cheeez2008.png" width="230" style="margin-bottom: 20px;" class="shadow"/></a>
 		</div>        
@@ -424,6 +437,34 @@
 				</div>
 				<div class="clear"></div>
 				<button id="resetscore" value="resetscore" style="float:left;">Reset</button>
+			</div><!-- scoreboard -->
+			<div id="score-eucher">
+				<div class="eucher-team-score">
+					<input class="eucherteamname" type="text" name="homename" placeholder="Good Guys" style="text-align:center;">
+					<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
+					<div class="clear"></div>
+					<div class="meter animate red">
+						<span id="eucherteam1" style="width:0px"><span></span></span>
+					</div>
+					<div class="clear"></div>
+					<button id="eucherplushome" class="eucherhomeplusbtn" value="+">+</button>
+					<button id="eucherminushome" class="eucherhomeminusbtn" value="-">-</button>
+					<div class="clear"></div>
+				</div>
+				<div class="eucher-team-score">
+					<input class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys" style="text-align:center;">
+					<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
+					<div class="clear"></div>
+					<div class="meter animate purple">
+						<span id="eucherteam2" style="width:0px"><span></span></span>
+					</div>
+					<div class="clear"></div>
+					<button id="eucherplusaway" class="eucherawayplusbtn" value="+">+</button>
+					<button id="eucherminusaway" class="eucherawayminusbtn" value="-">-</button>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<button id="eucherresetscore" value="resetscore" style="float:left;">Reset</button>
 			</div><!-- scoreboard -->
 		</div> <!-- footer -->
 	</div> <!-- container_12 -->
