@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 	// When clicking on the button close or the mask layer the popup closed
 	//$('#mask').live('click', function() { 
-	$('#mask').live("click touch", function(){
+	$('#mask').live("click touchstart", function(){
 		$('#mask , #popupform , #score-sheet , #scoreboard').fadeOut(300 , function() {
 			$('#mask').remove();  
 		}); 
@@ -33,7 +33,7 @@ $(document).ready(function() {
 	});
 	
 	//$('#mask').live('click', function() { 
-	$('#mask').live("click touch", function(){
+	$('#mask').live("click touchstart", function(){
 		$('#pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7, #pic8, #pic9, #pic10, #pic11, #pic12, #pic13').fadeOut(300 , function() {
 			$('#mask').remove();  
 		}); 
