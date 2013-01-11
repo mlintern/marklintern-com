@@ -1,3 +1,5 @@
+//5 Crowns Scoring
+
 var array1=['31','41','51','61','71','81','91','101','j1','q1','k1'];
 var array2=['32','42','52','62','72','82','92','102','j2','q2','k2'];
 var array3=['33','43','53','63','73','83','93','103','j3','q3','k3'];
@@ -122,5 +124,46 @@ $(document).ready(function() {
 		$('.player7').show();
 		$('.player3').show();
 		fixsizing('#score-sheet')
+	});
+});
+
+//Scoreboard
+$(document).ready(function() {
+	$(".HomeMinus").live("click", function() {
+		console.log("HomeMinus");
+		var current = parseInt($("#homescore").val());
+		if (current == 0){
+		}else{
+			$("#homescore").val(current - 1);
+		}
+	});
+	$(".HomePlus").live("click", function() {
+		console.log("HomePlus");
+		var current = parseInt($("#homescore").val());
+		if (current == 999){
+		}else{
+			$("#homescore").val(current + 1);
+		}
+	});
+	$(".AwayMinus").live("click", function() {
+		console.log("AwayMinus");
+		var current = parseInt($("#awayscore").val());
+		if (current == 0){
+		}else{
+			$("#awayscore").val(current - 1);
+		}
+	});
+	$(".AwayPlus").live("click", function() {
+		console.log("HomePlus");
+		var current = parseInt($("#awayscore").val());
+		if (current == 999){
+		}else{
+			$("#awayscore").val(current + 1);
+		}
+	});
+	$("#resetscore").live("click", function() {
+		console.log("Reset");
+		$("#homescore").val(0);
+		$("#awayscore").val(0);
 	});
 });

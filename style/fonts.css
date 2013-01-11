@@ -10,3 +10,9 @@
 	font-weight: 400;
 	src: local('Finger Paint'), local('FingerPaint-Regular'), url(finger-paint.woff) format('woff');
 }
+@font-face {
+  font-family: 'Nova Square';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nova Square'), local('NovaSquare'), url(nova-square.woff) format('woff');
+}

@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 	// When clicking on the button close or the mask layer the popup closed
 	$('#mask').live('click', function() { 
-		$('#mask , #popupform , #score-sheet').fadeOut(300 , function() {
+		$('#mask , #popupform , #score-sheet , #scoreboard').fadeOut(300 , function() {
 			$('#mask').remove();  
 		}); 
 		return false;
