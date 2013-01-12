@@ -132,7 +132,6 @@ background: purple;
 padding: 5px; 	
 border: 2px solid #000000;
 float: left;
-font-size: 1.2em;
 position: fixed;
 top: 50%; left: 50%;
 z-index: 99999;
@@ -143,9 +142,26 @@ text-align: center;
 #score-sheet td, #score-sheet th{
 color: white;
 text-align: center;
+width: 70px;
+font-size: 22px;
+}
+#score-sheet #scoresheet input{
+height: 25px;
+width: 95px;
+font-size: 20px;
+text-align: center;
 }
 #player-picker{
 color: white;
+float: left;
+margin-left: 10px;
+margin-bottom: 5px;
+}
+#game-picker{
+color: white;
+float: right;
+margin-right: 10px;
+margin-bottom: 5px;
 }
 .player5{
 display:none;
@@ -154,6 +170,15 @@ display:none;
 display:none;
 }
 .player7{
+display:none;
+}
+.player8{
+display:none;
+}
+#rowone{
+display:none;
+}
+#rowtwo{
 display:none;
 }
 /* POP UP FORM */
@@ -336,14 +361,23 @@ background-color: black;
 margin-left: 20px;
 margin-top: 5px;
 }
-.eucherhomeplusbtn, .eucherawayplusbtn, .eucherhomeminusbtn, .eucherawayminusbtn{
+.eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
 float: left;
 font-size: 30px;
 background-color: black;
 color: white;
 border: none;
 margin-top: 15px;
-margin-left: 120px;
+margin-left: 60px;
+}
+.eucherhomeminusbtn, .eucherawayminusbtn{
+float: left;
+font-size: 30px;
+background-color: black;
+color: white;
+border: none;
+margin-top: 15px;
+margin-left: 100px;
 }
 #eucherresetscore{
 background-color:black;

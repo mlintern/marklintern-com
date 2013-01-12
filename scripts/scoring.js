@@ -7,7 +7,8 @@ var array4=['34','44','54','64','74','84','94','104','j4','q4','k4'];
 var array5=['35','45','55','65','75','85','95','105','j5','q5','k5'];
 var array6=['36','46','56','66','76','86','96','106','j6','q6','k6'];
 var array7=['37','47','57','67','77','87','97','107','j7','q7','k7'];
-var arrayt=['t1','t2','t3','t4','t5','t6','t7'];
+var array8=['38','48','58','68','78','88','98','108','j8','q8','k8'];
+var arrayt=['t1','t2','t3','t4','t5','t6','t7','t8'];
 
 function calculate_score(){
 	add_column(array1,1);
@@ -17,6 +18,7 @@ function calculate_score(){
 	add_column(array5,5);
 	add_column(array6,6);
 	add_column(array7,7);
+	add_column(array8,8);
 };
 
 function add_column(col_array,col_id) {
@@ -49,6 +51,7 @@ function reset_score(){
 		reset_column(array5);
 		reset_column(array6);
 		reset_column(array7);
+		reset_column(array8);
 		reset_column(arrayt);
 		}
 	  else
@@ -76,16 +79,16 @@ function fixsizing(divname) {
 	};
 
 $(document).ready(function() {
-
 	$('#player_3').click(function() {
 		console.log('3');
+		$('.player3').show();
 		$('.player4').hide();
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
+		$('.player8').hide();
 		fixsizing('#score-sheet')
 	});
-	
 	$('#player_4').click(function() {
 		console.log('4');
 		$('.player3').show();
@@ -93,36 +96,71 @@ $(document).ready(function() {
 		$('.player5').hide();
 		$('.player6').hide();
 		$('.player7').hide();
+		$('.player8').hide();
 		fixsizing('#score-sheet')
 	});
-	
 	$('#player_5').click(function() {
 		console.log('5');
-		$('.player4').show();
 		$('.player3').show();
+		$('.player4').show();
 		$('.player5').show();
 		$('.player6').hide();
 		$('.player7').hide();
+		$('.player8').hide();
 		fixsizing('#score-sheet')
 	});
-	
 	$('#player_6').click(function() {
 		console.log('6');
+		$('.player3').show();
 		$('.player4').show();
 		$('.player5').show();
 		$('.player6').show();
-		$('.player3').show();
 		$('.player7').hide();
+		$('.player8').hide();
 		fixsizing('#score-sheet')
 	});
-	
 	$('#player_7').click(function() {
 		console.log('7');
+		$('.player3').show();
 		$('.player4').show();
 		$('.player5').show();
 		$('.player6').show();
 		$('.player7').show();
+		$('.player8').hide();
+		fixsizing('#score-sheet')
+	});
+	$('#player_8').click(function() {
+		console.log('7');
 		$('.player3').show();
+		$('.player4').show();
+		$('.player5').show();
+		$('.player6').show();
+		$('.player7').show();
+		$('.player8').show();
+		fixsizing('#score-sheet')
+	});
+	$('#onetothree').click(function() {
+		console.log('1-2');
+		if($('#onetothree').attr('checked')) {
+		    $("#rowone").show();
+		    $("#rowtwo").show();
+		} else {
+		    $("#rowone").hide();
+		    $("#rowtwo").hide();
+		}
+		fixsizing('#score-sheet')
+	});
+	$('#jacktoking').click(function() {
+		console.log('J-K');
+		if($('#jacktoking').attr('checked')) {
+		    $("#rowJ").show();
+		    $("#rowQ").show();
+		    $("#rowK").show();
+		} else {
+		    $("#rowJ").hide();
+		    $("#rowQ").hide();
+		    $("#rowK").hide();
+		}
 		fixsizing('#score-sheet')
 	});
 });
@@ -180,7 +218,7 @@ $(document).ready(function() {
 			$("#eucherhomescore").val(currentscore - 1);
 		}
 	});
-	$(".eucherhomeplusbtn").live("click", function() {
+	$(".eucherhomeplus1btn").live("click", function() {
 		console.log("EucherHomePlus");
 		var currentscore = parseInt($("#eucherhomescore").val());
 		var currentpos = $("#eucherteam1").width();
@@ -189,6 +227,16 @@ $(document).ready(function() {
 			$("#eucherteam1").width(currentpos + 40);
 			$("#eucherhomescore").val(currentscore + 1);
 		}
+	});
+	$(".eucherhomeplus2btn").live("click", function() {
+		$(".eucherhomeplus1btn").click();
+		$(".eucherhomeplus1btn").click();
+	});
+	$(".eucherhomeplus4btn").live("click", function() {
+		$(".eucherhomeplus1btn").click();
+		$(".eucherhomeplus1btn").click();
+		$(".eucherhomeplus1btn").click();
+		$(".eucherhomeplus1btn").click();
 	});
 	$(".eucherawayminusbtn").live("click", function() {
 		console.log("EucherAwayMinus");
@@ -200,7 +248,7 @@ $(document).ready(function() {
 			$("#eucherawayscore").val(currentscore - 1);
 		}
 	});
-	$(".eucherawayplusbtn").live("click", function() {
+	$(".eucherawayplus1btn").live("click", function() {
 		console.log("EucherHomePlus");
 		var currentscore = parseInt($("#eucherawayscore").val());
 		var currentpos = $("#eucherteam2").width();
@@ -209,6 +257,16 @@ $(document).ready(function() {
 			$("#eucherteam2").width(currentpos + 40);
 			$("#eucherawayscore").val(currentscore + 1);
 		}
+	});
+	$(".eucherawayplus2btn").live("click", function() {
+		$(".eucherawayplus1btn").click();
+		$(".eucherawayplus1btn").click();
+	});
+	$(".eucherawayplus4btn").live("click", function() {
+		$(".eucherawayplus1btn").click();
+		$(".eucherawayplus1btn").click();
+		$(".eucherawayplus1btn").click();
+		$(".eucherawayplus1btn").click();
 	});
 	$("#eucherresetscore").live("click", function() {
 		console.log("EucherReset");
