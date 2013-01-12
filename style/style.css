@@ -264,6 +264,7 @@ float: right;
 #scoreboard {
 display:none;
 background: black;
+background-image: url('../images/metallic-bg1.jpg');
 padding: 5px; 	
 border: 5px solid green;
 float: left;
