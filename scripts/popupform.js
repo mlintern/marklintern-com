@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('a.link-to-form').click(function() {
+	$('a.popup-link').click(function() {
 
 		//Getting the variable's value from a link 
 		var popupBox = $(this).attr('href');

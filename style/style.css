@@ -117,7 +117,7 @@ margin-bottom: 10px;
 #twitter-box{
 display: none;
 position: absolute;
-top: 435px;
+top: 235px;
 left: 215px;
 width: 300px;
 }
@@ -369,7 +369,7 @@ background-color: black;
 color: white;
 border: none;
 margin-top: 15px;
-margin-left: 60px;
+margin-left: 50px;
 }
 .eucherhomeminusbtn, .eucherawayminusbtn{
 float: left;
