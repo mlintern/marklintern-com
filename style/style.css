@@ -22,11 +22,14 @@ text-decoration: underline;
 -webkit-box-shadow: 7px 7px 8px #444;
 box-shadow: 7px 7px 8px #444;
 }
-.square{
-font-family: 'Nova Square', cursive;
+.paint{
+font-family: 'Finger Paint', cursive;
 }
-.scoreboardfont{
-font-family: 'CrashedScoreboardRegular', Arial, sans-serif;
+.square{
+font-family: 'Nova Square', Arial, sans-serif;
+}
+.apple{
+font-family: 'Homemade Apple', cursive;
 }
 /*BACKGROUND IMAGES*/
 .background-cardboard{
@@ -58,7 +61,6 @@ background-repeat: no-repeat;*/
 height: 200px;
 }
 .header-text{
-font-family: 'Homemade Apple', cursive;
 font-family: 'Finger Paint', cursive;
 font-size: 130px;
 color: #4CF748;
@@ -347,20 +349,22 @@ font-size: 30px;
 background-color: black;
 color: white;
 border: none;
-width: 305px;
+width: 300px;
 float: left;
 margin-bottom: 20px;
+margin-top: 5px;
 }
 .eucherscore{
 float: left;
-font-size: 25px;
+font-size: 40px;
 text-align: center;
 width: 40px;
 color: white;
 border: white 2px solid;
 background-color: black;
 margin-left: 20px;
-margin-top: 5px;
+margin-top: 0px;
+padding: 0 5px;
 }
 .eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
 float: left;
@@ -369,7 +373,9 @@ background-color: black;
 color: white;
 border: none;
 margin-top: 15px;
-margin-left: 50px;
+margin-left: 40px;
+border: 1px solid green;
+padding: 0 8px;
 }
 .eucherhomeminusbtn, .eucherawayminusbtn{
 float: left;
@@ -378,12 +384,25 @@ background-color: black;
 color: white;
 border: none;
 margin-top: 15px;
-margin-left: 100px;
+margin-left: 90px;
+border: 1px solid red;
+padding: 0 8px;
 }
 #eucherresetscore{
 background-color:black;
 color: white;
 border: none;
+}
+.scoremarker{
+background-image: url('../images/scoremarkers.png');
+background-repeat: no-repeat;
+background-position-y: 10px;
+}
+.separator{
+border-top: white solid 1px;
+margin-top: 10px;
+height: 10px;
+width: 100%;
 }
 /*FOOTER*/
 .footer{
