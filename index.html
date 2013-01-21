@@ -528,7 +528,7 @@ $(function() {
 			</div><!-- scoreboard -->
 			<div id="score-eucher">
 				<div class="eucher-team-score">
-					<input class="eucherteamname" type="text" name="homename" placeholder="Good Guys" style="text-align:center;">
+					<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys" style="text-align:center;">
 					<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
 					<div class="clear"></div>
 					<div class="meter animate red scoremarker">
@@ -543,8 +543,18 @@ $(function() {
 				</div>
 				<div class="clear"></div>
 				<div class="separator"></div>
+				<div class="wins-losses">
+					<div class="scorecontainer">
+					<div id="homeeucherteamname" style="margin-left: 0px;">Good Guys</div>
+					<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+					<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+					<div id="awayeucherteamname">Bad Guys</div>
+					</div>
+					<div class="clear"></div>
+					<div class="separator"></div>
+				</div>
 				<div class="eucher-team-score">
-					<input class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys" style="text-align:center;">
+					<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys" style="text-align:center;">
 					<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
 					<div class="clear"></div>
 					<div class="meter animate purple scoremarker">

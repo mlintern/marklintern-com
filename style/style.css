@@ -366,6 +366,23 @@ margin-left: 20px;
 margin-top: 0px;
 padding: 0 5px;
 }
+.wins-losses{
+display: none;
+}
+.scorecontainer{
+margin: 0 auto;
+width: 320px;
+}
+.overallscore{
+font-size: 25px;
+padding: 3px 0px;
+}
+#homeeucherteamname, #awayeucherteamname{
+float: left;
+color: #ffffff;
+margin-left: 20px;
+margin-top: 5px;
+}
 .eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
 float: left;
 font-size: 30px;

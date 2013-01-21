@@ -208,6 +208,27 @@ $(document).ready(function() {
 
 //Eucher Scoreboard
 $(document).ready(function() {
+	function reseteuchergame() {
+		console.log("EucherReset");
+		$("#eucherteam1").width(0);
+		$("#eucherhomescore").val(0);
+		$("#eucherteam2").width(0);
+		$("#eucherawayscore").val(0);
+	};
+	
+	$("#homeeuchername").on('keyup',function(){
+		$("#homeeucherteamname").text($('#homeeuchername').val());
+		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 125);
+		$(".scorecontainer").css({'margin':'0 auto'});
+	});
+	
+	$("#awayeuchername").on('keyup',function(){
+		$("#awayeucherteamname").text($('#awayeuchername').val());
+		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 125;
+		$(".scorecontainer").width( newWidth );
+		$(".scorecontainer").css({'margin':'0 auto'});
+	});
+	
 	$(".eucherhomeminusbtn").live("click", function() {
 		console.log("EucherHomeMinus");
 		var currentscore = parseInt($("#eucherhomescore").val());
@@ -220,22 +241,32 @@ $(document).ready(function() {
 	});
 	$(".eucherhomeplus1btn").live("click", function() {
 		console.log("EucherHomePlus");
-		var currentscore = parseInt($("#eucherhomescore").val());
 		var currentpos = $("#eucherteam1").width();
-		if (currentpos == 400){
+		if (currentpos == 360){
+			$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
+			reseteuchergame();
+			$(".wins-losses").show();
 		}else{
 			$("#eucherteam1").width(currentpos + 40);
-			$("#eucherhomescore").val(currentscore + 1);
+			$("#eucherhomescore").val(parseInt($("#eucherhomescore").val()) + 1);
 		}
 	});
 	$(".eucherhomeplus2btn").live("click", function() {
+		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
 		$(".eucherhomeplus1btn").click();
+		if (stop) {stop=false;return;}
 		$(".eucherhomeplus1btn").click();
 	});
 	$(".eucherhomeplus4btn").live("click", function() {
+		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
 		$(".eucherhomeplus1btn").click();
+		if (stop) {stop=false;return;}
+		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
 		$(".eucherhomeplus1btn").click();
+		if (stop) {stop=false;return;}
+		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
 		$(".eucherhomeplus1btn").click();
+		if (stop) {stop=false;return;}
 		$(".eucherhomeplus1btn").click();
 	});
 	$(".eucherawayminusbtn").live("click", function() {
@@ -252,27 +283,37 @@ $(document).ready(function() {
 		console.log("EucherHomePlus");
 		var currentscore = parseInt($("#eucherawayscore").val());
 		var currentpos = $("#eucherteam2").width();
-		if (currentpos == 400){
+		if (currentpos == 360){
+			$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
+			reseteuchergame();
+			$(".wins-losses").show();
 		}else{
 			$("#eucherteam2").width(currentpos + 40);
-			$("#eucherawayscore").val(currentscore + 1);
+			$("#eucherawayscore").val(parseInt($("#eucherawayscore").val()) + 1);
 		}
 	});
 	$(".eucherawayplus2btn").live("click", function() {
+	if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
 		$(".eucherawayplus1btn").click();
+		if (stop) {stop=false;return;}
 		$(".eucherawayplus1btn").click();
 	});
 	$(".eucherawayplus4btn").live("click", function() {
+		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
 		$(".eucherawayplus1btn").click();
+		if (stop) {stop=false;return;}
+		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
 		$(".eucherawayplus1btn").click();
+		if (stop) {stop=false;return;}
+		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
 		$(".eucherawayplus1btn").click();
+		if (stop) {stop=false;return;}
 		$(".eucherawayplus1btn").click();
 	});
 	$("#eucherresetscore").live("click", function() {
 		console.log("EucherReset");
-		$("#eucherteam1").width(0);
-		$("#eucherhomescore").val(0);
-		$("#eucherteam2").width(0);
-		$("#eucherawayscore").val(0);
+		reseteuchergame()
+		$("#eucherhomeoverallscore").val(0);
+		$("#eucherawayoverallscore").val(0);
 	});
 });
