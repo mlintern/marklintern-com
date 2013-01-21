@@ -374,8 +374,9 @@ color: white;
 border: none;
 margin-top: 15px;
 margin-left: 40px;
-border: 1px solid green;
+border: 2px solid green;
 padding: 0 8px;
+border-radius: 20px;
 }
 .eucherhomeminusbtn, .eucherawayminusbtn{
 float: left;
@@ -385,8 +386,9 @@ color: white;
 border: none;
 margin-top: 15px;
 margin-left: 90px;
-border: 1px solid red;
-padding: 0 8px;
+border: 2px solid red;
+padding: 0 9px;
+border-radius: 20px;
 }
 #eucherresetscore{
 background-color:black;
