@@ -153,6 +153,15 @@ width: 95px;
 font-size: 20px;
 text-align: center;
 }
+#totalscore{
+border: #000 solid 3px;
+}
+#totalscore td{
+border-right: #000 solid 3px;
+}
+#totalscore input{
+font-weight: bold;
+}
 #player-picker{
 color: white;
 float: left;
