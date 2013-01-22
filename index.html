@@ -461,17 +461,17 @@ $(function() {
 			<div id="scoreboard">
 				<div id="timer">
 					<div id="countdownDisp">
-						<img height="50" src="numerals/c0.gif" name="h" id="h"/>
-						<img height="50" src="numerals/c0.gif" name="i" id="i"/>
-						<img height="50" src="numerals/colon.gif" name="j" id="j"/>
-						<img height="50" src="numerals/c0.gif" name="k" id="k"/>
-						<img height="50" src="numerals/c0.gif" name="l" id="l"/>
+						<img class="numeral" src="numerals/c0.gif" name="h" id="h"/>
+						<img class="numeral" src="numerals/c0.gif" name="i" id="i"/>
+						<img class="numeral" src="numerals/colon.gif" name="j" id="j"/>
+						<img class="numeral" src="numerals/c0.gif" name="k" id="k"/>
+						<img class="numeral" src="numerals/c0.gif" name="l" id="l"/>
 					</div>
 					<div>
-						<INPUT TYPE="BUTTON" Name="ssbutton" VALUE="Start/Stop" onClick="startstop()"/>
-						<INPUT TYPE="BUTTON" NAME="reset" VALUE="Reset" onClick="timerreset()"/>
-						<INPUT TYPE="BUTTON" NAME="minplus" VALUE="+min" onClick="addmin()"/>
-						<INPUT TYPE="BUTTON" NAME="minplus" VALUE="+30" onClick="addthirty()"/>
+						<div><INPUT TYPE="BUTTON" Name="ssbutton" VALUE="Start/Stop" onClick="startstop()"/></div>
+						<div><INPUT TYPE="BUTTON" NAME="minplus" VALUE="+min" onClick="addmin()"/>
+						<INPUT TYPE="BUTTON" NAME="minplus" VALUE="+30" onClick="addthirty()"/></div>
+						<div><INPUT TYPE="BUTTON" NAME="reset" VALUE="Reset" onClick="timerreset()"/></div>
 					</div>
 				</div>
 				<div class="team-score">

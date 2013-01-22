@@ -77,6 +77,7 @@ function run() {
 	if (state == 1)  {
 		if (ms == 0){
 		window.alert('Done');
+		clearInterval(refreshIntervalId);
 		state = 0;
 		} else {
 		ms = ms - 1000;
