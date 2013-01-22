@@ -1,17 +1,15 @@
-//if (top.location != document.location) top.location = document.location;
-
-	c1 = new Image(); c1.src = "numerals/c1.gif";
-	c2 = new Image(); c2.src = "numerals/c2.gif";
-	c3 = new Image(); c3.src = "numerals/c3.gif";
-	c4 = new Image(); c4.src = "numerals/c4.gif";
-	c5 = new Image(); c5.src = "numerals/c5.gif";
-	c6 = new Image(); c6.src = "numerals/c6.gif";
-	c7 = new Image(); c7.src = "numerals/c7.gif";
-	c8 = new Image(); c8.src = "numerals/c8.gif";
-	c9 = new Image(); c9.src = "numerals/c9.gif";
-	c0 = new Image(); c0.src = "numerals/c0.gif";
-	cb = new Image(); cb.src = "numerals/cb.gif";
-	onePix = new Image(); onePix.src = "numerals/clear.gif";
+c1 = new Image(); c1.src = "numerals/c1.gif";
+c2 = new Image(); c2.src = "numerals/c2.gif";
+c3 = new Image(); c3.src = "numerals/c3.gif";
+c4 = new Image(); c4.src = "numerals/c4.gif";
+c5 = new Image(); c5.src = "numerals/c5.gif";
+c6 = new Image(); c6.src = "numerals/c6.gif";
+c7 = new Image(); c7.src = "numerals/c7.gif";
+c8 = new Image(); c8.src = "numerals/c8.gif";
+c9 = new Image(); c9.src = "numerals/c9.gif";
+c0 = new Image(); c0.src = "numerals/c0.gif";
+cb = new Image(); cb.src = "numerals/cb.gif";
+onePix = new Image(); onePix.src = "numerals/clear.gif";
 
 var ms = 0;
 var state = 0;
@@ -20,7 +18,6 @@ var refreshIntervalId;
 var targettime = 0;
 
 function showtime() {
-//countdown.innerHTML = Math.floor(targettime/60) + ":" + (targettime%60 < 10 ? "0": "") + targettime %60;
 	targettime = ms/1000;
 	minutefield = Math.floor(targettime/60);
 	secondfield = (targettime%60 < 10 ? "0": "") + targettime %60;
@@ -59,7 +56,6 @@ ms = ms + 60000;
 console.log('add min');
 console.log(ms);
 showtime();
-$('#timedisplay').text(ms/1000);
 }
 
 function addthirty() {
@@ -67,7 +63,6 @@ ms = ms + 30000;
 console.log('add min');
 console.log(ms);
 showtime();
-$('#timedisplay').text(ms/1000);
 }
 
 function timerreset() {
@@ -75,7 +70,7 @@ state = 0;
 ms = 0;
 first = 0;
 showtime();
-$('#timedisplay').text(ms/1000);
+clearInterval(refreshIntervalId);
 }
 
 function run() {
