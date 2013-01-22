@@ -461,49 +461,18 @@ $(function() {
 			<div id="scoreboard">
 				<div id="timer">
 					<div id="countdownDisp">
-					<img height="100" src="numerals/c0.gif" width="72" name="h" id="h">
-					<img height="100" src="numerals/c0.gif" width="72" name="i" id="i">
-					<img height="100" src="numerals/colon.gif" width="36" name="j" id="j">
-					<img height="100" src="numerals/c0.gif" width="72" name="k" id="k">
-					<img height="100" src="numerals/c0.gif" width="72" name="l" id="l">
+						<img height="50" src="numerals/c0.gif" name="h" id="h"/>
+						<img height="50" src="numerals/c0.gif" name="i" id="i"/>
+						<img height="50" src="numerals/colon.gif" name="j" id="j"/>
+						<img height="50" src="numerals/c0.gif" name="k" id="k"/>
+						<img height="50" src="numerals/c0.gif" name="l" id="l"/>
 					</div>
-					<form id="minutesForm" style="margin-top:0px;margin-bottom:0px;">
-					<select id="minutesSelect" onChange="doMinuteTimer();" title="Select Minutes">
-					<option value="OFF" selected>OFF</option>
-					<option value="4">5 Seconds (Test)</option>
-					<option value="29">30 Seconds</option>
-					<option value="59">1 Minute</option>
-						<option value="119">2 Minutes</option>
-						<option value="179">3 Minutes</option>
-						<option value="239">4 Minutes</option>
-						<option value="299">5 Minutes</option>
-						<option value="359">6 Minutes</option>
-						<option value="419">7 Minutes</option>
-						<option value="479">8 Minutes</option>
-						<option value="539">9 Minutes</option>
-						<option value="599">10 Minutes</option>
-						<option value="659">11 Minutes</option>
-						<option value="719">12 Minutes</option>
-						<option value="779">13 Minutes</option>
-						<option value="839">14 Minutes</option>
-						<option value="899">15 Minutes</option>
-						<option value="1199">20 Minutes</option>
-						<option value="1499">25 Minutes</option>
-						<option value="1799">30 Minutes</option>
-						<option value="2099">35 Minutes</option>
-						<option value="2399">40 Minutes</option>
-						<option value="2699">45 Minutes</option>
-						<option value="2999">50 Minutes</option>
-						<option value="3299">55 Minutes</option>
-						<option value="3599">60 Minutes</option>
-						<option value="3899">65 Minutes</option>
-						<option value="4199">70 Minutes</option>
-						<option value="4499">75 Minutes</option>
-						<option value="4799">80 Minutes</option>
-						<option value="5099">85 Minutes</option>
-						<option value="5399">90 Minutes</option>
-					</select>
-					</form>
+					<div>
+						<INPUT TYPE="BUTTON" Name="ssbutton" VALUE="Start/Stop" onClick="startstop()"/>
+						<INPUT TYPE="BUTTON" NAME="reset" VALUE="Reset" onClick="timerreset()"/>
+						<INPUT TYPE="BUTTON" NAME="minplus" VALUE="+min" onClick="addmin()"/>
+						<INPUT TYPE="BUTTON" NAME="minplus" VALUE="+30" onClick="addthirty()"/>
+					</div>
 				</div>
 				<div class="team-score">
 					<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
