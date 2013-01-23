@@ -218,13 +218,13 @@ $(document).ready(function() {
 	
 	$("#homeeuchername").on('keyup',function(){
 		$("#homeeucherteamname").text($('#homeeuchername').val());
-		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 125);
+		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 130);
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
 	
 	$("#awayeuchername").on('keyup',function(){
 		$("#awayeucherteamname").text($('#awayeuchername').val());
-		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 125;
+		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 130;
 		$(".scorecontainer").width( newWidth );
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
