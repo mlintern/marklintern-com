@@ -296,7 +296,7 @@ height: 40px;
 }
 #countdownDisp{
 background-color: black;
-width: 147px;
+width: 148px;
 margin: 0 auto;
 }
 .team-score{
@@ -416,6 +416,7 @@ margin-left: 40px;
 border: 2px solid green;
 padding: 0 8px;
 border-radius: 20px;
+-moz-border-radius: 22px;
 }
 .eucherhomeminusbtn, .eucherawayminusbtn{
 float: left;
@@ -429,6 +430,17 @@ border: 2px solid red;
 padding: 0 9px;
 border-radius: 20px;
 }
+
+@-moz-document url-prefix(){
+	.eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
+	border-radius: 22px;
+	}
+	.eucherhomeminusbtn, .eucherawayminusbtn{
+	border-radius: 22px;
+	padding: 0 8px;
+	}
+}
+
 #eucherresetscore{
 background-color:black;
 color: white;
@@ -437,7 +449,7 @@ border: none;
 .scoremarker{
 background-image: url('../images/scoremarkers.png');
 background-repeat: no-repeat;
-background-position-y: 10px;
+background-position: 0 10px;
 }
 .separator{
 border-top: white solid 1px;

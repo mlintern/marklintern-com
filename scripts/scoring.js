@@ -246,6 +246,7 @@ $(document).ready(function() {
 			$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
 			reseteuchergame();
 			$(".wins-losses").show();
+			fixsizing('#score-eucher');
 		}else{
 			$("#eucherteam1").width(currentpos + 40);
 			$("#eucherhomescore").val(parseInt($("#eucherhomescore").val()) + 1);
@@ -287,6 +288,7 @@ $(document).ready(function() {
 			$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
 			reseteuchergame();
 			$(".wins-losses").show();
+			fixsizing('#score-eucher');
 		}else{
 			$("#eucherteam2").width(currentpos + 40);
 			$("#eucherawayscore").val(parseInt($("#eucherawayscore").val()) + 1);
