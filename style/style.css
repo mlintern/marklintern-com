@@ -457,6 +457,11 @@ margin-top: 10px;
 height: 10px;
 width: 100%;
 }
+.opencloseteamscore{
+position: absolute;
+top: 187px;
+right: 2px;
+}
 /*FOOTER*/
 .footer{
 height: 150px;

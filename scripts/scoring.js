@@ -318,4 +318,7 @@ $(document).ready(function() {
 		$("#eucherhomeoverallscore").val(0);
 		$("#eucherawayoverallscore").val(0);
 	});
+	$(".opencloseteamscore").live("click", function() {
+		$(".wins-losses").toggle();
+	});
 });
