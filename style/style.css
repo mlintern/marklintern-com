@@ -488,6 +488,15 @@ top:0;
 left:0;
 z-index: 1000;
 }
+#bulletholes {
+display:none;
+background: black;
+float: left;
+position: fixed;
+width: 450px;
+top: 50%; left: 50%;
+z-index: 999;
+}
 #hole1{
 position: absolute;
 top:70px;
