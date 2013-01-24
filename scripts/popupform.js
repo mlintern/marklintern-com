@@ -40,7 +40,7 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$('a.popup-link-clear').click(function() {
+	$('a.bullets-link').click(function() {
 
 		//Getting the variable's value from a link 
 		var popupBox = $(this).attr('href');
@@ -56,6 +56,15 @@ $(document).ready(function() {
 			'margin-top' : -popMargTop,
 			'margin-left' : -popMargLeft
 		});
+		
+		$('#hole1').delay(500).fadeIn();
+		$('#hole2').delay(1000).fadeIn();
+		$('#hole3').delay(1500).fadeIn();
+		$('#hole4').delay(2000).fadeIn();
+		$('#hole5').delay(2500).fadeIn();
+		$('#hole6').delay(3000).fadeIn();
+		$('#hole7').delay(3500).fadeIn();
+		$('#hole8').delay(4000).fadeIn();
 
 		// Add the mask to body
 		$('body').append('<div id="clearmask"></div>');
