@@ -26,7 +26,7 @@ $(document).ready(function() {
 	// When clicking on the button close or the mask layer the popup closed
 	//$('#mask').live('click', function() { 
 	$('#mask').live("click touchstart", function(){
-		$('#mask , #popupform , #score-sheet , #scoreboard , #score-eucher').fadeOut(300 , function() {
+		$('#mask , #popupform , #score-sheet , #scoreboard , #score-eucher','#bulletholes').fadeOut(300 , function() {
 			$('#mask').remove();  
 		}); 
 		return false;
