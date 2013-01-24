@@ -76,7 +76,7 @@ clearInterval(refreshIntervalId);
 function run() {
 	if (state == 1)  {
 		if (ms == 0){
-		window.alert('Done');
+		window.alert('Ding Ding Ding');
 		clearInterval(refreshIntervalId);
 		state = 0;
 		} else {
