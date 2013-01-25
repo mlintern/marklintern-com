@@ -135,6 +135,7 @@ left: 220px;
 width: 300px;
 background-color: #fff;
 padding: 10px;
+border-radius: 8px;
 }
 #blog-post-list ul li{
 padding:5px 0;
