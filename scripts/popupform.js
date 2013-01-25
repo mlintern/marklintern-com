@@ -56,15 +56,22 @@ $(document).ready(function() {
 			'margin-top' : -popMargTop,
 			'margin-left' : -popMargLeft
 		});
-		
+		$('#hole1').hide();
+		$('#hole2').hide();
+		$('#hole3').hide();
+		$('#hole4').hide();
+		$('#hole5').hide();
+		$('#hole6').hide();
+		$('#hole7').hide();
+		$('#hole8').hide();
 		$('#hole1').delay(500).fadeIn();
-		$('#hole2').delay(1000).fadeIn();
-		$('#hole3').delay(1500).fadeIn();
+		$('#hole2').delay(700).fadeIn();
+		$('#hole3').delay(1700).fadeIn();
 		$('#hole4').delay(2000).fadeIn();
-		$('#hole5').delay(2500).fadeIn();
-		$('#hole6').delay(3000).fadeIn();
-		$('#hole7').delay(3500).fadeIn();
-		$('#hole8').delay(4000).fadeIn();
+		$('#hole5').delay(3000).fadeIn();
+		$('#hole6').delay(3300).fadeIn();
+		$('#hole7').delay(4000).fadeIn();
+		$('#hole8').delay(4200).fadeIn();
 
 		// Add the mask to body
 		$('body').append('<div id="clearmask"></div>');
