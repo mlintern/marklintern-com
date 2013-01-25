@@ -126,7 +126,20 @@ width: 300px;
 .twtr-tweets{
 padding: 10px;
 }
-
+/*Blog Posts*/
+#blog-post-list{
+display: none;
+position: absolute;
+top: 1440px;
+left: 220px;
+width: 300px;
+background-color: #fff;
+padding: 10px;
+}
+#blog-post-list ul li{
+padding:5px 0;
+border-bottom: 1px solid #ccc;
+}
 /* SCORE SHEET FORM */
 #score-sheet {
 display:none;

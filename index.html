@@ -8,6 +8,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
+
 
 <link type="text/css" href="style/960.css" rel="stylesheet">
 <link type="text/css" href="style/fonts.css" rel="stylesheet">
@@ -25,6 +27,7 @@
 <script type="text/javascript" src="scripts/tiny-scrollbar.js"></script>
 <script type="text/javascript" src="scripts/scoring.js"></script>
 <script type="text/javascript" src="scripts/timer.js"></script>
+<script type="text/javascript" src="scripts/google-api.js"></script>
 <script>	
 $(function() {
 		$(".meter > span").each(function() {
@@ -92,7 +95,11 @@ $(function() {
 			<a class="popup-link" href="#score-sheet" title="5 Crowns Score Sheet" ><img alt="5 Crowns Score Sheet" src="images/Crown.png"></a>
 			<a class="popup-link" href="#scoreboard" title="Scoreboard"><img alt="ScoreBoard" src="images/Scoreboard.png"></a>
 			</br>
-			<a target="_blank" href="http://blog.marklintern.com"><img src="images/Blog.png"/></a>
+			<a id="blog-link" target="_blank" href="http://blog.marklintern.com"><img src="images/Blog.png"/>
+				<div id="blog-post-list">
+			    	<ul id="BlogFeedList"></ul>
+  				</div>
+  			</a>
 			</br></br>
 			<a target="_blank" href="http://us.playstation.com/playstation/psn/visit/profiles/Cheeez2008"><img border="0" height="155" src="http://fp.profiles.us.playstation.com/playstation/psn/pid/Cheeez2008.png" width="230" style="margin-bottom: 20px;" class="shadow"/></a>
 		</div>        

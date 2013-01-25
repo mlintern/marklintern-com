@@ -30,3 +30,14 @@ $(document).ready(function() {
 	}
 	);
 });
+/* For the Blog sidebar div */
+$(document).ready(function() {
+	$('a#blog-link').hover(
+	function() {
+		$('#blog-post-list').show();
+	},
+	function() {
+		$('#blog-post-list').hide();
+	}
+	);
+});
