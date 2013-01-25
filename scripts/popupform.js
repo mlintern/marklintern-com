@@ -46,7 +46,7 @@ $(document).ready(function() {
 		var popupBox = $(this).attr('href');
 
 		//Fade in the Popup
-		$(popupBox).fadeIn(300);
+		$(popupBox).fadeIn(0);
 
 		//Set the center alignment padding + border see css style
 		var popMargTop = ($(popupBox).height() + 24) / 2; 
@@ -64,27 +64,27 @@ $(document).ready(function() {
 		$('#hole6').hide();
 		$('#hole7').hide();
 		$('#hole8').hide();
-		$('#hole1').delay(500).fadeIn();
-		$('#hole2').delay(700).fadeIn();
-		$('#hole3').delay(1700).fadeIn();
-		$('#hole4').delay(2000).fadeIn();
-		$('#hole5').delay(3000).fadeIn();
-		$('#hole6').delay(3300).fadeIn();
+		$('#hole1').delay(0).fadeIn();
+		$('#hole2').delay(100).fadeIn();
+		$('#hole3').delay(1300).fadeIn();
+		$('#hole4').delay(1500).fadeIn();
+		$('#hole5').delay(2700).fadeIn();
+		$('#hole6').delay(2900).fadeIn();
 		$('#hole7').delay(4000).fadeIn();
 		$('#hole8').delay(4200).fadeIn();
 
 		// Add the mask to body
-		$('body').append('<div id="clearmask"></div>');
-		$('#clearmask').fadeIn(300);
+		$('body').append('<div id="blackmask"></div>');
+		$('#blackmask').fadeIn(0);
 
 		return false;
 	});
 
 	// When clicking on the button close or the mask layer the popup closed
 	//$('#mask').live('click', function() { 
-	$('#clearmask').live("click touchstart", function(){
-		$('#clearmask , #bulletholes').fadeOut(300 , function() {
-			$('#clearmask').remove();  
+	$('#blackmask').live("click touchstart", function(){
+		$('#blackmask , #bulletholes').fadeOut(300 , function() {
+			$('#blackmask').remove();  
 		}); 
 		return false;
 	});
