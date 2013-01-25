@@ -33,31 +33,29 @@ font-family: 'Homemade Apple', cursive;
 }
 /*BACKGROUND IMAGES*/
 .background-cardboard{
-background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/f14fd3dc7dfb8feb1f5dc29985e3f717/cardboard_background.jpg');
+background-image: url('../images/cardboard_background.jpg');
 background-position: 0% 0%;
 }
 .background-top{
 background-color: transparent;
-background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/1ae777dc62836fe3017bf5d33ec8573c/fireball_pouring.png');
+background-image: url('../images/fireball_pouring.png');
 background-position: 0% 0%;
 background-repeat: no-repeat;
 }
 .background-middle{
 background-color: transparent;
-background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/300fd1075cb2199cb69c5c3b7ad9ceec/fireball_rain.png');
+background-image: url('../images/fireball_rain.png');
 background-position: 0% 0%;
 background-repeat: both;
 }
 .background-bottom{
 background-color: transparent;
-background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/1ad830d3318ce04d8e2cad85e5b6e3ac/fireball_pile_one_third.png');
+background-image: url('../images/fireball_pile_one_third.png');
 background-position: 0% 100%;
 background-repeat: repeat-x;
 }
 /*HEADER*/
 .header{
-/*background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/b932b37dc6f4bf7bdf01920c6eb2ff84/success_balls.png'); 
-background-repeat: no-repeat;*/
 height: 200px;
 }
 .header-text{
@@ -140,6 +138,10 @@ border-radius: 8px;
 #blog-post-list ul li{
 padding:5px 0;
 border-bottom: 1px solid #ccc;
+}
+.Date-Author{
+font-size: 12px;
+color: red;
 }
 /* SCORE SHEET FORM */
 #score-sheet {
@@ -288,7 +290,7 @@ margin: 0;
 padding: 5px 0;
 }
 #form_container .fire{
-background-image: url('http://cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/36fa1b7c-3afe-4afb-940c-ac2ceefcc527/Image/0aaeeaa074b2e8a87a2b7130751fcf02/fireball_80.png');
+background-image: url('../images/fireball_80.png');
 background-repeat: no-repeat;
 min-height: 80px;
 }
