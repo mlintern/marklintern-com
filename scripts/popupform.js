@@ -56,6 +56,7 @@ $(document).ready(function() {
 			'margin-top' : -popMargTop,
 			'margin-left' : -popMargLeft
 		});
+		
 		$('#hole1').hide();
 		$('#hole2').hide();
 		$('#hole3').hide();
@@ -64,18 +65,29 @@ $(document).ready(function() {
 		$('#hole6').hide();
 		$('#hole7').hide();
 		$('#hole8').hide();
-		$('#hole1').delay(0).fadeIn();
-		$('#hole2').delay(100).fadeIn();
-		$('#hole3').delay(1300).fadeIn();
-		$('#hole4').delay(1500).fadeIn();
-		$('#hole5').delay(2700).fadeIn();
-		$('#hole6').delay(2900).fadeIn();
-		$('#hole7').delay(4000).fadeIn();
-		$('#hole8').delay(4200).fadeIn();
-
+		
 		// Add the mask to body
 		$('body').append('<div id="blackmask"></div>');
 		$('#blackmask').fadeIn(0);
+		
+		$('#hole1').delay(0).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},0);
+		$('#hole2').delay(1000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},1000);
+		$('#hole3').delay(2000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},2000);
+		$('#hole4').delay(3000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},3000);
+		$('#hole5').delay(4000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},4000);
+		$('#hole6').delay(5000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},5000);
+		$('#hole7').delay(6000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},6000);
+		$('#hole8').delay(7000).fadeIn();
+		setTimeout(function(){$.playSound('sounds/Gun-Shot.mp3');},7000);
+
+		
 
 		return false;
 	});
