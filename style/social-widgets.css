@@ -104,13 +104,13 @@ font-family: inherit !important;
 background-color: transparent !important;
 width: 180px !important;
 }
-.twtr-hd {
+.home-social-box .twtr-hd {
 display: none !important;
 }
-.twtr-ft {
+.home-social-box .twtr-ft {
 display: none;
 }
-.twtr-bd {
+.home-social-box .twtr-bd {
 padding: 0 !important;
 }
 #home-twitter-feed.twtr-widget .twtr-timeline {
