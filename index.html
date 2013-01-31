@@ -33,6 +33,9 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/QapTcha.jquery.js"></script>
 <script>	
+var browserName=navigator.appName; 
+if (browserName=="Microsoft Internet Explorer"){window.console = ({log:function(){}})}
+
 $(function() {
 		$(".meter > span").each(function() {
 			$(this)
