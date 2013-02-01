@@ -53,15 +53,11 @@ if (state == 0) {
 
 function addmin() {
 ms = ms + 60000;
-console.log('add min');
-console.log(ms);
 showtime();
 }
 
 function addthirty() {
 ms = ms + 30000;
-console.log('add min');
-console.log(ms);
 showtime();
 }
 
@@ -81,7 +77,6 @@ function run() {
 		state = 0;
 		} else {
 		ms = ms - 1000;
-		console.log(ms);
 		showtime();
 		$('#timedisplay').text(ms/1000);
 		}

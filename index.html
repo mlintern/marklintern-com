@@ -20,6 +20,7 @@
 <link type="text/css" href="style/style.css" rel="stylesheet">
 <link type="text/css" href="style/QapTcha.css" rel="stylesheet">
 
+<script type="text/javascript" src="scripts/windows-console.js"></script>
 <script type="text/javascript" src="scripts/popupform.js"></script>
 <script type="text/javascript" src="scripts/playSound.js"></script>
 <script type="text/javascript" src="scripts/show-hide.js"></script>
@@ -33,9 +34,6 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/QapTcha.jquery.js"></script>
 <script>	
-var browserName=navigator.appName; 
-if (browserName=="Microsoft Internet Explorer"){window.console = ({log:function(){}})}
-
 $(function() {
 		$(".meter > span").each(function() {
 			$(this)
@@ -486,7 +484,7 @@ $(function() {
 						<div><INPUT TYPE="BUTTON" Name="ssbutton" VALUE="Start/Stop" onClick="startstop()"/></div>
 						<div><INPUT TYPE="BUTTON" NAME="minplus" VALUE="+min" onClick="addmin()"/>
 						<INPUT TYPE="BUTTON" NAME="minplus" VALUE="+30" onClick="addthirty()"/></div>
-						<div><INPUT TYPE="BUTTON" NAME="reset" VALUE="Reset" onClick="timerreset()"/></div>
+						<div><INPUT TYPE="BUTTON" NAME="reset" VALUE="Reset Timer" onClick="timerreset()"/></div>
 					</div>
 				</div>
 				<div class="team-score">
@@ -508,7 +506,7 @@ $(function() {
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
-				<button id="resetscore" value="resetscore" style="float:left;">Reset</button>
+				<button id="resetscore" value="resetscore" style="float:left;">Reset Score</button>
 			</div><!-- scoreboard -->
 			<div id="score-eucher">
 				<div class="eucher-team-score">

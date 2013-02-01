@@ -88,13 +88,5 @@ jQuery.QapTcha = {
 }; jQuery.fn.QapTcha = jQuery.QapTcha.build;
 
 $(document).ready(function(){
-    // Simple call
     $('.QapTcha').QapTcha();
-    
-/*    // More complex call
-    $('.QapTcha').QapTcha({
-      autoSubmit : true,
-      autoRevert : true,
-      PHPfile : 'path_to_my_php_file/Qaptcha.jquery.php'
-    }); */
   });

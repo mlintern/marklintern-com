@@ -1,4 +1,4 @@
-<!-- Twitter Widget Code Starts here-->
+/* Twitter Widget Code Starts here */
 $(document).ready(function() {twitter_widget = new TWTR.Widget({
 id: 'home-twitter-feed',
 version: 2,
@@ -46,9 +46,9 @@ controls: 'twitter-controls'
 }
 }
 });
-<!-- Twitter Widget Code Ends here-->
+/* Twitter Widget Code Ends here */
 
-<!-- Instagram Widget Code Starts here-->
+/* Instagram Widget Code Starts here */
 (function($){
 $.fn.instagram = function(options) {
 var that = this,
@@ -81,7 +81,6 @@ $('<a>')
 .addClass('social-image')
 .addClass('instagram-image')
 .css('background-image', 'url(' + photo.images.low_resolution.url + ')')
-//.css('background-image', 'url(//imagefilter.content.compendiumblog.com/image?url=' + encodeURIComponent(photo.images.low_resolution.url) + '&width=178&height=178&secure=0)')
 );
 if (photo.caption) {
 li.append($('<p>').text(photo.caption.text));
@@ -183,4 +182,4 @@ nextprev: false
 }
 });
 });
-<!-- Instagram Widget Code Ends here-->
+/* Instagram Widget Code Ends here */
