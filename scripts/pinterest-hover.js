@@ -1,5 +1,5 @@
 $(function(){
-    var img = "//cdn2.content.compendiumblog.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5449f829-a13a-44bb-8103-38ecafc13d5d/Image/15cbaea47eeca078dd036b554d11e0a3/pinit.png";
+    var img = "images/pinit.png";
     var img_w = 46;
     var img_h = 26;
     var distance_from_corner = 10;
@@ -9,7 +9,7 @@ $(function(){
     var page_url = document.location;
     var page_title = document.title;
     //$(".post-body img").hover(function(){
-    $("img").hover(function(){
+    $("img:not(#cp-pin-it)").hover(function(){
         var offset = $(this).offset();
         var left = offset.left + $(this).innerWidth() - img_w - distance_from_corner;
         var top = offset.top + distance_from_corner;
