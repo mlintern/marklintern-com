@@ -40,6 +40,10 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	function gunShot(){
+	        $("body").append("<embed src='sounds/Gun-Shot.mp3' autostart='true' loop='false' width='2' height='0'></embed>");
+	}
+	
 	$('a.bullets-link').click(function() {
 
 		//Getting the variable's value from a link 
@@ -70,25 +74,15 @@ $(document).ready(function() {
 		$('body').append('<div id="blackmask"></div>');
 		$('#blackmask').fadeIn(0);
 		
-		$('#hole1').delay(0).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},0);
-		$('#hole2').delay(1000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},1000);
-		$('#hole3').delay(2000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},2000);
-		$('#hole4').delay(3000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},3000);
-		$('#hole5').delay(4000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},4000);
-		$('#hole6').delay(5000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},5000);
-		$('#hole7').delay(6000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.wav');},6000);
-		$('#hole8').delay(7000).fadeIn();
-		setTimeout(function(){$.playSound('sounds/Gun-Shot.mp3');},7000);
-
-		
-
+		$('#hole1').delay(0).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole2').delay(1000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole3').delay(2000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole4').delay(3000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole5').delay(4000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole6').delay(5000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole7').delay(6000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		$('#hole8').delay(7000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+	
 		return false;
 	});
 

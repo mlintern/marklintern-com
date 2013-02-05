@@ -2,7 +2,7 @@
 /** QapTcha CSS **/
 /*****************/
 .QapTcha {
-margin:10px auto;
+margin:0px auto 5px auto;
 width:252px;
 }
 .QapTcha .clr{
@@ -10,15 +10,15 @@ clear:both;
 }
 .QapTcha .bgSlider {
 width:252px;
-height:37px;
+height:25px;
 float:left;
 border:1px solid #040404;
 background-color: red;
 }
 .QapTcha .Slider {
-width:51px;
-height:37px;
-background:transparent url('../images/bg_draggable_qaptcha.jpg') no-repeat;
+width:34px;
+height:25px;
+background:transparent url('../images/bg_qaptcha_arrow.jpg') no-repeat;
 cursor:e-resize;
 position:relative;
 top:0;

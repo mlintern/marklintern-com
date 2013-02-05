@@ -278,21 +278,22 @@ font-size: 15px;
 }
 #form_container label {
 float:left;
-width: 85px;
+width: 65px;
 text-align: center;
 color: yellow;
 }
 #form_container .drop{
-margin-top: 20px;
+margin-top: 15px;
+margin-right: 15px;
 }
 #form_container .form_item{
 margin: 0;
 padding: 5px 0;
 }
 #form_container .fire{
-background-image: url('../images/fireball_80.png');
+background-image: url('../images/fireball_60.png');
 background-repeat: no-repeat;
-min-height: 80px;
+min-height: 60px;
 }
 #form_container a{
 color: #3C3D3C;
@@ -301,7 +302,7 @@ color: #3C3D3C;
 border: solid 1px #69584d;
 background: #fffcf6;
 float:left;
-width: 200px;
+width: 220px;
 }
 #form_container .form_item textarea{
 border: solid 1px #69584d;
@@ -356,7 +357,7 @@ font-size: 30px;
 background-color: black;
 color: white;
 border: none;
-width: 305px;
+width: 310px;
 float: left;
 }
 .score{

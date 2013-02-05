@@ -6,7 +6,7 @@ google.load("feeds", "1", { callback: function() {
 		if (!result.error) {
 			for (var i = 0, l=result.feed.entries.length; i < l; i++) {
 			var entry = result.feed.entries[i];
-			console.log(entry);
+			//console.log(entry);
 			var entrydate = new Date(entry.publishedDate);
 			entrydate = moment(entrydate).format('MMMM Do, YYYY');
 			var li = $('<li>')

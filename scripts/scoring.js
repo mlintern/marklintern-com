@@ -80,7 +80,6 @@ function fixsizing(divname) {
 
 $(document).ready(function() {
 	$('#player_3').click(function() {
-		console.log('3');
 		$('.player3').show();
 		$('.player4').hide();
 		$('.player5').hide();
@@ -90,7 +89,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#player_4').click(function() {
-		console.log('4');
 		$('.player3').show();
 		$('.player4').show();
 		$('.player5').hide();
@@ -100,7 +98,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#player_5').click(function() {
-		console.log('5');
 		$('.player3').show();
 		$('.player4').show();
 		$('.player5').show();
@@ -110,7 +107,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#player_6').click(function() {
-		console.log('6');
 		$('.player3').show();
 		$('.player4').show();
 		$('.player5').show();
@@ -120,7 +116,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#player_7').click(function() {
-		console.log('7');
 		$('.player3').show();
 		$('.player4').show();
 		$('.player5').show();
@@ -130,7 +125,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#player_8').click(function() {
-		console.log('7');
 		$('.player3').show();
 		$('.player4').show();
 		$('.player5').show();
@@ -140,7 +134,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#onetothree').click(function() {
-		console.log('1-2');
 		if($('#onetothree').attr('checked')) {
 		    $("#rowone").show();
 		    $("#rowtwo").show();
@@ -151,7 +144,6 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#jacktoking').click(function() {
-		console.log('J-K');
 		if($('#jacktoking').attr('checked')) {
 		    $("#rowJ").show();
 		    $("#rowQ").show();
@@ -168,7 +160,6 @@ $(document).ready(function() {
 //Scoreboard
 $(document).ready(function() {
 	$(".HomeMinus").live("click", function() {
-		console.log("HomeMinus");
 		var current = parseInt($("#homescore").val());
 		if (current == 0){
 		}else{
@@ -176,7 +167,6 @@ $(document).ready(function() {
 		}
 	});
 	$(".HomePlus").live("click", function() {
-		console.log("HomePlus");
 		var current = parseInt($("#homescore").val());
 		if (current == 999){
 		}else{
@@ -184,7 +174,6 @@ $(document).ready(function() {
 		}
 	});
 	$(".AwayMinus").live("click", function() {
-		console.log("AwayMinus");
 		var current = parseInt($("#awayscore").val());
 		if (current == 0){
 		}else{
@@ -192,7 +181,6 @@ $(document).ready(function() {
 		}
 	});
 	$(".AwayPlus").live("click", function() {
-		console.log("HomePlus");
 		var current = parseInt($("#awayscore").val());
 		if (current == 999){
 		}else{
@@ -200,7 +188,7 @@ $(document).ready(function() {
 		}
 	});
 	$("#resetscore").live("click", function() {
-		console.log("Reset");
+		//console.log("Reset");
 		$("#homescore").val(0);
 		$("#awayscore").val(0);
 	});
@@ -209,7 +197,6 @@ $(document).ready(function() {
 //Eucher Scoreboard
 $(document).ready(function() {
 	function reseteuchergame() {
-		console.log("EucherReset");
 		$("#eucherteam1").width(0);
 		$("#eucherhomescore").val(0);
 		$("#eucherteam2").width(0);
@@ -218,19 +205,18 @@ $(document).ready(function() {
 	
 	$("#homeeuchername").on('keyup',function(){
 		$("#homeeucherteamname").text($('#homeeuchername').val());
-		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 130);
+		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 135);
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
 	
 	$("#awayeuchername").on('keyup',function(){
 		$("#awayeucherteamname").text($('#awayeuchername').val());
-		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 130;
+		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 135;
 		$(".scorecontainer").width( newWidth );
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
 	
 	$(".eucherhomeminusbtn").live("click", function() {
-		console.log("EucherHomeMinus");
 		var currentscore = parseInt($("#eucherhomescore").val());
 		var currentpos = $("#eucherteam1").width();
 		if (currentpos == 0){
@@ -240,7 +226,6 @@ $(document).ready(function() {
 		}
 	});
 	$(".eucherhomeplus1btn").live("click", function() {
-		console.log("EucherHomePlus");
 		var currentpos = $("#eucherteam1").width();
 		if (currentpos == 360){
 			$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
@@ -271,7 +256,6 @@ $(document).ready(function() {
 		$(".eucherhomeplus1btn").click();
 	});
 	$(".eucherawayminusbtn").live("click", function() {
-		console.log("EucherAwayMinus");
 		var currentscore = parseInt($("#eucherawayscore").val());
 		var currentpos = $("#eucherteam2").width();
 		if (currentpos == 0){
@@ -281,7 +265,6 @@ $(document).ready(function() {
 		}
 	});
 	$(".eucherawayplus1btn").live("click", function() {
-		console.log("EucherHomePlus");
 		var currentscore = parseInt($("#eucherawayscore").val());
 		var currentpos = $("#eucherteam2").width();
 		if (currentpos == 360){
@@ -313,7 +296,6 @@ $(document).ready(function() {
 		$(".eucherawayplus1btn").click();
 	});
 	$("#eucherresetscore").live("click", function() {
-		console.log("EucherReset");
 		reseteuchergame()
 		$("#eucherhomeoverallscore").val(0);
 		$("#eucherawayoverallscore").val(0);
