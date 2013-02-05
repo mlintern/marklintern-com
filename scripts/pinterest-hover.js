@@ -40,6 +40,3 @@ $(function(){
         window.open(url, 'cp-pinterest', 'screenX=100,screenY=100,height=580,width=730');
     });
 });
-$(document).ready(function(){
-alert(location.protocol + "//" + location.host);
-});
