@@ -18,7 +18,11 @@ $(function(){
         } else {
             page_title = document.title;
         }
-        current_img = $(this).attr("src");
+        if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
+        	current_img = $(this).attr('src');
+        }else{
+        	current_img = "http://www.marklintern.com/" + $(this).attr('src');
+        }
         button.css({top: top, left: left, display: "block"});
     }, function() {
         button.css({ display: "none" });
