@@ -8,6 +8,8 @@ $(function(){
     var pinterest_url = "http://pinterest.com/pin/create/button/";
     var page_url = document.location;
     var page_title = document.title;
+    var page_domain = location.host;
+    var page_protocol = location.protocol;
     //$(".post-body img").hover(function(){
     $("img:not(#cp-pin-it)").hover(function(){
         var offset = $(this).offset();
@@ -20,10 +22,17 @@ $(function(){
         }
         if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
         	current_img = $(this).attr('src');
+        	console.log('A');
         }else{
-        	//current_img = "http://www.marklintern.com/" + $(this).attr('src');
-        	current_img = location.protocol + "//" + location.host + "/" + $(this).attr('src');
-
+        	if ( $(this).attr('src').toLowerCase().indexOf("//") >= 0 ){
+        	current_img = location.protocol + $(this).attr('src');
+        	console.log('B');
+        	}else{
+        	//current_img = "http://www.marklintern.com/" + $(this).attr('src'); //For Testing locally
+        	//current_img = location.protocol + "//" + location.host + "/" + $(this).attr('src');
+        	current_img = page_protocol + "//" + page_domain + "/" + $(this).attr('src');
+        	console.log('C');
+        	}
         }
         button.css({top: top, left: left, display: "block"});
     }, function() {
