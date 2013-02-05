@@ -21,7 +21,9 @@ $(function(){
         if ( $(this).attr('src').toLowerCase().indexOf("http") >= 0 ){
         	current_img = $(this).attr('src');
         }else{
-        	current_img = "http://www.marklintern.com/" + $(this).attr('src');
+        	//current_img = "http://www.marklintern.com/" + $(this).attr('src');
+        	current_img = location.protocol + "//" + location.host + "/" + $(this).attr('src');
+
         }
         button.css({top: top, left: left, display: "block"});
     }, function() {
@@ -37,4 +39,7 @@ $(function(){
         url += "&media=" + encodeURIComponent(current_img);
         window.open(url, 'cp-pinterest', 'screenX=100,screenY=100,height=580,width=730');
     });
+});
+$(document).ready(function(){
+alert(location.protocol + "//" + location.host);
 });
