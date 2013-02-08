@@ -11,7 +11,7 @@ $(function(){
     var page_domain = location.host;
     var page_protocol = location.protocol;
     //$(".post-body img").hover(function(){
-    $("img").not(#cp-pin-it).hover(function(){
+    $("img").not("#cp-pin-it").hover(function(){
         var offset = $(this).offset();
         var left = offset.left + $(this).innerWidth() - img_w - distance_from_corner;
         var top = offset.top + distance_from_corner;
