@@ -9,7 +9,7 @@ $(function(){
     var page_url = document.location;
     var page_title = document.title;
     //$(".post-body img").hover(function(){
-    $("img").hover(function(){
+    $("img").not("#cp-pin-it").hover(function(){
         var offset = $(this).offset();
         var left = offset.left + $(this).innerWidth() - img_w - distance_from_corner;
         var top = offset.top + distance_from_corner;
