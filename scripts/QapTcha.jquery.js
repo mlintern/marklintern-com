@@ -68,7 +68,8 @@ jQuery.QapTcha = {
 						    type: 'submit',
 						    value: 'Share your Story'
 						})).appendTo('form');
-						
+												
+						$('.QapTcha').hide();
 						}
 				}
 			});
