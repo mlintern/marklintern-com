@@ -29,4 +29,13 @@ $(document).ready(function() {
 		$('#blog-post-list').hide();
 	}
 	);
+	
+	$('#blog-post-list').hover(
+	function() {
+		$('#blog-post-list').show();
+	},
+	function() {
+		$('#blog-post-list').hide();
+	}
+	);
 });

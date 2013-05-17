@@ -1,5 +1,5 @@
 google.load("feeds", "1", { callback: function() {
-	var feed = new google.feeds.Feed("http://blog.marklintern.com/blog/test---marks-network/rss");
+	var feed = new google.feeds.Feed("http://www.marklintern.com/successbucket/test---marks-network/rss");
 	feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
 	feed.setNumEntries(10);
 	feed.load(function(result) {
