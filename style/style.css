@@ -340,7 +340,7 @@ height: 416px;
 }
 #timer{
 position:absolute;
-top: 170px;
+top: 125px;
 left: 261px;
 }
 .numeral{
@@ -348,7 +348,7 @@ height: 40px;
 }
 #countdownDisp{
 background-color: black;
-width: 148px;
+width: 162px;
 margin: 0 auto;
 }
 .team-score{
@@ -361,7 +361,7 @@ font-size: 30px;
 background-color: black;
 color: white;
 border: none;
-width: 310px;
+width: 320px;
 float: left;
 }
 .score{
