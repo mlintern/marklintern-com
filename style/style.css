@@ -32,6 +32,9 @@ font-family: 'Nova Square', Arial, sans-serif;
 .apple{
 font-family: 'Homemade Apple', cursive;
 }
+body{
+font-family: 'Almost Noteworthy';
+}
 /*BACKGROUND IMAGES*/
 .background-cardboard{
 background-image: url('../images/cardboard_background.jpg');
