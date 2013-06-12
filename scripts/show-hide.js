@@ -18,6 +18,14 @@ $(document).ready(function() {
 		$('#twitter-box').hide();
 	}
 	);
+	$('#twitter-box').hover(
+	function() {
+		$('#twitter-box').show();
+	},
+	function() {
+		$('#twitter-box').hide();
+	}
+	);
 });
 /* For the Blog sidebar div */
 $(document).ready(function() {
