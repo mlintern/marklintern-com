@@ -1,52 +1,35 @@
-/* Twitter Widget Code Starts here */
-$(document).ready(function() {twitter_widget = new TWTR.Widget({
-id: 'home-twitter-feed',
-version: 2,
-type: 'profile',
-rpp: 30,
-interval: 30000,
-width: 230,
-height: 310,
-theme: {
-shell: {
-background: '#ffffff',
-color: '#000000'
-},
-tweets: {
-background: '#ffffff',
-color: '#333333',
-links: '#004097'
-}
-},
-features: {
-scrollbar: false,
-loop: false,
-live: false,
-behavior: 'all'
-}
-/* Update user here */
-}).render().setUser('mlintern').start();
-
-watch_twitter = setInterval(function(){checkTwitter()}, 500);
-function checkTwitter() {
-if($("#home-twitter-feed .twtr-tweet").length) {
-clearInterval(watch_twitter);
-
-$("#home-twitter-feed.twtr-widget").css("position", "static");
-
-$("#home-twitter-feed .twtr-reference-tweet").remove();
-$("#home-twitter-feed .twtr-tweets").easyPaginate({
-step:3, 
-auto:false, 
-loop:false,
-clickstop:false,
-nextprev: false,
-controls: 'twitter-controls'
-});
-}
-}
-});
-/* Twitter Widget Code Ends here */
+/* Pinterest Widget Code Starts here */
+google.load("feeds", "1", { callback: function() {
+    var feed = new google.feeds.Feed("http://pinterest.com/mlintern/feed.rss");
+    feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
+    feed.setNumEntries(10);
+    feed.load(function(result) {
+        if (!result.error) {
+			for (var i = 0, l=result.feed.entries.length; i < l; i++) {
+			var entry = result.feed.entries[i];
+			var entrydate = new Date(entry.publishedDate);
+			entrydate = moment(entrydate).format('MMMM Do, YYYY');
+			var li = $('<li>')
+					.attr('class','pin-post')
+					.append(
+                $('<div>')
+                    .attr('class','pin-content')
+                    .html(entry.content)
+			    );
+			$('#home-pinerest-feed').append(li);
+			}
+		}
+        $("#home-pinerest-feed").easyPaginate({
+            step:1, 
+            auto:false, 
+            loop:false,
+    		clickstop:false,
+    		nextprev: false,
+            controls: 'pinterest-controls'
+    	});
+	});
+}});
+/* Pinterest Widget Code Ends here */
 
 /* Instagram Widget Code Starts here */
 (function($){
@@ -75,13 +58,18 @@ var li = $('<li>')
 .addClass('instagram-placeholder')
 .attr('id', photo.id)
 .append(
-$('<a>')
-.attr('target', '_blank')
-.attr('href', photo.link)
-.addClass('social-image')
-.addClass('instagram-image')
-.css('background-image', 'url(' + photo.images.low_resolution.url + ')')
-);
+	$('<a>')
+	.attr('target', '_blank')
+	.attr('href', photo.link)
+	//.addClass('social-image')
+	//.addClass('instagram-image')
+	//.css('background-image', 'url(' + photo.images.low_resolution.url + ')')
+	.append(
+		$('<img>')
+		.attr('src', photo.images.low_resolution.url)
+		.attr('width', '250')
+		)
+	);
 if (photo.caption) {
 li.append($('<p>').text(photo.caption.text));
 }
