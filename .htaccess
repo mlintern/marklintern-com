@@ -1,8 +1,7 @@
 #redirect domain.com to www.domain.com
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^marklintern\.com$ [NC]
-RewriteRule ^(.*)$ http://www.marklintern.com/$1 [R=301,L]
-
+RewriteRule ^(.*)$ http://www.marklintern.com/$1 [R=301,L]:w
 
 #RewriteRule successbucket/(.*)$ / [L,R=301]
 #<IfModule mod_rewrite.c>
