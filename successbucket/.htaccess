@@ -2,4 +2,4 @@ RewriteEngine On
 #RequestHeader set X-Compendium-ID 758c2424-6055-4d3e-880c-4021718d814e
 #RewriteRule (.*)$ http://www.compendiumblog.com/successbucket$1 [L,P]
 RewriteBase /successbucket
-RewriteRule (.+) reverse-proxy.php
+RewriteRule (.*) reverse-proxy.php

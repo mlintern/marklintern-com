@@ -3,38 +3,6 @@ $fullPath = $_SERVER['REQUEST_URI'];
 
 $newUrl = "http://www.compendiumblog.com/$fullPath";
 
-/*
-$proxy = curl_init($newUrl);
-curl_setopt($proxy, CURLOPT_HTTPHEADER, array("X-Compendium-ID: 758c2424-6055-4d3e-880c-4021718d814e"));
-curl_setopt($proxy, CURLOPT_HEADER, TRUE);
-//curl_setopt($proxy, CURLOPT_FOLLOWLOCATION, TRUE);
-curl_setopt($proxy, CURLOPT_RETURNTRANSFER, TRUE);
-$result = curl_exec($proxy);
-curl_close($proxy);
-
-$list = explode("\r\n", $result);
-$foundHeader = false;
-foreach ($list as $line)
-{
-	if (!$foundHeader)
-	{
-		if($line == "")
-		{
-			$foundHeader = true;
-		}
-		else if (strpos($line, "Connection:") < 0)
-		{
-			header($line);
-		}
-	}
-	else
-	{
-		echo $line;
-	}
-}
-*/
-
-
 $targetServer = "www.compendiumblog.com";
 $fp = fsockopen($targetServer, 80, $errno, $errstr, 30);
 
