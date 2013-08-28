@@ -120,7 +120,8 @@ background-color: #F26722;
 }
 /*SIDEBAR*/
 .sidebar{
-margin-top: 10px;   
+margin-top: 10px; 
+position: relative;  
 }
 .sidebar .widget{
 background-color: #ffffff;
