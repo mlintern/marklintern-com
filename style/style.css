@@ -431,7 +431,7 @@ border-radius:3px 3px 3px 3px;
 text-align: center;
 }
 .eucher-team-score{
-margin: 10px;
+margin: 10px 2px;
 text-align:center;
 float:left;
 width: 430px;
@@ -463,7 +463,7 @@ display: none;
 }
 .scorecontainer{
 margin: 0 auto;
-width: 305px;
+width: 100%;
 }
 .overallscore{
 font-size: 25px;
@@ -473,7 +473,7 @@ padding: 3px 0px;
 float: left;
 color: #ffffff;
 margin-left: 20px;
-margin-top: 5px;
+margin-top: 8px;
 }
 .eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
 float: left;
@@ -519,7 +519,7 @@ border: none;
 .scoremarker{
 background-image: url('../images/scoremarkers.png');
 background-repeat: no-repeat;
-background-position: 0 10px;
+background-position: 0 0;
 }
 .separator{
 border-top: white solid 1px;
