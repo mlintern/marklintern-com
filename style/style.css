@@ -18,6 +18,10 @@ cursor: pointer;
 a:hover{
 text-decoration: underline; 
 }
+img {
+max-width: 100%;
+height: auto !important;
+}
 .shadow {
 -moz-box-shadow: 7px 7px 8px #444;
 -webkit-box-shadow: 7px 7px 8px #444;
@@ -34,9 +38,6 @@ font-family: 'Homemade Apple', cursive;
 }
 body{
 font-family: 'Almost Noteworthy';
-}
-.container{
-width: 1000px;
 }
 /*BACKGROUND IMAGES*/
 .background-cardboard{
@@ -87,7 +88,9 @@ margin: 20px;
 background-color: #ffffff;
 }
 /*CONTENT*/
+.content{text-align:center;}
 .sub-content{
+text-align: left;
 margin-left: 30px;
 padding: 15px;
 }
@@ -142,6 +145,7 @@ position: absolute;
 top: 235px;
 left: 215px;
 width: 300px;
+z-index: 1;
 }
 .twtr-tweets{
 padding: 10px;
@@ -156,6 +160,7 @@ width: 300px;
 background-color: #fff;
 padding: 10px;
 border-radius: 8px;
+z-index: 1;
 }
 #blog-post-list ul li{
 padding:5px 0;
@@ -475,7 +480,7 @@ color: #ffffff;
 margin-left: 20px;
 margin-top: 8px;
 }
-.eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
+.eucherhomeplus1btn, .eucherawayplus1btn{
 float: left;
 font-size: 30px;
 background-color: black;
@@ -484,9 +489,34 @@ border: none;
 margin-top: 15px;
 margin-left: 40px;
 border: 2px solid green;
-padding: 0 8px;
-border-radius: 20px;
--moz-border-radius: 22px;
+padding: 0 15px;
+border-radius: 35px;
+-moz-border-radius: 35px;
+}
+.eucherhomeplus2btn, .eucherawayplus2btn{
+float: left;
+font-size: 30px;
+background-color: black;
+color: white;
+border: none;
+margin-top: 15px;
+margin-left: 40px;
+border: 2px solid green;
+padding: 0 12px;
+border-radius: 35px;
+-moz-border-radius: 35px;
+} 
+.eucherhomeplus4btn, .eucherawayplus4btn {
+float: left;
+font-size: 30px;
+background-color: black;
+color: white;
+border: none;
+margin-top: 15px;
+margin-left: 40px;
+border: 2px solid green;
+padding: 0 13px;
+border-radius: 35px;
 }
 .eucherhomeminusbtn, .eucherawayminusbtn{
 float: left;
@@ -497,18 +527,8 @@ border: none;
 margin-top: 15px;
 margin-left: 90px;
 border: 2px solid red;
-padding: 0 9px;
-border-radius: 20px;
-}
-
-@-moz-document url-prefix(){
-	.eucherhomeplus1btn, .eucherawayplus1btn, .eucherhomeplus2btn, .eucherawayplus2btn, .eucherhomeplus4btn, .eucherawayplus4btn {
-	border-radius: 22px;
-	}
-	.eucherhomeminusbtn, .eucherawayminusbtn{
-	border-radius: 22px;
-	padding: 0 8px;
-	}
+padding: 0 14px;
+border-radius: 35px;
 }
 
 #eucherresetscore{
@@ -529,8 +549,13 @@ width: 100%;
 }
 .opencloseteamscore{
 position: absolute;
-top: 187px;
+top: 184px;
 right: 2px;
+height: 30px;
+width: 30px;
+padding: 0;
+border-radius: 15px;
+border: none;
 }
 /*FOOTER*/
 .footer{
@@ -569,41 +594,41 @@ left:0px;
 display:none;
 position: absolute;
 top:10px;
-left:300px;
+left:50%;
 }
 #hole3{
 display:none;
 position: absolute;
 top:310px;
-left:85px;
+left:30%;
 }
 #hole4{
 display:none;
 position: absolute;
 top:350px;
-left:365px;
+left:70%;
 }
 #hole5{
 display:none;
 position: absolute;
-top:225px;
-left:225px;
+top:275px;
+left:10%;
 }
 #hole6{
 display:none;
 position: absolute;
 top:165px;
-left:360px;
+left:40%;
 }
 #hole7{
 display:none;
 position: absolute;
-top:410px;
-left:205px;
+top:500px;
+left:20%;
 }
 #hole8{
 display:none;
 position: absolute;
 top:465px;
-left:365px;
+left:65%;
 }
