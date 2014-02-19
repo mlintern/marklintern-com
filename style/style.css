@@ -104,6 +104,12 @@ width: 96%;
 width: 100%;
 height: 200px;
 }
+#home-instagram{
+height: 400px;
+}
+#home-pinterest{
+height: 400px;
+}
 @media ( max-width : 767px ) {
 	.sub-content{
 	margin-left: 0;
