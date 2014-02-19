@@ -72,6 +72,11 @@ font-size: 130px;
 color: #4CF748;
 text-align: center;
 }
+@media ( max-width : 520px ) {
+.header-text{
+font-size: 60px;
+}
+}
 /*MENU*/
 .menu{
 padding: 5px;   
@@ -192,8 +197,9 @@ font-size: 22px;
 #score-sheet #scoresheet input{
 height: 25px;
 width: 95px;
-font-size: 20px;
+font-size: 16px;
 text-align: center;
+color: #000;
 }
 #totalscore{
 border: #000 solid 3px;
@@ -201,8 +207,9 @@ border: #000 solid 3px;
 #totalscore td{
 border-right: #000 solid 3px;
 }
-#totalscore input{
+#score-sheet #scoresheet #totalscore input{
 font-weight: bold;
+height: 30px;
 }
 #player-picker{
 color: white;
@@ -334,6 +341,7 @@ width: 220px;
 border: solid 1px #69584d;
 background: #fffcf6;
 float: left;
+width: 220px;
 }
 #form_container .form_item button {
 margin-left:100px;
@@ -363,10 +371,13 @@ height: 416px;
 #timer{
 position:absolute;
 top: 125px;
-left: 261px;
+left: 255px;
+}
+#timer input{
+margin: 5px 0;
 }
 .numeral{
-height: 40px;
+height: 40px !important;
 }
 #countdownDisp{
 background-color: black;
@@ -406,6 +417,8 @@ color: white;
 border: none;
 margin-top: 15px;
 margin-left: 128px;
+line-height: 1;
+margin-right: 10px;
 }
 .minusbtn{
 float:left;

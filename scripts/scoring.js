@@ -134,7 +134,7 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#onetothree').click(function() {
-		if($('#onetothree').attr('checked')) {
+		if($('#onetothree').prop('checked')) {
 		    $("#rowone").show();
 		    $("#rowtwo").show();
 		} else {
@@ -144,7 +144,7 @@ $(document).ready(function() {
 		fixsizing('#score-sheet')
 	});
 	$('#jacktoking').click(function() {
-		if($('#jacktoking').attr('checked')) {
+		if($('#jacktoking').prop('checked')) {
 		    $("#rowJ").show();
 		    $("#rowQ").show();
 		    $("#rowK").show();
@@ -159,35 +159,35 @@ $(document).ready(function() {
 
 //Scoreboard
 $(document).ready(function() {
-	$(".HomeMinus").live("click", function() {
+	$(".HomeMinus").click(function() {
 		var current = parseInt($("#homescore").val());
 		if (current == 0){
 		}else{
 			$("#homescore").val(current - 1);
 		}
 	});
-	$(".HomePlus").live("click", function() {
+	$(".HomePlus").click(function() {
 		var current = parseInt($("#homescore").val());
 		if (current == 999){
 		}else{
 			$("#homescore").val(current + 1);
 		}
 	});
-	$(".AwayMinus").live("click", function() {
+	$(".AwayMinus").click(function() {
 		var current = parseInt($("#awayscore").val());
 		if (current == 0){
 		}else{
 			$("#awayscore").val(current - 1);
 		}
 	});
-	$(".AwayPlus").live("click", function() {
+	$(".AwayPlus").click(function() {
 		var current = parseInt($("#awayscore").val());
 		if (current == 999){
 		}else{
 			$("#awayscore").val(current + 1);
 		}
 	});
-	$("#resetscore").live("click", function() {
+	$("#resetscore").click(function() {
 		//console.log("Reset");
 		$("#homescore").val(0);
 		$("#awayscore").val(0);
@@ -216,7 +216,7 @@ $(document).ready(function() {
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
 	
-	$(".eucherhomeminusbtn").live("click", function() {
+	$(".eucherhomeminusbtn").click(function() {
 		var currentscore = parseInt($("#eucherhomescore").val());
 		var currentpos = $("#eucherteam1").width();
 		if (currentpos == 0){
@@ -225,7 +225,7 @@ $(document).ready(function() {
 			$("#eucherhomescore").val(currentscore - 1);
 		}
 	});
-	$(".eucherhomeplus1btn").live("click", function() {
+	$(".eucherhomeplus1btn").click(function() {
 		var currentpos = $("#eucherteam1").width();
 		if (currentpos == 360){
 			$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
@@ -237,13 +237,13 @@ $(document).ready(function() {
 			$("#eucherhomescore").val(parseInt($("#eucherhomescore").val()) + 1);
 		}
 	});
-	$(".eucherhomeplus2btn").live("click", function() {
+	$(".eucherhomeplus2btn").click(function() {
 		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
 		$(".eucherhomeplus1btn").click();
 		if (stop) {stop=false;return;}
 		$(".eucherhomeplus1btn").click();
 	});
-	$(".eucherhomeplus4btn").live("click", function() {
+	$(".eucherhomeplus4btn").click(function() {
 		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
 		$(".eucherhomeplus1btn").click();
 		if (stop) {stop=false;return;}
@@ -255,7 +255,7 @@ $(document).ready(function() {
 		if (stop) {stop=false;return;}
 		$(".eucherhomeplus1btn").click();
 	});
-	$(".eucherawayminusbtn").live("click", function() {
+	$(".eucherawayminusbtn").click(function() {
 		var currentscore = parseInt($("#eucherawayscore").val());
 		var currentpos = $("#eucherteam2").width();
 		if (currentpos == 0){
@@ -264,7 +264,7 @@ $(document).ready(function() {
 			$("#eucherawayscore").val(currentscore - 1);
 		}
 	});
-	$(".eucherawayplus1btn").live("click", function() {
+	$(".eucherawayplus1btn").click(function() {
 		var currentscore = parseInt($("#eucherawayscore").val());
 		var currentpos = $("#eucherteam2").width();
 		if (currentpos == 360){
@@ -277,13 +277,13 @@ $(document).ready(function() {
 			$("#eucherawayscore").val(parseInt($("#eucherawayscore").val()) + 1);
 		}
 	});
-	$(".eucherawayplus2btn").live("click", function() {
+	$(".eucherawayplus2btn").click(function() {
 	if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
 		$(".eucherawayplus1btn").click();
 		if (stop) {stop=false;return;}
 		$(".eucherawayplus1btn").click();
 	});
-	$(".eucherawayplus4btn").live("click", function() {
+	$(".eucherawayplus4btn").click(function() {
 		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
 		$(".eucherawayplus1btn").click();
 		if (stop) {stop=false;return;}
@@ -295,12 +295,12 @@ $(document).ready(function() {
 		if (stop) {stop=false;return;}
 		$(".eucherawayplus1btn").click();
 	});
-	$("#eucherresetscore").live("click", function() {
+	$("#eucherresetscore").click(function() {
 		reseteuchergame()
 		$("#eucherhomeoverallscore").val(0);
 		$("#eucherawayoverallscore").val(0);
 	});
-	$(".opencloseteamscore").live("click", function() {
+	$(".opencloseteamscore").click(function() {
 		$(".wins-losses").toggle();
 	});
 });

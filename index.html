@@ -27,13 +27,12 @@
 <div class="background-bottom">
     <div class="container">
         
-        <div class="header span12 row">
+        <div class="header">
 			<div class="header-text">nretniL kraM</div>
 		</div> 
 		   
 		<div class="row">    
 	        <div id="sidebar" class="sidebar col-sm-3">
-				<a href="/"><img src="images/Home.png"/></a> 
 				<a id="twitter-link" target="_blank" href="http://www.twitter.com/mlintern"><img src="images/Twitter.png"/>
 					<div id="twitter-box">
 						<a class="twitter-timeline" href="https://twitter.com/mlintern" data-widget-id="341567210726244353" data-theme="light" data-link-color="#cc0000"  data-related="compendiumit,compendiumhelp"  data-tweet-limit="10" data-aria-polite="assertive" width="300" height="500" lang="EN" data-chrome="nofooter noborders noheader">Tweets by @mlintern</a>
@@ -180,22 +179,6 @@
 					<a id="keyboard" title="Support Form" onclick="showhide('#keyboard-div');"><img src="images/Keyboard.png"/></a>
 					<div id="keyboard-div" class="fog60 hide sub-content">
 						<div>
-						<script type="text/javascript">
-						$(document).ready(function() {
-							$("input[name='q9'][value='No']").click(function() {
-								$("input[name='q9'][value='Yes']").prop('checked', true);
-								$("input[name='q9'][value='No']").prop('checked', false);
-							});
-							$("input[name='q12'][value='Yes']").click(function() {
-								$("input[name='q12'][value='Yes']").prop('checked', false);
-								$("input[name='q12'][value='No']").prop('checked', true);
-							});
-							$("input[name='q14'][value='No']").click(function() {
-								$("input[name='q14'][value='Yes']").prop('checked', true);
-								$("input[name='q14'][value='No']").prop('checked', false);
-							});
-						});
-						</script>
 						<h1>Computer Problem Report Form</h1>
 						<p><i>Complete all answers before submitting, incomplete forms will be ignored</i></p>
 						<form action="http://www.nretnil.com/php/FormToEmail.php" method="POST">
@@ -679,8 +662,8 @@
 </div>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script charset="utf-8" src="scripts/widget.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="scripts/widget.js"></script>
 <script type="text/javascript" src="scripts/jsapi.js"></script>
 <script type="text/javascript" src="scripts/moment.js"></script>
 <script type="text/javascript" src="scripts/windows-console.js"></script>
@@ -695,9 +678,9 @@
 <script type="text/javascript" src="scripts/google-api.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/QapTcha.jquery.js"></script>
-<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/pinterest-hover-pinit-all-img.js"></script>
 
-<script>	
+<script type="text/javascript">	
+
 $(function() {
 	$(".meter > span").each(function() {
 		$(this)
@@ -708,6 +691,22 @@ $(function() {
 			}, 1200);
 	});
 });
+
+$(document).ready(function() {
+	$("input[name='q9'][value='No']").click(function() {
+		$("input[name='q9'][value='Yes']").prop('checked', true);
+		$("input[name='q9'][value='No']").prop('checked', false);
+	});
+	$("input[name='q12'][value='Yes']").click(function() {
+		$("input[name='q12'][value='Yes']").prop('checked', false);
+		$("input[name='q12'][value='No']").prop('checked', true);
+	});
+	$("input[name='q14'][value='No']").click(function() {
+		$("input[name='q14'][value='Yes']").prop('checked', true);
+		$("input[name='q14'][value='No']").prop('checked', false);
+	});
+});
+
 </script>
 
 <script type="text/javascript">
