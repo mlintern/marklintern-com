@@ -33,9 +33,6 @@ font-family: 'Finger Paint', cursive;
 .square{
 font-family: 'Nova Square', Arial, sans-serif;
 }
-.apple{
-font-family: 'Homemade Apple', cursive;
-}
 body{
 font-family: 'Almost Noteworthy';
 }
@@ -146,7 +143,7 @@ margin-bottom: 10px;
 #twitter-box{
 display: none;
 position: absolute;
-top: 235px;
+top: 30px;
 left: 215px;
 width: 300px;
 z-index: 1;
@@ -158,7 +155,7 @@ padding: 10px;
 #blog-post-list{
 display: none;
 position: absolute;
-top: 440px;
+top: 240px;
 left: 220px;
 width: 300px;
 background-color: #fff;
