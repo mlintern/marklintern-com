@@ -1,15 +1,15 @@
-c1 = new Image(); c1.src = "numerals/c1.gif";
-c2 = new Image(); c2.src = "numerals/c2.gif";
-c3 = new Image(); c3.src = "numerals/c3.gif";
-c4 = new Image(); c4.src = "numerals/c4.gif";
-c5 = new Image(); c5.src = "numerals/c5.gif";
-c6 = new Image(); c6.src = "numerals/c6.gif";
-c7 = new Image(); c7.src = "numerals/c7.gif";
-c8 = new Image(); c8.src = "numerals/c8.gif";
-c9 = new Image(); c9.src = "numerals/c9.gif";
-c0 = new Image(); c0.src = "numerals/c0.gif";
-cb = new Image(); cb.src = "numerals/cb.gif";
-onePix = new Image(); onePix.src = "numerals/clear.gif";
+c1 = new Image(); c1.src = "images/numerals/c1.gif";
+c2 = new Image(); c2.src = "images/numerals/c2.gif";
+c3 = new Image(); c3.src = "images/numerals/c3.gif";
+c4 = new Image(); c4.src = "images/numerals/c4.gif";
+c5 = new Image(); c5.src = "images/numerals/c5.gif";
+c6 = new Image(); c6.src = "images/numerals/c6.gif";
+c7 = new Image(); c7.src = "images/numerals/c7.gif";
+c8 = new Image(); c8.src = "images/numerals/c8.gif";
+c9 = new Image(); c9.src = "images/numerals/c9.gif";
+c0 = new Image(); c0.src = "images/numerals/c0.gif";
+cb = new Image(); cb.src = "images/numerals/cb.gif";
+onePix = new Image(); onePix.src = "images/numerals/clear.gif";
 
 var ms = 0;
 var state = 0;

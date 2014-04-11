@@ -1,9 +1,6 @@
 .clear{
 clear:both;   
 }
-.fog60{
-background-image: url('../images/fog_60.png');	
-}
 .show{
 display: block;
 }
@@ -12,10 +9,11 @@ display: none;
 }
 a {
 text-decoration: none;   
-color: #000000;
+color: #fff;
 cursor: pointer;
 }
 a:hover{
+color: #fff;
 text-decoration: underline; 
 }
 img {
@@ -34,7 +32,7 @@ font-family: 'Finger Paint', cursive;
 font-family: 'Nova Square', Arial, sans-serif;
 }
 body{
-font-family: 'Almost Noteworthy';
+font-family: 'Almost Noteworthy'; color: #fff;
 }
 /*BACKGROUND IMAGES*/
 .background-cardboard{
@@ -60,9 +58,6 @@ background-position: 0% 100%;
 background-repeat: repeat-x;
 }
 /*HEADER*/
-.header{
-
-}
 .header-text{
 font-family: 'Finger Paint', cursive;
 font-size: 130px;
@@ -74,21 +69,6 @@ text-align: center;
 font-size: 60px;
 }
 }
-/*MENU*/
-.menu{
-padding: 5px;   
-}
-.menu ul li{
-list-style: none outside none;
-display: inline;
-padding: 5px auto;
-}
-.menu ul li a{
-font-size: 20px;
-padding: 5px 30px;
-margin: 20px;
-background-color: #ffffff;
-}
 /*CONTENT*/
 .section{
 margin-bottom: 20px;
@@ -98,6 +78,15 @@ margin-bottom: 20px;
 text-align: left;
 margin-left: 30px;
 padding: 15px;
+}
+.list-title{
+font-size: 120%;
+padding-bottom: 5px;
+margin-bottom: 10px;
+border-bottom: solid 1px;
+}
+.list{
+list-style: none outside none;
 }
 textarea{
 width: 96%;
@@ -122,30 +111,17 @@ height: 400px;
 	height: auto;
 	}
 }
-/*SIDEBAR*/
-.sidebar{
-margin-top: 10px; 
-position: relative;  
+.panel{
+box-shadow: none;
 }
-.sidebar .widget{
-background-color: #ffffff;
-border-radius: 8px;
-width: 100%;
-padding: 5px;
-margin-bottom: 20px;
+.panel-group .panel-heading+.panel-collapse .panel-body {
+border-top: none;
 }
-.sidebar h3 {
-font-size: 22px;
-border-bottom: 3px solid #000000;
-margin-bottom: 10px;
+.panel-group .panel-heading {
+border-bottom: none;
 }
 /*TWITTER BOX*/
 #twitter-box{
-display: none;
-position: absolute;
-top: 30px;
-left: 215px;
-width: 300px;
 z-index: 1;
 }
 .twtr-tweets{
@@ -153,11 +129,6 @@ padding: 10px;
 }
 /*Blog Posts*/
 #blog-post-list{
-display: none;
-position: absolute;
-top: 240px;
-left: 220px;
-width: 300px;
 background-color: #fff;
 padding: 10px;
 border-radius: 8px;
@@ -170,6 +141,9 @@ border-bottom: 1px solid #ccc;
 .Date-Author{
 font-size: 12px;
 color: red;
+}
+.post-title{
+color: #444;
 }
 /* SCORE SHEET FORM */
 #score-sheet {
@@ -233,6 +207,7 @@ font-size: 22px;
 border-radius: 8px;
 background-color: yellow;
 border: solid #000 2px;
+color: #000;
 }
 .player5{
 display:none;

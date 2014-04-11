@@ -14,6 +14,7 @@ google.load("feeds", "1", { callback: function() {
 					.append(
 				$('<a>')
 					.attr('target','_blank')
+					.attr('class','post-title')
 					.attr('href', entry.link)
 					.text(entry.title),
 				$('<div>')
