@@ -255,7 +255,7 @@
 						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavFour" href="#collapseFour" class="collapsed"><img src="images/Motorcycle-Red.png"/></a></h1>
 					</div>
 					<div class="col-sm-3 col-sm-offset-3 text-center">
-						<a class="popup-link" href="#popupform" title="Tell Me About It" ><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
+						<a href="javascript:void(0)" title="Tell Me About It" data-toggle="modal" data-target="#share-your-story"><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
 					</div>
 				</div>
 			</div>
@@ -440,314 +440,330 @@
 		
 	<div class="footer span12 row">
 		<div class="footer-email">mark@lintern.us</div>
-		<div id="popupform">
-			<div class="widget html">
-				<div id="form_container">
-					<form action="https://www.compendiumblog.com/app/posts/webtopost" enctype="multipart/form-data" id="cb_web_to_post" method="post">
-						<input name="BlogKey" type="hidden" value="6U0be14zgTQNMhgA4R445NTmfDGQhLCvw0N0KmMUn2IhxeHKupj3rHBoviZWo80UwxNyEi8zI/0oSQVZVITc4Q==" /> <input name="RetUrl" type="hidden" value="http://blog.marklintern.com" />
-						<div class="form_item fire">
-							<label class="drop" for="Title">Title: </label> <input class="drop"  id="Title" name="Title" type="text" value="" /> 
-							<div class="clear"></div>
-						</div>		
-						<div class="form_item fire">
-							<label class="drop" for="Body">Story: </label><textarea cols="29" id="Body" name="Body" rows="12"></textarea>
-							<div class="clear"></div>
-						</div>
-						<div class="form_item fire" id="form_item_name">
-							<label class="drop" for="DataField_Name">Name: </label> <input class="drop" id="DataField_Name" name="DataField[Name]" type="text" value="" /></div>
-						<div class="clear"></div>
-						<div class="form_item fire">
-							<label class="drop" for="HiddenField_EmailAddress">E-mail: </label> <input class="drop" id="HiddenField_EmailAddress" name="HiddenField[EmailAddress]" type="text" value="" />
-							<div>
-							<div class="clear"></div>
-							<label>&nbsp;</label><input style="width: 20px;" checked="checked" name="Settings[Notify]" type="checkbox" value="yes" /> Notify me when my story goes live</div>
-						</div>
-						<div class="clear"></div>
-						<div id="image_fields">
-							<div class="form_item fire">
-								<label class="drop" for="UserFiles_0">Image: </label> <input class="drop" id="UserFiles" name="UserFiles[0]" type="file" /></div>
-						</div>
-						<div class="form_item hide" id="add_another_image_link">
-						<label>&nbsp;</label><a href="#">[+] Add another image</a></div>
-						<div class="clear"></div>
-						<div id="cb_captcha"></div>  
-						<div class="form_item">
-							<button type="submit">Share your Story</button>
-						</div>
-						<script src="http://www.compendiumblog.com/js/w2p.js" type="text/javascript"></script></form>
-				</div>
-			</div>
-		</div> <!-- popupform -->
-		<div id="score-sheet">
-			<form id="player-picker">
-				<input id="player_3" type="radio" name="players" value="3">3
-				<input id="player_4" type="radio" name="players" value="4" checked>4
-				<input id="player_5" type="radio" name="players" value="5">5
-				<input id="player_6" type="radio" name="players" value="6">6
-				<input id="player_7" type="radio" name="players" value="7">7
-				<input id="player_8" type="radio" name="players" value="8">8
-			</form>
-			<form id="game-picker">
-				<input id="onetothree" type="checkbox" name="players" value="1-2">1-2
-				<input id="jacktoking" type="checkbox" name="players" value="J-K" checked>J-K
-			</form>
-			<div class="clear"></div>
-			<form>
-				<table id="scoresheet" border="1">
-				<tr>
-				<th>Hand</th>
-				<th class="player1"><input type="text" name="name1" placeholder="Player 1"></th>
-				<th class="player2"><input type="text" name="name2" placeholder="Player 2"></th>
-				<th class="player3"><input type="text" name="name3" placeholder="Player 3"></th>
-				<th class="player4"><input type="text" name="name4" placeholder="Player 4"></th>
-				<th class="player5"><input type="text" name="name5" placeholder="Player 5"></th>
-				<th class="player6"><input type="text" name="name6" placeholder="Player 6"></th>
-				<th class="player7"><input type="text" name="name7" placeholder="Player 7"></th>
-				<th class="player8"><input type="text" name="name8" placeholder="Player 8"></th>
-				</tr>
-				<tr id="rowone">
-				<td>1</td>
-				<td class="player1"><input id="11" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="12" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="13" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="14" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="15" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="16" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="17" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="18" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr id="rowtwo">
-				<td>2</td>
-				<td class="player1"><input id="21" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="22" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="23" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="24" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="25" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="26" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="27" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="28" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>3</td>
-				<td class="player1"><input id="31" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="32" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="33" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="34" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="35" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="36" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="37" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="38" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>4</td>
-				<td class="player1"><input id="41" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="42" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="43" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="44" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="45" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="46" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="47" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="48" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>5</td>
-				<td class="player1"><input id="51" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="52" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="53" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="54" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="55" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="56" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="57" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="58" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>6</td>
-				<td class="player1"><input id="61" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="62" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="63" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="64" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="65" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="66" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="67" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="68" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>7</td>
-				<td class="player1"><input id="71" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="72" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="73" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="74" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="75" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="76" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="77" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="78" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>8</td>
-				<td class="player1"><input id="81" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="82" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="83" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="84" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="85" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="86" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="87" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="88" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>9</td>
-				<td class="player1"><input id="91" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="92" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="93" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="94" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="95" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="96" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="97" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="98" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr>
-				<td>10</td>
-				<td class="player1"><input id="101" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="102" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="103" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="104" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="105" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="106" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="107" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="108" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr id="rowJ">
-				<td>J</td>
-				<td class="player1"><input id="j1" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="j2" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="j3" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="j4" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="j5" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="j6" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="j7" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="j8" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr id="rowQ">
-				<td>Q</td>
-				<td class="player1"><input id="q1" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="q2" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="q3" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="q4" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="q5" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="q6" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="q7" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="q8" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr id="rowK">
-				<td>K</td>
-				<td class="player1"><input id="k1" type="input" name="num" placeholder="0"></td>
-				<td class="player2"><input id="k2" type="input" name="num" placeholder="0"></td>
-				<td class="player3"><input id="k3" type="input" name="num" placeholder="0"></td>
-				<td class="player4"><input id="k4" type="input" name="num" placeholder="0"></td>
-				<td class="player5"><input id="k5" type="input" name="num" placeholder="0"></td>
-				<td class="player6"><input id="k6" type="input" name="num" placeholder="0"></td>
-				<td class="player7"><input id="k7" type="input" name="num" placeholder="0"></td>
-				<td class="player8"><input id="k8" type="input" name="num" placeholder="0"></td>
-				</tr>
-				<tr id="totalscore">
-				<td>Total</td>
-				<td class="player1"><input id="t1" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player2"><input id="t2" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player3"><input id="t3" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player4"><input id="t4" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player5"><input id="t5" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player6"><input id="t6" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player7"><input id="t7" type="text" name="num" placeholder="0" readonly</td>
-				<td class="player8"><input id="t8" type="text" name="num" placeholder="0" readonly</td>
-				</tr>
-				</table>
-			</form>
-			<div class="clear" style="margin-top: 5px;"></div>
-			<button id="calculate" value="Calculate" onclick="calculate_score();">Calculate</button>
-			<button id="reset" value="Reset Scores" onclick="reset_score();">Reset</button>
-		</div> <!-- score-sheet -->
-		<div id="scoreboard">
-			<div id="timer">
-				<div id="countdownDisp">
-					<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
-					<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
-					<img class="numeral" src="images/numerals/colon.gif" name="j" id="j"/>
-					<img class="numeral" src="images/numerals/c0.gif" name="k" id="k"/>
-					<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
-				</div>
-				<div>
-					<div><input type="button" class="btn btn-default" name="ssbutton" value="Start/Stop" onClick="startstop()"/></div>
-					<div><input type="button" class="btn btn-default" name="minplus" value="+min" onClick="addmin()"/>
-					<input type="button" class="btn btn-default" name="minplus" value="+30" onClick="addthirty()"/></div>
-					<div><input type="button" class="btn btn-default" name="reset" value="Reset Timer" onClick="timerreset()"/></div>
-				</div>
-			</div>
-			<div class="team-score">
-				<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
-				<div class="clear"></div>
-				<input id="homescore" class="square score" type="text" name="num" value="0" readonly>
-				<div class="clear"></div>
-				<button id="plushome" class="HomePlus plusbtn" value="+">+</button>
-				<button id="minushome" class="HomeMinus minusbtn" value="-">-</button>
-				<div class="clear"></div>
-			</div>
-			<div class="team-score">
-				<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
-				<div class="clear"></div>
-				<input id="awayscore" class="square score" type="text" name="num" value="0" readonly>
-				<div class="clear"></div>
-				<button id="plusaway" class="AwayPlus plusbtn" value="+">+</button>
-				<button id="minusaway" class="AwayMinus minusbtn" value="-">-</button>
-				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
-			<button id="resetscore" value="resetscore" style="float:left;">Reset Score</button>
-		</div><!-- scoreboard -->
-		<div id="score-eucher">
-			<div class="eucher-team-score">
-				<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys" style="text-align:center;">
-				<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
-				<div class="clear"></div>
-				<div class="meter animate red scoremarker">
-					<span id="eucherteam1" style="width:0px"><span></span></span>
-				</div>
-				<div class="clear"></div>
-				<button id="eucherplushome" class="eucherhomeplus1btn" value="1">1</button>
-				<button id="eucherplushome" class="eucherhomeplus2btn" value="2">2</button>
-				<button id="eucherplushome" class="eucherhomeplus4btn" value="4">4</button>
-				<button id="eucherminushome" class="eucherhomeminusbtn" value="-">-</button>
-				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
-			<button class="opencloseteamscore" type="button" value=""></button>
-			<div class="separator"></div>
-			<div class="wins-losses">
-				<div class="scorecontainer">
-					<div id="homeeucherteamname" style="margin-left: 0px;">Good Guys</div>
-					<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
-					<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
-					<div id="awayeucherteamname">Bad Guys</div>
-					<div class="clear"></div>
-				</div>
-				<div class="separator"></div>
-			</div>
-			<div class="eucher-team-score">
-				<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys" style="text-align:center;">
-				<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
-				<div class="clear"></div>
-				<div class="meter animate purple scoremarker">
-					<span id="eucherteam2" style="width:0px"><span></span></span>
-				</div>
-				<div class="clear"></div>
-				<button id="eucherplusaway" class="eucherawayplus1btn" value="1">1</button>
-				<button id="eucherplusaway" class="eucherawayplus2btn" value="2">2</button>
-				<button id="eucherplusaway" class="eucherawayplus4btn" value="4">4</button>
-				<button id="eucherminusaway" class="eucherawayminusbtn" value="-">-</button>
-				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
-			<button id="eucherresetscore" value="resetscore" style="float:left;">Reset</button>
-		</div><!-- score-eucher -->
 	</div> <!-- footer -->
+	
+	<div class="modal fade" id="share-your-story" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Share Your Story</h4>
+				</div>
+				<div class="modal-body">
+					<div id="form_container">
+						<form action="https://www.compendiumblog.com/app/posts/webtopost" enctype="multipart/form-data" id="cb_web_to_post" method="post">
+							<input name="BlogKey" type="hidden" value="6U0be14zgTQNMhgA4R445NTmfDGQhLCvw0N0KmMUn2IhxeHKupj3rHBoviZWo80UwxNyEi8zI/0oSQVZVITc4Q==" /> <input name="RetUrl" type="hidden" value="http://blog.marklintern.com" />
+							<div class="form_item fire">
+								<label class="drop" for="Title">Title: </label> <input class="drop form-control" id="Title" name="Title" type="text" value="" /> 
+								<div class="clear"></div>
+							</div>		
+							<div class="form_item fire">
+								<label class="drop" for="Body">Story: </label><textarea class="form-control" cols="29" id="Body" name="Body" rows="8"></textarea>
+								<div class="clear"></div>
+							</div>
+							<div class="form_item fire" id="form_item_name">
+								<label class="drop" for="DataField_Name">Name: </label> <input class="drop form-control" id="DataField_Name" name="DataField[Name]" type="text" value="" /></div>
+							<div class="clear"></div>
+							<div class="form_item fire">
+								<label class="drop" for="HiddenField_EmailAddress">E-mail: </label> <input class="drop form-control" id="HiddenField_EmailAddress" name="HiddenField[EmailAddress]" type="text" value="" />
+								<div>
+								<div class="clear"></div>
+								<label>&nbsp;</label><input style="width: 20px;" checked="checked" name="Settings[Notify]" type="checkbox" value="yes" /> Notify me when my story goes live</div>
+							</div>
+							<div class="clear"></div>
+							<div id="image_fields">
+								<div class="form_item fire">
+									<label class="drop" for="UserFiles_0">Image: </label> <input class="drop form-control" id="UserFiles" name="UserFiles[0]" type="file" /></div>
+							</div>
+							<div class="clear"></div>
+							<div id="cb_captcha"></div>  
+							<div class="form_item">
+								<button class="btn btn-danger" type="submit">Share your Story</button>
+							</div>
+							<script src="http://www.compendiumblog.com/js/w2p.js" type="text/javascript"></script>
+						</form>
+					</div>
+				</div> <!-- modal-body -->
+			</div> <!-- modal-content -->
+		</div> <!-- modal-dialog -->
+	</div> <!-- modal -->
+	
+	
+	<div id="score-sheet">
+		<form id="player-picker">
+			<input id="player_3" type="radio" name="players" value="3">3
+			<input id="player_4" type="radio" name="players" value="4" checked>4
+			<input id="player_5" type="radio" name="players" value="5">5
+			<input id="player_6" type="radio" name="players" value="6">6
+			<input id="player_7" type="radio" name="players" value="7">7
+			<input id="player_8" type="radio" name="players" value="8">8
+		</form>
+		<form id="game-picker">
+			<input id="onetothree" type="checkbox" name="players" value="1-2">1-2
+			<input id="jacktoking" type="checkbox" name="players" value="J-K" checked>J-K
+		</form>
+		<div class="clear"></div>
+		<form>
+			<table id="scoresheet" border="1">
+			<tr>
+			<th>Hand</th>
+			<th class="player1"><input type="text" name="name1" placeholder="Player 1"></th>
+			<th class="player2"><input type="text" name="name2" placeholder="Player 2"></th>
+			<th class="player3"><input type="text" name="name3" placeholder="Player 3"></th>
+			<th class="player4"><input type="text" name="name4" placeholder="Player 4"></th>
+			<th class="player5"><input type="text" name="name5" placeholder="Player 5"></th>
+			<th class="player6"><input type="text" name="name6" placeholder="Player 6"></th>
+			<th class="player7"><input type="text" name="name7" placeholder="Player 7"></th>
+			<th class="player8"><input type="text" name="name8" placeholder="Player 8"></th>
+			</tr>
+			<tr id="rowone">
+			<td>1</td>
+			<td class="player1"><input id="11" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="12" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="13" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="14" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="15" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="16" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="17" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="18" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr id="rowtwo">
+			<td>2</td>
+			<td class="player1"><input id="21" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="22" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="23" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="24" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="25" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="26" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="27" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="28" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>3</td>
+			<td class="player1"><input id="31" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="32" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="33" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="34" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="35" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="36" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="37" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="38" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>4</td>
+			<td class="player1"><input id="41" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="42" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="43" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="44" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="45" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="46" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="47" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="48" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>5</td>
+			<td class="player1"><input id="51" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="52" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="53" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="54" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="55" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="56" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="57" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="58" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>6</td>
+			<td class="player1"><input id="61" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="62" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="63" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="64" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="65" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="66" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="67" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="68" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>7</td>
+			<td class="player1"><input id="71" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="72" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="73" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="74" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="75" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="76" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="77" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="78" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>8</td>
+			<td class="player1"><input id="81" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="82" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="83" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="84" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="85" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="86" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="87" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="88" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>9</td>
+			<td class="player1"><input id="91" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="92" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="93" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="94" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="95" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="96" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="97" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="98" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr>
+			<td>10</td>
+			<td class="player1"><input id="101" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="102" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="103" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="104" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="105" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="106" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="107" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="108" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr id="rowJ">
+			<td>J</td>
+			<td class="player1"><input id="j1" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="j2" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="j3" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="j4" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="j5" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="j6" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="j7" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="j8" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr id="rowQ">
+			<td>Q</td>
+			<td class="player1"><input id="q1" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="q2" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="q3" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="q4" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="q5" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="q6" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="q7" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="q8" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr id="rowK">
+			<td>K</td>
+			<td class="player1"><input id="k1" type="input" name="num" placeholder="0"></td>
+			<td class="player2"><input id="k2" type="input" name="num" placeholder="0"></td>
+			<td class="player3"><input id="k3" type="input" name="num" placeholder="0"></td>
+			<td class="player4"><input id="k4" type="input" name="num" placeholder="0"></td>
+			<td class="player5"><input id="k5" type="input" name="num" placeholder="0"></td>
+			<td class="player6"><input id="k6" type="input" name="num" placeholder="0"></td>
+			<td class="player7"><input id="k7" type="input" name="num" placeholder="0"></td>
+			<td class="player8"><input id="k8" type="input" name="num" placeholder="0"></td>
+			</tr>
+			<tr id="totalscore">
+			<td>Total</td>
+			<td class="player1"><input id="t1" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player2"><input id="t2" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player3"><input id="t3" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player4"><input id="t4" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player5"><input id="t5" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player6"><input id="t6" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player7"><input id="t7" type="text" name="num" placeholder="0" readonly</td>
+			<td class="player8"><input id="t8" type="text" name="num" placeholder="0" readonly</td>
+			</tr>
+			</table>
+		</form>
+		<div class="clear" style="margin-top: 5px;"></div>
+		<button id="calculate" value="Calculate" onclick="calculate_score();">Calculate</button>
+		<button id="reset" value="Reset Scores" onclick="reset_score();">Reset</button>
+	</div> <!-- score-sheet -->
+	
+	
+	<div id="scoreboard">
+		<div id="timer">
+			<div id="countdownDisp">
+				<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
+				<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
+				<img class="numeral" src="images/numerals/colon.gif" name="j" id="j"/>
+				<img class="numeral" src="images/numerals/c0.gif" name="k" id="k"/>
+				<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
+			</div>
+			<div>
+				<div><input type="button" class="btn btn-default" name="ssbutton" value="Start/Stop" onClick="startstop()"/></div>
+				<div><input type="button" class="btn btn-default" name="minplus" value="+min" onClick="addmin()"/>
+				<input type="button" class="btn btn-default" name="minplus" value="+30" onClick="addthirty()"/></div>
+				<div><input type="button" class="btn btn-default" name="reset" value="Reset Timer" onClick="timerreset()"/></div>
+			</div>
+		</div>
+		<div class="team-score">
+			<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
+			<div class="clear"></div>
+			<input id="homescore" class="square score" type="text" name="num" value="0" readonly>
+			<div class="clear"></div>
+			<button id="plushome" class="HomePlus plusbtn" value="+">+</button>
+			<button id="minushome" class="HomeMinus minusbtn" value="-">-</button>
+			<div class="clear"></div>
+		</div>
+		<div class="team-score">
+			<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
+			<div class="clear"></div>
+			<input id="awayscore" class="square score" type="text" name="num" value="0" readonly>
+			<div class="clear"></div>
+			<button id="plusaway" class="AwayPlus plusbtn" value="+">+</button>
+			<button id="minusaway" class="AwayMinus minusbtn" value="-">-</button>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<button id="resetscore" value="resetscore" style="float:left;">Reset Score</button>
+	</div><!-- scoreboard -->
+	
+	
+	<div id="score-eucher">
+		<div class="eucher-team-score">
+			<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys" style="text-align:center;">
+			<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
+			<div class="clear"></div>
+			<div class="meter animate red scoremarker">
+				<span id="eucherteam1" style="width:0px"><span></span></span>
+			</div>
+			<div class="clear"></div>
+			<button id="eucherplushome" class="eucherhomeplus1btn" value="1">1</button>
+			<button id="eucherplushome" class="eucherhomeplus2btn" value="2">2</button>
+			<button id="eucherplushome" class="eucherhomeplus4btn" value="4">4</button>
+			<button id="eucherminushome" class="eucherhomeminusbtn" value="-">-</button>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<button class="opencloseteamscore" type="button" value=""></button>
+		<div class="separator"></div>
+		<div class="wins-losses">
+			<div class="scorecontainer">
+				<div id="homeeucherteamname" style="margin-left: 0px;">Good Guys</div>
+				<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+				<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+				<div id="awayeucherteamname">Bad Guys</div>
+				<div class="clear"></div>
+			</div>
+			<div class="separator"></div>
+		</div>
+		<div class="eucher-team-score">
+			<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys" style="text-align:center;">
+			<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
+			<div class="clear"></div>
+			<div class="meter animate purple scoremarker">
+				<span id="eucherteam2" style="width:0px"><span></span></span>
+			</div>
+			<div class="clear"></div>
+			<button id="eucherplusaway" class="eucherawayplus1btn" value="1">1</button>
+			<button id="eucherplusaway" class="eucherawayplus2btn" value="2">2</button>
+			<button id="eucherplusaway" class="eucherawayplus4btn" value="4">4</button>
+			<button id="eucherminusaway" class="eucherawayminusbtn" value="-">-</button>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<button id="eucherresetscore" value="resetscore" style="float:left;">Reset</button>
+	</div><!-- score-eucher -->
+	
+	
 </div> <!-- background-bottom -->
 </div> <!-- background-middle -->
 </div> <!-- background-top -->
@@ -762,7 +778,6 @@
 	<img id="hole7" src="images/bullet_hole.png"/>
 	<img id="hole8" src="images/bullet_hole.png"/>
 </div>
-
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
