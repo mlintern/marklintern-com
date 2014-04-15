@@ -8,7 +8,6 @@
 
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
-<link type="text/css" href="css/progressbar.css" rel="stylesheet">
 <link type="text/css" href="css/style.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
@@ -32,7 +31,7 @@
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-sm-2 col-sm-offset-1 text-center">
-						<a class="popup-link" href="#score-eucher" title="Eucher Scoreboard"><img alt="Score Eucher" src="images/Suites.png"></a>
+						<a href="javascript:void(0)" title="Eucher Scoreboard" data-toggle="modal" data-target="#eucher-scorecard"><img alt="Score Eucher" src="images/Suites.png"></a>
 					</div>
 					<div class="panel-title col-sm-4 col-sm-offset-2">
 						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavOne" href="#collapseOne" class="collapsed"><img src="images/Netowrk_Tool.png"/></a></h1>
@@ -716,52 +715,57 @@
 		<button id="resetscore" value="resetscore" style="float:left;">Reset Score</button>
 	</div><!-- scoreboard -->
 	
-	
-	<div id="score-eucher">
-		<div class="eucher-team-score">
-			<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys" style="text-align:center;">
-			<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
-			<div class="clear"></div>
-			<div class="meter animate red scoremarker">
-				<span id="eucherteam1" style="width:0px"><span></span></span>
-			</div>
-			<div class="clear"></div>
-			<button id="eucherplushome" class="eucherhomeplus1btn" value="1">1</button>
-			<button id="eucherplushome" class="eucherhomeplus2btn" value="2">2</button>
-			<button id="eucherplushome" class="eucherhomeplus4btn" value="4">4</button>
-			<button id="eucherminushome" class="eucherhomeminusbtn" value="-">-</button>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
-		<button class="opencloseteamscore" type="button" value=""></button>
-		<div class="separator"></div>
-		<div class="wins-losses">
-			<div class="scorecontainer">
-				<div id="homeeucherteamname" style="margin-left: 0px;">Good Guys</div>
-				<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
-				<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
-				<div id="awayeucherteamname">Bad Guys</div>
-				<div class="clear"></div>
-			</div>
-			<div class="separator"></div>
-		</div>
-		<div class="eucher-team-score">
-			<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys" style="text-align:center;">
-			<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
-			<div class="clear"></div>
-			<div class="meter animate purple scoremarker">
-				<span id="eucherteam2" style="width:0px"><span></span></span>
-			</div>
-			<div class="clear"></div>
-			<button id="eucherplusaway" class="eucherawayplus1btn" value="1">1</button>
-			<button id="eucherplusaway" class="eucherawayplus2btn" value="2">2</button>
-			<button id="eucherplusaway" class="eucherawayplus4btn" value="4">4</button>
-			<button id="eucherminusaway" class="eucherawayminusbtn" value="-">-</button>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
-		<button id="eucherresetscore" value="resetscore" style="float:left;">Reset</button>
-	</div><!-- score-eucher -->
+	<div class="modal fade" id="eucher-scorecard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content" style="background-color: #000;">
+				<div class="modal-body">
+					<div class="eucher-team-score">
+						<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys">
+						<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
+						<div class="clear"></div>
+						<div class="progress progress-striped active progress-lg">
+							<span class="numbers">0 1 2 3 4 5 6 7 8 9</span>
+							<div id="progress_one" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-valuefull="100" style="width: 0%"></div>
+						</div>
+						<div class="clearfix"></div>
+						<button class="btn btn-success btn-lg plus" onclick="addHomePoint(1)">1</button>
+						<button class="btn btn-success btn-lg plus" onclick="addHomePoint(2)">2</button>
+						<button class="btn btn-success btn-lg plus" onclick="addHomePoint(4)">4</button>
+						<button class="btn btn-danger btn-lg pull-right" onclick="minusHomePoint()">-</button>
+					</div>
+					<div class="clear"></div>
+					<div class="separator"></div>
+					<button class="opencloseteamscore btn btn-default pull-right" type="button" value=""></button>
+					<div class="wins-losses">
+						<div class="scorecontainer">
+							<div id="homeeucherteamname" style="margin-left: 0px;">Good Guys</div>
+							<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+							<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+							<div id="awayeucherteamname">Bad Guys</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="separator"></div>
+					<div class="eucher-team-score">
+						<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys">
+						<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
+						<div class="clear"></div>
+						<div class="progress progress-striped active progress-lg">
+							<span class="numbers">0 1 2 3 4 5 6 7 8 9</span>
+							<div id="progress_two" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-valuefull="100" style="width: 0%"></div>
+						</div>
+						<div class="clearfix"></div>
+						<button class="btn btn-success btn-lg plus" onclick="addAwayPoint(1)">1</button>
+						<button class="btn btn-success btn-lg plus" onclick="addAwayPoint(2)">2</button>
+						<button class="btn btn-success btn-lg plus" onclick="addAwayPoint(4)">4</button>
+						<button class="btn btn-danger btn-lg pull-right" onclick="minusAwayPoint()">-</button>
+					</div>
+					<div class="clearfix"></div>
+					<button id="eucherresetscore" value="resetscore">Reset</button>
+				</div> <!-- modal-body -->
+			</div> <!-- modal-content -->
+		</div> <!-- modal-dialog -->
+	</div> <!-- modal -->
 	
 	
 </div> <!-- background-bottom -->
@@ -795,17 +799,6 @@
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 
 <script type="text/javascript">	
-
-$(function() {
-	$(".meter > span").each(function() {
-		$(this)
-			.data("origWidth", $(this).width())
-			.width(0)
-			.animate({
-				width: $(this).data("origWidth")
-			}, 1200);
-	});
-});
 
 $(document).ready(function() {
 	$("input[name='q9'][value='No']").click(function() {

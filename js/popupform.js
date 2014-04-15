@@ -18,13 +18,15 @@ $(document).ready(function() {
 
 		// Add the mask to body
 		$('body').append('<div id="mask"></div>');
+		$('body').addClass('modal-open');
 		$('#mask').fadeIn(300);
 		
 		// When clicking on the button close or the mask layer the popup closed
 		//$('#mask').live('click', function() { 
 		$('#mask').click(function(){
-			$('#mask , #popupform , #score-sheet , #scoreboard , #score-eucher').fadeOut(300 , function() {
+			$('#mask , #score-sheet , #scoreboard , #score-eucher').fadeOut(300 , function() {
 				$('#mask').remove();  
+				$('body').removeClass('modal-open');
 			}); 
 			return false;
 		});

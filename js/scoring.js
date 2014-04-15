@@ -196,12 +196,6 @@ $(document).ready(function() {
 
 //Eucher Scoreboard
 $(document).ready(function() {
-	function reseteuchergame() {
-		$("#eucherteam1").width(0);
-		$("#eucherhomescore").val(0);
-		$("#eucherteam2").width(0);
-		$("#eucherawayscore").val(0);
-	};
 	
 	$("#homeeuchername").on('keyup',function(){
 		$("#homeeucherteamname").text($('#homeeuchername').val());
@@ -216,91 +210,117 @@ $(document).ready(function() {
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
 	
-	$(".eucherhomeminusbtn").click(function() {
-		var currentscore = parseInt($("#eucherhomescore").val());
-		var currentpos = $("#eucherteam1").width();
-		if (currentpos == 0){
-		}else{
-			$("#eucherteam1").width(currentpos - 40);
-			$("#eucherhomescore").val(currentscore - 1);
-		}
-	});
-	$(".eucherhomeplus1btn").click(function() {
-		var currentpos = $("#eucherteam1").width();
-		if (currentpos == 360){
-			$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
-			reseteuchergame();
-			$(".wins-losses").show();
-			fixsizing('#score-eucher');
-		}else{
-			$("#eucherteam1").width(currentpos + 40);
-			$("#eucherhomescore").val(parseInt($("#eucherhomescore").val()) + 1);
-		}
-	});
-	$(".eucherhomeplus2btn").click(function() {
-		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
-		$(".eucherhomeplus1btn").click();
-		if (stop) {stop=false;return;}
-		$(".eucherhomeplus1btn").click();
-	});
-	$(".eucherhomeplus4btn").click(function() {
-		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
-		$(".eucherhomeplus1btn").click();
-		if (stop) {stop=false;return;}
-		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
-		$(".eucherhomeplus1btn").click();
-		if (stop) {stop=false;return;}
-		if ( $("#eucherhomescore").val() == 9 ) {var stop = true;}
-		$(".eucherhomeplus1btn").click();
-		if (stop) {stop=false;return;}
-		$(".eucherhomeplus1btn").click();
-	});
-	$(".eucherawayminusbtn").click(function() {
-		var currentscore = parseInt($("#eucherawayscore").val());
-		var currentpos = $("#eucherteam2").width();
-		if (currentpos == 0){
-		}else{
-			$("#eucherteam2").width(currentpos - 40);
-			$("#eucherawayscore").val(currentscore - 1);
-		}
-	});
-	$(".eucherawayplus1btn").click(function() {
-		var currentscore = parseInt($("#eucherawayscore").val());
-		var currentpos = $("#eucherteam2").width();
-		if (currentpos == 360){
-			$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
-			reseteuchergame();
-			$(".wins-losses").show();
-			fixsizing('#score-eucher');
-		}else{
-			$("#eucherteam2").width(currentpos + 40);
-			$("#eucherawayscore").val(parseInt($("#eucherawayscore").val()) + 1);
-		}
-	});
-	$(".eucherawayplus2btn").click(function() {
-	if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
-		$(".eucherawayplus1btn").click();
-		if (stop) {stop=false;return;}
-		$(".eucherawayplus1btn").click();
-	});
-	$(".eucherawayplus4btn").click(function() {
-		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
-		$(".eucherawayplus1btn").click();
-		if (stop) {stop=false;return;}
-		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
-		$(".eucherawayplus1btn").click();
-		if (stop) {stop=false;return;}
-		if ( $("#eucherawayscore").val() == 9 ) {var stop = true;}
-		$(".eucherawayplus1btn").click();
-		if (stop) {stop=false;return;}
-		$(".eucherawayplus1btn").click();
-	});
 	$("#eucherresetscore").click(function() {
 		reseteuchergame()
 		$("#eucherhomeoverallscore").val(0);
 		$("#eucherawayoverallscore").val(0);
 	});
+	
 	$(".opencloseteamscore").click(function() {
 		$(".wins-losses").toggle();
 	});
 });
+
+reseteuchergame = function() {
+	progressZero('#progress_one');
+	$("#eucherhomescore").val(0);
+	progressZero('#progress_two');
+	$("#eucherawayscore").val(0);
+};
+
+minusHomePoint = function() {
+	var currentscore = parseInt($("#eucherhomescore").val());
+	var currentpos = $("#eucherteam1").width();
+	if (currentpos == 0){
+	}else{
+		progressDown('#progress_one',10);
+		$("#eucherhomescore").val(currentscore - 1);
+	}
+}
+
+addHomePoint = function(num){
+	var stop = false;
+	for ( i=0;i<num;i++ ){
+		if (!stop){
+			var currentpos = $("#eucherteam1").width();
+			if ( $("#eucherhomescore").val() == 9 ) {
+				stop = true;
+				$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
+				reseteuchergame();
+				$(".wins-losses").show();
+			}else{
+				progressUp('#progress_one',10);
+				$("#eucherhomescore").val(parseInt($("#eucherhomescore").val()) + 1);
+			}
+		}
+	}
+}
+
+minusAwayPoint = function() {
+	var currentscore = parseInt($("#eucherawayscore").val());
+	var currentpos = $("#eucherteam1").width();
+	if (currentpos == 0){
+	}else{
+		progressDown('#progress_two',10);
+		$("#eucherhomescore").val(currentscore - 1);
+	}
+}
+
+addAwayPoint = function(num){
+	var stop = false;
+	for ( i=0;i<num;i++ ){
+		if (!stop){
+			var currentpos = $("#eucherteam2").width();
+			if ( $("#eucherawayscore").val() == 9 ) {
+				stop = true;
+				$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
+				reseteuchergame();
+				$(".wins-losses").show();
+			}else{
+				progressUp('#progress_two',10);
+				$("#eucherawayscore").val(parseInt($("#eucherawayscore").val()) + 1);
+			}
+		}
+	}
+}
+
+function progressUp(id,amount) {
+	var current = parseInt($(id).attr('aria-valuenow'));
+	var max = parseInt($(id).attr('aria-valuemax'));
+	var min = parseInt($(id).attr('aria-valuemin'));
+	var full = parseInt($(id).attr('aria-valuefull')); 
+	var newval = current + amount;
+	var percent = (newval / full)*100;
+
+	if ( newval > max ){
+		$(id).attr('aria-valuenow', max);
+		percent = (((max) / full)*100);
+		$(id).css('width', percent+'%');
+	}else{
+		$(id).attr('aria-valuenow', newval );
+		$(id).css('width', percent+'%');
+	}
+}
+
+function progressDown(id,amount) {
+	var current = parseInt($(id).attr('aria-valuenow'));
+	var max = parseInt($(id).attr('aria-valuemax'));
+	var min = parseInt($(id).attr('aria-valuemin'));
+	var full = parseInt($(id).attr('aria-valuefull')); 
+	var newval = current - amount;
+	var percent = (newval / full)*100;
+
+	if ( newval < min ){
+		$(id).attr('aria-valuenow', min);
+		percent = ((min / full)*100);
+		$(id).css('width', percent+'%');
+	}else{
+		$(id).attr('aria-valuenow', newval );
+		$(id).css('width', percent+'%');
+	}
+}
+
+function progressZero(id){
+	$(id).attr('aria-valuenow', 0 );
+	$(id).css('width', '0%');
+}
