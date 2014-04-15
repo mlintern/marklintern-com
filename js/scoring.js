@@ -230,8 +230,7 @@ function reseteuchergame() {
 
 function minusHomePoint() {
 	var currentscore = parseInt($("#eucherhomescore").val());
-	var currentpos = $("#eucherteam1").width();
-	if (currentpos == 0){
+	if (currentscore == 0){
 	}else{
 		progressDown('#progress_one',10);
 		$("#eucherhomescore").val(currentscore - 1);
@@ -242,7 +241,6 @@ function addHomePoint(num){
 	var stop = false;
 	for ( i=0;i<num;i++ ){
 		if (!stop){
-			var currentpos = $("#eucherteam1").width();
 			if ( $("#eucherhomescore").val() == 9 ) {
 				stop = true;
 				$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
@@ -258,11 +256,10 @@ function addHomePoint(num){
 
 function minusAwayPoint() {
 	var currentscore = parseInt($("#eucherawayscore").val());
-	var currentpos = $("#eucherteam1").width();
-	if (currentpos == 0){
+	if (currentscore == 0){
 	}else{
 		progressDown('#progress_two',10);
-		$("#eucherhomescore").val(currentscore - 1);
+		$("#eucherawayscore").val(currentscore - 1);
 	}
 }
 
@@ -270,7 +267,6 @@ function addAwayPoint(num){
 	var stop = false;
 	for ( i=0;i<num;i++ ){
 		if (!stop){
-			var currentpos = $("#eucherteam2").width();
 			if ( $("#eucherawayscore").val() == 9 ) {
 				stop = true;
 				$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
