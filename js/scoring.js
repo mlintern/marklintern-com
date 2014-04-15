@@ -26,7 +26,7 @@ function add_column(col_array,col_id) {
 	var y = col_array.length-1;
 	for (i=0;i<=y;i++)
 		{
-		 x = x + (document.getElementById(col_array[i]).value -0);
+		 x = x + (document.getElementById(col_array[i]).value - 0);
 		}
 	document.getElementById(arrayt[col_id-1]).value = x;
 };
@@ -36,7 +36,7 @@ function reset_column(col_array) {
 	var y = col_array.length-1;
 	for (i=0;i<=y;i++)
 		{
-		document.getElementById(col_array[i]).value = 0;
+		document.getElementById(col_array[i]).value = '';
 		}
 };
 
@@ -221,14 +221,14 @@ $(document).ready(function() {
 	});
 });
 
-reseteuchergame = function() {
+function reseteuchergame() {
 	progressZero('#progress_one');
 	$("#eucherhomescore").val(0);
 	progressZero('#progress_two');
 	$("#eucherawayscore").val(0);
 };
 
-minusHomePoint = function() {
+function minusHomePoint() {
 	var currentscore = parseInt($("#eucherhomescore").val());
 	var currentpos = $("#eucherteam1").width();
 	if (currentpos == 0){
@@ -238,7 +238,7 @@ minusHomePoint = function() {
 	}
 }
 
-addHomePoint = function(num){
+function addHomePoint(num){
 	var stop = false;
 	for ( i=0;i<num;i++ ){
 		if (!stop){
@@ -256,7 +256,7 @@ addHomePoint = function(num){
 	}
 }
 
-minusAwayPoint = function() {
+function minusAwayPoint() {
 	var currentscore = parseInt($("#eucherawayscore").val());
 	var currentpos = $("#eucherteam1").width();
 	if (currentpos == 0){
@@ -266,7 +266,7 @@ minusAwayPoint = function() {
 	}
 }
 
-addAwayPoint = function(num){
+function addAwayPoint(num){
 	var stop = false;
 	for ( i=0;i<num;i++ ){
 		if (!stop){
