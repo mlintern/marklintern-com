@@ -329,25 +329,19 @@ font-size: 13px;
 float: right;
 }
 /*SCOREBOARD*/
-#scoreboard {
-display:none;
+#scoreboard .modal-dialog {
 background: black;
 background-image: url('../images/metallic-bg1.jpg');
 padding: 5px; 	
 border: 5px solid green;
-float: left;
-position: fixed;
-top: 50%; left: 50%;
-z-index: 999;
-box-shadow: 0px 0px 20px #999; /* CSS3 */
-border-radius:3px 3px 3px 3px;
-text-align: center;
-height: 416px;
 }
-#timer{
-position:absolute;
-top: 125px;
-left: 255px;
+@media (min-width: 768px) {
+	#scoreboard .modal-dialog {
+	width: 750px;
+	}
+}
+#timer {
+margin-top: 30px;
 }
 #timer input{
 margin: 5px 0;
@@ -361,52 +355,41 @@ width: 162px;
 margin: 0 auto;
 }
 .team-score{
-margin: 10px;
 text-align:center;
 float:left;
+width: 100%;
 }
 .teamname{
 font-size: 30px;
 background-color: black;
 color: white;
 border: none;
-width: 320px;
-float: left;
+width: 100%
 }
 .score{
-float: left;
 font-size: 110px;
 text-align: center;
 width: 160px;
 color: green;
 border: white 5px solid;
 background-color: black;
-margin-left: 70px;
 margin-top: 30px;
 height: 200px;
 }
 .plusbtn{
-float: left;
 font-size: 50px;
-background-color: black;
-color: white;
-border: none;
 margin-top: 15px;
-margin-left: 128px;
 line-height: 1;
 margin-right: 10px;
+display: inline-block;
 }
 .minusbtn{
-float:left;
+font-size: 20px;
 margin-top:40px;
-background-color:black;
-color: white;
-border: none;
+display: inline-block;
 }
 #resetscore{
-background-color:black;
-color: white;
-border: none;
+margin-top: 15px;
 }
 /*EUCHER SCOREBOARD*/
 @media (min-width: 768px) {
@@ -446,21 +429,29 @@ display: none;
 margin: 0 auto;
 width: 100%;
 text-align: center;
+vertical-align: middle;
 }
 .overallscore{
-font-size: 25px;
-padding: 3px 0px;
+font-size: 40px;
+padding: 0px;
+width: 50px;
+margin: 0 5px;
+border: none;
+}
+.dash{
+color: #FFF;
+font-size: 20px;
+height: 40px;
+vertical-align: middle;
+display: inline-block;
+line-height: 1;
 }
 #homeeucherteamname, #awayeucherteamname{
 display: inline-block;
-color: #ffffff;
-margin-left: 20px;
-margin-top: 8px;
-}
-#eucherresetscore{
-background-color:black;
-color: white;
-border: none;
+color: #fff;
+font-size: 16px;
+height: 40px;
+vertical-align: middle;
 }
 .scoremarker{
 background-image: url('../images/scoremarkers.png');

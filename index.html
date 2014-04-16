@@ -12,6 +12,7 @@
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Nova%20Square/nova_square_regular/stylesheet.css" rel="stylesheet">
+<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
 
 </head>
@@ -271,7 +272,7 @@
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-sm-2 col-sm-offset-4 text-center">
-						<a class="popup-link" href="#scoreboard" title="Scoreboard"><img alt="ScoreBoard" src="images/Scoreboard.png"></a>
+						<a title="Scoreboard" data-toggle="modal" data-target="#scoreboard"><img alt="ScoreBoard" src="images/Scoreboard.png"></a>
 					</div>
 					<div class="panel-title col-sm-4 col-sm-offset-2">
 						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavFive" href="#collapseFive" class="collapsed"><img src="images/Pen.png"/></a></h1>
@@ -677,43 +678,58 @@
 	</div> <!-- score-sheet -->
 	
 	
-	<div id="scoreboard">
-		<div id="timer">
-			<div id="countdownDisp">
-				<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
-				<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
-				<img class="numeral" src="images/numerals/colon.gif" name="j" id="j"/>
-				<img class="numeral" src="images/numerals/c0.gif" name="k" id="k"/>
-				<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
-			</div>
-			<div>
-				<div><input type="button" class="btn btn-default" name="ssbutton" value="Start/Stop" onClick="startstop()"/></div>
-				<div><input type="button" class="btn btn-default" name="minplus" value="+min" onClick="addmin()"/>
-				<input type="button" class="btn btn-default" name="minplus" value="+30" onClick="addthirty()"/></div>
-				<div><input type="button" class="btn btn-default" name="reset" value="Reset Timer" onClick="timerreset()"/></div>
-			</div>
-		</div>
-		<div class="team-score">
-			<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
-			<div class="clear"></div>
-			<input id="homescore" class="square score" type="text" name="num" value="0" readonly>
-			<div class="clear"></div>
-			<button id="plushome" class="HomePlus plusbtn" value="+">+</button>
-			<button id="minushome" class="HomeMinus minusbtn" value="-">-</button>
-			<div class="clear"></div>
-		</div>
-		<div class="team-score">
-			<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
-			<div class="clear"></div>
-			<input id="awayscore" class="square score" type="text" name="num" value="0" readonly>
-			<div class="clear"></div>
-			<button id="plusaway" class="AwayPlus plusbtn" value="+">+</button>
-			<button id="minusaway" class="AwayMinus minusbtn" value="-">-</button>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
-		<button id="resetscore" value="resetscore" style="float:left;">Reset Score</button>
-	</div><!-- scoreboard -->
+	<div class="modal fade" id="scoreboard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content" style="background-color: transparent;">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xs-6"><input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;"></div>
+						<div class="col-xs-6"><input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;"></div>
+					</div>
+					<div class="row"> 
+						<div class="col-sm-4 col-xs-6">
+							<div class="team-score">
+								<input id="homescore" class="square score" type="text" name="num" value="0" readonly>
+								<div class="clear"></div>
+								<button id="plushome" class="HomePlus plusbtn btn btn-success" value="+">+</button>
+								<button id="minushome" class="HomeMinus minusbtn btn btn-danger" value="-">-</button>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-6 pull-right">
+							<div class="team-score">
+								<input id="awayscore" class="square score" type="text" name="num" value="0" readonly>
+								<div class="clear"></div>
+								<button id="plusaway" class="AwayPlus plusbtn btn btn-success" value="+">+</button>
+								<button id="minusaway" class="AwayMinus minusbtn btn btn-danger" value="-">-</button>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center">
+							<div id="timer">
+								<div id="countdownDisp">
+									<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
+									<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
+									<img class="numeral" src="images/numerals/colon.gif" name="j" id="j"/>
+									<img class="numeral" src="images/numerals/c0.gif" name="k" id="k"/>
+									<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
+								</div>
+								<div>
+									<div><input type="button" class="btn btn-success" name="ssbutton" value="Start/Stop" onClick="startstop()"/></div>
+									<div><input type="button" class="btn btn-warning" name="minplus" value="+min" onClick="addmin()"/>
+									<input type="button" class="btn btn-warning" name="minplus" value="+30" onClick="addthirty()"/></div>
+									<div><input type="button" class="btn btn-danger" name="reset" value="Reset Timer" onClick="timerreset()"/></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<button id="resetscore" class="btn btn-danger" value="resetscore">Reset Score</button>
+				</div> <!-- modal-body -->
+			</div> <!-- modal-content -->
+		</div> <!-- modal-dialog -->
+	</div> <!-- modal -->
 	
 	<div class="modal fade" id="eucher-scorecard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
 		<div class="modal-dialog">
@@ -735,11 +751,12 @@
 					</div>
 					<div class="clear"></div>
 					<div class="separator"></div>
-					<button class="opencloseteamscore btn btn-default pull-right" type="button" value=""></button>
+					<button class="opencloseteamscore btn btn-info pull-right btn-sm" type="button"><i class="fa fa-tachometer"></i></button>
 					<div class="wins-losses">
 						<div class="scorecontainer">
-							<div id="homeeucherteamname" style="margin-left: 0px;">Good Guys</div>
+							<div id="homeeucherteamname">Good Guys</div>
 							<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+							<span class="dash">-</span>
 							<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
 							<div id="awayeucherteamname">Bad Guys</div>
 						</div>
@@ -761,7 +778,7 @@
 						<button class="btn btn-danger btn-lg pull-right" onclick="minusAwayPoint()">-</button>
 					</div>
 					<div class="clearfix"></div>
-					<button id="eucherresetscore" value="resetscore">Reset</button>
+					<button id="eucherresetscore" class="btn btn-danger" value="resetscore">Reset</button>
 				</div> <!-- modal-body -->
 			</div> <!-- modal-content -->
 		</div> <!-- modal-dialog -->
