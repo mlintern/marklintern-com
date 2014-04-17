@@ -56,6 +56,12 @@ text-align: justify;
 position: relative;
 z-index: 11;
 }
+input, textarea{
+color: #444;
+}
+.help-block{
+color: red;
+}
 /*BACKGROUND IMAGES*/
 .background-cardboard{
 background-image: url('../images/cardboard_background.jpg');

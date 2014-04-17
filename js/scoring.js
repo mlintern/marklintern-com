@@ -59,25 +59,6 @@ function reset_score(){
 		}
 };
 
-function fixsizing(divname) {
-
-		//Getting the variable's value from a link 
-		var popupBox = divname;
-
-		//Fade in the Popup
-		$(popupBox).fadeIn(300);
-
-		//Set the center alignment padding + border see css style
-		var popMargTop = ($(popupBox).height() + 24) / 2; 
-		var popMargLeft = ($(popupBox).width() + 24) / 2; 
-
-		$(popupBox).css({ 
-			'margin-top' : -popMargTop,
-			'margin-left' : -popMargLeft
-		});
-		return false;
-	};
-
 $(document).ready(function() {
 	$('#player_3').click(function() {
 		$('.player3').show();
@@ -86,7 +67,6 @@ $(document).ready(function() {
 		$('.player6').hide();
 		$('.player7').hide();
 		$('.player8').hide();
-		fixsizing('#score-sheet')
 	});
 	$('#player_4').click(function() {
 		$('.player3').show();
@@ -95,7 +75,6 @@ $(document).ready(function() {
 		$('.player6').hide();
 		$('.player7').hide();
 		$('.player8').hide();
-		fixsizing('#score-sheet')
 	});
 	$('#player_5').click(function() {
 		$('.player3').show();
@@ -104,7 +83,6 @@ $(document).ready(function() {
 		$('.player6').hide();
 		$('.player7').hide();
 		$('.player8').hide();
-		fixsizing('#score-sheet')
 	});
 	$('#player_6').click(function() {
 		$('.player3').show();
@@ -113,7 +91,6 @@ $(document).ready(function() {
 		$('.player6').show();
 		$('.player7').hide();
 		$('.player8').hide();
-		fixsizing('#score-sheet')
 	});
 	$('#player_7').click(function() {
 		$('.player3').show();
@@ -122,7 +99,6 @@ $(document).ready(function() {
 		$('.player6').show();
 		$('.player7').show();
 		$('.player8').hide();
-		fixsizing('#score-sheet')
 	});
 	$('#player_8').click(function() {
 		$('.player3').show();
@@ -131,7 +107,6 @@ $(document).ready(function() {
 		$('.player6').show();
 		$('.player7').show();
 		$('.player8').show();
-		fixsizing('#score-sheet')
 	});
 	$('#onetothree').click(function() {
 		if($('#onetothree').prop('checked')) {
@@ -141,7 +116,6 @@ $(document).ready(function() {
 		    $("#rowone").hide();
 		    $("#rowtwo").hide();
 		}
-		fixsizing('#score-sheet')
 	});
 	$('#jacktoking').click(function() {
 		if($('#jacktoking').prop('checked')) {
@@ -153,7 +127,6 @@ $(document).ready(function() {
 		    $("#rowQ").hide();
 		    $("#rowK").hide();
 		}
-		fixsizing('#score-sheet')
 	});
 });
 

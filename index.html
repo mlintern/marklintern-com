@@ -206,41 +206,41 @@
 					<div class="container">
 						<h1>Computer Problem Report Form</h1>
 						<p><i>Complete all answers before submitting, incomplete forms will be ignored</i></p>
-						<form action="http://www.nretnil.com/php/FormToEmail.php" method="POST">
-							<input type=hidden name="recipient" value="ml@compendium.com">
+						<form class="computerform" action="http://www.nretnil.com/php/FormToEmail.php" method="POST" novalidate>
+							<input type="hidden" name="recipient" value="ml@compendium.com">
 							<input type="hidden" name="subject" value="Computer Problem Report Form">
-							<input type=hidden name="env_report" value="REMOTE_ADDR,HTTP_USER_AGENT">
+							<input type="hidden" name="env_report" value="REMOTE_ADDR,HTTP_USER_AGENT">
 							<input type="hidden" name="Source" value="Computer Problem Report Form">
 							<input type="hidden" name="redirect" value="http://www.marklintern.com">
 							<input type="hidden" name="required" value="name,email,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21">
 							<ol>
-								<li> <p>Name:<br /> <input type="text" name="name"></textarea></p></li>
-								<li> <p>Email:<br /> <input type="text" name="email"></textarea></p></li>
-								<li> <p>Describe your problem:<br /> <textarea rows="3" name="q1"></textarea></p></li>
-								<li> <p>Now, describe the problem with deatils:<br /> <textarea rows="3" name="q2"></textarea></p></li>
-								<li> <p>Speculate wildly about the cause of the problem:<br /> <textarea rows="3" name="q3"></textarea></p></li>
-								<li> <p>Select the problem severity: <select name="q4" size="1"><option>Minor</option><option>Minor</option><option>Minor</option><option>Trivial</option></select></p></li>
-								<li> <p>Select the nature of the problem: <select name="q5" size="1"><option>Locked Up</option><option>Frozen</option><option>Hung</option><option>Shot</option></select></p></li>
-								<li> <p>Is your computer plugged in? <input name="q6" type="radio" value="Yes"> Yes </input> <input name="q6" type="radio" value="No"> No </input></p></li>
-								<li> <p>Is it turned on? <input name="q7" type="radio" value="Yes"> Yes </input> <input name="q7" type="radio" value="No"> No </input></p></li>
-								<li> <p>Have you tried to fix it yourself? <input name="q8" type="radio" value="Yes"> Yes </input> <input name="q8" type="radio" value="No"> No </input></p></li>
-								<li> <p>Have you made it worse? <input name="q9" type="radio" value="Yes"> Yes </input>  <input id="q9" name="q9" type="radio" value="No"> No </input></p></li>
-								<li> <p>What were you doing with your computer at the time the problem occurred? <br /> <textarea rows="3" name="q10"></textarea></p></li>
-								<li> <p>If &quot;nothing&quot; explain why you were logged in. <br /> <textarea rows="3" name="q11"></textarea></p></li>
-								<li> <p>Are you sure that you aren't imagining the problem? <input name="q12" type="radio" value="Yes"> Yes </input> <input name="q12" type="radio" value="No"> No </input></p></li>
-								<li> <p>Do you have any independent witnesses of the problem? <input name="q13" type="radio" value="Yes"> Yes </input> <input name="q13" type="radio" value="No"> No </input></p></li>
-								<li> <p>Can't you do something else, instead of bothering me? <input name="q14" type="radio" value="Yes"> Yes </input> <input name="q14" type="radio" value="No"> No </input></p></li>
-								<li> <p>Did you install any sketchy software on your computer recently? <input name="q15" type="radio" value="Yes"> Yes </input> <input name="q15" type="radio" value="No"> No </input></p></li>
-								<li> <p>Are you sure you haven't installed any sketchy software on your computer recently? <input name="q16" type="radio" value="Yes"> Yes </input> <input name="q16" type="radio" value="No"> No </input></p></li>
-								<li> <p>Did any sketchy software magically appear on your computer recently that you don't have a clue where it came from? <input name="q17" type="radio" value="Yes"> Yes </input> <input name="q17" type="radio" value="No"> No </input></p></li>
-								<li> <p>Did a co-worker force you to install some sketchy software on your computer recently? <input name="q18" type="radio" value="Yes"> Yes </input> <input name="q18" type="radio" value="No"> No </input></p></li>
-								<li> <p>Are you interested in our sketchy software installation witness protection program? <input name="q19" type="radio" value="Yes"> Yes </input> <input name="q19" type="radio" value="No"> No </input></p></li>
-								<li> <p>Are you sure you don't want to just move to another computer? <input name="q20" type="radio" value="Yes"> Yes </input> <input name="q20" type="radio" value="No"> No </input></p></li>
-								<li> <p>Is the problem life threatening? <input name="q21" type="radio" value="Yes"> Yes </input> <input name="q21" type="radio" value="No"> No </input></p></li>
+								<li> <div class="control-group"><div class="control">Name:<input type="text" class="form-control" name="name" required /></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Email:<input type="email" class="form-control" name="email" required /></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Describe your problem:<br /> <textarea rows="3" class="form-control" name="q1" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Now, describe the problem with deatils:<br /><textarea rows="3" class="form-control" name="q2" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Speculate wildly about the cause of the problem:<br /> <textarea rows="3" class="form-control" name="q3" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Select the problem severity: <select name="q4" size="1" required><option>Minor</option><option>Minor</option><option>Minor</option><option>Trivial</option></select></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Select the nature of the problem: <select name="q5" size="1" required><option>Locked Up</option><option>Frozen</option><option>Hung</option><option>Shot</option></select></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Is your computer plugged in? <input name="q6" type="radio" value="Yes" required> Yes </input> <input name="q6" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Is it turned on? <input name="q7" type="radio" value="Yes" required> Yes </input> <input name="q7" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Have you tried to fix it yourself? <input name="q8" type="radio" value="Yes" required> Yes <input name="q8" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Have you made it worse? <input name="q9" type="radio" value="Yes" required> Yes  <input id="q9" name="q9" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">What were you doing with your computer at the time the problem occurred? <br /> <textarea rows="3" class="form-control" name="q10" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">If &quot;nothing&quot; explain why you were logged in. <br /> <textarea rows="3" class="form-control" name="q11" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you sure that you aren't imagining the problem? <input name="q12" type="radio" value="Yes" required /> Yes <input name="q12" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Do you have any independent witnesses of the problem? <input name="q13" type="radio" value="Yes" required /> Yes <input name="q13" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Can't you do something else, instead of bothering me? <input name="q14" type="radio" value="Yes" required /> Yes <input name="q14" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Did you install any sketchy software on your computer recently? <input name="q15" type="radio" value="Yes" required /> Yes <input name="q15" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you sure you haven't installed any sketchy software on your computer recently? <input name="q16" type="radio" value="Yes" required/> Yes <input name="q16" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Did any sketchy software magically appear on your computer recently that you don't have a clue where it came from? <input name="q17" type="radio" value="Yes" required /> Yes <input name="q17" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Did a co-worker force you to install some sketchy software on your computer recently? <input name="q18" type="radio" value="Yes" required /> Yes <input name="q18" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you interested in our sketchy software installation witness protection program? <input name="q19" type="radio" value="Yes" required /> Yes <input name="q19" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you sure you don't want to just move to another computer? <input name="q20" type="radio" value="Yes" required /> Yes <input name="q20" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Is the problem life threatening? <input name="q21" type="radio" value="Yes" required/> Yes <input name="q21" type="radio" value="No"/> No</div><p class="help-block"></p></div></li>
 							</ol>
 							<p>
-							<input TYPE="SUBMIT" class="btn btn-default" VALUE="Send in Report">
-							<input TYPE="RESET" class="btn btn-default" VALUE=" Forget it, I'll change computers ">
+								<input TYPE="submit" class="btn btn-default" value="Send in Report">
+								<input TYPE="reset" class="btn btn-default" value=" Forget it, I'll change computers ">
 							</p>
 						</form>
 					</div> <!-- container -->
@@ -520,162 +520,163 @@
 						</tr>
 						<tr id="rowone">
 							<td>1</td>
-							<td class="player1"><input id="11" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="12" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="13" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="14" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="15" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="16" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="17" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="18" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="11" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player2"><input id="12" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player3"><input id="13" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player4"><input id="14" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player5"><input id="15" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player6"><input id="16" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player7"><input id="17" type="number" class="form-control" placeholder="0"/></td>
+							<td class="player8"><input id="18" type="number" class="form-control" placeholder="0"/></td>
 						</tr>
 						<tr id="rowtwo">
 							<td>2</td>
-							<td class="player1"><input id="21" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="22" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="23" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="24" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="25" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="26" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="27" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="28" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="21" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="22" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="23" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="24" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="25" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="26" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="27" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="28" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>3</td>
-							<td class="player1"><input id="31" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="32" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="33" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="34" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="35" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="36" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="37" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="38" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="31" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="32" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="33" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="34" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="35" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="36" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="37" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="38" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>4</td>
-							<td class="player1"><input id="41" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="42" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="43" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="44" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="45" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="46" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="47" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="48" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="41" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="42" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="43" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="44" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="45" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="46" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="47" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="48" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>5</td>
-							<td class="player1"><input id="51" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="52" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="53" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="54" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="55" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="56" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="57" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="58" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="51" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="52" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="53" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="54" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="55" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="56" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="57" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="58" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>6</td>
-							<td class="player1"><input id="61" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="62" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="63" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="64" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="65" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="66" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="67" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="68" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="61" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="62" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="63" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="64" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="65" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="66" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="67" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="68" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>7</td>
-							<td class="player1"><input id="71" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="72" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="73" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="74" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="75" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="76" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="77" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="78" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="71" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="72" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="73" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="74" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="75" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="76" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="77" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="78" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>8</td>
-							<td class="player1"><input id="81" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="82" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="83" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="84" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="85" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="86" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="87" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="88" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="81" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="82" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="83" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="84" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="85" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="86" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="87" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="88" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>9</td>
-							<td class="player1"><input id="91" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="92" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="93" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="94" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="95" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="96" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="97" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="98" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="91" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="92" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="93" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="94" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="95" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="96" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="97" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="98" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr>
 							<td>10</td>
-							<td class="player1"><input id="101" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="102" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="103" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="104" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="105" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="106" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="107" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="108" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="101" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="102" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="103" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="104" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="105" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="106" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="107" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="108" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr id="rowJ">
 							<td>J</td>
-							<td class="player1"><input id="j1" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="j2" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="j3" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="j4" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="j5" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="j6" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="j7" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="j8" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="j1" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="j2" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="j3" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="j4" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="j5" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="j6" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="j7" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="j8" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr id="rowQ">
 							<td>Q</td>
-							<td class="player1"><input id="q1" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="q2" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="q3" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="q4" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="q5" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="q6" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="q7" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="q8" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="q1" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="q2" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="q3" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="q4" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="q5" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="q6" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="q7" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="q8" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr id="rowK">
 							<td>K</td>
-							<td class="player1"><input id="k1" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player2"><input id="k2" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player3"><input id="k3" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player4"><input id="k4" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player5"><input id="k5" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player6"><input id="k6" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player7"><input id="k7" type="number" class="form-control" name="num" placeholder="0"></td>
-							<td class="player8"><input id="k8" type="number" class="form-control" name="num" placeholder="0"></td>
+							<td class="player1"><input id="k1" type="number" class="form-control" placeholder="0"></td>
+							<td class="player2"><input id="k2" type="number" class="form-control" placeholder="0"></td>
+							<td class="player3"><input id="k3" type="number" class="form-control" placeholder="0"></td>
+							<td class="player4"><input id="k4" type="number" class="form-control" placeholder="0"></td>
+							<td class="player5"><input id="k5" type="number" class="form-control" placeholder="0"></td>
+							<td class="player6"><input id="k6" type="number" class="form-control" placeholder="0"></td>
+							<td class="player7"><input id="k7" type="number" class="form-control" placeholder="0"></td>
+							<td class="player8"><input id="k8" type="number" class="form-control" placeholder="0"></td>
 						</tr>
 						<tr id="totalscore">
 							<td>Total</td>
-							<td class="player1"><input id="t1" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player2"><input id="t2" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player3"><input id="t3" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player4"><input id="t4" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player5"><input id="t5" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player6"><input id="t6" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player7"><input id="t7" type="text" class="form-control" name="num" placeholder="0" readonly></td>
-							<td class="player8"><input id="t8" type="text" class="form-control" name="num" placeholder="0" readonly></td>
+							<td class="player1"><input id="t1" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player2"><input id="t2" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player3"><input id="t3" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player4"><input id="t4" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player5"><input id="t5" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player6"><input id="t6" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player7"><input id="t7" type="text" class="form-control" placeholder="0" readonly></td>
+							<td class="player8"><input id="t8" type="text" class="form-control" placeholder="0" readonly></td>
 						</tr>
 					</table>
 					<div class="clearfix" style="margin-top: 5px;"></div>
-					<button id="calculate" class="btn btn-success pull-right" value="Calculate" onclick="calculate_score();">Calculate</button>
+					<button id="calculate" class="btn btn-success pull-right" value="Calculate" onclick="calculate_score()">Calculate</button>
 					<button id="reset" class="btn btn-danger" value="Reset Scores" onclick="reset_score();">Reset</button>
+					</form>
 				</div> <!-- modal-body -->
 			</div> <!-- modal-content -->
 		</div> <!-- modal-dialog -->
@@ -692,7 +693,7 @@
 					<div class="row"> 
 						<div class="col-sm-4 col-xs-6">
 							<div class="team-score">
-								<input id="homescore" class="square score" type="text" name="num" value="0" readonly>
+								<input id="homescore" class="square score" type="text" value="0" readonly>
 								<div class="clear"></div>
 								<button id="plushome" class="HomePlus plusbtn btn btn-success" value="+">+</button>
 								<button id="minushome" class="HomeMinus minusbtn btn btn-danger" value="-">-</button>
@@ -701,7 +702,7 @@
 						</div>
 						<div class="col-sm-4 col-xs-6 pull-right">
 							<div class="team-score">
-								<input id="awayscore" class="square score" type="text" name="num" value="0" readonly>
+								<input id="awayscore" class="square score" type="text" value="0" readonly>
 								<div class="clear"></div>
 								<button id="plusaway" class="AwayPlus plusbtn btn btn-success" value="+">+</button>
 								<button id="minusaway" class="AwayMinus minusbtn btn btn-danger" value="-">-</button>
@@ -740,7 +741,7 @@
 				<div class="modal-body">
 					<div class="eucher-team-score">
 						<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys">
-						<input id="eucherhomescore" class="square eucherscore" type="text" name="num" value="0" readonly>
+						<input id="eucherhomescore" class="square eucherscore" type="text" value="0" readonly>
 						<div class="clear"></div>
 						<div class="progress progress-striped active progress-lg">
 							<span class="numbers">&nbsp; 1 2 3 4 5 6 7 8 9</span>
@@ -758,9 +759,9 @@
 					<div class="wins-losses">
 						<div class="scorecontainer">
 							<div id="homeeucherteamname">Good Guys</div>
-							<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+							<input id="eucherhomeoverallscore" class="square eucherscore overallscore" type="text" value="0" readonly>
 							<span class="dash">-</span>
-							<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" name="num" value="0" readonly>
+							<input id="eucherawayoverallscore" class="square eucherscore overallscore" type="text" value="0" readonly>
 							<div id="awayeucherteamname">Bad Guys</div>
 						</div>
 					</div>
@@ -768,7 +769,7 @@
 					<div class="separator"></div>
 					<div class="eucher-team-score">
 						<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys">
-						<input id="eucherawayscore" class="square eucherscore" type="text" name="num" value="0" readonly>
+						<input id="eucherawayscore" class="square eucherscore" type="text" value="0" readonly>
 						<div class="clear"></div>
 						<div class="progress progress-striped active progress-lg">
 							<span class="numbers">&nbsp; 1 2 3 4 5 6 7 8 9</span>
@@ -805,6 +806,7 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/bootstrap3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/BootstrapTools/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/jsapi.js"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/moment.min.js"></script>
 <script type="text/javascript" src="js/windows-console.js"></script>
@@ -818,7 +820,6 @@
 <script type="text/javascript" src="js/google-api.js"></script>
 
 <script type="text/javascript">	
-
 $(document).ready(function() {
 	$("input[name='q9'][value='No']").click(function() {
 		$("input[name='q9'][value='Yes']").prop('checked', true);
@@ -832,8 +833,30 @@ $(document).ready(function() {
 		$("input[name='q14'][value='Yes']").prop('checked', true);
 		$("input[name='q14'][value='No']").prop('checked', false);
 	});
+	
 });
+</script>
 
+<script>   
+$(function() {
+    $(".computerform").find("input,textarea,select").jqBootstrapValidation(
+        {
+            preventSubmit: true,
+            sniffHtml: true,
+            submitError: function($form, event, errors) {
+                // Here I do nothing, but you could do something like display 
+                // the error messages to the user, log, etc.
+            },
+            submitSuccess: function($form, event) {
+                alert("OK");
+                event.preventDefault();
+            },
+            filter: function() {
+                return $(this).is(":visible");
+            }
+        }
+    );
+});        
 </script>
 
 <script type="text/javascript">
