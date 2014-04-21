@@ -372,6 +372,9 @@ display: inline-block;
 #resetscore{
 margin-top: 15px;
 }
+.opencloseteamscore{
+padding: 0 3px;
+}
 /*EUCHER SCOREBOARD*/
 @media (min-width: 768px) {
 	#eucher-scorecard .modal-dialog {
