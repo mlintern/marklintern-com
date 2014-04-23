@@ -80,7 +80,7 @@ background-repeat: no-repeat;
 background-color: transparent;
 background-image: url('../images/fireball_rain.png');
 background-position: 0% 0%;
-background-repeat: both;
+background-repeat: repeat;
 }
 .background-bottom{
 background-color: transparent;
