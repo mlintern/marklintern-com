@@ -40,6 +40,7 @@ color: #444;
 }
 .progress {
 margin-bottom: 10px;
+border-radius: 20px;
 }
 .progress-lg {
 height: 40px;
