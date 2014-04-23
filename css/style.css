@@ -38,6 +38,9 @@ color: #fff;
 .modal {
 color: #444;
 }
+.progress {
+margin-bottom: 10px;
+}
 .progress-lg {
 height: 40px;
 position: relative;
@@ -381,10 +384,6 @@ padding: 0 3px;
 	width: 475px;
 	}
 }
-.eucher-team-score{
-margin: 10px 2px;
-text-align:center;
-}
 .eucherteamname{
 font-size: 30px;
 background-color: black;
@@ -449,7 +448,7 @@ height: 10px;
 width: 100%;
 }
 .plus {
-margin: 0 20px;
+margin: 0 3%;
 }
 /*FOOTER*/
 .footer{

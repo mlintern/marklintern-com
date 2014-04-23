@@ -740,7 +740,6 @@
 						<input id="eucherhomescore" class="square eucherscore" type="text" value="0" readonly>
 						<div class="clear"></div>
 						<div class="progress progress-striped active progress-lg">
-							<span class="numbers">&nbsp; 1 2 3 4 5 6 7 8 9</span>
 							<div id="progress_one" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-valuefull="100" style="width: 0%"></div>
 						</div>
 						<div class="clearfix"></div>
@@ -768,7 +767,6 @@
 						<input id="eucherawayscore" class="square eucherscore" type="text" value="0" readonly>
 						<div class="clear"></div>
 						<div class="progress progress-striped active progress-lg">
-							<span class="numbers">&nbsp; 1 2 3 4 5 6 7 8 9</span>
 							<div id="progress_two" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-valuefull="100" style="width: 0%"></div>
 						</div>
 						<div class="clearfix"></div>
@@ -777,8 +775,9 @@
 						<button class="btn btn-success btn-lg plus" onclick="addAwayPoint(4)">4</button>
 						<button class="btn btn-danger btn-lg pull-right" onclick="minusAwayPoint()">-</button>
 					</div>
+					<div class="clearfix" style="height: 10px;"></div>
+					<button id="eucherresetscore" class="btn btn-danger pull-right" value="resetscore">Reset</button>
 					<div class="clearfix"></div>
-					<button id="eucherresetscore" class="btn btn-danger" value="resetscore">Reset</button>
 				</div> <!-- modal-body -->
 			</div> <!-- modal-content -->
 		</div> <!-- modal-dialog -->
