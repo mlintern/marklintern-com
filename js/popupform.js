@@ -45,10 +45,10 @@ $(document).ready(function() {
 
 		$('#hole1').delay(0).fadeIn(0,function(){audio1.play();});
 		$('#hole2').delay(200).fadeIn(0,function(){audio2.play();});
-		$('#hole3').delay(2000).fadeIn(0,function(){audio3.play();});
-		$('#hole4').delay(2300).fadeIn(0,function(){audio4.play();});
-		$('#hole5').delay(3000).fadeIn(0,function(){audio5.play();});
-		$('#hole6').delay(4000).fadeIn(0,function(){audio6.play();});
+		$('#hole3').delay(1500).fadeIn(0,function(){audio3.play();});
+		$('#hole4').delay(1800).fadeIn(0,function(){audio4.play();});
+		$('#hole5').delay(2500).fadeIn(0,function(){audio5.play();});
+		$('#hole6').delay(3500).fadeIn(0,function(){audio6.play();});
 		$('#hole7').delay(5000).fadeIn(0,function(){audio7.play();});
 		$('#hole8').delay(5300).fadeIn(0,function(){audio8.play();});
 		
