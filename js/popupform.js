@@ -34,14 +34,23 @@ $(document).ready(function() {
 		$('body').append('<div id="blackmask"></div>');
 		$('#blackmask').fadeIn(0);
 		
-		$('#hole1').delay(0).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole2').delay(1000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole3').delay(2000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole4').delay(3000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole5').delay(4000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole6').delay(5000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole7').delay(6000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
-		$('#hole8').delay(7000).fadeIn(0,function(){$.playSound('sounds/Gun-Shot.wav');});
+		var audio1 = document.getElementsByTagName("audio")[0];
+		var audio2 = document.getElementsByTagName("audio")[1];
+		var audio3 = document.getElementsByTagName("audio")[2];
+		var audio4 = document.getElementsByTagName("audio")[3];
+		var audio5 = document.getElementsByTagName("audio")[4];
+		var audio6 = document.getElementsByTagName("audio")[5];
+		var audio7 = document.getElementsByTagName("audio")[6];
+		var audio8 = document.getElementsByTagName("audio")[7];
+
+		$('#hole1').delay(0).fadeIn(0,function(){audio1.play();});
+		$('#hole2').delay(200).fadeIn(0,function(){audio2.play();});
+		$('#hole3').delay(2000).fadeIn(0,function(){audio3.play();});
+		$('#hole4').delay(2300).fadeIn(0,function(){audio4.play();});
+		$('#hole5').delay(3000).fadeIn(0,function(){audio5.play();});
+		$('#hole6').delay(4000).fadeIn(0,function(){audio6.play();});
+		$('#hole7').delay(5000).fadeIn(0,function(){audio7.play();});
+		$('#hole8').delay(5300).fadeIn(0,function(){audio8.play();});
 		
 		// When clicking on the button close or the mask layer the popup closed
 		//$('#mask').live('click', function() { 
