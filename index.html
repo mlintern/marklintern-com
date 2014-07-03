@@ -83,7 +83,110 @@
 			</div> <!-- colapse -->
 		</div> <!-- panel -->
 
-		<div id="local-two" class="panel fog0">
+		<div id="local-five" class="panel fog0">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-4 text-center">
+						<a title="Scoreboard" data-toggle="modal" data-target="#scoreboard"><img alt="ScoreBoard" src="images/Scoreboard.png"></a>
+					</div>
+					<div class="panel-title col-sm-4 col-sm-offset-2">
+						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavFive" href="#collapseFive" class="collapsed"><img src="images/Pen.png"/></a></h1>
+					</div>
+				</div>
+			</div>
+			<div id="collapseFive" class="panel-collapse collapse fog50">		
+				<div class="panel-body">
+					<div class="container">
+						<div class="list-title">Documents</div>
+						<ul class="list">
+							<li><a target="_blank" href="resume.html">Resume</a></li>
+							<li><a target="_blank" href="downloads/HandgunChangeOfAddressForm.pdf">Indiana Handgun change of Address</a></li>
+							<li><a target="_blank" href="downloads/Tough_Mudder_Participant_Waiver.pdf">Tough Mudder Participant Waiver</a></li>
+						</ul>			
+					</div> <!-- container -->
+				</div> <!-- panel-body -->
+			</div> <!-- colapse -->
+		</div> <!-- panel -->
+
+		<div id="local-three" class="panel fog0">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-0 text-center">
+						<a title="5 Crowns Score Sheet" data-toggle="modal" data-target="#scoresheet"><img alt="5 Crowns Score Sheet" src="images/Crown.png"></a>
+					</div>
+					<div class="panel-title col-sm-4 col-sm-offset-3">
+						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavThree" href="#collapseThree" class="collapsed"><img src="images/Keyboard.png"/></a></h1>
+					</div>
+				</div>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse fog50">
+				<div class="panel-body">
+					<div class="container">
+						<h1>Computer Problem Report Form</h1>
+						<p><i>Complete all answers before submitting, incomplete forms will be ignored</i></p>
+						<form class="computerform" action="http://www.nretnil.com/php/FormToEmail.php" method="POST" novalidate>
+							<input type="hidden" name="recipient" value="ml@compendium.com">
+							<input type="hidden" name="subject" value="Computer Problem Report Form">
+							<input type="hidden" name="env_report" value="REMOTE_ADDR,HTTP_USER_AGENT">
+							<input type="hidden" name="Source" value="Computer Problem Report Form">
+							<input type="hidden" name="redirect" value="http://www.marklintern.com">
+							<input type="hidden" name="required" value="name,email,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21">
+							<ol>
+								<li> <div class="control-group"><div class="control">Name:<input type="text" class="form-control" name="name" required /></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Email:<input type="email" class="form-control" name="email" required /></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Describe your problem:<br /> <textarea rows="3" class="form-control" name="q1" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Now, describe the problem with deatils:<br /><textarea rows="3" class="form-control" name="q2" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Speculate wildly about the cause of the problem:<br /> <textarea rows="3" class="form-control" name="q3" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Select the problem severity: <select name="q4" size="1" required><option>Minor</option><option>Minor</option><option>Minor</option><option>Trivial</option></select></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Select the nature of the problem: <select name="q5" size="1" required><option>Locked Up</option><option>Frozen</option><option>Hung</option><option>Shot</option></select></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Is your computer plugged in? <input name="q6" type="radio" value="Yes" required> Yes </input> <input name="q6" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Is it turned on? <input name="q7" type="radio" value="Yes" required> Yes </input> <input name="q7" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Have you tried to fix it yourself? <input name="q8" type="radio" value="Yes" required> Yes <input name="q8" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Have you made it worse? <input name="q9" type="radio" value="Yes" required> Yes  <input id="q9" name="q9" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">What were you doing with your computer at the time the problem occurred? <br /> <textarea rows="3" class="form-control" name="q10" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">If &quot;nothing&quot; explain why you were logged in. <br /> <textarea rows="3" class="form-control" name="q11" required ></textarea></div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you sure that you aren't imagining the problem? <input name="q12" type="radio" value="Yes" required /> Yes <input name="q12" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Do you have any independent witnesses of the problem? <input name="q13" type="radio" value="Yes" required /> Yes <input name="q13" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Can't you do something else, instead of bothering me? <input name="q14" type="radio" value="Yes" required /> Yes <input name="q14" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Did you install any sketchy software on your computer recently? <input name="q15" type="radio" value="Yes" required /> Yes <input name="q15" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you sure you haven't installed any sketchy software on your computer recently? <input name="q16" type="radio" value="Yes" required/> Yes <input name="q16" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Did any sketchy software magically appear on your computer recently that you don't have a clue where it came from? <input name="q17" type="radio" value="Yes" required /> Yes <input name="q17" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Did a co-worker force you to install some sketchy software on your computer recently? <input name="q18" type="radio" value="Yes" required /> Yes <input name="q18" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you interested in our sketchy software installation witness protection program? <input name="q19" type="radio" value="Yes" required /> Yes <input name="q19" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Are you sure you don't want to just move to another computer? <input name="q20" type="radio" value="Yes" required /> Yes <input name="q20" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
+								<li> <div class="control-group"><div class="control">Is the problem life threatening? <input name="q21" type="radio" value="Yes" required/> Yes <input name="q21" type="radio" value="No"/> No</div><p class="help-block"></p></div></li>
+							</ol>
+							<p>
+								<input TYPE="submit" class="btn btn-default" value="Send in Report">
+								<input TYPE="reset" class="btn btn-default" value=" Forget it, I'll change computers ">
+							</p>
+						</form>
+					</div> <!-- container -->
+				</div> <!-- panel-body -->
+			</div> <!-- colapse -->
+		</div> <!-- panel -->
+		
+		<div id="local-four" class="panel fog0">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="panel-title col-sm-3">
+						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavFour" href="#collapseFour" class="collapsed"><img src="images/Motorcycle-Red.png"/></a></h1>
+					</div>
+					<div class="col-sm-3 col-sm-offset-3 text-center">
+						<a title="Tell Me About It" data-toggle="modal" data-target="#share-your-story"><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
+					</div>
+				</div>
+			</div>
+			<div id="collapseFour" class="panel-collapse collapse fog50">		
+				<div class="panel-body">
+					<div class="container">
+						<iframe width="600" height="450" src="http://www.youtube.com/embed/iChPspk4zMk" frameborder="0" allowfullscreen></iframe>
+					</div> <!-- container -->
+				</div> <!-- panel-body -->
+			</div> <!-- colapse -->
+		</div> <!-- panel -->
+
+				<div id="local-two" class="panel fog0">
 			<div class="panel-heading">
 				<div class="row">
 					<div class="panel-title col-sm-4 col-sm-offset-3">
@@ -199,110 +302,6 @@
 								</div>
 							</div>
 						</div>		
-					</div> <!-- container -->
-				</div> <!-- panel-body -->
-			</div> <!-- colapse -->
-		</div> <!-- panel -->
-
-
-		<div id="local-three" class="panel fog0">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-sm-2 col-sm-offset-0 text-center">
-						<a title="5 Crowns Score Sheet" data-toggle="modal" data-target="#scoresheet"><img alt="5 Crowns Score Sheet" src="images/Crown.png"></a>
-					</div>
-					<div class="panel-title col-sm-4 col-sm-offset-3">
-						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavThree" href="#collapseThree" class="collapsed"><img src="images/Keyboard.png"/></a></h1>
-					</div>
-				</div>
-			</div>
-			<div id="collapseThree" class="panel-collapse collapse fog50">
-				<div class="panel-body">
-					<div class="container">
-						<h1>Computer Problem Report Form</h1>
-						<p><i>Complete all answers before submitting, incomplete forms will be ignored</i></p>
-						<form class="computerform" action="http://www.nretnil.com/php/FormToEmail.php" method="POST" novalidate>
-							<input type="hidden" name="recipient" value="ml@compendium.com">
-							<input type="hidden" name="subject" value="Computer Problem Report Form">
-							<input type="hidden" name="env_report" value="REMOTE_ADDR,HTTP_USER_AGENT">
-							<input type="hidden" name="Source" value="Computer Problem Report Form">
-							<input type="hidden" name="redirect" value="http://www.marklintern.com">
-							<input type="hidden" name="required" value="name,email,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21">
-							<ol>
-								<li> <div class="control-group"><div class="control">Name:<input type="text" class="form-control" name="name" required /></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Email:<input type="email" class="form-control" name="email" required /></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Describe your problem:<br /> <textarea rows="3" class="form-control" name="q1" required ></textarea></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Now, describe the problem with deatils:<br /><textarea rows="3" class="form-control" name="q2" required ></textarea></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Speculate wildly about the cause of the problem:<br /> <textarea rows="3" class="form-control" name="q3" required ></textarea></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Select the problem severity: <select name="q4" size="1" required><option>Minor</option><option>Minor</option><option>Minor</option><option>Trivial</option></select></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Select the nature of the problem: <select name="q5" size="1" required><option>Locked Up</option><option>Frozen</option><option>Hung</option><option>Shot</option></select></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Is your computer plugged in? <input name="q6" type="radio" value="Yes" required> Yes </input> <input name="q6" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Is it turned on? <input name="q7" type="radio" value="Yes" required> Yes </input> <input name="q7" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Have you tried to fix it yourself? <input name="q8" type="radio" value="Yes" required> Yes <input name="q8" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Have you made it worse? <input name="q9" type="radio" value="Yes" required> Yes  <input id="q9" name="q9" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">What were you doing with your computer at the time the problem occurred? <br /> <textarea rows="3" class="form-control" name="q10" required ></textarea></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">If &quot;nothing&quot; explain why you were logged in. <br /> <textarea rows="3" class="form-control" name="q11" required ></textarea></div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Are you sure that you aren't imagining the problem? <input name="q12" type="radio" value="Yes" required /> Yes <input name="q12" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Do you have any independent witnesses of the problem? <input name="q13" type="radio" value="Yes" required /> Yes <input name="q13" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Can't you do something else, instead of bothering me? <input name="q14" type="radio" value="Yes" required /> Yes <input name="q14" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Did you install any sketchy software on your computer recently? <input name="q15" type="radio" value="Yes" required /> Yes <input name="q15" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Are you sure you haven't installed any sketchy software on your computer recently? <input name="q16" type="radio" value="Yes" required/> Yes <input name="q16" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Did any sketchy software magically appear on your computer recently that you don't have a clue where it came from? <input name="q17" type="radio" value="Yes" required /> Yes <input name="q17" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Did a co-worker force you to install some sketchy software on your computer recently? <input name="q18" type="radio" value="Yes" required /> Yes <input name="q18" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Are you interested in our sketchy software installation witness protection program? <input name="q19" type="radio" value="Yes" required /> Yes <input name="q19" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Are you sure you don't want to just move to another computer? <input name="q20" type="radio" value="Yes" required /> Yes <input name="q20" type="radio" value="No" /> No</div><p class="help-block"></p></div></li>
-								<li> <div class="control-group"><div class="control">Is the problem life threatening? <input name="q21" type="radio" value="Yes" required/> Yes <input name="q21" type="radio" value="No"/> No</div><p class="help-block"></p></div></li>
-							</ol>
-							<p>
-								<input TYPE="submit" class="btn btn-default" value="Send in Report">
-								<input TYPE="reset" class="btn btn-default" value=" Forget it, I'll change computers ">
-							</p>
-						</form>
-					</div> <!-- container -->
-				</div> <!-- panel-body -->
-			</div> <!-- colapse -->
-		</div> <!-- panel -->
-		
-		<div id="local-four" class="panel fog0">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="panel-title col-sm-3">
-						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavFour" href="#collapseFour" class="collapsed"><img src="images/Motorcycle-Red.png"/></a></h1>
-					</div>
-					<div class="col-sm-3 col-sm-offset-3 text-center">
-						<a title="Tell Me About It" data-toggle="modal" data-target="#share-your-story"><img alt="Tell Me About It" src="images/tell-me-about-it.png"></a>
-					</div>
-				</div>
-			</div>
-			<div id="collapseFour" class="panel-collapse collapse fog50">		
-				<div class="panel-body">
-					<div class="container">
-						<iframe width="600" height="450" src="http://www.youtube.com/embed/iChPspk4zMk" frameborder="0" allowfullscreen></iframe>
-					</div> <!-- container -->
-				</div> <!-- panel-body -->
-			</div> <!-- colapse -->
-		</div> <!-- panel -->
-		
-		<div id="local-five" class="panel fog0">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-sm-2 col-sm-offset-4 text-center">
-						<a title="Scoreboard" data-toggle="modal" data-target="#scoreboard"><img alt="ScoreBoard" src="images/Scoreboard.png"></a>
-					</div>
-					<div class="panel-title col-sm-4 col-sm-offset-2">
-						<h1 class="text-center"><a data-toggle="collapse" data-parent="#accordion" data-nav-active="NavFive" href="#collapseFive" class="collapsed"><img src="images/Pen.png"/></a></h1>
-					</div>
-				</div>
-			</div>
-			<div id="collapseFive" class="panel-collapse collapse fog50">		
-				<div class="panel-body">
-					<div class="container">
-						<div class="list-title">Documents</div>
-						<ul class="list">
-							<li><a target="_blank" href="resume.html">Resume</a></li>
-							<li><a target="_blank" href="downloads/HandgunChangeOfAddressForm.pdf">Indiana Handgun change of Address</a></li>
-							<li><a target="_blank" href="downloads/Tough_Mudder_Participant_Waiver.pdf">Tough Mudder Participant Waiver</a></li>
-						</ul>			
 					</div> <!-- container -->
 				</div> <!-- panel-body -->
 			</div> <!-- colapse -->
