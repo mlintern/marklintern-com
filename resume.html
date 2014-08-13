@@ -14,9 +14,9 @@
 		h4{font-size: 16px;}
 	</style>
 </head>
-<body onload="document.getElementById('pdf-icon').style.visibility = 'visible';">
+<body>
 <div class="container">
-	<div id="pdf-icon" style="position: absolute; left: 10px; top: 10px; visiblity: hidden;">
+	<div id="pdf-icon" style="position: absolute; left: 10px; top: 10px; visibility: hidden;">
 		<a href="downloads/lintern-web-resume.pdf"><img src="images/pdf_icon.png" width="40"/></a>
 	</div>
 	
@@ -166,6 +166,17 @@
 	</div>
 	
 </div>
+
+<script>
+	function paramExists(p){
+		return window.location.href.search("[?&]" + p + "=") != -1;
+	}
+	if ( paramExists('nopdf') ) {
+		document.getElementById('pdf-icon').style.visibility = 'hidden';
+	} else {
+		document.getElementById('pdf-icon').style.visibility = 'visible';
+	}
+</script>
 
 </body>
 </html>
