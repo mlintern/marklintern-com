@@ -95,11 +95,12 @@ font-family: 'Finger Paint', cursive;
 font-size: 130px;
 color: #4CF748;
 text-align: center;
+text-shadow: 2px 2px #ffffff;
 }
 @media ( max-width : 520px ) {
-.header-text{
-font-size: 60px;
-}
+	.header-text{
+	font-size: 60px;
+	}
 }
 /*CONTENT*/
 .section{
@@ -119,6 +120,7 @@ border-bottom: solid 1px;
 }
 .list{
 list-style: none outside none;
+padding-left: 0;
 }
 textarea{
 width: 96%;
