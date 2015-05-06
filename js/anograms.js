@@ -9,3 +9,7 @@ var getName = function () {
 }
 
 getName();
+
+$(function () { 
+	$(".header-text").on("click",getName);
+})

@@ -35,6 +35,9 @@ body{
 font-family: 'Almost Noteworthy';
 color: #fff;
 }
+.header-text {
+	cursor: pointer;
+}
 .modal {
 color: #444;
 }
