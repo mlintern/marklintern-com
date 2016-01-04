@@ -138,7 +138,7 @@
 		<div><h4>Delta Tau Delta Fraternity</h4></div>
 		<ul>	
 			<li><strong>Vice President</strong>, was in charge of more than 10 committees which ran both internal and external functions of the fraternity including successful philanthropies and social events.</li>
-			<li><strong>Treasurer</strong>, constructed and solely managed a budget of $103,000 for the 2006-2007 academic school year which maintained rent, food, social events, committee funds, etc.</li>
+			<li><strong>Treasurer</strong>, constructed and solely managed a budget of more than $100,000 for the 2006-2007 academic school year which maintained rent, food, social events, committee funds, etc.</li>
 		</ul>
 	</div>
 	
@@ -148,6 +148,7 @@
 		<ul>
 			<li>compendium-api: utilizes compendium api with easy function calls for ruby scripting. <a target="_blank" href="http://www.github.com/mlintern/compendium-api">http://www.github.com/mlintern/compendium-api</a></li>
 			<li>nretnil-password: easy password, passphrase and uuid generation. <a target="_blank" href="http://www.github.com/mlintern/nretnil-password">http://www.github.com/mlintern/nretnil-password</a></li>
+			<li>nretnil-fake-data: great for creating fake data such as names and dates. <a target="_blank" href="http://www.github.com/mlintern/nretnil-fake-data">http://www.github.com/mlintern/nretnil-fake-data</a></li>
 		</ul>
 		<div><h4>Personal Websites <small>for pleasure and deveopmental purposes</small></h4></div>
 		<ul>	
@@ -170,12 +171,20 @@
 	
 </div>
 
+<script src="http://code.jquery.com/jquery-2.1.4.min.js" ></script>
 <script>
 	function paramExists(p){
 		return window.location.href.search("[?&]" + p + "=") != -1;
 	}
 	if ( paramExists('nopdf') ) {
 		document.getElementById('pdf-icon').style.visibility = 'hidden';
+	} else {
+		document.getElementById('pdf-icon').style.visibility = 'visible';
+	}
+
+	if ( paramExists('print') ) {
+		document.getElementById('pdf-icon').style.visibility = 'hidden';
+		$('body').append('<style> h2{font-size: 20px;} h3{font-size: 16px;} h4{font-size: 14px;}</style>')
 	} else {
 		document.getElementById('pdf-icon').style.visibility = 'visible';
 	}
