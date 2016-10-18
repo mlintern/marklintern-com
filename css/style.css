@@ -32,9 +32,6 @@ a {
 a:hover {
 	color: blue;
 }
-.modal {
-	color: #444;
-}
 .top-left, .top-right {
 	margin: 20px;
 	line-height: 1;
@@ -84,12 +81,17 @@ a:hover {
 	text-decoration: none;
 }
 
-/* SCORE SHEET FORM */
-@media (min-width: 768px) {
-	#scoresheet .modal-dialog {
-		width: 90%;
-	}
+/* MODAL */
+.modal-90 {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	bottom:	5%;
+	left: 5%;
+	max-width: 90%;
 }
+
+/* SCORE SHEET FORM */
 #scoresheet td, #scoresheet th {
 	color: white;
 	text-align: center;
