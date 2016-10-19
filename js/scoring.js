@@ -304,7 +304,7 @@ $(document).ready(function() {
 		$(".scorecontainer").css({'margin':'0 auto'});
 	});
 	
-	$("#eucherresetscore").click(function() {
+	$("#eucherresetscore").on('touchstart click', function() {
 		reseteuchergame();
 		$("#eucherhomeoverallscore").val(0);
 		$("#eucherawayoverallscore").val(0);
@@ -314,19 +314,19 @@ $(document).ready(function() {
 		$(".wins-losses").toggle();
 	});
 
-	$('.away-plus').click(function(){
+	$('.away-plus').on('touchstart click', function(){
 		addAwayPoint(1);
 	});
 
-	$('.home-plus').click(function(){
+	$('.home-plus').on('touchstart click', function(){
 		addHomePoint(1);
 	});
 
-	$('.away-minus').click(function(){
+	$('.away-minus').on('touchstart click', function(){
 		minusAwayPoint();
 	});
 
-	$('.home-minus').click(function(){
+	$('.home-minus').on('touchstart click', function(){
 		minusHomePoint();
 	});
 });
