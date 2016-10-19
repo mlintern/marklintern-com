@@ -90,14 +90,28 @@ a:hover {
 .modal-90 {
 	position: absolute;
 	top: 5%;
-	right: 5%;
-	bottom:	5%;
-	left: 5%;
-	max-width: 90%;
+	right: 0;
+	bottom:	0;
+	left: 0;
+	max-width: 100%;
 }
 .modal-90 .modal-content, .modal-90 .modal-content .modal-body {
 	height: 100%;
 	overflow-y: auto;
+}
+@media ( min-width : 575px ) {
+	.modal-90 {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		bottom:	5%;
+		left: 5%;
+		max-width: 90%;
+	}
+	.modal-90 .modal-content, .modal-90 .modal-content .modal-body {
+		height: 100%;
+		overflow-y: auto;
+	}
 }
 
 /* SCORE SHEET FORM */
