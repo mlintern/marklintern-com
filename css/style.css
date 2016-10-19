@@ -440,3 +440,62 @@ a:hover {
 		transform:rotate(180deg);
 	}
 }
+
+@media ( min-width : 1200px ) {
+	.eucherscore {
+		top: 35px;
+		font-size: 12em;
+		width: 350px;
+}
+	.pieContainer {
+		height: 370px;
+		width: 370px;
+		margin: 0 auto;
+		border: solid 10px green;
+		border-radius: 185px;
+		background-color: green;
+	}
+	.pieBackground {
+		background-color: #f1f1f1;
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		-moz-border-radius: 175px;
+		-webkit-border-radius: 175px;
+		-o-border-radius: 175px;
+		border-radius: 175px;
+	}
+	.shadow {
+		-moz-box-shadow: -1px 1px 3px #000;
+		-webkit-box-shadow: -1px 1px 3px #000;
+		-o-box-shadow: -1px 1px 3px #000;
+		box-shadow: -1px 1px 7px #000;
+	}
+	.pie {
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		-moz-border-radius: 175px;
+		-webkit-border-radius: 175px;
+		-o-border-radius: 175px;
+		border-radius: 175px;
+		clip: rect(0px, 175px, 350px, 0px);
+		background-color: green;
+	}
+	.hold {
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		-moz-border-radius: 175px;
+		-webkit-border-radius: 175px;
+		-o-border-radius: 175px;
+		border-radius: 175px;
+		clip: rect(0px, 350px, 350px, 175px);
+	}
+	.left {
+		-webkit-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+		transform:rotate(180deg);
+	}
+}
