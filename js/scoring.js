@@ -158,40 +158,16 @@ $(document).ready(function() {
 		}
 	});
 	$("#resetscore").click(function() {
-		//console.log("Reset");
 		$("#homescore").val(0);
 		$("#awayscore").val(0);
 	});
 });
 
 
-
 //Eucher Scoreboard
-$(document).ready(function() {
-	
-	$("#homeeuchername").on('keyup',function(){
-		$("#homeeucherteamname").text($('#homeeuchername').val());
-		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 135);
-		$(".scorecontainer").css({'margin':'0 auto'});
-	});
-	
-	$("#awayeuchername").on('keyup',function(){
-		$("#awayeucherteamname").text($('#awayeuchername').val());
-		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 135;
-		$(".scorecontainer").width( newWidth );
-		$(".scorecontainer").css({'margin':'0 auto'});
-	});
-	
-	$("#eucherresetscore").click(function() {
-		reseteuchergame();
-		$("#eucherhomeoverallscore").val(0);
-		$("#eucherawayoverallscore").val(0);
-	});
-	
-	$(".opencloseteamscore").click(function() {
-		$(".wins-losses").toggle();
-	});
-});
+var WIN_POINTS = 10;
+var PIE_SIZE = 360 / WIN_POINTS;
+var HALF_WAY = WIN_POINTS / 2;
 
 function reseteuchergame() {
 	progressZero('.home-progress');
@@ -213,7 +189,7 @@ function addHomePoint(num){
 	var stop = false;
 	for ( i=0;i<num;i++ ){
 		if (!stop){
-			if ( $("#eucherhomescore").val() == 9 ) {
+			if ( $("#eucherhomescore").val() == ( WIN_POINTS - 1 ) ) {
 				stop = true;
 				$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
 				reseteuchergame();
@@ -239,7 +215,7 @@ function addAwayPoint(num){
 	var stop = false;
 	for ( i=0;i<num;i++ ){
 		if (!stop){
-			if ( $("#eucherawayscore").val() == 9 ) {
+			if ( $("#eucherawayscore").val() == ( WIN_POINTS - 1 ) ) {
 				stop = true;
 				$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
 				reseteuchergame();
@@ -252,29 +228,27 @@ function addAwayPoint(num){
 	}
 }
 
+var fullRight = {
+	'-webkit-transform': 'rotate(180deg)',
+	'-moz-transform': 'rotate(180deg)',
+	'-o-transform': 'rotate(180deg)',
+	'transform': 'rotate(180deg)'
+};
+
 function progressUp(id, curr, amount) {
-	if ( curr + amount > 5 ) {
-		degree = (curr + amount - 5) * 36;
-		styleright = {
-			'background-color': 'green',
-			'-webkit-transform': 'rotate(180deg)',
-			'-moz-transform': 'rotate(180deg)',
-			'-o-transform': 'rotate(180deg)',
-			'transform': 'rotate(180deg)'
-		};
+	if ( curr + amount > HALF_WAY ) {
+		degree = (curr + amount - HALF_WAY) * PIE_SIZE;
 		styleleft = {
-			'background-color': 'green',
 			'-webkit-transform': 'rotate(' + degree + 'deg)',
 			'-moz-transform': 'rotate(' + degree + 'deg)',
 			'-o-transform': 'rotate(' + degree + 'deg)',
 			'transform': 'rotate(' + degree + 'deg)'
 		};
-		$(id + '.right .pie').css(styleright);
+		$(id + '.right .pie').css(fullRight);
 		$(id + '.left .pie').css(styleleft);
 	}else{
-		degree = (curr + amount) * 36;
+		degree = (curr + amount) * PIE_SIZE;
 		style = {
-			'background-color': 'green',
 			'-webkit-transform': 'rotate(' + degree + 'deg)',
 			'-moz-transform': 'rotate(' + degree + 'deg)',
 			'-o-transform': 'rotate(' + degree + 'deg)',
@@ -285,11 +259,10 @@ function progressUp(id, curr, amount) {
 }
 
 function progressDown(id, curr, amount) {
-	if ( curr - amount > 5 ) {
-		degree = (curr - amount - 5 ) * 36;
+	if ( curr - amount > HALF_WAY ) {
+		degree = (curr - amount - HALF_WAY ) * PIE_SIZE;
 		console.log(degree);
 		styleleft = {
-			'background-color': 'green',
 			'-webkit-transform': 'rotate(' + degree + 'deg)',
 			'-moz-transform': 'rotate(' + degree + 'deg)',
 			'-o-transform': 'rotate(' + degree + 'deg)',
@@ -297,9 +270,8 @@ function progressDown(id, curr, amount) {
 		};
 		$(id + '.left .pie').css(styleleft);
 	}else{
-		degree = (curr - amount) * 36;
+		degree = (curr - amount) * PIE_SIZE;
 		style = {
-			'background-color': 'green',
 			'-webkit-transform': 'rotate(' + degree + 'deg)',
 			'-moz-transform': 'rotate(' + degree + 'deg)',
 			'-o-transform': 'rotate(' + degree + 'deg)',
@@ -317,3 +289,45 @@ function progressDown(id, curr, amount) {
 function progressZero(id){
 	$(id + ' .pie').attr('style','');
 }
+
+$(document).ready(function() {
+	$("#homeeuchername").on('keyup',function(){
+		$("#homeeucherteamname").text($('#homeeuchername').val());
+		$(".scorecontainer").width($("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 135);
+		$(".scorecontainer").css({'margin':'0 auto'});
+	});
+	
+	$("#awayeuchername").on('keyup',function(){
+		$("#awayeucherteamname").text($('#awayeuchername').val());
+		var newWidth = $("#homeeucherteamname").width() + 20 + $("#awayeucherteamname").width() + 20 + 135;
+		$(".scorecontainer").width( newWidth );
+		$(".scorecontainer").css({'margin':'0 auto'});
+	});
+	
+	$("#eucherresetscore").click(function() {
+		reseteuchergame();
+		$("#eucherhomeoverallscore").val(0);
+		$("#eucherawayoverallscore").val(0);
+	});
+	
+	$(".opencloseteamscore").click(function() {
+		$(".wins-losses").toggle();
+	});
+
+	$('.away-plus').click(function(){
+		addAwayPoint(1);
+	});
+
+	$('.home-plus').click(function(){
+		addHomePoint(1);
+	});
+
+	$('.away-minus').click(function(){
+		minusAwayPoint();
+	});
+
+	$('.home-minus').click(function(){
+		minusHomePoint();
+	});
+});
+

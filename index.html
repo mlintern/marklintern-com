@@ -11,6 +11,7 @@
 <link type="image/png" href="favicon.ico?v=2.0" rel="icon">
 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" href="css/style.css?v=2.0" rel="stylesheet">
+<link type="text/css" href="css/square.css?v=1.0" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Nova%20Square/nova_square_regular/stylesheet.css" rel="stylesheet">
@@ -296,7 +297,7 @@
 		
 		<div class="modal fade" id="eucher-scorecard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
 			<div class="modal-dialog modal-90">
-				<div class="modal-content" style="background-color: #000;">
+				<div class="modal-content">
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-sm-6">
@@ -307,20 +308,19 @@
 
 									<div class="row text-xs-center">
 										<div class="pieContainer">
-											<div class="pieBackground"></div>
+											<div class="pieBackground shadow"></div>
 											<div class="pieSlice home-progress right hold">
 												<div class="pie"></div>
 											</div>
 											<div class="pieSlice home-progress left hold">
 												<div class="pie"></div>
 											</div>
-											<input id="eucherhomescore" class="square eucherscore" type="text" value="0" readonly>
+											<input id="eucherhomescore" class="home-plus square eucherscore" type="text" value="0" readonly>
 										</div>
 									</div>
 
 									<div class="row text-xs-center controls">
-										<button class="btn btn-danger btn-xxl" onclick="minusHomePoint()">-</button>
-										<button class="btn btn-success btn-xxl plus" onclick="addHomePoint(1)">+</button>
+										<button class="btn btn-default btn-lg home-minus">-</button>
 									</div>
 								</div>
 							</div>
@@ -331,8 +331,8 @@
 									</div>
 
 									<div class="row text-xs-center">
-										<div class="pieContainer">
-											<div class="pieBackground"></div>
+										<div class="pieContainer away-plus">
+											<div class="pieBackground shadow"></div>
 											<div class="pieSlice away-progress right hold">
 												<div class="pie"></div>
 											</div>
@@ -344,8 +344,7 @@
 									</div>
 
 									<div class="row text-xs-center controls">
-										<button class="btn btn-danger btn-xxl" onclick="minusAwayPoint()">-</button>
-										<button class="btn btn-success btn-xxl plus" onclick="addAwayPoint(1)">+</button>
+										<button class="btn btn-default btn-lg away-minus">-</button>
 									</div>
 								</div>
 							</div>
@@ -357,7 +356,7 @@
 								<div class="scorecontainer">
 									<div id="homeeucherteamname">Good Guys</div>
 									<input id="eucherhomeoverallscore" class="square overallscore" type="text" value="0" readonly>
-									<span class="dash">-</span>
+									<br class="hidden-sm-up"/><span class="dash hidden-xs-down">-</span><br class="hidden-sm-up"/>
 									<input id="eucherawayoverallscore" class="square overallscore" type="text" value="0" readonly>
 									<div id="awayeucherteamname">Bad Guys</div>
 								</div>
