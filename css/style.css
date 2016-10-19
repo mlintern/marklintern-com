@@ -90,6 +90,10 @@ a:hover {
 	left: 5%;
 	max-width: 90%;
 }
+.modal-90 .modal-content, .modal-90 .modal-content .modal-body {
+	height: 100%;
+	overflow-y: auto;
+}
 
 /* SCORE SHEET FORM */
 #scoresheet td, #scoresheet th {
@@ -151,11 +155,6 @@ a:hover {
 	padding: 5px;
 	border: 5px solid green;
 }
-@media (min-width: 768px) {
-	#scoreboard .modal-dialog {
-		width: 750px;
-	}
-}
 #timer {
 	margin-top: 30px;
 }
@@ -212,11 +211,6 @@ a:hover {
 }
 
 /* EUCHER SCOREBOARD */
-@media (min-width: 768px) {
-	#eucher-scorecard .modal-dialog {
-		width: 475px;
-	}
-}
 .eucherteamname {
 	font-size: 30px;
 	background-color: black;
@@ -226,20 +220,18 @@ a:hover {
 	margin-bottom: 20px;
 	margin-top: 5px;
 	text-align: center;
+	width: 100%;
 }
 .eucherscore {
-	font-size: 40px;
-	width: 40px;
-	color: white;
+	position: relative;
+	top: 25px;
+	display: block;
+	font-size: 100px;
 	text-align: center;
-	border: white 2px solid;
-	background-color: black;
-	margin-left: 20px;
-	margin-top: 0px;
-	padding: 0 5px;
-}
-.wins-losses {
-	display: none;
+	width: 200px;
+	color: black;
+	border: none;
+	background-color: transparent;
 }
 .scorecontainer {
 	margin: 0 auto;
@@ -253,6 +245,9 @@ a:hover {
 	width: 50px;
 	margin: 0 5px;
 	border: none;
+	color: white;
+	background: transparent;
+	text-align: center;
 }
 .dash {
 	color: #FFF;
@@ -262,6 +257,12 @@ a:hover {
 	display: inline-block;
 	line-height: 1;
 }
+.plus {
+	margin-left: 30px;
+}
+.controls {
+	margin-top: 30px;
+}
 #homeeucherteamname, #awayeucherteamname {
 	display: inline-block;
 	color: #fff;
@@ -269,19 +270,18 @@ a:hover {
 	height: 40px;
 	vertical-align: middle;
 }
-.scoremarker {
-	background-image: url('../images/scoremarkers.png');
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
 .separator {
 	border-top: white solid 1px;
-	margin-top: 10px;
-	height: 10px;
+	margin-top: 30px;
+	padding-top: 30px;
 	width: 100%;
 }
-.plus {
-	margin: 0 3%;
+@media ( min-width : 768px ) {
+	#eucherresetscore {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+	}
 }
 
 /* FOOTER */
@@ -295,4 +295,58 @@ a:hover {
 	color: white;
 	text-align: center;
 	padding-top: 80px;
+}
+
+/* PIE */
+.pieContainer {
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+}
+.pieBackground {
+	background-color: #f8f8f8;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+	-moz-box-shadow: -1px 1px 3px #000;
+	-webkit-box-shadow: -1px 1px 3px #000;
+	-o-box-shadow: -1px 1px 3px #000;
+	box-shadow: -1px 1px 3px #000;
+} 
+.pie {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+	clip: rect(0px, 100px, 200px, 0px);
+	background-color: green;
+}
+.hold {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+	clip: rect(0px, 200px, 200px, 100px);
+}
+.left {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+.btn-xxl {
+	padding: 1.5rem 3rem;
+	font-size: 1.75rem;
+	border-radius: .6rem;
 }

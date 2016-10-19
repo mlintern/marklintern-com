@@ -10,7 +10,7 @@ var array7=['17','27','37','47','57','67','77','87','97','107','j7','q7','k7'];
 var array8=['18','28','38','48','58','68','78','88','98','108','j8','q8','k8'];
 var arrayt=['t1','t2','t3','t4','t5','t6','t7','t8'];
 
-function calculate_score(){
+function calculate_score() {
 	add_column(array1,1);
 	add_column(array2,2);
 	add_column(array3,3);
@@ -19,7 +19,7 @@ function calculate_score(){
 	add_column(array6,6);
 	add_column(array7,7);
 	add_column(array8,8);
-};
+}
 
 function add_column(col_array,col_id) {
 	var x = 0;
@@ -29,21 +29,19 @@ function add_column(col_array,col_id) {
 		 x = x + (document.getElementById(col_array[i]).value - 0);
 		}
 	document.getElementById(arrayt[col_id-1]).value = x;
-};
+}
 
 function reset_column(col_array) {
 	var x = 0;
 	var y = col_array.length-1;
-	for (i=0;i<=y;i++)
-		{
+	for (i = 0;i <= y; i++){
 		document.getElementById(col_array[i]).value = '';
-		}
-};
+	}
+}
 
 function reset_score(){
-	var ans=confirm("Are You Sure you want to Reset?!");
-	if (ans==true)
-		{
+	var ans = confirm("Are You Sure you want to Reset?!");
+	if (ans === true) {
 		reset_column(array1);
 		reset_column(array2);
 		reset_column(array3);
@@ -53,11 +51,10 @@ function reset_score(){
 		reset_column(array7);
 		reset_column(array8);
 		reset_column(arrayt);
-		}
-	  else
-		{
-		}
-};
+	} else
+	{
+	}
+}
 
 $(document).ready(function() {
 	$('#player_3').click(function() {
@@ -134,7 +131,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$(".HomeMinus").click(function() {
 		var current = parseInt($("#homescore").val());
-		if (current == 0){
+		if (current === 0){
 		}else{
 			$("#homescore").val(current - 1);
 		}
@@ -148,7 +145,7 @@ $(document).ready(function() {
 	});
 	$(".AwayMinus").click(function() {
 		var current = parseInt($("#awayscore").val());
-		if (current == 0){
+		if (current === 0){
 		}else{
 			$("#awayscore").val(current - 1);
 		}
@@ -167,6 +164,8 @@ $(document).ready(function() {
 	});
 });
 
+
+
 //Eucher Scoreboard
 $(document).ready(function() {
 	
@@ -184,7 +183,7 @@ $(document).ready(function() {
 	});
 	
 	$("#eucherresetscore").click(function() {
-		reseteuchergame()
+		reseteuchergame();
 		$("#eucherhomeoverallscore").val(0);
 		$("#eucherawayoverallscore").val(0);
 	});
@@ -195,17 +194,17 @@ $(document).ready(function() {
 });
 
 function reseteuchergame() {
-	progressZero('#progress_one');
+	progressZero('.home-progress');
 	$("#eucherhomescore").val(0);
-	progressZero('#progress_two');
+	progressZero('.away-progress');
 	$("#eucherawayscore").val(0);
-};
+}
 
 function minusHomePoint() {
 	var currentscore = parseInt($("#eucherhomescore").val());
-	if (currentscore == 0){
+	if (currentscore === 0){
 	}else{
-		progressDown('#progress_one',10);
+		progressDown('.home-progress', currentscore, 1);
 		$("#eucherhomescore").val(currentscore - 1);
 	}
 }
@@ -218,10 +217,10 @@ function addHomePoint(num){
 				stop = true;
 				$("#eucherhomeoverallscore").val(parseInt($("#eucherhomeoverallscore").val()) + 1);
 				reseteuchergame();
-				$(".wins-losses").show();
 			}else{
-				progressUp('#progress_one',10);
-				$("#eucherhomescore").val(parseInt($("#eucherhomescore").val()) + 1);
+				currScore = parseInt($("#eucherhomescore").val());
+				progressUp('.home-progress', currScore, 1);
+				$("#eucherhomescore").val(currScore + 1);
 			}
 		}
 	}
@@ -229,9 +228,9 @@ function addHomePoint(num){
 
 function minusAwayPoint() {
 	var currentscore = parseInt($("#eucherawayscore").val());
-	if (currentscore == 0){
+	if (currentscore === 0){
 	}else{
-		progressDown('#progress_two',10);
+		progressDown('.away-progress', currentscore, 1);
 		$("#eucherawayscore").val(currentscore - 1);
 	}
 }
@@ -244,52 +243,77 @@ function addAwayPoint(num){
 				stop = true;
 				$("#eucherawayoverallscore").val(parseInt($("#eucherawayoverallscore").val()) + 1);
 				reseteuchergame();
-				$(".wins-losses").show();
 			}else{
-				progressUp('#progress_two',10);
-				$("#eucherawayscore").val(parseInt($("#eucherawayscore").val()) + 1);
+				currScore = parseInt($("#eucherawayscore").val());
+				progressUp('.away-progress', currScore, 1);
+				$("#eucherawayscore").val(currScore + 1);
 			}
 		}
 	}
 }
 
-function progressUp(id,amount) {
-	var current = parseInt($(id).attr('aria-valuenow'));
-	var max = parseInt($(id).attr('aria-valuemax'));
-	var min = parseInt($(id).attr('aria-valuemin'));
-	var full = parseInt($(id).attr('aria-valuefull')); 
-	var newval = current + amount;
-	var percent = (newval / full)*100;
-
-	if ( newval > max ){
-		$(id).attr('aria-valuenow', max);
-		percent = (((max) / full)*100);
-		$(id).css('width', percent+'%');
+function progressUp(id, curr, amount) {
+	if ( curr + amount > 5 ) {
+		degree = (curr + amount - 5) * 36;
+		styleright = {
+			'background-color': 'green',
+			'-webkit-transform': 'rotate(180deg)',
+			'-moz-transform': 'rotate(180deg)',
+			'-o-transform': 'rotate(180deg)',
+			'transform': 'rotate(180deg)'
+		};
+		styleleft = {
+			'background-color': 'green',
+			'-webkit-transform': 'rotate(' + degree + 'deg)',
+			'-moz-transform': 'rotate(' + degree + 'deg)',
+			'-o-transform': 'rotate(' + degree + 'deg)',
+			'transform': 'rotate(' + degree + 'deg)'
+		};
+		$(id + '.right .pie').css(styleright);
+		$(id + '.left .pie').css(styleleft);
 	}else{
-		$(id).attr('aria-valuenow', newval );
-		$(id).css('width', percent+'%');
+		degree = (curr + amount) * 36;
+		style = {
+			'background-color': 'green',
+			'-webkit-transform': 'rotate(' + degree + 'deg)',
+			'-moz-transform': 'rotate(' + degree + 'deg)',
+			'-o-transform': 'rotate(' + degree + 'deg)',
+			'transform': 'rotate(' + degree + 'deg)'
+		};
+		$(id + '.right .pie').css(style);
 	}
 }
 
-function progressDown(id,amount) {
-	var current = parseInt($(id).attr('aria-valuenow'));
-	var max = parseInt($(id).attr('aria-valuemax'));
-	var min = parseInt($(id).attr('aria-valuemin'));
-	var full = parseInt($(id).attr('aria-valuefull')); 
-	var newval = current - amount;
-	var percent = (newval / full)*100;
-
-	if ( newval < min ){
-		$(id).attr('aria-valuenow', min);
-		percent = ((min / full)*100);
-		$(id).css('width', percent+'%');
+function progressDown(id, curr, amount) {
+	if ( curr - amount > 5 ) {
+		degree = (curr - amount - 5 ) * 36;
+		console.log(degree);
+		styleleft = {
+			'background-color': 'green',
+			'-webkit-transform': 'rotate(' + degree + 'deg)',
+			'-moz-transform': 'rotate(' + degree + 'deg)',
+			'-o-transform': 'rotate(' + degree + 'deg)',
+			'transform': 'rotate(' + degree + 'deg)'
+		};
+		$(id + '.left .pie').css(styleleft);
 	}else{
-		$(id).attr('aria-valuenow', newval );
-		$(id).css('width', percent+'%');
+		degree = (curr - amount) * 36;
+		style = {
+			'background-color': 'green',
+			'-webkit-transform': 'rotate(' + degree + 'deg)',
+			'-moz-transform': 'rotate(' + degree + 'deg)',
+			'-o-transform': 'rotate(' + degree + 'deg)',
+			'transform': 'rotate(' + degree + 'deg)'
+		};
+		if ( (curr - amount) === 0 ) {
+			progressZero(id);
+		} else {
+			$(id + '.right .pie').css(style);
+			$(id + '.left .pie').attr('style','');
+		}
 	}
 }
 
 function progressZero(id){
-	$(id).attr('aria-valuenow', 0 );
-	$(id).css('width', '0%');
+	$(id + ' .pie').attr('style','');
 }
