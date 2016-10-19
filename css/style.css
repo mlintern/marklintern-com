@@ -243,9 +243,9 @@ a:hover {
 	position: relative;
 	top: 5px;
 	display: block;
-	font-size: 10em;
+	font-size: 6em;
 	text-align: center;
-	width: 250px;
+	width: 150px;
 	color: black;
 	border: none;
 	background-color: transparent;
@@ -301,6 +301,59 @@ a:hover {
 	}
 }
 
+/* PIE */
+.pieContainer {
+	height: 170px;
+	width: 170px;
+	margin: 0 auto;
+	border: solid 10px green;
+	border-radius: 85px;
+	background-color: green;
+}
+.pieBackground {
+	background-color: #f1f1f1;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	-moz-border-radius: 75px;
+	-webkit-border-radius: 75px;
+	-o-border-radius: 75px;
+	border-radius: 75px;
+}
+.shadow {
+	-moz-box-shadow: -1px 1px 3px #000;
+	-webkit-box-shadow: -1px 1px 3px #000;
+	-o-box-shadow: -1px 1px 3px #000;
+	box-shadow: -1px 1px 7px #000;
+}
+.pie {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	-moz-border-radius: 75px;
+	-webkit-border-radius: 75px;
+	-o-border-radius: 75px;
+	border-radius: 75px;
+	clip: rect(0px, 75px, 150px, 0px);
+	background-color: green;
+}
+.hold {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	-moz-border-radius: 75px;
+	-webkit-border-radius: 75px;
+	-o-border-radius: 75px;
+	border-radius: 75px;
+	clip: rect(0px, 150px, 150px, 75px);
+}
+.left {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
 /* FOOTER */
 .footer {
 	height: 150px;
@@ -314,55 +367,60 @@ a:hover {
 	padding-top: 80px;
 }
 
-/* PIE */
-.pieContainer {
-	height: 270px;
-	width: 270px;
-	margin: 0 auto;
-	border: solid 10px green;
-	border-radius: 135px;
-	background-color: green;
-}
-.pieBackground {
-	background-color: #f1f1f1;
-	position: absolute;
-	width: 250px;
-	height: 250px;
-	-moz-border-radius: 125px;
-	-webkit-border-radius: 125px;
-	-o-border-radius: 125px;
-	border-radius: 125px;
-}
-.shadow {
-	-moz-box-shadow: -1px 1px 3px #000;
-	-webkit-box-shadow: -1px 1px 3px #000;
-	-o-box-shadow: -1px 1px 3px #000;
-	box-shadow: -1px 1px 7px #000;
-}
-.pie {
-	position: absolute;
-	width: 250px;
-	height: 250px;
-	-moz-border-radius: 125px;
-	-webkit-border-radius: 125px;
-	-o-border-radius: 125px;
-	border-radius: 125px;
-	clip: rect(0px, 125px, 250px, 0px);
-	background-color: green;
-}
-.hold {
-	position: absolute;
-	width: 250px;
-	height: 250px;
-	-moz-border-radius: 125px;
-	-webkit-border-radius: 125px;
-	-o-border-radius: 125px;
-	border-radius: 125px;
-	clip: rect(0px, 250px, 250px, 125px);
-}
-.left {
-	-webkit-transform:rotate(180deg);
-	-moz-transform:rotate(180deg);
-	-o-transform:rotate(180deg);
-	transform:rotate(180deg);
+@media ( min-width : 768px ) {
+	.eucherscore {
+		font-size: 10em;
+		width: 250px;
+	}
+	.pieContainer {
+		height: 270px;
+		width: 270px;
+		margin: 0 auto;
+		border: solid 10px green;
+		border-radius: 135px;
+		background-color: green;
+	}
+	.pieBackground {
+		background-color: #f1f1f1;
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		-moz-border-radius: 125px;
+		-webkit-border-radius: 125px;
+		-o-border-radius: 125px;
+		border-radius: 125px;
+	}
+	.shadow {
+		-moz-box-shadow: -1px 1px 3px #000;
+		-webkit-box-shadow: -1px 1px 3px #000;
+		-o-box-shadow: -1px 1px 3px #000;
+		box-shadow: -1px 1px 7px #000;
+	}
+	.pie {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		-moz-border-radius: 125px;
+		-webkit-border-radius: 125px;
+		-o-border-radius: 125px;
+		border-radius: 125px;
+		clip: rect(0px, 125px, 250px, 0px);
+		background-color: green;
+	}
+	.hold {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		-moz-border-radius: 125px;
+		-webkit-border-radius: 125px;
+		-o-border-radius: 125px;
+		border-radius: 125px;
+		clip: rect(0px, 250px, 250px, 125px);
+	}
+	.left {
+		-webkit-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+		transform:rotate(180deg);
+	}
 }
