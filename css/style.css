@@ -8,8 +8,8 @@
 	display: none;
 }
 img {
-margin-width: 100%;
-height: auto !important;
+	margin-width: 100%;
+	height: auto !important;
 }
 .shadow {
 	-moz-box-shadow: 7px 7px 8px #444;
@@ -56,12 +56,10 @@ a:hover {
 	text-align: center;
 	line-height: 1;
 }
-@media ( min-width : 768px ) {
-	.center {
-		padding-top: 25%;
-	}
+.center {
+	padding-top: 25%;
 }
-@media ( max-width : 768px ) {
+@media ( max-width: 544px ) {
 	.title-text{
 		font-size: 60px;
 	}
@@ -71,10 +69,12 @@ a:hover {
 .dropdown-menu {
 	padding: 0;
 	border-radius: 0;
+	min-width: 285px;
 }
 .dropdown-menu li a {
-	padding: 10px 20px;
+	padding: 15px 30px;
 	display: block;
+	font-size: 30px;
 }
 .dropdown-menu li a:hover {
 	background-color: #f1f1f1;
@@ -276,7 +276,7 @@ a:hover {
 	padding-top: 30px;
 	width: 100%;
 }
-@media ( min-width : 768px ) {
+@media ( min-width: 544px ) {
 	#eucherresetscore {
 		position: absolute;
 		bottom: 15px;
