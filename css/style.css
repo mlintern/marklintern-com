@@ -38,6 +38,12 @@ a:hover {
 	font-size: 1.75rem;
 	border-radius: .6rem;
 }
+.btn-expand {
+	position: absolute;
+	left: 50%;
+	margin-left: -15px;
+	z-index: 10;
+}
 
 /* BACKGROUND */
 .full-screen {
@@ -96,6 +102,10 @@ a:hover {
 	height: 100%;
 	overflow-y: auto;
 }
+.modal .modal-content {
+	border: solid 5px white;
+	background-color: black;
+}
 @media ( min-width : 575px ) {
 	.modal-90 {
 		position: absolute;
@@ -109,6 +119,14 @@ a:hover {
 		height: 100%;
 		overflow-y: auto;
 	}
+}
+.modal-100 {
+	top: 0;
+	right: 0;
+	bottom:	0;
+	left: 0;
+	max-width: 100%;
+	margin: 0;
 }
 
 /* SCORE SHEET FORM */
@@ -125,10 +143,10 @@ a:hover {
 	color: #000;
 }
 #totalscore {
-	border: #000 solid 3px;
+	border: #fff solid 3px;
 }
 #totalscore td {
-	border-right: #000 solid 3px;
+	border-right: #fff solid 3px;
 }
 #scoresheet #totalscore input {
 	font-weight: bold;
@@ -165,24 +183,19 @@ a:hover {
 }
 
 /* SCOREBOARD */
-#scoreboard .modal-dialog {
-	background: black;
-	background-image: url('../images/metallic-bg1.jpg');
-	padding: 5px;
-	border: 5px solid green;
-}
 #timer {
 	margin-top: 30px;
 }
-#timer input {
-	margin: 5px 0;
+#timer .btn {
+	margin-top: 5px;
 }
 .numeral{
 	height: 40px !important;
 }
 #countdownDisp {
-	background-color: black;
-	width: 162px;
+	background-color: black; 
+	display: inline-block;
+	padding: 5px 10px;
 	margin: 0 auto;
 }
 .team-score {
@@ -200,12 +213,13 @@ a:hover {
 .score {
 	font-size: 110px;
 	text-align: center;
-	width: 160px;
 	color: green;
 	border: white 5px solid;
 	background-color: black;
 	margin-top: 30px;
-	height: 200px;
+	display: block;
+	line-height: 1;
+	padding: 20px 0;
 }
 .plusbtn {
 	font-size: 50px;
@@ -223,22 +237,45 @@ a:hover {
 	margin-top: 15px;
 	float: right;
 }
-@media ( min-width : 544px ) {
+@media ( min-width : 768px ) {
 	#resetscore {
 		position: absolute;
 		bottom: 15px;
 		right: 15px;
 	}
+	.teamname {
+		font-size: 50px;
+	}
+	.score {
+		font-size: 150px;
+	}
+	.numeral {
+		height: 60px !important;
+	}
 }
-.opencloseteamscore {
-	padding: 0 3px;
+@media ( min-width : 1200px ) {
+	#resetscore {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+	}
+	.teamname {
+		font-size: 60px;
+	}
+	.score {
+		font-size: 200px;
+	}
+	.numeral {
+		height: 100px !important;
+	}
+}
+@media ( min-width : 1450px ) {
+	.score {
+		font-size: 300px;
+	}
 }
 
 /* EUCHER SCOREBOARD */
-#eucher-scorecard .modal-content {
-	background-color: #000;
-	border: solid 5px #fff;
-}
 .eucherteamname {
 	font-size: 30px;
 	background-color: black;

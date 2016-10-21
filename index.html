@@ -52,7 +52,8 @@
 
 		<div class="modal fade" id="scoresheet" tabindex="-1" role="dialog" aria-labelledby="ScoreSheet" aria-hidden="true">
 			<div class="modal-dialog modal-90">
-				<div class="modal-content" style="background-color: purple;">
+				<div class="modal-content">
+					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-plus"></i></button>
 					<div class="modal-body">
 						<div id="player-picker">
 							<input id="player_3" type="radio" name="players" value="3">3
@@ -245,32 +246,33 @@
 		
 		<div class="modal fade" id="scoreboard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
 			<div class="modal-dialog modal-90">
-				<div class="modal-content" style="background-color: transparent;">
+				<div class="modal-content">
+					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-plus"></i></button>
 					<div class="modal-body">
-						<div class="row">
-							<div class="col-xs-6"><input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;"></div>
-							<div class="col-xs-6"><input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;"></div>
-						</div>
 						<div class="row"> 
-							<div class="col-sm-4 col-xs-6">
+							<div class="col-sm-6">
+								<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
 								<div class="team-score">
-									<input id="homescore" class="square score" type="text" value="0" readonly>
+									<div id="homescore" class="square score">0</div>
 									<div class="clear"></div>
 									<button id="plushome" class="HomePlus plusbtn btn btn-success" value="+">+</button>
 									<button id="minushome" class="HomeMinus minusbtn btn btn-danger" value="-">-</button>
 									<div class="clear"></div>
 								</div>
 							</div>
-							<div class="col-sm-4 col-xs-6 pull-right">
+							<div class="hidden-sm-up" style="height: 30px; clear: both;"></div>
+							<div class="col-sm-6 pull-right">
+								<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
 								<div class="team-score">
-									<input id="awayscore" class="square score" type="text" value="0" readonly>
+									<div input id="awayscore" class="square score">0</div>
 									<div class="clear"></div>
 									<button id="plusaway" class="AwayPlus plusbtn btn btn-success" value="+">+</button>
 									<button id="minusaway" class="AwayMinus minusbtn btn btn-danger" value="-">-</button>
 									<div class="clear"></div>
 								</div>
 							</div>
-							<div class="col-sm-4 text-xs-center">
+						</div>
+						<div class="row text-xs-center">
 								<div id="timer">
 									<div id="countdownDisp">
 										<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
@@ -280,10 +282,10 @@
 										<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
 									</div>
 									<div>
-										<div><input type="button" class="btn btn-success" name="ssbutton" value="Start/Stop" onClick="startstop()"/></div>
-										<div><input type="button" class="btn btn-warning" name="minplus" value="+min" onClick="addmin()"/>
-										<input type="button" class="btn btn-warning" name="minplus" value="+30" onClick="addthirty()"/></div>
-										<div><input type="button" class="btn btn-danger" name="reset" value="Reset Timer" onClick="timerreset()"/></div>
+										<input type="button" class="btn btn-success" name="ssbutton" value="Start/Stop" onClick="startstop()"/>
+										<input type="button" class="btn btn-warning" name="minplus" value="+min" onClick="addmin()"/>
+										<input type="button" class="btn btn-warning" name="minplus" value="+30" onClick="addthirty()"/>
+										<input type="button" class="btn btn-danger" name="reset" value="Reset Timer" onClick="timerreset()"/>
 									</div>
 								</div>
 							</div>
@@ -298,6 +300,7 @@
 		<div class="modal fade" id="eucher-scorecard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
 			<div class="modal-dialog modal-90">
 				<div class="modal-content">
+					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-plus"></i></button>
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-sm-6">
