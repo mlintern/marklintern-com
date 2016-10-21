@@ -163,6 +163,10 @@ a:hover {
 	margin-right: 10px;
 	margin-bottom: 5px;
 }
+#player-picker input,
+#game-picker input {
+	margin-right: 5px;
+}
 .player5 {
 	display:none;
 }
