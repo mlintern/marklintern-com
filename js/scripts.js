@@ -6,7 +6,79 @@ function isMobile() {
 	}
 }
 
-//5 Crowns Scoring
+// Timer
+var ms = 0;
+var state = 0;
+var first = 0;
+var refreshIntervalId;
+var targettime = 0;
+
+function showtime() {
+	targettime = ms / 1000;
+	minutefield = Math.floor(targettime / 60);
+	secondfield = (targettime % 60 < 10 ? "0" : "") + targettime % 60;
+	secondfieldForDisplay = targettime % 60; 
+
+	if (minutefield <= 9) {
+		document.images.h.src = "images/numerals/c0.gif";
+		document.images.i.src = "images/numerals/c" + minutefield + ".gif";
+	} else {
+		document.images.h.src = "images/numerals/c" + Math.floor(minutefield / 10) + ".gif";
+		document.images.i.src = "images/numerals/c" + (minutefield % 10) + ".gif";
+	}
+	if (secondfield <= 9) {
+		document.k.src = "images/numerals/c0.gif";
+		document.images.l.src = "images/numerals/c" + secondfieldForDisplay + ".gif";
+	}
+	else {
+		document.images.k.src = "images/numerals/c" + Math.floor(secondfieldForDisplay / 10) + ".gif";
+		document.images.l.src = "images/numerals/c" + (secondfieldForDisplay % 10) + ".gif";
+	}
+}
+
+function startstop() {
+	if (state === 0) {
+		state = 1;
+		refreshIntervalId = setInterval(run, 1000);
+	} else {
+		state = 0;
+		clearInterval(refreshIntervalId);
+	}
+}
+
+function addmin() {
+	ms = ms + 60000;
+	showtime();
+}
+
+function addthirty() {
+	ms = ms + 30000;
+	showtime();
+}
+
+function timerreset() {
+	state = 0;
+	ms = 0;
+	first = 0;
+	showtime();
+	clearInterval(refreshIntervalId);
+}
+
+function run() {
+	if (state == 1)  {
+		if (ms === 0){
+			window.alert('Ding Ding Ding');
+			clearInterval(refreshIntervalId);
+			state = 0;
+		} else {
+			ms = ms - 1000;
+			showtime();
+			$('#timedisplay').text(ms/1000);
+		}
+	}
+}
+
+// 5 Crowns Scoring
 var array1=['11','21','31','41','51','61','71','81','91','101','j1','q1','k1'];
 var array2=['12','22','32','42','52','62','72','82','92','102','j2','q2','k2'];
 var array3=['13','23','33','43','53','63','73','83','93','103','j3','q3','k3'];
@@ -134,7 +206,7 @@ $(document).ready(function() {
 	});
 });
 
-//Scoreboard
+// Scoreboard
 $(document).ready(function() {
 	$(".HomeMinus").on(isMobile() ? 'touchend' : 'click', function() {
 		var current = parseInt($("#homescore").text());
@@ -335,8 +407,8 @@ $(document).ready(function() {
 	});
 
 	$('.btn-expand').on(isMobile() ? 'touchend' : 'click', function(){
-		$(this).find('.fa').toggleClass('fa-plus');
-		$(this).find('.fa').toggleClass('fa-minus');
+		$(this).find('.fa').toggleClass('fa-window-maximize');
+		$(this).find('.fa').toggleClass('fa-window-minimize');
 		$(this).parent().parent().toggleClass('modal-100');
 	});
 });
