@@ -44,6 +44,29 @@ a:hover {
 	margin-left: -15px;
 	z-index: 10;
 }
+.version-one {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 50px;
+	width: 60px;
+	height: 60px;
+	line-height: 1;
+	text-align: center;
+	z-index: 11;
+}
+.version-one:hover {
+	text-decoration: none;
+}
+.secret, .secret:active, .secret:visited, .secret:focus {
+	color: transparent;
+}
+.secret:hover {
+	color: blue;
+}
+.secret.white:hover {
+	color: white;
+}
 
 /* BACKGROUND */
 .full-screen {
@@ -66,6 +89,11 @@ a:hover {
 }
 .center {
 	padding-top: 25%;
+}
+@media ( min-width: 1200px ) {
+	.center {
+		padding-top: 21%;
+	}
 }
 @media ( max-width: 544px ) {
 	.title-text{
