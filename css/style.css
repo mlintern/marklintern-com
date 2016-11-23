@@ -55,7 +55,18 @@ a:hover {
 	text-align: center;
 	z-index: 11;
 }
-.version-one:hover {
+.version-two {
+	position: fixed;
+	bottom: 0;
+	left: 60px;
+	font-size: 50px;
+	width: 60px;
+	height: 60px;
+	line-height: 1;
+	text-align: center;
+	z-index: 11;
+}
+.version-one:hover, .version-two:hover {
 	text-decoration: none;
 }
 .secret, .secret:active, .secret:visited, .secret:focus {
