@@ -9,14 +9,11 @@
 <title>Mark Lintern</title>
 
 <link type="image/png" href="favicon.ico?v=2.0" rel="icon">
-<link type="text/css" href="css/bootstrap.min.css?v4.0.0-alpha.5" rel="stylesheet">
+<link type="text/css" href="css/fontstrap-square.min.css?v1.2.4" rel="stylesheet">
 <link type="text/css" href="css/style.css?v=2.1.2" rel="stylesheet">
-<link type="text/css" href="css/square.css?v=1.0" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Nova%20Square/nova_square_regular/stylesheet.css" rel="stylesheet">
-<link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/font-awesome-4/css/font-awesome.css?v=4.7.0" rel="stylesheet">
-
 </head>
 
 <body onload="$('.loading').hide();">
@@ -251,7 +248,7 @@
 				<div class="modal-content">
 					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-window-maximize"></i></button>
 					<div class="modal-body">
-						<div class="row"> 
+						<div class="row">
 							<div class="col-sm-6">
 								<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
 								<div class="team-score">
@@ -262,7 +259,7 @@
 									<div class="clear"></div>
 								</div>
 							</div>
-							<div class="hidden-sm-up" style="height: 30px; clear: both;"></div>
+							<div class="d-sm-none d-inline-block" style="height: 30px; clear: both;"></div>
 							<div class="col-sm-6 pull-right">
 								<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
 								<div class="team-score">
@@ -274,8 +271,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="row text-xs-center">
-								<div id="timer">
+						<div class="row">
+								<div id="timer" class='w-100 text-center'>
 									<div id="countdownDisp">
 										<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
 										<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
@@ -311,7 +308,7 @@
 										<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys">
 									</div>
 
-									<div class="row text-xs-center">
+									<div class="row text-center">
 										<div class="pieContainer">
 											<div class="pieBackground shadow"></div>
 											<div class="pieSlice home-progress right hold">
@@ -324,7 +321,7 @@
 										</div>
 									</div>
 
-									<div class="row text-xs-center controls">
+									<div class="text-center controls">
 										<button class="btn btn-default btn-lg home-minus">-</button>
 									</div>
 								</div>
@@ -335,7 +332,7 @@
 										<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys">
 									</div>
 
-									<div class="row text-xs-center">
+									<div class="row text-center">
 										<div class="pieContainer away-plus">
 											<div class="pieBackground shadow"></div>
 											<div class="pieSlice away-progress right hold">
@@ -348,7 +345,7 @@
 										</div>
 									</div>
 
-									<div class="row text-xs-center controls">
+									<div class="text-center controls">
 										<button class="btn btn-default btn-lg away-minus">-</button>
 									</div>
 								</div>
@@ -357,11 +354,11 @@
 
 						<div class="row">
 							<div class="separator"></div>
-							<div class="wins-losses">
-								<div class="scorecontainer">
+							<div class="wins-losses w-100">
+								<div class="scorecontainer w-100">
 									<div id="homeeucherteamname">Good Guys</div>
 									<input id="eucherhomeoverallscore" class="square overallscore" type="text" value="0" readonly>
-									<br class="hidden-sm-up"/><span class="dash hidden-xs-down">-</span><br class="hidden-sm-up"/>
+									<br class="d-sm-none d-inline-block"/><span class="dash hidden-xs-down">-</span><br class="d-sm-none d-inline-block"/>
 									<input id="eucherawayoverallscore" class="square overallscore" type="text" value="0" readonly>
 									<div id="awayeucherteamname">Bad Guys</div>
 								</div>
@@ -376,9 +373,8 @@
 
 	</div> <!-- full-screen -->
 
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="js/tether.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js?v4.0.0-alpha.5"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fontstrap.js?v1.2.4"></script>
 	<script type="text/javascript" src="js/scripts.js?v=1.0"></script>
 
 	<script type="text/javascript">
