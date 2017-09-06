@@ -9,7 +9,7 @@
 <title>Mark Lintern</title>
 
 <link type="image/png" href="favicon.ico?v=2.0" rel="icon">
-<link type="text/css" href="css/fontstrap-square.min.css?v1.2.4" rel="stylesheet">
+<link type="text/css" href="css/fontstrap-square.min.css?v=1.2.4" rel="stylesheet">
 <link type="text/css" href="css/style.css?v=2.1.2" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
@@ -373,11 +373,13 @@
 
 	</div> <!-- full-screen -->
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/fontstrap.js?v1.2.4"></script>
-	<script type="text/javascript" src="js/scripts.js?v=1.0"></script>
+	<script type="text/javascript" src="js/jquery.min.js?v=3.2.1"></script>
+	<script type="text/javascript" src="js/fontstrap.js?v=1.2.4"></script>
 
 	<script type="text/javascript">
+		$(window).on('load', function() {
+			loadScript("js/scripts.js", function(){ });
+		});
 	/*Google Analytics*/
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-38230837-1']);
