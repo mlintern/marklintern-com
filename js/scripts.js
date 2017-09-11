@@ -1,12 +1,19 @@
 /*
  * Local Data
  */
-var eucher_data = storage.get('marklintern-com-eucher') || {"homeTeamName":"Good Guys", "awayTeamName":"Bad Guys", "homeTeamScore":0, "awayTeamScore":0, "homeTeamWins":0, "awayTeamWins":0};
+var eucher_storage_name = 'marklintern-com-eucher',
+    scoreboard_storage_name = 'marklintern-com-scoreboard';
+var eucher_data = storage.get(eucher_storage_name) || {"homeTeamName":"Good Guys", "awayTeamName":"Bad Guys", "homeTeamScore":0, "awayTeamScore":0, "homeTeamWins":0, "awayTeamWins":0};
 if ( whatIsIt(eucher_data) == 'string' ) {
 	eucher_data = JSON.parse(eucher_data);
 }
 storage.save(eucher_storage_name, eucher_data);
 
+var scoreboard_data = storage.get(scoreboard_storage_name) || {"homeTeamScore":0, "awayTeamScore":0};
+if ( whatIsIt(scoreboard_data) == 'string' ) {
+	scoreboard_data = JSON.parse(scoreboard_data);
+}
+storage.save(scoreboard_storage_name, scoreboard_data);
 
 /*
  * Helper Functions
@@ -93,7 +100,9 @@ function run() {
 	}
 }
 
-// 5 Crowns Scoring
+/*
+ * 5 Crowns Scoring
+ */
 var array1=['11','21','31','41','51','61','71','81','91','101','j1','q1','k1'];
 var array2=['12','22','32','42','52','62','72','82','92','102','j2','q2','k2'];
 var array3=['13','23','33','43','53','63','73','83','93','103','j3','q3','k3'];
@@ -221,13 +230,17 @@ $(document).ready(function() {
 	});
 });
 
-// Scoreboard
+/*
+ * Scoreboard
+ */
 $(document).ready(function() {
 	$(".HomeMinus").on(isMobile() ? 'touchend' : 'click', function() {
 		var current = parseInt($("#homescore").text());
 		if (current === 0){
 		}else{
 			$("#homescore").text(current - 1);
+			scoreboard_data.homeTeamScore = current - 1;
+			storage.save(scoreboard_storage_name, scoreboard_data);
 		}
 	});
 	$(".HomePlus").on(isMobile() ? 'touchend' : 'click', function() {
@@ -235,6 +248,8 @@ $(document).ready(function() {
 		if (current == 999){
 		}else{
 			$("#homescore").text(current + 1);
+			scoreboard_data.homeTeamScore = current + 1;
+			storage.save(scoreboard_storage_name, scoreboard_data);
 		}
 	});
 	$(".AwayMinus").on(isMobile() ? 'touchend' : 'click', function() {
@@ -242,6 +257,8 @@ $(document).ready(function() {
 		if (current === 0){
 		}else{
 			$("#awayscore").text(current - 1);
+			scoreboard_data.awayTeamScore = current - 1;
+			storage.save(scoreboard_storage_name, scoreboard_data);
 		}
 	});
 	$(".AwayPlus").on(isMobile() ? 'touchend' : 'click', function() {
@@ -249,16 +266,25 @@ $(document).ready(function() {
 		if (current == 999){
 		}else{
 			$("#awayscore").text(current + 1);
+			scoreboard_data.awayTeamScore = current + 1;
+			storage.save(scoreboard_storage_name, scoreboard_data);
 		}
 	});
 	$("#resetscore").on(isMobile() ? 'touchend' : 'click', function() {
 		$("#homescore").text(0);
 		$("#awayscore").text(0);
+		scoreboard_data.homeTeamScore = 0;
+		scoreboard_data.awayTeamScore = 0;
+		storage.save(scoreboard_storage_name, scoreboard_data);
 	});
+
+	$("#homescore").text(scoreboard_data.homeTeamScore);
+	$("#awayscore").text(scoreboard_data.awayTeamScore);
 });
 
-
-//Eucher Scoreboard
+/*
+  * Eucher Scoreboard
+ */
 var WIN_POINTS = 10;
 var PIE_SIZE = 360 / WIN_POINTS;
 var HALF_WAY = WIN_POINTS / 2;
@@ -396,8 +422,7 @@ function progressZero(id){
 	$(id + ' .pie').attr('style','');
 }
 
-function setData(data) {
-	console.log(data);
+function setEucherData(data) {
 	$("#homeeucherteamname").text(data.homeTeamName);
 	$("#homeeuchername").val(data.homeTeamName);
 	$("#awayeucherteamname").text(data.awayTeamName);
@@ -410,10 +435,8 @@ function setData(data) {
 	progressUp('.away-progress', 0, data.awayTeamScore);
 }
 
-var eucher_storage_name = 'marklintern-com-eucher';
-
 $(document).ready(function() {
-	setData(eucher_data);
+	setEucherData(eucher_data);
 
 	$("#homeeuchername").on('keyup',function(){
 		$("#homeeucherteamname").text($('#homeeuchername').val());
