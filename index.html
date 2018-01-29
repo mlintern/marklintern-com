@@ -9,7 +9,7 @@
 <title>Mark Lintern</title>
 
 <link type="image/png" href="favicon.ico?v=2.0" rel="icon">
-<link type="text/css" href="css/fontstrap-square.min.css?v=1.2.4" rel="stylesheet">
+<link type="text/css" href="dist/css/theme/fontstrap-square.min.css?v=2.2.0" rel="stylesheet">
 <link type="text/css" href="css/style.css?v=2.1.2" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="http://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
@@ -22,8 +22,8 @@
 		<a class="version-one secret white" href="previous_versions/1/" target="_blank">v1</a>
 		<a class="version-two secret white" href="previous_versions/2/" target="_blank">v2</a>
 
-		<div class="dropdown pull-left top-left">
-			<a data-toggle="dropdown" href="#"><i class="fa fa-newspaper-o fa-3x" style="color: #fff;"></i></a>
+		<div class="dropdown float-left top-left">
+			<a data-toggle="dropdown" href="#"><i class="far fa-newspaper fa-3x" style="color: #fff;"></i></a>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<li><a target="_blank" href="http://www.nretnil.com">Nretnil.com</a></li>
 				<li><a target="_blank" href="http://www.lintern.us">Lintern.us</a></li>
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 
-		<div class="dropdown pull-right top-right">
+		<div class="dropdown float-right top-right">
 			<a data-toggle="dropdown" href="#"><i class="fa fa-gamepad fa-3x" style="color: #fff;"></i></a>
 			<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
 				<li><a href="javascript:void(0)" title="Eucher Scoreboard" data-toggle="modal" data-target="#eucher-scorecard">Eucher</a></li>
@@ -47,6 +47,7 @@
 
 		<div class="footer">
 			<div class="footer-email">mark@lintern.us</div>
+			<div class="text-white text-center small">v2018.1.29</div>
 		</div> <!-- footer -->
 
 		<div class="modal fade" id="scoresheet" tabindex="-1" role="dialog" aria-labelledby="ScoreSheet" aria-hidden="true">
@@ -322,7 +323,7 @@
 									</div>
 
 									<div class="text-center controls">
-										<button class="btn btn-default btn-lg home-minus">-</button>
+										<button class="btn btn-default btn-lg home-minus px-5 py-2 bg-danger text-white">-</button>
 									</div>
 								</div>
 							</div>
@@ -346,7 +347,7 @@
 									</div>
 
 									<div class="text-center controls">
-										<button class="btn btn-default btn-lg away-minus">-</button>
+										<button class="btn btn-default btn-lg away-minus px-5 py-2 bg-danger text-white">-</button>
 									</div>
 								</div>
 							</div>
@@ -373,13 +374,11 @@
 
 	</div> <!-- full-screen -->
 
-	<script type="text/javascript" src="js/jquery.min.js?v=3.2.1"></script>
-	<script type="text/javascript" src="js/fontstrap.js?v=1.2.4"></script>
+	<script type="text/javascript" src="dist/js/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.2.0"></script>
+	<script type="text/javascript" src="js/scripts.js?v=1.0.0"></script>
 
 	<script type="text/javascript">
-		$(window).on('load', function() {
-			loadScript("js/scripts.js", function(){ });
-		});
 	/*Google Analytics*/
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-38230837-1']);
