@@ -9,7 +9,7 @@ div#header{
 	margin: 5px;
 	text-align: center;
 	border: 2px solid white;
-	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-image: url(img/GradientGreyToWhiteB2T.png);
 	background-size: 100% 100%;
 	border-radius: 65px;
 }
@@ -50,7 +50,7 @@ div#sidebar{
 	width: 300px;
 	height: 584px;
 	border-radius: 25px;
-	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-image: url(img/GradientGreyToWhiteB2T.png);
 	background-size: 100% 100%;
 }
 
@@ -101,7 +101,7 @@ div#main{
 	padding: 5px;
 	margin: 5px;
 	border: 2px solid white;
-	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-image: url(img/GradientGreyToWhiteB2T.png);
 	background-size: 100% 100%;
 	border-radius: 25px;
 }
@@ -115,7 +115,7 @@ div#footer{
 	position: relative;
 	text-align: center;
 	clear: both;
-	background-image: url(Images/GradientGreyToWhiteB2T.png);
+	background-image: url(img/GradientGreyToWhiteB2T.png);
 	background-size: 100% 100%;
 	border: 2px solid white;
 	border-radius: 34px;
@@ -142,7 +142,7 @@ body#home{
 	background-color: white;
 	text-align: center;
 	margin: 0px;
-	background-image: url(Images/GradientGreyToWhiteL2R.png);
+	background-image: url(img/GradientGreyToWhiteL2R.png);
 	background-size: 100%;
 } 	
 
