@@ -21,13 +21,13 @@ img {
 }
 body {
 	font-family: 'Almost Noteworthy';
-	color: #fff;
+	color: #444;
 }
 a {
-	color: blue;
+	color: #444;
 }
 a:hover {
-	color: blue;
+	color: #444;
 }
 .top-left, .top-right {
 	margin: 20px;
@@ -94,17 +94,12 @@ a:hover {
 /* TITLE */
 .title-text {
 	font-family: 'Finger Paint', cursive;
-	font-size: 130px;
+	font-size: 100px;
 	text-align: center;
 	line-height: 1;
 }
 .center {
 	padding-top: 25%;
-}
-@media ( min-width: 1200px ) {
-	.center {
-		padding-top: 21%;
-	}
 }
 @media ( max-width: 544px ) {
 	.title-text{
@@ -236,7 +231,7 @@ a:hover {
 	height: 40px !important;
 }
 #countdownDisp {
-	background-color: black; 
+	background-color: black;
 	display: inline-block;
 	padding: 5px 10px;
 	margin: 0 auto;
@@ -452,15 +447,9 @@ a:hover {
 
 /* FOOTER */
 .footer {
-	height: 150px;
 	position: absolute;
 	bottom: 0;
 	width: 100%
-}
-.footer-email {
-	color: white;
-	text-align: center;
-	padding-top: 80px;
 }
 
 @media ( min-width : 768px ) {

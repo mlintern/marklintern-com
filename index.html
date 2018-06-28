@@ -17,13 +17,13 @@
 </head>
 
 <body onload="$('.loading').hide();">
-	<div class="loading full-screen" style="background: #000; color: #fff; z-index: 1000;"><i class="fa fa-4x fa-spinner fa-spin" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;"></i></div>
-	<div class="full-screen main-bg">
-		<a class="version-one secret white" href="previous_versions/1/" target="_blank">v1</a>
-		<a class="version-two secret white" href="previous_versions/2/" target="_blank">v2</a>
+	<div class="loading full-screen bg-dark text-white" style="z-index: 1000;"><i class="far fa-4x fa-futbol fa-spin fa-pulse" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;"></i></div>
+	<div class="full-screen-bg main-bg p-0" data-image="images/family-1.jpg">
+		<a class="version-one secret" href="previous_versions/1/" target="_blank">v1</a>
+		<a class="version-two secret" href="previous_versions/2/" target="_blank">v2</a>
 
 		<div class="dropdown float-left top-left">
-			<a data-toggle="dropdown" href="#"><i class="far fa-newspaper fa-3x" style="color: #fff;"></i></a>
+			<a data-toggle="dropdown" href="#"><i class="far fa-newspaper fa-3x"></i></a>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<li><a target="_blank" href="http://www.nretnil.com">Nretnil.com</a></li>
 				<li><a target="_blank" href="http://www.lintern.us">Lintern.us</a></li>
@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="dropdown float-right top-right">
-			<a data-toggle="dropdown" href="#"><i class="fa fa-gamepad fa-3x" style="color: #fff;"></i></a>
+			<a data-toggle="dropdown" href="#"><i class="fa fa-gamepad fa-3x"></i></a>
 			<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
 				<li><a href="javascript:void(0)" title="Eucher Scoreboard" data-toggle="modal" data-target="#eucher-scorecard">Eucher</a></li>
 				<li><a href="javascript:void(0)" title="Scoreboard" data-toggle="modal" data-target="#scoreboard">Scoreboard</a></li>
@@ -45,9 +45,9 @@
 			<div class="title-text" title="Anograms of Mark Lintern">nretniL kraM</div>
 		</div>
 
-		<div class="footer">
+		<div class="footer text-center py-3">
 			<div class="footer-email">mark@lintern.us</div>
-			<div class="text-white text-center small">v2018.1.29</div>
+			<div class="small">v2018.6.28</div>
 		</div> <!-- footer -->
 
 		<div class="modal fade" id="scoresheet" tabindex="-1" role="dialog" aria-labelledby="ScoreSheet" aria-hidden="true">
@@ -375,10 +375,12 @@
 	</div> <!-- full-screen -->
 
 	<script type="text/javascript" src="dist/js/jquery.min.js?v=3.3.1"></script>
-	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.2.0"></script>
+	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.4.0"></script>
 	<script type="text/javascript" src="js/scripts.js?v=1.0.0"></script>
 
 	<script type="text/javascript">
+	$('.full-screen-bg').fullScreenBackground();
+
 	/*Google Analytics*/
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-38230837-1']);
