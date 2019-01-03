@@ -1,5 +1,5 @@
 .clear {
-	clear:both;
+	clear: both;
 }
 .pointer {
 	cursor: pointer;
@@ -13,10 +13,10 @@ img {
 	-webkit-box-shadow: 7px 7px 8px #444;
 	box-shadow: 7px 7px 8px #444;
 }
-.paint{
+.paint {
 	font-family: 'Finger Paint', cursive;
 }
-.square{
+.square {
 	font-family: 'Nova Square', Arial, sans-serif;
 }
 body {
@@ -88,9 +88,11 @@ a:hover {
 	left: 0;
 }
 .main-bg {
-	background-color: blue;
+	transition: background 1s linear;
 }
-
+.bg-black {
+	background-color: black;
+}
 /* TITLE */
 .title-text {
 	font-family: 'Finger Paint', cursive;

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="host_name" content="http://www.marklintern.com">
+
+<title>Mark Lintern</title>
+
+<link type="image/png" href="favicon.ico?v=2.0" rel="icon">
+<link type="text/css" href="dist/css/theme/fontstrap-square.min.css?v=2.2.0" rel="stylesheet">
+<link type="text/css" href="css/style.css?v=2.1.2" rel="stylesheet">
+<link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
+<link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Nova%20Square/nova_square_regular/stylesheet.css" rel="stylesheet">
+</head>
+
+<body onload="$('.loading').hide();">
+	<div class="loading full-screen bg-dark text-white" style="z-index: 1000;"><i class="far fa-4x fa-futbol fa-spin fa-pulse" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;"></i></div>
+	<div class="full-screen bg-black p-3" data-image="">
+		<div class="row">
+			<div class="col-sm-6">
+				<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
+				<div class="team-score">
+					<div id="homescore" class="square score">0</div>
+					<div class="clear"></div>
+					<button id="plushome" class="HomePlus plusbtn btn btn-success" value="+">+</button>
+					<button id="minushome" class="HomeMinus minusbtn btn btn-danger" value="-">-</button>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="d-sm-none d-inline-block" style="height: 30px; clear: both;"></div>
+			<div class="col-sm-6 pull-right">
+				<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
+				<div class="team-score">
+					<div input id="awayscore" class="square score">0</div>
+					<div class="clear"></div>
+					<button id="plusaway" class="AwayPlus plusbtn btn btn-success" value="+">+</button>
+					<button id="minusaway" class="AwayMinus minusbtn btn btn-danger" value="-">-</button>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+				<div id="timer" class='w-100 text-center'>
+					<div id="countdownDisp">
+						<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
+						<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
+						<img class="numeral" src="images/numerals/colon.gif" name="j" id="j"/>
+						<img class="numeral" src="images/numerals/c0.gif" name="k" id="k"/>
+						<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
+					</div>
+					<div>
+						<input type="button" class="btn btn-success" name="ssbutton" value="Start/Stop" onClick="startstop()"/>
+						<input type="button" class="btn btn-warning" name="minplus" value="+min" onClick="addmin()"/>
+						<input type="button" class="btn btn-warning" name="minplus" value="+30" onClick="addthirty()"/>
+						<input type="button" class="btn btn-danger" name="reset" value="Reset Timer" onClick="timerreset()"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button id="resetscore" class="btn btn-danger" value="resetscore">Reset Score</button>
+	</div> <!-- full-screen -->
+
+	<script type="text/javascript" src="dist/js/third_party/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.8.2"></script>
+	<script type="text/javascript" src="js/scripts.js?v=1.0.0"></script>
+
+	<script type="text/javascript">
+	/*Google Analytics*/
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-38230837-1']);
+		_gaq.push(['_setDomainName', 'marklintern.com']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+</body>
+</html>

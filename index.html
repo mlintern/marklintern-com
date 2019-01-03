@@ -9,7 +9,7 @@
 <title>Mark Lintern</title>
 
 <link type="image/png" href="favicon.ico?v=2.0" rel="icon">
-<link type="text/css" href="dist/css/theme/fontstrap-square.min.css?v=2.2.0" rel="stylesheet">
+<link type="text/css" href="dist/css/theme/fontstrap-square.min.css?v=2.8.2" rel="stylesheet">
 <link type="text/css" href="css/style.css?v=2.1.2" rel="stylesheet">
 <link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
 <link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Finger%20Paint/finger_paint_regular/stylesheet.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 <body onload="$('.loading').hide();">
 	<div class="loading full-screen bg-dark text-white" style="z-index: 1000;"><i class="far fa-4x fa-futbol fa-spin fa-pulse" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;"></i></div>
-	<div class="full-screen-bg main-bg p-0" data-image="images/family-1.jpg">
+	<div class="full-screen-bg main-bg p-0" data-image="images/bg/0.jpg">
 		<a class="version-one secret" href="previous_versions/1/" target="_blank">v1</a>
 		<a class="version-two secret" href="previous_versions/2/" target="_blank">v2</a>
 
@@ -36,9 +36,9 @@
 		<div class="dropdown float-right top-right">
 			<a data-toggle="dropdown" href="#"><i class="fa fa-gamepad fa-3x"></i></a>
 			<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-				<li><a href="javascript:void(0)" title="Eucher Scoreboard" data-toggle="modal" data-target="#eucher-scorecard">Eucher</a></li>
-				<li><a href="javascript:void(0)" title="Scoreboard" data-toggle="modal" data-target="#scoreboard">Scoreboard</a></li>
-				<li><a href="javascript:void(0)" title="5 Crowns Score Sheet" data-toggle="modal" data-target="#scoresheet">5 Crowns</a></li>
+				<li><a href="eucher.html" title="Eucher Scoreboard" target="_blank">Eucher</a></li>
+				<li><a href="scoreboard.html" title="Scoreboard" target="_blank">Scoreboard</a></li>
+				<li><a href="scoresheet.html" title="5 Crowns Score Sheet" target="_blank">5 Crowns</a></li>
 			</ul>
 		</div>
 
@@ -48,339 +48,23 @@
 
 		<div class="footer text-center py-3">
 			<div class="footer-email">mark@lintern.us</div>
-			<div class="small">v2018.6.28</div>
+			<div class="small">v2019.1.3</div>
 		</div> <!-- footer -->
-
-		<div class="modal fade" id="scoresheet" tabindex="-1" role="dialog" aria-labelledby="ScoreSheet" aria-hidden="true">
-			<div class="modal-dialog modal-90">
-				<div class="modal-content">
-					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-window-maximize"></i></button>
-					<div class="modal-body">
-						<div id="player-picker">
-							<input id="player_3" type="radio" name="players" value="3">3
-							<input id="player_4" type="radio" name="players" value="4" checked>4
-							<input id="player_5" type="radio" name="players" value="5">5
-							<input id="player_6" type="radio" name="players" value="6">6
-							<input id="player_7" type="radio" name="players" value="7">7
-							<input id="player_8" type="radio" name="players" value="8">8
-						</div>
-						<div id="game-picker">
-							<input id="onetothree" type="checkbox" name="players" value="1-2">1-2
-							<input id="jacktoking" type="checkbox" name="players" value="J-K" checked>J-K
-						</div>
-						<div class="clearfix"></div>
-						<table class="table table-bordered">
-							<tr>
-								<th>Hand</th>
-								<th class="player1"><input type="text" class="form-control" name="name1" placeholder="Player 1"></th>
-								<th class="player2"><input type="text" class="form-control" name="name2" placeholder="Player 2"></th>
-								<th class="player3"><input type="text" class="form-control" name="name3" placeholder="Player 3"></th>
-								<th class="player4"><input type="text" class="form-control" name="name4" placeholder="Player 4"></th>
-								<th class="player5"><input type="text" class="form-control" name="name5" placeholder="Player 5"></th>
-								<th class="player6"><input type="text" class="form-control" name="name6" placeholder="Player 6"></th>
-								<th class="player7"><input type="text" class="form-control" name="name7" placeholder="Player 7"></th>
-								<th class="player8"><input type="text" class="form-control" name="name8" placeholder="Player 8"></th>
-							</tr>
-							<tr id="rowone">
-								<td>1</td>
-								<td class="player1"><input id="11" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player2"><input id="12" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player3"><input id="13" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player4"><input id="14" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player5"><input id="15" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player6"><input id="16" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player7"><input id="17" type="number" class="form-control" placeholder="0"/></td>
-								<td class="player8"><input id="18" type="number" class="form-control" placeholder="0"/></td>
-							</tr>
-							<tr id="rowtwo">
-								<td>2</td>
-								<td class="player1"><input id="21" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="22" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="23" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="24" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="25" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="26" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="27" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="28" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td class="player1"><input id="31" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="32" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="33" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="34" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="35" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="36" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="37" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="38" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td class="player1"><input id="41" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="42" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="43" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="44" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="45" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="46" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="47" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="48" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>5</td>
-								<td class="player1"><input id="51" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="52" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="53" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="54" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="55" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="56" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="57" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="58" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>6</td>
-								<td class="player1"><input id="61" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="62" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="63" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="64" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="65" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="66" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="67" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="68" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>7</td>
-								<td class="player1"><input id="71" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="72" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="73" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="74" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="75" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="76" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="77" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="78" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>8</td>
-								<td class="player1"><input id="81" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="82" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="83" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="84" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="85" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="86" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="87" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="88" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>9</td>
-								<td class="player1"><input id="91" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="92" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="93" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="94" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="95" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="96" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="97" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="98" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr>
-								<td>10</td>
-								<td class="player1"><input id="101" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="102" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="103" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="104" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="105" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="106" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="107" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="108" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr id="rowJ">
-								<td>J</td>
-								<td class="player1"><input id="j1" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="j2" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="j3" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="j4" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="j5" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="j6" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="j7" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="j8" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr id="rowQ">
-								<td>Q</td>
-								<td class="player1"><input id="q1" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="q2" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="q3" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="q4" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="q5" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="q6" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="q7" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="q8" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr id="rowK">
-								<td>K</td>
-								<td class="player1"><input id="k1" type="number" class="form-control" placeholder="0"></td>
-								<td class="player2"><input id="k2" type="number" class="form-control" placeholder="0"></td>
-								<td class="player3"><input id="k3" type="number" class="form-control" placeholder="0"></td>
-								<td class="player4"><input id="k4" type="number" class="form-control" placeholder="0"></td>
-								<td class="player5"><input id="k5" type="number" class="form-control" placeholder="0"></td>
-								<td class="player6"><input id="k6" type="number" class="form-control" placeholder="0"></td>
-								<td class="player7"><input id="k7" type="number" class="form-control" placeholder="0"></td>
-								<td class="player8"><input id="k8" type="number" class="form-control" placeholder="0"></td>
-							</tr>
-							<tr id="totalscore">
-								<td>Total</td>
-								<td class="player1"><input id="t1" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player2"><input id="t2" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player3"><input id="t3" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player4"><input id="t4" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player5"><input id="t5" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player6"><input id="t6" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player7"><input id="t7" type="text" class="form-control" placeholder="0" readonly></td>
-								<td class="player8"><input id="t8" type="text" class="form-control" placeholder="0" readonly></td>
-							</tr>
-						</table>
-						<div class="clearfix" style="margin-top: 5px;"></div>
-						<button id="calculate" class="btn btn-success pull-right" value="Calculate" onclick="calculate_score()">Calculate</button>
-						<button id="reset" class="btn btn-danger" value="Reset Scores" onclick="reset_score();">Reset</button>
-						</form>
-					</div> <!-- modal-body -->
-				</div> <!-- modal-content -->
-			</div> <!-- modal-dialog -->
-		</div> <!-- modal -->
-
-		<div class="modal fade" id="scoreboard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
-			<div class="modal-dialog modal-90">
-				<div class="modal-content">
-					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-window-maximize"></i></button>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-sm-6">
-								<input class="teamname" type="text" name="homename" placeholder="Home" style="text-align:center;">
-								<div class="team-score">
-									<div id="homescore" class="square score">0</div>
-									<div class="clear"></div>
-									<button id="plushome" class="HomePlus plusbtn btn btn-success" value="+">+</button>
-									<button id="minushome" class="HomeMinus minusbtn btn btn-danger" value="-">-</button>
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="d-sm-none d-inline-block" style="height: 30px; clear: both;"></div>
-							<div class="col-sm-6 pull-right">
-								<input class="teamname" type="text" name="awayname" placeholder="Away" style="text-align:center;">
-								<div class="team-score">
-									<div input id="awayscore" class="square score">0</div>
-									<div class="clear"></div>
-									<button id="plusaway" class="AwayPlus plusbtn btn btn-success" value="+">+</button>
-									<button id="minusaway" class="AwayMinus minusbtn btn btn-danger" value="-">-</button>
-									<div class="clear"></div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-								<div id="timer" class='w-100 text-center'>
-									<div id="countdownDisp">
-										<img class="numeral" src="images/numerals/c0.gif" name="h" id="h"/>
-										<img class="numeral" src="images/numerals/c0.gif" name="i" id="i"/>
-										<img class="numeral" src="images/numerals/colon.gif" name="j" id="j"/>
-										<img class="numeral" src="images/numerals/c0.gif" name="k" id="k"/>
-										<img class="numeral" src="images/numerals/c0.gif" name="l" id="l"/>
-									</div>
-									<div>
-										<input type="button" class="btn btn-success" name="ssbutton" value="Start/Stop" onClick="startstop()"/>
-										<input type="button" class="btn btn-warning" name="minplus" value="+min" onClick="addmin()"/>
-										<input type="button" class="btn btn-warning" name="minplus" value="+30" onClick="addthirty()"/>
-										<input type="button" class="btn btn-danger" name="reset" value="Reset Timer" onClick="timerreset()"/>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<button id="resetscore" class="btn btn-danger" value="resetscore">Reset Score</button>
-					</div> <!-- modal-body -->
-				</div> <!-- modal-content -->
-			</div> <!-- modal-dialog -->
-		</div> <!-- modal -->
-
-		<div class="modal fade" id="eucher-scorecard" tabindex="-1" role="dialog" aria-labelledby="Share Your Story" aria-hidden="true">
-			<div class="modal-dialog modal-90">
-				<div class="modal-content">
-					<button class="btn btn-sm btn-default btn-expand"><i class="fa fa-window-maximize"></i></button>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="eucher-team-score">
-									<div class="row">
-										<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys">
-									</div>
-
-									<div class="row text-center">
-										<div class="pieContainer">
-											<div class="pieBackground shadow"></div>
-											<div class="pieSlice home-progress right hold">
-												<div class="pie"></div>
-											</div>
-											<div class="pieSlice home-progress left hold">
-												<div class="pie"></div>
-											</div>
-											<div id="eucherhomescore" class="home-plus square eucherscore pointer">0</div>
-										</div>
-									</div>
-
-									<div class="text-center controls">
-										<button class="btn btn-default btn-lg home-minus px-5 py-2 bg-danger text-white">-</button>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="eucher-team-score">
-									<div class="row">
-										<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys">
-									</div>
-
-									<div class="row text-center">
-										<div class="pieContainer away-plus">
-											<div class="pieBackground shadow"></div>
-											<div class="pieSlice away-progress right hold">
-												<div class="pie"></div>
-											</div>
-											<div class="pieSlice away-progress left hold">
-												<div class="pie"></div>
-											</div>
-											<div id="eucherawayscore" class="square eucherscore pointer">0</div>
-										</div>
-									</div>
-
-									<div class="text-center controls">
-										<button class="btn btn-default btn-lg away-minus px-5 py-2 bg-danger text-white">-</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="separator"></div>
-							<div class="wins-losses w-100">
-								<div class="scorecontainer w-100">
-									<div id="homeeucherteamname">Good Guys</div>
-									<input id="eucherhomeoverallscore" class="square overallscore" type="text" value="0" readonly>
-									<br class="d-sm-none d-inline-block"/><span class="dash hidden-xs-down">-</span><br class="d-sm-none d-inline-block"/>
-									<input id="eucherawayoverallscore" class="square overallscore" type="text" value="0" readonly>
-									<div id="awayeucherteamname">Bad Guys</div>
-								</div>
-							</div>
-						</div>
-
-						<button id="eucherresetscore" class="btn btn-danger pull-right" value="resetscore">Reset</button>
-					</div> <!-- modal-body -->
-				</div> <!-- modal-content -->
-			</div> <!-- modal-dialog -->
-		</div> <!-- modal -->
-
 	</div> <!-- full-screen -->
 
-	<script type="text/javascript" src="dist/js/jquery.min.js?v=3.3.1"></script>
-	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.4.0"></script>
+	<script type="text/javascript" src="dist/js/third_party/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.8.2"></script>
 	<script type="text/javascript" src="js/scripts.js?v=1.0.0"></script>
 
 	<script type="text/javascript">
 	$('.full-screen-bg').fullScreenBackground();
+	var totalPhotos = 2;
+	var currentPhoto = 0;
+	setInterval(function () {
+		nextPhoto = (currentPhoto + 1) % totalPhotos;
+		currentPhoto = nextPhoto;
+		$('.main-bg').css('background-image', 'url("images/bg/' + nextPhoto + '.jpg")');
+	}, 20000);
 
 	/*Google Analytics*/
 		var _gaq = _gaq || [];

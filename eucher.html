@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="host_name" content="http://www.marklintern.com">
+
+<title>Mark Lintern</title>
+
+<link type="image/png" href="favicon.ico?v=2.0" rel="icon">
+<link type="text/css" href="dist/css/theme/fontstrap-square.min.css?v=2.8.2" rel="stylesheet">
+<link type="text/css" href="css/style.css?v=2.1.2" rel="stylesheet">
+<link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Almost%20Noteworthy/almost_noteworthy/stylesheet.css" rel="stylesheet">
+<link type="text/css" href="https://dev.nretnil.com/staging/bluevioletmuleinfluenceplayground/beigedormousemultiplyteeth/fonts/Nova%20Square/nova_square_regular/stylesheet.css" rel="stylesheet">
+
+</head>
+
+<body onload="$('.loading').hide();">
+	<div class="loading full-screen bg-dark text-white" style="z-index: 1000;"><i class="far fa-4x fa-futbol fa-spin fa-pulse" style="position: absolute; top: 50%; left: 50%; margin-left: -23px;"></i></div>
+	<div class="full-screen bg-black">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="eucher-team-score">
+					<div class="row">
+						<input id="homeeuchername" class="eucherteamname" type="text" name="homename" placeholder="Good Guys">
+					</div>
+
+					<div class="row text-center">
+						<div class="pieContainer">
+							<div class="pieBackground shadow"></div>
+							<div class="pieSlice home-progress right hold">
+								<div class="pie"></div>
+							</div>
+							<div class="pieSlice home-progress left hold">
+								<div class="pie"></div>
+							</div>
+							<div id="eucherhomescore" class="home-plus square eucherscore pointer">0</div>
+						</div>
+					</div>
+
+					<div class="text-center controls">
+						<button class="btn btn-default btn-lg home-minus px-5 py-2 bg-danger text-white">-</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="eucher-team-score">
+					<div class="row">
+						<input id="awayeuchername" class="eucherteamname" type="text" name="awayname" placeholder="Bad Guys">
+					</div>
+
+					<div class="row text-center">
+						<div class="pieContainer away-plus">
+							<div class="pieBackground shadow"></div>
+							<div class="pieSlice away-progress right hold">
+								<div class="pie"></div>
+							</div>
+							<div class="pieSlice away-progress left hold">
+								<div class="pie"></div>
+							</div>
+							<div id="eucherawayscore" class="square eucherscore pointer">0</div>
+						</div>
+					</div>
+
+					<div class="text-center controls">
+						<button class="btn btn-default btn-lg away-minus px-5 py-2 bg-danger text-white">-</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="separator"></div>
+			<div class="wins-losses w-100">
+				<div class="scorecontainer w-100">
+					<div id="homeeucherteamname">Good Guys</div>
+					<input id="eucherhomeoverallscore" class="square overallscore" type="text" value="0" readonly>
+					<br class="d-sm-none d-inline-block"/><span class="dash hidden-xs-down">-</span><br class="d-sm-none d-inline-block"/>
+					<input id="eucherawayoverallscore" class="square overallscore" type="text" value="0" readonly>
+					<div id="awayeucherteamname">Bad Guys</div>
+				</div>
+			</div>
+		</div>
+
+		<button id="eucherresetscore" class="btn btn-danger pull-right" value="resetscore">Reset</button>
+	</div> <!-- full-screen -->
+
+	<script type="text/javascript" src="dist/js/third_party/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.8.2"></script>
+	<script type="text/javascript" src="js/scripts.js?v=1.0.0"></script>
+
+	<script type="text/javascript">
+	/*Google Analytics*/
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-38230837-1']);
+		_gaq.push(['_setDomainName', 'marklintern.com']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+</body>
+</html>
