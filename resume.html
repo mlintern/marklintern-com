@@ -8,11 +8,11 @@
 	<link type="text/css" href="https://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="https://dev.nretnil.com/staging/tools/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
 	<style>
-		body {font-size: 12px;}
-		h2, h4, h5 {margin: 4px 0;}
-		h2 {font-size: 22px;}
-		h3 {font-size: 20px;}
-		h4 {font-size: 16px;}
+		body { font-size: 12px; }
+		h2, h4, h5 {margin: 4px 0; }
+		h2 { font-size: 22px; }
+		h3 { font-size: 20px; }
+		h4 { font-size: 16px; }
 	</style>
 </head>
 <body>
@@ -43,10 +43,12 @@
 		<h4>Oracle Corporation, Indianapolis, IN</h4>
 		<div class="row"><h4 class="col-sm-6">Senior Quality Assurance Engineer</h4><h5 class="col-sm-6 pull-right text-right">February 2017 - Present</h5><div class="clearfix"></div></div>
 		<ul>
-			<li>Continuation of Assurance Engineering role with additional responsibilites.</li>
-			<li>Implement code changes to assist development team for minor bugs and design updates.</li>
+			<li>Continuation of Quality Assurance Engineering role with additional responsibilites.</li>
+			<li>Engineer and Implement code changes to assist with development team for minor bugs and design updates.</li>
 			<li>Maintain Salt configuration scripts for development, test, qa, and production environments. As well as scripts for bootstrapping developers host machines.</li>
 			<li>Served as a project manager.  Tracked and reported on development projects to make sure deadlines where not missed.</li>
+			<li>Lead Quality Assurance Engineer for a new Application Management Cloud Product (AMS) within the Oracle Cloud.</li>
+			<li>Created and maintained anautomation testing suite for the AMS application written in Java run with Selendium Webdriver functionality.</li>
 		</ul>
 	</div>
 
@@ -55,7 +57,7 @@
 		<ul>
 			<li>Review and test new features and bug fix merge requests using a locally maintained development environment as well as our public facing test environment.</li>
 			<li>Developed and maintain helper web app with functionalities that include network cloning, network population, and content scramble.</li>
-			<li>Created and maintain anautomation testing suite for the Compendium application written in Ruby running Selendium Webdriver functionality.</li>
+			<li>Created and maintained anautomation testing suite for the Compendium application written in Ruby run with Selendium Webdriver functionality.</li>
 			<li>Facilitated DNS, email, and website migration, during the Compendium acquisition by Oracle.</li>
 		</ul>
 	</div>
@@ -94,7 +96,7 @@
 		<ul>
 			<li>Perform routine outbound maintenance and repairs for hardware and software when necessary.</li>
 			<li>Implement and maintain security protocols companywide through group policy and third party software.</li>
-			<li>Supported IP phone systems for managed companies as well as own internal phone network.</li>
+			<li>Supported Altigen IP phone systems for managed companies as well as own internal phone network.</li>
 			<li>Created and maintained backup solutions, both on-line as well as physical drives, onsite and remotely.</li>
 			<li>Trained new employees to deal with common issues and software tools used.</li>
 			<li>Work directly with the director of IT solutions.</li>
@@ -155,7 +157,7 @@
 	</div>
 
 	<div class="tech">
-		<h3>Projects</h3>
+		<h3>Personal Projects</h3>
 		<div><h4>Gems</h4></div>
 		<ul>
 			<li>compendium-api: utilizes compendium api with easy function calls for ruby scripting. <a target="_blank" href="http://www.github.com/mlintern/compendium-api">http://www.github.com/mlintern/compendium-api</a></li>
@@ -168,12 +170,16 @@
 		<ul>
 			<li><a target="_blank" href="http://www.nretnil.com">nretnil.com</a>, practical site of my commonly used online tools built with javasript and php.</li>
 			<li><a target="_blank" href="http://www.marklintern.com">marklintern.com</a>, personal site with javascript functionality.</li>
-			<li><a target="_blank" href="http://app.nretnil.com">app.nretnil.com</a>, ruby padrino app shell that handles account management, sessions, and authentication. Features include and curl generator and todo list.</li>
-			<li><a target="_blank" href="http://www.lintern.us">lintern.us</a>, fun site with family photos displayed as if they are on a cork board.</li>
+			<li><a target="_blank" href="http://app.nretnil.com">app.nretnil.com</a>, ruby padrino app shell that handles account management, sessions, and authentication. Features include a curl generator and todo list.</li>
+			<li><a target="_blank" href="http://www.lintern.us">lintern.us</a>, fun site with family photos displayed as if they are polarids on a cork board.</li>
 			<li><a target="_blank" href="http://sandybox.nretnil.com">sandybox.nretnil.com</a>, html and javscript sandbox environment utilizing Ace Editor and Bootstrap.</li>
 			<li><a target="_blank" href="http://dice.nretnil.com">dice.nretnil.com</a>, randomized results for numbers, letters, 6-sided dice values, or custom characters.</li>
 		</ul>
 		Full List - <a target="_blank" href="http://sites.nrentil.com">sites.nretnil.com</a>
+		<div><h4>Other</h4></div>
+		<ul>
+			<li>Fontstrap: CSS/Javascript project combining Bootstrap and Fontawesome along with custom elemnents and script. <a target="_blank" href="https://nretnilkram.github.io/fontstrap">https://nretnilkram.github.io/fontstrap</a></li>
+		</ul>
 	</div>
 
 	<div class="education">
@@ -191,15 +197,11 @@
 	}
 	if ( paramExists('nopdf') ) {
 		document.getElementById('pdf-icon').style.visibility = 'hidden';
-	} else {
-		document.getElementById('pdf-icon').style.visibility = 'visible';
 	}
 
 	if ( paramExists('print') ) {
 		document.getElementById('pdf-icon').style.visibility = 'hidden';
 		$('body').append('<style> h2{font-size: 20px;} h3{font-size: 16px;} h4{font-size: 14px;}</style>');
-	} else {
-		document.getElementById('pdf-icon').style.visibility = 'visible';
 	}
 </script>
 
