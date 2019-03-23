@@ -12,230 +12,238 @@
 	<style>
 		body { font-size: 12px; padding: 30px 0; }
 		h2, h4 {margin: 4px 0; }
-		h2 { font-size: 22px; }
-		h3 { font-size: 20px; }
-		h4 { font-size: 16px; }
+		h2 { font-size: 28px; }
+		h3 { font-size: 22px; }
+		h4 { font-size: 18px; }
 		h5 { font-size: 14px; }
+		.major-li { padding-bottom: 2rem; }
+		ul.accomplishments { list-style-type: dash; border-left: solid 1px #000; border-right: solid 1px #000; padding-left: 2rem; padding-top: .5rem; padding-bottom: .5rem; margin-top: .5rem; padding-right: .5rem; }
+		.connector { position: absolute; margin-left: 5px; border-left: solid 2px #212529; left: -1.5rem; top: 1rem; bottom: -.5rem; }
+		.fa-li { left: -2.5em; background: #fff; }
 		.pointer { cursor: pointer; }
 		@media print {
-			h2 { font-size: 20px; }
-			h3 { font-size: 16px; }
-			h4 { font-size: 14px; }
 			#pdf-icon { display: none; }
+			.btn { border: 0px; }
 		}
+		hr { margin-top: .5rem; margin-bottom: .5rem; border: 0; border-top: 1px solid rgba(0,0,0,1); }
 	</style>
 </head>
 <body>
-<div class="container">
-	<div id="pdf-icon" class="fixed top left p-3 d-none">
-		<a href="downloads/lintern-web-resume.pdf"><img src="images/pdf_icon.png" width="40"/></a>
-	</div>
+	<div class="container">
+		<div id="pdf-icon" class="fixed top left p-3 d-none">
+			<a href="downloads/lintern-web-resume.pdf"><img src="images/pdf_icon.png" width="40"/></a>
+		</div>
 
-	<div class="text-center">
-		<h2>Mark L. Lintern</h2>
-		<p>6016 Andover Rd. Indianapolis, IN 46220<br>
-			419 - 571 - 9960 <span class="d-inline-block px-3"></span> markllintern@gmail.com
-		</p>
-	</div>
+		<div class="row">
+			<div class="col">
+				<h1 class="mb-0">Mark L. Lintern</h1>
+				<h3>Computer Engineer</h3>
+			</div>
+			<div class="text-right">
+				<div>markllintern@gmail.com <i class="fa fa-fw fa-envelope"></i></div>
+				<div>419 - 571 - 9960 <i class="fa fa-fw fa-phone"></i></div>
+				<div>6016 Andover Rd. Indianapolis, IN 46220 <i class="fa fa-fw fa-home"></i></div>
+			</div>
+		</div>
 
-	<h5 class="px-5 py-3 summary" contenteditable="true">
-		<span class="adjective pointer">Motivated</span> computer engineer with 10+ years of experience and proven full stack skills from <strong>HTML</strong> to <strong>DevOps</strong>.&nbsp;
-		Seeking position with <span contenteditable="true">&lt;Nretnil, Inc&gt;</span> that will push my abilities to the next level.&nbsp;
-		I have developed many web applications in <strong>Ruby</strong> to enhance and enable faster testing processes.&nbsp;
-		I am excited to <span class="verb pointer">accelerate</span> a new team with the latest technologies and methods.
-	</h5>
+		<h5 class="px-5 py-3 summary" contenteditable="true">
+			<span class="adjective pointer">Motivated</span> computer engineer with 10+ years of experience and proven full stack skills from <strong>HTML</strong> to <strong>DevOps</strong>.&nbsp;
+			Seeking position with <span contenteditable="true">&lt;Nretnil, Inc&gt;</span> that will allow me to push my abilities to the next level.&nbsp;
+			I have developed many web applications in <strong>Ruby</strong> to enhance and enable faster testing processes.&nbsp;
+			I am excited to <span class="verb pointer">accelerate</span> a new team with the latest technologies and methods.
+		</h5>
 
-	<div class="tech">
-		<h3>Technical Skills</h3>
-		<ul>
-			<li>Advanced Experience with HTML, Javascript, CSS, Ruby, JQuery, MySQL, Microsoft Office</li>
-			<li>Intermediate level experience with PHP, Bash, C++, Python, Java, Saltstack, Docker, Kubernetes, Browserstack.</li>
-			<li>Limited experience with Microsoft Exchange, Bomgar, Kaseya, True Crypt, SQL, Mozy online backup, Mathematica, Backup Exec</li>
-			<li>Operating System experience: Windows OS, MAC OS X, Windows Server, Linux Systems</li>
-			<li>Altigen Phone System: 5.0 PBX, 5.2 PBX, 6.0, 6.5, along with programing IP 705, 710, and 720 phones</li>
+		<h3>Skills</h3>
+		<hr/>
+		<h4>
+			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">Ruby</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">MySQL</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">HTML</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">CSS</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">JavaScript</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">JQuery</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">Bash</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">Microsoft Office</span>
+			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">PostgreSQL</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">MongoDB</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Docker</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">PHP</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">OracleDB</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">C++</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Python</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Java</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Saltstack</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Kubernetes</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Browserstack</span>
+			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Microsoft Exchange</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Bomgar</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Kaseya</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">True Crypt</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Mozy Online Backup</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Backup Exec</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Mathematica</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-warning">Altigen IP Phone System</span>
+			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">Windows OS</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">MAC OS X</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">Linux OS</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">Windows Server</span>
+		</h4>
+
+		<h3 class="mt-4">Work Experience</h3>
+		<hr/>
+		<ul class="major-ul fa-ul">
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4 class="font-weight-bolder">Senior Quality Assurance Engineer</h4>
+				<h4>Oracle Corporation</h4>
+				<div class="row font-italic"><div class="col">February 2017 - March 2019</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
+				<ul class="accomplishments">
+					<li>Continuation of Quality Assurance Engineering role with additional responsibilites.</li>
+					<li>Engineered and Implemented code changes to assist with development team for bugs and design updates.</li>
+					<li>Maintained Saltstack configuration scripts for development, test, qa, and production environments. As well as scripts for bootstrapping developers host machines.</li>
+					<li>Served as Compendium's project manager. Tracked and reported on development progress to assure deadlines were not missed.</li>
+					<li>Lead Quality Assurance Engineer for a new Application Management Cloud Product (AMS) within the Oracle Cloud.</li>
+					<li>Created and maintained an automation testing suite for the Oracle Marketing Cloud Framework application written in Java on top of the Selendium Webdriver framework.</li>
+					<li>Performed deployments of docker containers to our OMC Framework QA environtment through a Kubernetes management software, Rancher</li>
+				</ul>
+			</li>
+
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4 class="font-weight-bolder">Quality Assurance Engineer</h4>
+				<h4>Oracle Corporation</h4>
+				<div class="row font-italic"><div class="col">January 2014 - February 2017</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
+				<ul class="accomplishments">
+					<li>Reviewed and tested new features and bug fix merge requests using a locally maintained development environment as well as our public facing test environment.</li>
+					<li>Developed and maintained <strong>Ruby</strong> web application with functionalities that include network cloning, network population, and content scramble for the Compendium product.</li>
+					<li>Created and maintained an automation testing suite for the Compendium application written in <strong>Ruby</strong> on top of the <strong>Selendium Webdriver</strong> framework.</li>
+					<li>Facilitated migration of DNS, email, and website during the Compendium acquisition by Oracle.</li>
+				</ul>
+			</li>
+
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4 class="font-weight-bolder">Implementation Specialist</h4>
+				<h4>Compendium</h4>
+				<div class="row font-italic"><div class="col">July 2012 - January 2014</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
+				<ul class="accomplishments">
+					<li>Implementated customer designs from Photoshop into <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>JQuery</strong> in our template management tool.</li>
+					<li>Wrote and execute content import and export scripts in <strong>PHP</strong> and <strong>Ruby</strong> using the Compendium Rest API.</li>
+					<li>Planned and Executed the office move, which included designing and setup of wiring tower.</li>
+					<li>Split Time between company Integrations, Implementation and Maintenance of Web Designs, and Product Support.</li>
+					<li>Migrated support request system from Salesforce to a Zendesk Salesforce integration.</li>
+					<li>Completed support requests via phone and email and tracked them with Zendesk.</li>
+					<li>Maintain internal systems, new user setups, user laptop configuration and companywide network configuration.</li>
+				</ul>
+			</li>
+
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4 class="font-weight-bolder">Information Technologies Administrator</h4>
+				<h4>Compendium</h4>
+				<div class="row font-italic"><div class="col">September 2010 - July 2012</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
+				<ul class="accomplishments">
+					<li>Configured and maintained internal Active Directory, DHCP, and DNS Services.</li>
+					<li>Created a move plan for office equipment, phone system and network organization.</li>
+					<li>Executed email migration from Microsoft Exchange Server to Google Apps.</li>
+					<li>Maintained Bacula backup system then migrated it to Windows Backup once everyone switched to MAC.</li>
+					<li>Built and maintained internal web server build on Cent OS and Apache 2.</li>
+					<li>Migrated DNS and DHCP from Linux BIND and DHCP to Windows Server 2008 Native Applications.</li>
+					<li>Upgraded and Maintained Samba Network Storage Server with OpenLDAP and Active Directory integration.</li>
+					<li>Migrated Network Storage from Samba Server to Windows Server.</li>
+				</ul>
+			</li>
+
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4 class="font-weight-bolder">Support Desk Analyst II</h4>
+				<h4>Qbase Inc.</h4>
+				<div class="row font-italic"><div class="col">November 2009 - September 2010</div><div class="col ml-auto text-right">Beavercreek, OH, USA</div></div>
+				<ul class="accomplishments">
+					<li>Performed routine outbound maintenance and repairs for hardware and software when necessary.</li>
+					<li>Implemented and maintained security protocols company wide through group policy and third party software.</li>
+					<li>Supported Altigen IP phone systems for managed companies as well as own internal phone network.</li>
+					<li>Created and maintained backup solutions, both on-line as well as physical drives, onsite and remotely.</li>
+					<li>Trained new employees how to deal with common issues and software tools used within the company.</li>
+					<li>Worked directly with the director of IT solutions.</li>
+				</ul>
+			</li>
+
+			<li class="tech major-li">
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4 class="font-weight-bolder">Support Desk Analyst I</h4>
+				<h4>Qbase Inc.</h4>
+				<div class="row font-italic"><div class="col">May 2008 - November 2009</div><div class="col ml-auto text-right">Beavercreek, OH, USA</div></div>
+				<ul class="accomplishments">
+					<li>Performed remote, phone and email support using verbal instruction and remote control software.</li>
+					<li>Supported the various software, hardware and network issues of more than 300 companies.</li>
+					<li>Managed servers, workstations, routers and switches for approximately 30 companies subscribing to the managed services opportunities provided by the support staff with a third party software.</li>
+					<li>Performed virus control measures for both pre infection prevention as well as post infection removal.</li>
+					<li>Utilized the connectwise support application to track user requests from trouble ticket generation to resolution.</li>
+					<li>Hand built servers and workstations as well as installed hardware and software as requested by client.</li>
+				</ul>
+			</li>
 		</ul>
-	</div>
 
-	<h3>Professional Experience</h3>
+		<h3 class="mt-4">Personal Projects</h3>
+		<hr/>
+		<ul class="major-ul fa-ul">
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4>Ruby Gems</h4>
+				<ul class="accomplishments">
+					<li>compendium-api: utilizes compendium api with easy function calls for <strong>Ruby</strong> scripting. <a target="_blank" href="http://www.github.com/mlintern/compendium-api">http://www.github.com/mlintern/compendium-api</a></li>
+					<li>nretnil-password: easy password, passphrase and uuid generation. <a target="_blank" href="https://github.com/nretnilkram/nretnil-password">https://github.com/nretnilkram/nretnil-password</a></li>
+					<li>nretnil-fake-data: great for creating fake data such as names and dates. <a target="_blank" href="https://github.com/nretnilkram/nretnil-fake-data">https://github.com/nretnilkram/nretnil-fake-data</a></li>
+					<li>nretnil-utilites: a set of utilies which extends Array, Hash, String and Integer classes. <a target="_blank" href="https://github.com/nretnilkram/nretnil-utilities">https://github.com/nretnilkram/nretnil-utilities</a></li>
+					<li>nretnil-translate: a gem which translates text into Pig Latin or a simple scramble. <a target="_blank" href="https://github.com/nretnilkram/nretnil-translate">https://github.com/nretnilkram/nretnil-translate</a></li>
+				</ul>
+			</li>
 
-	<div class="tech">
-		<h4>Oracle Corporation, Indianapolis, IN</h4>
-		<div class="row"><h4 class="col">Senior Quality Assurance Engineer</h4><h4 class="col ml-auto text-right">February 2017 - March 2019</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Continuation of Quality Assurance Engineering role with additional responsibilites.</li>
-			<li>Engineered and Implemented code changes to assist with development team for bugs and design updates.</li>
-			<li>Maintained Saltstack configuration scripts for development, test, qa, and production environments. As well as scripts for bootstrapping developers host machines.</li>
-			<li>Served as Compendium's project manager. Tracked and reported on development progress to assure deadlines were not missed.</li>
-			<li>Lead Quality Assurance Engineer for a new Application Management Cloud Product (AMS) within the Oracle Cloud.</li>
-			<li>Created and maintained an automation testing suite for the Oracle Marketing Cloud Framework application written in Java on top of the Selendium Webdriver framework.</li>
-			<li>Performed deployments of docker containers to our OMC Framework QA environtment through a Kubernetes management software, Rancher</li>
+			<li class="tech major-li">
+				<span class="connector"></span>
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4>Personal Websites <small>for pleasure and assistance in development</small></h4>
+				<ul class="accomplishments">
+					<li><a target="_blank" href="http://www.nretnil.com">nretnil.com</a>, practical site of my commonly used online tools built primarily with <strong>JavaScript</strong> and <strong>PHP</strong>.</li>
+					<li><a target="_blank" href="http://www.marklintern.com">marklintern.com</a>, personal site.</li>
+					<li><a target="_blank" href="http://app.nretnil.com">app.nretnil.com</a>, <strong>Ruby</strong> Padrino App that handles account management, sessions, and authentication. Features include a curl generator and todo list.</li>
+					<li><a target="_blank" href="http://www.lintern.us">lintern.us</a>, fun site with family photos displayed as if they are polarids on a cork board.</li>
+					<li><a target="_blank" href="http://sandybox.nretnil.com">sandybox.nretnil.com</a>, <strong>HTML</strong> and <strong>JavaScript</strong> sandbox environment utilizing the JavaScript <a href="https://ace.c9.io/">Ace Editor</a>.</li>
+					<li><a target="_blank" href="http://dice.nretnil.com">dice.nretnil.com</a>, randomized results for numbers, letters, 6-sided dice values, or custom characters.</li>
+				</ul>
+			</li>
+
+			<li class="tech major-li">
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4>JavaScript / CSS Projects</h4>
+				<ul class="accomplishments">
+					<li>Fontstrap: <strong>CSS/JavaScript</strong> project combining <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://fontawesome.com/">Fontawesome</a> along with custom features and scripts. <a target="_blank" href="https://nretnilkram.github.io/fontstrap">https://nretnilkram.github.io/fontstrap</a></li>
+				</ul>
+			</li>
 		</ul>
-	</div>
 
-	<div class="tech">
-		<div class="row"><h4 class="col">Quality Assurance Engineer</h4><h4 class="col ml-auto text-right">January 2014 - February 2017</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Reviewed and tested new features and bug fix merge requests using a locally maintained development environment as well as our public facing test environment.</li>
-			<li>Developed and maintained Ruby web application with functionalities that include network cloning, network population, and content scramble for the Compendium product.</li>
-			<li>Created and maintained an automation testing suite for the Compendium application written in Ruby on top of the Selendium Webdriver framework.</li>
-			<li>Facilitated migration of DNS, email, and website during the Compendium acquisition by Oracle.</li>
+		<h3 class="mt-4">Education</h3>
+		<hr/>
+		<ul class="major-ul fa-ul">
+			<li class="education major-li">
+				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
+				<h4>Wittenberg University</h4>
+				<div class="row font-italic"><div class="col">August 2004 - May 2008</div><div class="col ml-auto text-right">Springfield, OH, USA</div></div>
+				<ul class="accomplishments">
+					<li><h5>Bachelor of Science - Computer Science</h5></li>
+					<li><h5>Bachelor of Arts - Mathematics</h5></li>
+				</ul>
+			</li>
 		</ul>
-	</div>
 
-	<div class="tech">
-		<h4>Compendium , Indianapolis, IN</h4>
-		<div class="row"><h4 class="col">Implementation Specialist</h4><h4 class="col ml-auto text-right">July 2012 - January 2014</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Implementated customer designs from Photoshop into HTML, CSS, Javascript, and JQuery in our template management tool.</li>
-			<li>Wrote and execute content import and export scripts in PHP and Ruby using the Compendium Rest API.</li>
-			<li>Planned and Executed the office move, which included designing and setup of wiring tower.</li>
-			<li>Split Time between company Integrations, Implementation and Maintenance of Web Designs, and Product Support.</li>
-			<li>Migrated support request system from Salesforce to a Zendesk Salesforce integration.</li>
-			<li>Completed support requests via phone and email and tracked them with Zendesk.</li>
-			<li>Maintain internal systems, new user setups, user laptop configuration and companywide network configuration.</li>
-		</ul>
-	</div>
-
-	<div class="tech">
-		<div class="row"><h4 class="col">Information Technologies Administrator</h4><h4 class="col ml-auto text-right">September 2010 - July 2012</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Configured and maintained internal Active Directory, DHCP, and DNS Services.</li>
-			<li>Created a move plan for office equipment, phone system and network organization.</li>
-			<li>Executed email migration from Microsoft Exchange Server to Google Apps.</li>
-			<li>Maintained Bacula backup system then migrated it to Windows Backup once everyone switched to MAC.</li>
-			<li>Built and maintained internal web server build on Cent OS and Apache 2.</li>
-			<li>Migrated DNS and DHCP from Linux BIND and DHCP to Windows Server 2008 Native Applications.</li>
-			<li>Upgraded and Maintained Samba Network Storage Server with OpenLDAP and Active Directory integration.</li>
-			<li>Migrated Network Storage from Samba Server to Windows Server.</li>
-		</ul>
-	</div>
-
-	<div class="tech">
-		<h4>Qbase Inc., Beavercreek, OH</h4>
-		<div class="row"><h4 class="col">Support Desk Analyst II</h4><h4 class="col ml-auto text-right">November 2009 - September 2010</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Performed routine outbound maintenance and repairs for hardware and software when necessary.</li>
-			<li>Implemented and maintained security protocols company wide through group policy and third party software.</li>
-			<li>Supported Altigen IP phone systems for managed companies as well as own internal phone network.</li>
-			<li>Created and maintained backup solutions, both on-line as well as physical drives, onsite and remotely.</li>
-			<li>Trained new employees how to deal with common issues and software tools used within the company.</li>
-			<li>Worked directly with the director of IT solutions.</li>
-		</ul>
-	</div>
-
-	<div class="tech">
-		<div class="row"><h4 class="col">Support Desk Analyst I</h4><h4 class="col ml-auto text-right">May 2008 - November 2009</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Performed remote, phone and email support using verbal instruction and remote control software.</li>
-			<li>Supported the various software, hardware and network issues of more than 300 companies.</li>
-			<li>Managed servers, workstations, routers and switches for approximately 30 companies subscribing to the managed services opportunities provided by the support staff with a third party software.</li>
-			<li>Performed virus control measures for both pre infection prevention as well as post infection removal.</li>
-			<li>Utilized the connectwise support application to track user requests from trouble ticket generation to resolution.</li>
-			<li>Hand built servers and workstations as well as installed hardware and software as requested by client.</li>
-		</ul>
-	</div>
-
-	<div class="full">
-		<h4>Wittenberg Math Workshop</h4>
-		<div class="row"><h4 class="col">Tutor</h4><h4 class="col ml-auto text-right">August 2007 - May 2008</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Worked with students to improve their "Wittenberg Math Score", which was a prerequisite for math geared courses.</li>
-			<li>Tutored students in Math classes ranging from beginning Algebra to Calculus II.</li>
-			<li>Tutored students in Computer Science and Basic programming for introductory to programming courses taught in Python.</li>
-		</ul>
-	</div>
-
-	<div class="tech">
-		<h4>CFA Networks, Springfield, OH</h4>
-		<div class="row"><h4 class="col">Engineer / Help Desk Intern</h4><h4 class="col ml-auto text-right">May 2007 - August 2007</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>Acted in a support role for clients local to the building who subscribed to ISP and Phone services.</li>
-			<li>Rack mounted servers, switches, routers and cable management in the locally operated datacenter.</li>
-			<li>Shadowed Outbound engineers on server migrations and other support calls and projects.</li>
-			<li>Created instruction manuals for commonly used software by our customers.</li>
-			<li>Ran cat5 cabling throughout the datacenter, as well as, punching them down and using testing equipment verified that each was correctly labeled and properly terminated.</li>
-		</ul>
-	</div>
-
-	<div class="full">
-		<h4>Wittenberg Computing Solutions Center</h4>
-		<div class="row"><h4 class="col">Help Desk Phone Operator/ Student Installer</h4><h4 class="col ml-auto text-right">January 2005 - August 2007</h4><div class="clearfix"></div></div>
-		<ul>
-			<li>As part of a group, executed a campus wide operating system upgrade from Windows 2000 to Windows XP.</li>
-			<li>Replaced malfunctioning hardware and resolved software issues on the more than 2000 campus computers.</li>
-			<li>Performed Wittenberg preparation and virus removal as needed on Student PCs.</li>
-		</ul>
-	</div>
-
-	<div class="professional">
-		<h3>Professional Development</h3>
-		<div><h4>Delta Tau Delta Fraternity</h4></div>
-		<ul>
-			<li><strong>Vice President</strong>, was in charge of more than 10 committees which ran both internal and external functions of the fraternity including successful philanthropies and social events.</li>
-			<li><strong>Treasurer</strong>, constructed and solely managed a budget of more than $100,000 for the 2006-2007 academic school year which maintained rent, food, social events, committee funds, etc.</li>
-		</ul>
-	</div>
-
-	<div class="tech">
-		<h3>Personal Projects</h3>
-		<div><h4>Gems</h4></div>
-		<ul>
-			<li>compendium-api: utilizes compendium api with easy function calls for ruby scripting. <a target="_blank" href="http://www.github.com/mlintern/compendium-api">http://www.github.com/mlintern/compendium-api</a></li>
-			<li>nretnil-password: easy password, passphrase and uuid generation. <a target="_blank" href="https://github.com/nretnilkram/nretnil-password">https://github.com/nretnilkram/nretnil-password</a></li>
-			<li>nretnil-fake-data: great for creating fake data such as names and dates. <a target="_blank" href="https://github.com/nretnilkram/nretnil-fake-data">https://github.com/nretnilkram/nretnil-fake-data</a></li>
-			<li>nretnil-utilites: a set of utilies which extends Array, Hash, String and Integer classes. <a target="_blank" href="https://github.com/nretnilkram/nretnil-utilities">https://github.com/nretnilkram/nretnil-utilities</a></li>
-			<li>nretnil-translate: a gem which translates text into Pig Latin or a simple scramble. <a target="_blank" href="https://github.com/nretnilkram/nretnil-translate">https://github.com/nretnilkram/nretnil-translate</a></li>
-		</ul>
-		<div><h4>Personal Websites <small>for pleasure and deveopmental purposes</small></h4></div>
-		<ul>
-			<li><a target="_blank" href="http://www.nretnil.com">nretnil.com</a>, practical site of my commonly used online tools built primarily with javasript and php.</li>
-			<li><a target="_blank" href="http://www.marklintern.com">marklintern.com</a>, personal site.</li>
-			<li><a target="_blank" href="http://app.nretnil.com">app.nretnil.com</a>, ruby padrino app shell that handles account management, sessions, and authentication. Features include a curl generator and todo list.</li>
-			<li><a target="_blank" href="http://www.lintern.us">lintern.us</a>, fun site with family photos displayed as if they are polarids on a cork board.</li>
-			<li><a target="_blank" href="http://sandybox.nretnil.com">sandybox.nretnil.com</a>, html and javscript sandbox environment utilizing Ace Editor and Bootstrap.</li>
-			<li><a target="_blank" href="http://dice.nretnil.com">dice.nretnil.com</a>, randomized results for numbers, letters, 6-sided dice values, or custom characters.</li>
-		</ul>
-		<div><h4>Other</h4></div>
-		<ul>
-			<li>Fontstrap: CSS/Javascript project combining Bootstrap and Fontawesome along with custom features and scripts. <a target="_blank" href="https://nretnilkram.github.io/fontstrap">https://nretnilkram.github.io/fontstrap</a></li>
-		</ul>
-	</div>
-
-	<div class="education">
-		<h3>Education</h3>
-		<div><h4>Wittenberg University</h4></div>
-		<div class="row"><h4 class="col">Bachelor of Science - Computer Science</h4><h4 class="col ml-auto text-right">May 2008</h4><div class="clearfix"></div></div>
-		<div class="row"><h4 class="col">Bachelor of Arts - Mathematics</h4><h4 class="col ml-auto text-right">May 2008</h4><div class="clearfix"></div></div>
-	</div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>
-	function paramExists(p){
-		return window.location.href.search("[?&]" + p + "=") != -1;
-	}
-	if ( paramExists('nopdf') ) {
-		$('$pdf-icon').hide();
-	}
-	if ( paramExists('nosummary') ) {
-		$('.summary').hide();
-	}
-	if ( paramExists('editor-mode') ) {
-		$('li').on('click', function () {
-			$(this).toggleClass('bg-warning');
+	<script type="text/javascript" src="dist/js/third_party/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.8.2"></script>
+	<script>
+		function paramExists(p){
+			return window.location.href.search("[?&]" + p + "=") != -1;
+		}
+		if ( paramExists('nopdf') ) {
+			$('$pdf-icon').hide();
+		}
+		if ( paramExists('nosummary') ) {
+			$('.summary').hide();
+		}
+		if ( paramExists('editor-mode') ) {
+			$('li').on('click', function () {
+				$(this).toggleClass('bg-warning');
+			});
+		}
+		var currentAdj = 0;
+		var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic', 'Dedicated']
+		$('.adjective').on('click', function () {
+			$(this).text(adjectives[(currentAdj += 1) % adjectives.length])
 		});
-	}
-	var currentAdj = 0;
-	var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic', 'Dedicated']
-	$('.adjective').on('click', function () {
-		$(this).text(adjectives[(currentAdj += 1) % adjectives.length])
-	});
-	var currentVerb = 0;
-	var verbs = ['accelerate', 'drive', 'excel']
-	$('.verb').on('click', function () {
-		$(this).text(verbs[(currentVerb += 1) % verbs.length])
-	});
-</script>
+		var currentVerb = 0;
+		var verbs = ['accelerate', 'drive', 'excel']
+		$('.verb').on('click', function () {
+			$(this).text(verbs[(currentVerb += 1) % verbs.length])
+		});
+	</script>
 
 </body>
 </html>
