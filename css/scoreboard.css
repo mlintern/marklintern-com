@@ -1,0 +1,92 @@
+/* SCOREBOARD */
+#timer {
+	margin-top: 30px;
+}
+#timer .btn {
+	margin-top: 5px;
+}
+.numeral{
+	height: 40px !important;
+}
+#countdownDisp {
+	background-color: black;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 auto;
+}
+.team-score {
+	text-align:center;
+	float:left;
+	width: 100%;
+}
+.teamname {
+	font-size: 30px;
+	background-color: black;
+	color: white;
+	border: none;
+	width: 100%
+}
+.score {
+	font-size: 110px;
+	text-align: center;
+	color: green;
+	border: white 5px solid;
+	background-color: black;
+	margin-top: 10px;
+	display: block;
+	line-height: 1;
+	padding: 20px 0;
+}
+.plusbtn {
+	font-size: 50px;
+	margin-top: 15px;
+	line-height: 1;
+	margin-right: 10px;
+	display: inline-block;
+}
+.minusbtn {
+	font-size: 20px;
+	margin-top:40px;
+	display: inline-block;
+}
+#resetscore {
+	margin-top: 15px;
+	float: right;
+}
+@media ( min-width : 768px ) {
+	#resetscore {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+	}
+	.teamname {
+		font-size: 50px;
+	}
+	.score {
+		font-size: 150px;
+	}
+	.numeral {
+		height: 60px !important;
+	}
+}
+@media ( min-width : 1200px ) {
+	#resetscore {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+	}
+	.teamname {
+		font-size: 60px;
+	}
+	.score {
+		font-size: 200px;
+	}
+	.numeral {
+		height: 100px !important;
+	}
+}
+@media ( min-width : 1450px ) {
+	.score {
+		font-size: 300px;
+	}
+}

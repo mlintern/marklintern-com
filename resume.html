@@ -4,7 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="host_name" content="http://www.marklintern.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Mark Lintern's Resume</title>
+
+	<link type="image/png" href="favicon.ico?v=2.0" rel="icon">
 	<link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
 	<style>
 		body { font-size: 12px; padding: 30px 0; }
@@ -12,6 +15,7 @@
 		h2 { font-size: 22px; }
 		h3 { font-size: 20px; }
 		h4 { font-size: 16px; }
+		h5 { font-size: 14px; }
 		@media print {
 			h2 { font-size: 20px; }
 			h3 { font-size: 16px; }
@@ -31,11 +35,13 @@
 		<p>6016 Andover Rd. Indianapolis, IN 46220<br>419 - 571 - 9960<br>markllintern@gmail.com</p>
 	</div>
 
+	<h5 class="px-5 py-3 summary" contenteditable="true"><span class="adjective">Motivated</span> computer engineer with 10+ years of experience and proven full stack skills from HTML to DevOps.  Seeking position with <span contenteditable="true">&lt;Nretnil, Inc&gt;</span>.  Built many web applications in Ruby to enhance and enable faster testing processes.  Excited to excel a new team with the latest technologies and methods. </h5>
+
 	<div class="tech">
 		<h3>Technical Skills</h3>
 		<ul>
 			<li>Advanced Experience with HTML, Javascript, CSS, Ruby, JQuery, MySQL, Microsoft Office</li>
-			<li>Intermediate level experience with PHP, Bash, C++, Python, Java, Saltstack, Browserstack.</li>
+			<li>Intermediate level experience with PHP, Bash, C++, Python, Java, Saltstack, Docker, Kubernetes, Browserstack.</li>
 			<li>Limited experience with Microsoft Exchange, Bomgar, Kaseya, True Crypt, SQL, Mozy online backup, Mathematica, Backup Exec</li>
 			<li>Operating System experience: Windows OS, MAC OS X, Windows Server, Linux Systems</li>
 			<li>Altigen Phone System: 5.0 PBX, 5.2 PBX, 6.0, 6.5, along with programing IP 705, 710, and 720 phones</li>
@@ -54,6 +60,7 @@
 			<li>Served as Compendium's project manager. Tracked and reported on development progress to assure deadlines were not missed.</li>
 			<li>Lead Quality Assurance Engineer for a new Application Management Cloud Product (AMS) within the Oracle Cloud.</li>
 			<li>Created and maintained an automation testing suite for the Oracle Marketing Cloud Framework application written in Java on top of the Selendium Webdriver framework.</li>
+			<li>Performed deployments of docker containers to our OMC Framework QA environtment through a Kubernetes management software, Rancher</li>
 		</ul>
 	</div>
 
@@ -200,13 +207,22 @@
 		return window.location.href.search("[?&]" + p + "=") != -1;
 	}
 	if ( paramExists('nopdf') ) {
-		document.getElementById('pdf-icon').style.visibility = 'hidden';
+		$('$pdf-icon').hide();
+	}
+	if ( paramExists('nosummary') ) {
+		$('.summary').hide();
 	}
 	if ( paramExists('editor-mode') ) {
 		$('li').on('click', function () {
 			$(this).toggleClass('bg-warning');
 		});
 	}
+	var currentAdj = 0;
+	var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic']
+	$('.adjective').on('click', function () {
+		console.log('here');
+		$(this).text(adjectives[(currentAdj += 1) % adjectives.length])
+	})
 </script>
 
 </body>
