@@ -17,15 +17,20 @@
 		h4 { font-size: 18px; }
 		h5 { font-size: 14px; }
 		.major-li { padding-bottom: 2rem; }
-		ul.accomplishments { list-style-type: dash; border-left: solid 1px #000; border-right: solid 1px #000; padding-left: 2rem; padding-top: .5rem; padding-bottom: .5rem; margin-top: .5rem; padding-right: .5rem; }
+		ul.accomplishments { position: relative; list-style-type: dash; border-left: solid 1px #000; border-right: solid 1px #000; padding-left: 2rem; padding-top: .5rem; padding-bottom: .5rem; margin-top: .5rem; padding-right: .5rem; }
 		.connector { position: absolute; margin-left: 5px; border-left: solid 2px #212529; left: -1.5rem; top: 1rem; bottom: -.5rem; }
 		.fa-li { left: -2.5em; background: #fff; }
 		.pointer { cursor: pointer; }
+		.border-tabs { position: absolute; width: 10px; height: 0; border-top: solid 1px #000;  }
+		.top-left { left: 0; top: 0; }
+		.top-right { right: 0; top: 0; }
+		.bottom-left { left: 0; bottom: 0; }
+		.bottom-right { right: 0; bottom: 0; }
 		@media print {
 			#pdf-icon { display: none; }
 			.btn { border: 0px; }
 		}
-		hr { margin-top: .5rem; margin-bottom: .5rem; border: 0; border-top: 1px solid rgba(0,0,0,1); }
+		hr { margin-top: .5rem; margin-bottom: 1rem; border: 0; border-top: 2px solid rgba(0,0,0,1); }
 	</style>
 </head>
 <body>
@@ -42,7 +47,7 @@
 			<div class="text-right">
 				<div>markllintern@gmail.com <i class="fa fa-fw fa-envelope"></i></div>
 				<div>419 - 571 - 9960 <i class="fa fa-fw fa-phone"></i></div>
-				<div>6016 Andover Rd. Indianapolis, IN 46220 <i class="fa fa-fw fa-home"></i></div>
+				<div>Indianapolis, IN, USA<i class="fas fa-fw fa-map-marker-alt"></i></div>
 			</div>
 		</div>
 
@@ -53,8 +58,10 @@
 			I am excited to <span class="verb pointer">accelerate</span> a new team with the latest technologies and methods.
 		</h5>
 
-		<h3>Skills</h3>
-		<hr/>
+		<h3>SKILLS</h3>
+	</div>
+	<hr/>
+	<div class="container">
 		<h4>
 			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">Ruby</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">MySQL</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">HTML</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">CSS</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">JavaScript</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">JQuery</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">Bash</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-success">Microsoft Office</span>
 			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">PostgreSQL</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">MongoDB</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Docker</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">PHP</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">OracleDB</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">C++</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Python</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Java</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Saltstack</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Kubernetes</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-info">Browserstack</span>
@@ -62,8 +69,10 @@
 			<span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">Windows OS</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">MAC OS X</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">Linux OS</span><span class="p-2 mr-2 mb-2 d-inline-block badge badge-primary">Windows Server</span>
 		</h4>
 
-		<h3 class="mt-4">Work Experience</h3>
-		<hr/>
+		<h3 class="mt-4">WORK EXPERIENCE</h3>
+	</div>
+	<hr/>
+	<div class="container">
 		<ul class="major-ul fa-ul">
 			<li class="tech major-li">
 				<span class="connector"></span>
@@ -72,6 +81,7 @@
 				<h4>Oracle Corporation</h4>
 				<div class="row font-italic"><div class="col">February 2017 - March 2019</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Continuation of Quality Assurance Engineering role with additional responsibilites.</li>
 					<li>Engineered and Implemented code changes to assist with development team for bugs and design updates.</li>
 					<li>Maintained Saltstack configuration scripts for development, test, qa, and production environments. As well as scripts for bootstrapping developers host machines.</li>
@@ -89,6 +99,7 @@
 				<h4>Oracle Corporation</h4>
 				<div class="row font-italic"><div class="col">January 2014 - February 2017</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Reviewed and tested new features and bug fix merge requests using a locally maintained development environment as well as our public facing test environment.</li>
 					<li>Developed and maintained <strong>Ruby</strong> web application with functionalities that include network cloning, network population, and content scramble for the Compendium product.</li>
 					<li>Created and maintained an automation testing suite for the Compendium application written in <strong>Ruby</strong> on top of the <strong>Selendium Webdriver</strong> framework.</li>
@@ -103,6 +114,7 @@
 				<h4>Compendium</h4>
 				<div class="row font-italic"><div class="col">July 2012 - January 2014</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Implementated customer designs from Photoshop into <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>JQuery</strong> in our template management tool.</li>
 					<li>Wrote and execute content import and export scripts in <strong>PHP</strong> and <strong>Ruby</strong> using the Compendium Rest API.</li>
 					<li>Planned and Executed the office move, which included designing and setup of wiring tower.</li>
@@ -120,6 +132,7 @@
 				<h4>Compendium</h4>
 				<div class="row font-italic"><div class="col">September 2010 - July 2012</div><div class="col ml-auto text-right">Indianapolis, IN, USA</div></div>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Configured and maintained internal Active Directory, DHCP, and DNS Services.</li>
 					<li>Created a move plan for office equipment, phone system and network organization.</li>
 					<li>Executed email migration from Microsoft Exchange Server to Google Apps.</li>
@@ -138,6 +151,7 @@
 				<h4>Qbase Inc.</h4>
 				<div class="row font-italic"><div class="col">November 2009 - September 2010</div><div class="col ml-auto text-right">Beavercreek, OH, USA</div></div>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Performed routine outbound maintenance and repairs for hardware and software when necessary.</li>
 					<li>Implemented and maintained security protocols company wide through group policy and third party software.</li>
 					<li>Supported Altigen IP phone systems for managed companies as well as own internal phone network.</li>
@@ -153,6 +167,7 @@
 				<h4>Qbase Inc.</h4>
 				<div class="row font-italic"><div class="col">May 2008 - November 2009</div><div class="col ml-auto text-right">Beavercreek, OH, USA</div></div>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Performed remote, phone and email support using verbal instruction and remote control software.</li>
 					<li>Supported the various software, hardware and network issues of more than 300 companies.</li>
 					<li>Managed servers, workstations, routers and switches for approximately 30 companies subscribing to the managed services opportunities provided by the support staff with a third party software.</li>
@@ -163,14 +178,17 @@
 			</li>
 		</ul>
 
-		<h3 class="mt-4">Personal Projects</h3>
-		<hr/>
+		<h3 class="mt-4">PERSONAL PROJECTS</h3>
+	</div>
+	<hr/>
+	<div class="container">
 		<ul class="major-ul fa-ul">
 			<li class="tech major-li">
 				<span class="connector"></span>
 				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
 				<h4>Ruby Gems</h4>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>compendium-api: utilizes compendium api with easy function calls for <strong>Ruby</strong> scripting. <a target="_blank" href="http://www.github.com/mlintern/compendium-api">http://www.github.com/mlintern/compendium-api</a></li>
 					<li>nretnil-password: easy password, passphrase and uuid generation. <a target="_blank" href="https://github.com/nretnilkram/nretnil-password">https://github.com/nretnilkram/nretnil-password</a></li>
 					<li>nretnil-fake-data: great for creating fake data such as names and dates. <a target="_blank" href="https://github.com/nretnilkram/nretnil-fake-data">https://github.com/nretnilkram/nretnil-fake-data</a></li>
@@ -184,6 +202,7 @@
 				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
 				<h4>Personal Websites <small>for pleasure and assistance in development</small></h4>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li><a target="_blank" href="http://www.nretnil.com">nretnil.com</a>, practical site of my commonly used online tools built primarily with <strong>JavaScript</strong> and <strong>PHP</strong>.</li>
 					<li><a target="_blank" href="http://www.marklintern.com">marklintern.com</a>, personal site.</li>
 					<li><a target="_blank" href="http://app.nretnil.com">app.nretnil.com</a>, <strong>Ruby</strong> Padrino App that handles account management, sessions, and authentication. Features include a curl generator and todo list.</li>
@@ -197,21 +216,25 @@
 				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
 				<h4>JavaScript / CSS Projects</h4>
 				<ul class="accomplishments">
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
 					<li>Fontstrap: <strong>CSS/JavaScript</strong> project combining <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://fontawesome.com/">Fontawesome</a> along with custom features and scripts. <a target="_blank" href="https://nretnilkram.github.io/fontstrap">https://nretnilkram.github.io/fontstrap</a></li>
 				</ul>
 			</li>
 		</ul>
 
-		<h3 class="mt-4">Education</h3>
-		<hr/>
+		<h3 class="mt-4">EDUCATION</h3>
+	</div>
+	<hr/>
+	<div class="container">
 		<ul class="major-ul fa-ul">
 			<li class="education major-li">
 				<span class="fa-li" ><i class="far fa-lg fa-circle"></i></span>
 				<h4>Wittenberg University</h4>
 				<div class="row font-italic"><div class="col">August 2004 - May 2008</div><div class="col ml-auto text-right">Springfield, OH, USA</div></div>
 				<ul class="accomplishments">
-					<li><h5>Bachelor of Science - Computer Science</h5></li>
-					<li><h5>Bachelor of Arts - Mathematics</h5></li>
+					<span class="border-tabs top-left"></span><span class="border-tabs top-right"></span><span class="border-tabs bottom-left"></span><span class="border-tabs bottom-right"></span>
+					<li><h5 class="m-0">Bachelor of Science - Computer Science</h5></li>
+					<li><h5 class="m-0">Bachelor of Arts - Mathematics</h5></li>
 				</ul>
 			</li>
 		</ul>
