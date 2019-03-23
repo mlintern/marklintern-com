@@ -16,6 +16,7 @@
 		h3 { font-size: 20px; }
 		h4 { font-size: 16px; }
 		h5 { font-size: 14px; }
+		.pointer { cursor: pointer; }
 		@media print {
 			h2 { font-size: 20px; }
 			h3 { font-size: 16px; }
@@ -32,14 +33,16 @@
 
 	<div class="text-center">
 		<h2>Mark L. Lintern</h2>
-		<p>6016 Andover Rd. Indianapolis, IN 46220<br>419 - 571 - 9960<br>markllintern@gmail.com</p>
+		<p>6016 Andover Rd. Indianapolis, IN 46220<br>
+			419 - 571 - 9960 <span class="d-inline-block px-3"></span> markllintern@gmail.com
+		</p>
 	</div>
 
 	<h5 class="px-5 py-3 summary" contenteditable="true">
-		<span class="adjective">Motivated</span> computer engineer with 10+ years of experience and proven full stack skills from <strong>HTML</strong> to <strong>DevOps</strong>.&nbsp;
+		<span class="adjective pointer">Motivated</span> computer engineer with 10+ years of experience and proven full stack skills from <strong>HTML</strong> to <strong>DevOps</strong>.&nbsp;
 		Seeking position with <span contenteditable="true">&lt;Nretnil, Inc&gt;</span> that will push my abilities to the next level.&nbsp;
 		I have developed many web applications in <strong>Ruby</strong> to enhance and enable faster testing processes.&nbsp;
-		Excited to excelerate a new team with the latest technologies and methods.
+		I am excited to <span class="verb pointer">accelerate</span> a new team with the latest technologies and methods.
 	</h5>
 
 	<div class="tech">
@@ -223,11 +226,15 @@
 		});
 	}
 	var currentAdj = 0;
-	var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic']
+	var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic', 'Dedicated']
 	$('.adjective').on('click', function () {
-		console.log('here');
 		$(this).text(adjectives[(currentAdj += 1) % adjectives.length])
-	})
+	});
+	var currentVerb = 0;
+	var verbs = ['accelerate', 'drive', 'excel']
+	$('.verb').on('click', function () {
+		$(this).text(verbs[(currentVerb += 1) % verbs.length])
+	});
 </script>
 
 </body>
