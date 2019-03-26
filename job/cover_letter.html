@@ -18,13 +18,11 @@
 
 		<h1>Mark L. Lintern</h1>
 
-		<div class="personal my-4">
-			<div><i class="fa fa-fw fa-envelope"></i> markllintern@gmail.com</div>
-			<div><i class="fa fa-fw fa-mobile-alt"></i>419 - 571 - 9960</div>
-			<div><i class="fas fa-fw fa-map-marker-alt"></i>Indianapolis, IN, USA</div>
-		</div>
+		<p class="mb-5">markllintern@gmail.com</p>
 
-		<p contenteditable="true"><span class="company">&lt;Nrenil, Inc&gt;</span></p>
+		<p contenteditable="true"><span class="date">January 1, 2019</span></p>
+
+		<p class="my-4" contenteditable="true"><span class="company">&lt;Nrenil, Inc&gt;</span></p>
 
 		<p contenteditable="true">RE: Passionate and Hard-Working <span class="position">&lt;Software Support Engineer&gt;</span></p>
 
@@ -48,6 +46,7 @@
 
 	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/third_party/jquery.min.js?v=3.3.1"></script>
 	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.min.js?v=2.11.0"></script>
+	<script type="text/javascript" src="../js/moment.js?v=2.11.0"></script>
 	<script>
 		function getUrlVars() {
 			var vars = {};
@@ -57,6 +56,8 @@
 		function paramExists(p){ return window.location.href.search("[?&]" + p + "=") != -1; }
 		if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
 		if ( paramExists('company') ) { $('.company').html(getUrlVars()['company']); }
+		var now = moment().format('MMMM Do, YYYY');
+		$('.date').html(now);
 	</script>
 
 </body>
