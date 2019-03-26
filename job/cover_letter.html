@@ -7,10 +7,10 @@
 
 	<title>Mark Lintern's Cover Letter</title>
 
-	<link type="image/png" href="favicon.ico?v=2.0" rel="icon">
-	<link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css" rel="stylesheet">
+	<link type="image/png" href="../favicon.ico?v=2.0" rel="icon">
+	<link type="text/css" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css?v=2.11.0" rel="stylesheet">
 	<style>
-		html, body { font-size: 1em; padding: 30px 0; line-height: 1; }
+		html, body { font-size: 1em; padding: 30px 0; }
 	</style>
 </head>
 <body>
@@ -18,21 +18,25 @@
 
 		<h1>Mark L. Lintern</h1>
 
-		<div class="personal">
+		<div class="personal my-4">
 			<div><i class="fa fa-fw fa-envelope"></i> markllintern@gmail.com</div>
 			<div><i class="fa fa-fw fa-mobile-alt"></i>419 - 571 - 9960</div>
 			<div><i class="fas fa-fw fa-map-marker-alt"></i>Indianapolis, IN, USA</div>
 		</div>
 
+		<p contenteditable="true"><span class="company">&lt;Nrenil, Inc&gt;</span></p>
+
+		<p contenteditable="true">RE: Passionate and Hard-Working <span class="position">&lt;Software Support Engineer&gt;</span></p>
+
 		<p contenteditable="true">Dear <span class="company">&lt;Nrenil, Inc&gt;</span>,</p>
 
 		<p contenteditable="true">I would like to express my interest in the <span class="position">&lt;Software Support Engineer&gt;</span> position. I am a self-motivated and progress-driven Senior Quality Assurance Engineer with an extensive background in this industry. With a long-standing record of initiative and innovation, I have developed and executed strategies which I believe will bring value to <span class="company">&lt;Nrenil, Inc&gt;</span>. </p>
 
-		<p contenteditable="true">Throughout the course of my career, I have honed my testing and development abilities. I am an astute problem-solver capable of prioritizing and managing complex projects with proficiency.</p>
+		<p contenteditable="true">Throughout the course of my career, I have honed my testing and development abilities. Not only in my professional life, but in my personal life as well. Software development is more than a job or career, it's a hobby of mine as well.</p>
 
-		<p contenteditable="true">In my previous role, I exercised problem-solving, critical thinking, and editing in contribution of team efforts and organizational improvements. I am open-minded and focused on new developments in my field. I have proven to be effective and motivational, with proficiency in innovation and collaborative work. I enjoy brainstorming and coordinating efforts to achieve a common goal.</p>
+		<p contenteditable="true">In my previous role, I exercised problem-solving, critical thinking and clear communication in contribution of the development process. I am open-minded and focused on new developments in my field. I have proven to be effective and innovative during collaborative work. I enjoy brainstorming and coordinating efforts to achieve a common goal.</p>
 
-		<p contenteditable="true">Please take a moment to review my enclosed resume and accompanying credentials. I would appreciate the opportunity to speak with you regarding my candidacy for the Software Support Engineer role.</p>
+		<p contenteditable="true">Please take a moment to review my enclosed resume and accompanying credentials. I would appreciate the opportunity to speak with you regarding my candidacy for the <span class="position">&lt;Software Support Engineer&gt;</span> role.</p>
 
 		<p contenteditable="true">I’m looking forward to your response and thank you for your consideration.</p>
 
@@ -42,19 +46,17 @@
 
 	</div>
 
-	<script type="text/javascript" src="dist/js/third_party/jquery.min.js?v=3.3.1"></script>
-	<script type="text/javascript" src="dist/js/fontstrap.min.js?v=2.8.2"></script>
+	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/third_party/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.min.js?v=2.11.0"></script>
 	<script>
 		function getUrlVars() {
-	    var vars = {};
-	    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-	        vars[key] = value;
-	    });
-	    return vars;
-	}
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) { vars[key] = value.replace(/%20/g, ' '); });
+			return vars;
+		}
 		function paramExists(p){ return window.location.href.search("[?&]" + p + "=") != -1; }
 		if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
-		if ( paramExists('company') ) { $('.position').html(getUrlVars()['company']); }
+		if ( paramExists('company') ) { $('.company').html(getUrlVars()['company']); }
 	</script>
 
 </body>
