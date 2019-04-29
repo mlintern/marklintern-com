@@ -52,7 +52,7 @@
 		</div>
 
 		<h5 class="p-3 summary" contenteditable="true">
-			<span class="adjective pointer">Motivated</span> <span class="position">&lt;Software Engineer&gt;</span> with 10+ years of experience and proven full stack skills from <strong>HTML</strong> to <strong>DevOps</strong>.&nbsp;
+			<span class="adjective pointer">Motivated</span> <span class="position">&lt;Software Engineer&gt;</span> with 10+ years of SAAS experience and proven full stack skills from <strong>HTML</strong> to <strong>DevOps</strong>.&nbsp;
 			Seeking position with <span class="company">&lt;Nrenil, Inc&gt;</span> that will allow me to push my abilities to the next level.&nbsp;
 			I have developed many web applications in <strong>Ruby</strong> which enhanced and enabled faster testing processes.&nbsp;
 			I am excited to <span class="verb pointer">accelerate</span> a new team with the latest technologies and methods.
@@ -233,28 +233,29 @@
 				</ul>
 			</li>
 		</ul>
+	</div>
 
-		<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/third_party/jquery.min.js?v=3.3.1"></script>
-		<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.min.js?v=2.11.0"></script>
+	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/third_party/jquery.min.js?v=3.3.1"></script>
+	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.min.js?v=2.11.0"></script>
 	<script>
-	function getUrlVars() {
-		var vars = {};
-		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) { vars[key] = value.replace(/%20/g, ' '); });
-		return vars;
-	}
-	function paramExists(p){ return window.location.href.search("[?&]" + p + "=") != -1; }
-	if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
-	if ( paramExists('company') ) { $('.company').html(getUrlVars()['company']); }
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) { vars[key] = value.replace(/%20/g, ' '); });
+			return vars;
+		}
+		function paramExists(p){ return window.location.href.search("[?&]" + p + "=") != -1; }
+		if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
+		if ( paramExists('company') ) { $('.company').html(getUrlVars()['company']); }
 		if ( paramExists('nopdf') ) { $('$pdf-icon').hide(); }
 		if ( paramExists('nosummary') ) { $('.summary').hide(); }
 		if ( paramExists('editor-mode') ) {
 			$('li').on('click', function () { $(this).toggleClass('bg-warning'); });
 		}
 		var currentAdj = 0;
-		var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic', 'Dedicated']
+		var adjectives = ['Motivated', 'Driven', 'Passionate', 'Energetic', 'Dedicated'];
 		$('.adjective').on('click', function () { $(this).text(adjectives[(currentAdj += 1) % adjectives.length]) });
 		var currentVerb = 0;
-		var verbs = ['accelerate', 'drive', 'excel']
+		var verbs = ['accelerate', 'drive', 'excel'];
 		$('.verb').on('click', function () { $(this).text(verbs[(currentVerb += 1) % verbs.length]) });
 	</script>
 
