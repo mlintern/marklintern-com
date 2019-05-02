@@ -55,7 +55,10 @@
 		}
 		function paramExists(p){ return window.location.href.search("[?&]" + p + "=") != -1; }
 		if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
-		if ( paramExists('company') ) { $('.company').html(getUrlVars()['company']); }
+		if ( paramExists('company') ) {
+			$('.company').html(getUrlVars()['company']);
+			$('title').text('Lintern_Cover_' + getUrlVars()['company']);
+		}
 		var now = moment().format('MMMM Do, YYYY');
 		$('.date').html(now);
 	</script>

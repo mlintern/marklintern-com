@@ -245,7 +245,10 @@
 		}
 		function paramExists(p){ return window.location.href.search("[?&]" + p + "=") != -1; }
 		if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
-		if ( paramExists('company') ) { $('.company').html(getUrlVars()['company']); }
+		if ( paramExists('company') ) {
+			$('.company').html(getUrlVars()['company']);
+			$('title').text('Lintern_Resume_' + getUrlVars()['company']);
+		}
 		if ( paramExists('nopdf') ) { $('$pdf-icon').hide(); }
 		if ( paramExists('nosummary') ) { $('.summary').hide(); }
 		if ( paramExists('editor-mode') ) {
