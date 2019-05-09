@@ -118,7 +118,7 @@
 					<li>Split time between company integrations, implementation and maintenance of <strong>HTML</strong> designs, and Product Support.</li>
 					<li>Migrated customer support request system from Salesforce to a Zendesk Salesforce integration.</li>
 					<li>Resolved customer support requests via phone and email and tracked them with Zendesk.</li>
-					<li>Maintained internal systems, new user setups, user laptop configuration and companywide network configuration.</li>
+					<li>Maintained internal systems, new user setups, user laptop configuration and company-wide network configuration.</li>
 				</ul>
 				<div class="page-break"></div>
 			</li>
@@ -247,7 +247,7 @@
 		if ( paramExists('position') ) { $('.position').html(getUrlVars()['position']); }
 		if ( paramExists('company') ) {
 			$('.company').html(getUrlVars()['company']);
-			$('title').text('Lintern_Resume_' + getUrlVars()['company']);
+			$('title').text('Lintern_Resume_' + getUrlVars()['company'].replace(' ','_'));
 		}
 		if ( paramExists('nopdf') ) { $('$pdf-icon').hide(); }
 		if ( paramExists('nosummary') ) { $('.summary').hide(); }
