@@ -49,7 +49,7 @@
 
 		<div class="footer text-center py-3">
 			<div class="footer-email">mark@lintern.us</div>
-			<div class="small">v2019.3.23</div>
+			<div class="small">v2020.4.3</div>
 		</div> <!-- footer -->
 	</div> <!-- full-screen -->
 
@@ -60,19 +60,15 @@
 	<script type="text/javascript">
 	$('.full-screen-bg').fullScreenBackground();
 	var totalPhotos = 3;
-	var currentPhoto = 0;
-	setInterval(function () {
-		nextPhoto = (currentPhoto + 1) % totalPhotos;
+	var currentPhoto = _.random(0, totalPhotos - 1);
+	console.debug("starting:",currentPhoto);
+	function updateBg () {
+		var nextPhoto = (currentPhoto + 1) % totalPhotos;
 		currentPhoto = nextPhoto;
 		$('.main-bg').css('background-image', 'url("images/bg/' + nextPhoto + '.jpg")');
-	}, 20000);
-
-	$(document).ready(function () {
-		_.times(totalPhotos - 1, function (i) {
-			$('body').append($('<img>').attr('src', 'images/bg/' + (i + 1) + '.jpg').addClass('d-none'));
-
-		})
-	});
+	}
+	updateBg();
+	setInterval(updateBg, 5000);
 
 	/*Google Analytics*/
 		var _gaq = _gaq || [];
